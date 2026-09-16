@@ -4,6 +4,7 @@ import { randomUUID } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { getSource, noSymlinkPath, readJson, sha256, writeJson } from "../io.ts";
 import { sourceKey, SOURCE_MANIFEST, type Source } from "../contracts.ts";
+import { decodeTextContext, isTextContextArtifact, TEXT_FORMATS_BY_EXTENSION as TEXT_FORMATS } from "../text-context.ts";
 import { ARXIV_TEMPLATE, GENERIC_TEMPLATE, extractHtml, validateTemplate } from "./html.ts";
 import { PARSER_VERSION, type Acquisition, type Artifact, type CleaningTemplate, type IngestResult, type PreparedManifest, type RawManifest, type SourceMapBlock } from "./types.ts";
 
@@ -102,19 +103,6 @@ async function boundedResponse(response: Response, limit: number): Promise<Uint8
   for (const chunk of chunks) { output.set(chunk, offset); offset += chunk.length; }
   return output;
 }
-const TEXT_FORMATS: Record<string, string> = {
-  md: "markdown", markdown: "markdown", mdx: "mdx", qmd: "quarto-markdown", txt: "text", text: "text",
-  ts: "typescript", tsx: "tsx", js: "javascript", mjs: "javascript", cjs: "javascript", jsx: "jsx",
-  py: "python", rs: "rust", go: "go", sh: "shell", zsh: "shell", json: "json", yaml: "yaml", yml: "yaml", toml: "toml", xml: "xml", css: "css",
-};
-function decodeSourceText(bytes: Uint8Array): string {
-  let text: string;
-  try { text = new TextDecoder("utf-8", { fatal: true, ignoreBOM: true }).decode(bytes); }
-  catch { throw new Error("text_invalid_utf8"); }
-  if (!text.trim()) throw new Error("text_empty_content");
-  if (/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/.test(text) || /^(?:%PDF-|PK\x03\x04|\x7fELF)/.test(text)) throw new Error("binary_disguised_as_text");
-  return text;
-}
 function validatePayload(kind: "html" | "tex", bytes: Uint8Array, contentType: string, binding: string | null, source: Source, url: string): { kind: Acquisition["kind"]; format: string; extension: string } {
   const prefix = Buffer.from(bytes.subarray(0, Math.min(bytes.length, 32_768))).toString("utf8");
   const html = /<(?:!doctype\s+html|html|body|article)\b/i.test(prefix);
@@ -126,7 +114,7 @@ function validatePayload(kind: "html" | "tex", bytes: Uint8Array, contentType: s
       if (!textual) throw new Error("response_is_not_textual_document");
       const charset = contentType.match(/charset\s*=\s*["']?([^\s;"']+)/i)?.[1];
       if (charset && !/^(?:utf-8|utf8|us-ascii|ascii)$/i.test(charset)) throw new Error("text_unsupported_charset");
-      decodeSourceText(bytes);
+      decodeTextContext(bytes);
       const format = TEXT_FORMATS[suffix] ?? (mediaType === "text/markdown" ? "markdown" : mediaType.includes("json") ? "json" : mediaType.includes("javascript") ? "javascript" : mediaType.includes("xml") ? "xml" : "text");
       const extension = TEXT_FORMATS[suffix] ? suffix : format === "markdown" ? "md" : format === "json" ? "json" : format === "javascript" ? "js" : format === "xml" ? "xml" : "txt";
       return { kind: "raw_text", format, extension };
@@ -225,8 +213,10 @@ async function resolveHelper() {
 async function parserIdentity(helper: string) {
   const inputs = [{ name: "entry", content: await readFile(fileURLToPath(import.meta.url)) }, { name: "tex-helper", content: await readFile(helper) }];
   // A bundled entry already contains this module. An unbundled run binds it too.
-  try { inputs.push({ name: "html", content: await readFile(new URL("./html.ts", import.meta.url)) }); }
-  catch (error: any) { if (error.code !== "ENOENT") throw error; }
+  for (const [name, path] of [["html", "./html.ts"], ["text-context", "../text-context.ts"]]) {
+    try { inputs.push({ name, content: await readFile(new URL(path, import.meta.url)) }); }
+    catch (error: any) { if (error.code !== "ENOENT") throw error; }
+  }
   return sha256(JSON.stringify(inputs.map(i => ({ name: i.name, sha256: sha256(i.content) }))));
 }
 async function runTex(archive: string, destination: string, options: PrepareOptions, helper: string) {
@@ -278,7 +268,14 @@ export async function prepareSource(root: string, id: string, options: PrepareOp
   };
   const template = validateTemplate(options.template ?? (binding ? ARXIV_TEMPLATE : GENERIC_TEMPLATE));
   const helper = await resolveHelper();
-  const recipe = { parser_version: PARSER_VERSION, implementation_sha256: await parserIdentity(helper), inputs: raw.artifacts.map(a => ({ id: a.id, sha256: a.sha256 })).sort((a, b) => a.id.localeCompare(b.id)), template, limits };
+  const recipe = {
+    parser_version: PARSER_VERSION, implementation_sha256: await parserIdentity(helper), source_identity: identity(source),
+    extraction_context: {
+      title: source.title, kind: source.kind,
+      acquisitions: raw.acquisitions.map(a => ({ kind: a.kind, url_field: a.url_field ?? a.kind, requested_url: a.requested_url, final_url: a.final_url, content_type: a.content_type, text_encoding: a.text_encoding ?? null, artifact: a.artifact })).sort((a, b) => a.artifact.id.localeCompare(b.artifact.id)),
+    },
+    inputs: raw.artifacts.map(a => ({ id: a.id, sha256: a.sha256 })).sort((a, b) => a.id.localeCompare(b.id)), template, limits,
+  };
   const preparationKey = sha256(JSON.stringify(recipe));
   const generationRel = `.local/prepared/${key}/generations/${preparationKey}`;
   const generation = await noSymlinkPath(root, generationRel);
@@ -286,6 +283,8 @@ export async function prepareSource(root: string, id: string, options: PrepareOp
   const pointerPath = await privatePath(root, `prepared/${key}/current.json`);
   const existing = await optionalJson(await noSymlinkPath(root, manifestRel)) as PreparedManifest | null;
   if (existing) {
+    if (existing.source_id !== source.id || existing.source_key !== key || existing.version !== (source.version ?? null) || sha256(JSON.stringify(existing.source_identity)) !== identitySha(source)) throw new Error("prepared_cache_identity_mismatch");
+    if (existing.preparation_key !== preparationKey || existing.parser_version !== PARSER_VERSION) throw new Error("prepared_cache_recipe_mismatch");
     await verifyArtifacts(root, existing.artifacts);
     const manifestSha = sha256(await readFile(await noSymlinkPath(root, manifestRel)));
     await writeJson(pointerPath, { ...existing, manifest_path: manifestRel, manifest_sha256: manifestSha });
@@ -308,7 +307,8 @@ export async function prepareSource(root: string, id: string, options: PrepareOp
       if (source.kind === "paper" || binding) throw new Error("paper_raw_text_not_allowed");
       options.signal?.throwIfAborted();
       const bytes = await readFile(await noSymlinkPath(root, textRaw.artifact.path));
-      const text = decodeSourceText(bytes), lineCount = text.split("\n").length - (text.endsWith("\n") ? 1 : 0);
+      if (!isTextContextArtifact({ role: "prompt_context", format: textRaw.artifact.format })) throw new Error("unsupported_text_context_format");
+      const text = decodeTextContext(bytes), lineCount = text.split("\n").length - (text.endsWith("\n") ? 1 : 0);
       const extension = extname(textRaw.artifact.path) || ".txt";
       const contextPath = ["markdown", "text"].includes(textRaw.artifact.format) ? "document.llms.txt" : `document${extension}`;
       // Do not trim, render, execute, or synthesize the source. It remains an exact

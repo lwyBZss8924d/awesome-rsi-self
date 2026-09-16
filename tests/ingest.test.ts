@@ -206,6 +206,64 @@ describe("non-paper source text", () => {
   });
 });
 
+describe("preparation source and extraction identity", () => {
+  const documentSource = (url: string) => ({ id: "identity-context", kind: "documentation", version: "pinned", title: "Identity context", urls: { canonical: url, html: url }, tags: [] });
+  async function setSource(root: string, url: string) {
+    await writeFile(resolve(root, "sources/source-manifest.json"), JSON.stringify({ schema_version: "rsi.sources.v1", updated_at: "2026-09-16T00:00:00Z", sources: [documentSource(url)] }));
+  }
+  const sameHtml = (finalUrl?: string) => (async () => {
+    const response = new Response(html, { headers: { "content-type": "text/html" } });
+    if (finalUrl) Object.defineProperty(response, "url", { value: finalUrl });
+    return response;
+  }) as unknown as typeof fetch;
+  async function assets(root: string, output: Awaited<ReturnType<typeof prepareSource>>) {
+    return JSON.parse(await readFile(resolve(root, output.artifacts.find(item => item.id === "source-assets")!.path), "utf8")).assets;
+  }
+
+  test("same bytes at a new source URL create a new bound generation and preserve the old one", async () => {
+    const firstUrl = "https://example.test/old/document.html", secondUrl = "https://example.test/new/document.html";
+    const root = await setup(documentSource(firstUrl));
+    const firstRaw = await fetchSource(root, "identity-context", { fetch: sameHtml() });
+    const first = await prepareSource(root, "identity-context"), firstManifestBytes = await readFile(resolve(root, String(first.manifest_path)));
+    await setSource(root, secondUrl);
+    const secondRaw = await fetchSource(root, "identity-context", { fetch: sameHtml() });
+    expect(secondRaw.artifacts[0].sha256).toBe(firstRaw.artifacts[0].sha256);
+    const second = await prepareSource(root, "identity-context");
+    expect(second.cache_hit).toBe(false); expect(second.preparation_key).not.toBe(first.preparation_key);
+    expect(second.source_identity).toEqual({ id: "identity-context", version: "pinned", urls: documentSource(secondUrl).urls });
+    expect((await getPreparedManifest(root, "identity-context"))?.preparation_key).toBe(String(second.preparation_key));
+    expect((await assets(root, first))[0].url).toBe("https://example.test/old/figure.png");
+    expect((await assets(root, second))[0].url).toBe("https://example.test/new/figure.png");
+    expect(sha256(await readFile(resolve(root, String(first.manifest_path))))).toBe(sha256(firstManifestBytes));
+    const recipe = JSON.parse(await readFile(resolve(root, second.artifacts.find(item => item.id === "preparation-recipe")!.path), "utf8"));
+    expect(recipe.source_identity.urls.html).toBe(secondUrl); expect(JSON.stringify(recipe)).not.toContain(root);
+    expect((await prepareSource(root, "identity-context")).cache_hit).toBe(true);
+  });
+
+  test("same source identity and bytes at a new final URL invalidate URL-dependent context", async () => {
+    const url = "https://example.test/document.html", root = await setup(documentSource(url));
+    const firstRaw = await fetchSource(root, "identity-context", { fetch: sameHtml("https://cdn.example.test/old/document.html") });
+    const first = await prepareSource(root, "identity-context");
+    const secondRaw = await fetchSource(root, "identity-context", { refresh: true, fetch: sameHtml("https://cdn.example.test/new/document.html") });
+    expect(secondRaw.artifacts[0].sha256).toBe(firstRaw.artifacts[0].sha256);
+    const second = await prepareSource(root, "identity-context");
+    expect(second.source_identity).toEqual(first.source_identity); expect(second.preparation_key).not.toBe(first.preparation_key);
+    expect((await assets(root, first))[0].url).toBe("https://cdn.example.test/old/figure.png");
+    expect((await assets(root, second))[0].url).toBe("https://cdn.example.test/new/figure.png");
+  });
+
+  test("a cached generation with mismatched identity is refused without rewriting the pointer", async () => {
+    const root = await setup(documentSource("https://example.test/document.html"));
+    await fetchSource(root, "identity-context", { fetch: sameHtml() });
+    const first = await prepareSource(root, "identity-context"), pointer = resolve(root, `.local/prepared/${first.source_key}/current.json`);
+    const pointerBefore = await readFile(pointer), file = resolve(root, String(first.manifest_path)), manifest = JSON.parse(await readFile(file, "utf8"));
+    manifest.source_identity.urls.html = "https://wrong.example.test/document.html";
+    await writeFile(file, JSON.stringify(manifest));
+    await expect(prepareSource(root, "identity-context")).rejects.toThrow("prepared_cache_identity_mismatch");
+    expect(sha256(await readFile(pointer))).toBe(sha256(pointerBefore));
+  });
+});
+
 describe("local parse requests and visual receipts", () => {
   test("reuses successful parse across preparation generations with the same bytes/configuration", async () => {
     const { root } = await prepared();

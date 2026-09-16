@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { z } from "zod";
 import { sourceKey, type Source } from "../contracts.ts";
 import { noSymlinkPath, sha256 } from "../io.ts";
+import { decodeTextContext, isTextContextArtifact } from "../text-context.ts";
 import { evidenceSchema, recordedEvidenceSchema, type Evidence, type RecordedEvidence } from "./contracts.ts";
 
 export function strictRelative(path: string): string {
@@ -48,10 +49,10 @@ export async function validateEvidence(root: string, evidenceInput: Evidence, so
   const members = manifest.artifacts.filter(artifact => artifact.path === artifactPath);
   if (members.length !== 1 || members[0]!.sha256 !== evidence.sha256) throw new Error("artifact_not_bound_by_manifest");
   const member = members[0]!;
-  if (!/\.(?:txt|md|tex)$/i.test(artifactPath) || (member.role && ["context_index", "source_map", "metadata"].includes(member.role))) throw new Error("evidence_requires_context_leaf");
+  if (!isTextContextArtifact(member)) throw new Error("evidence_requires_context_leaf");
   const bytes = await readFile(await noSymlinkPath(root, artifactPath));
   if (sha256(bytes) !== evidence.sha256 || (member.bytes !== undefined && bytes.byteLength !== member.bytes)) throw new Error("artifact_digest_mismatch");
-  const text = new TextDecoder("utf-8", { fatal: true }).decode(bytes), lines = text.split(/\r?\n/);
+  const text = decodeTextContext(bytes), lines = text.split(/\r?\n/);
   if (lines.at(-1) === "") lines.pop();
   if (evidence.locator.end_line < evidence.locator.start_line || evidence.locator.end_line > lines.length) throw new Error("locator_out_of_bounds");
   if (!lines.slice(evidence.locator.start_line - 1, evidence.locator.end_line).join("\n").trim()) throw new Error("locator_empty");

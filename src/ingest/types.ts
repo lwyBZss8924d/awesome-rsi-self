@@ -1,6 +1,6 @@
 import type { Source } from "../contracts.ts";
 
-export const PARSER_VERSION = "rsi-paper-context/1.0.2";
+export const PARSER_VERSION = "rsi-paper-context/1.0.3";
 export type IngestStatus = "fetched" | "prepared" | "partial" | "unavailable";
 export type Artifact = {
   id: string;

@@ -4,6 +4,7 @@ import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { buildKnowledge, importContribution, lintKnowledge, parseMarkdown, readKnowledge, searchKnowledge, serializeMarkdown, trustTier, type Contribution } from "../src/knowledge/index.ts";
 import { sha256 } from "../src/io.ts";
+import { fetchSource, prepareSource } from "../src/ingest/index.ts";
 
 const roots: string[] = [];
 afterEach(async () => { for (const root of roots.splice(0)) await rm(root, { recursive: true, force: true }); });
@@ -108,6 +109,57 @@ describe("source-grounded contribution import", () => {
     await expect(importContribution(f.root, f.contribution)).rejects.toThrow("symlink_path");
     await put(f.root, "wiki/knowledge-manifest.json", { schema_version: "rsi.knowledge-manifest.v1", files: { "../escape.md": { kind: "derived", sha256: "a".repeat(64) } }, imports: {} });
     await expect(buildKnowledge(f.root)).rejects.toThrow("invalid_wiki_path");
+  });
+});
+
+describe("prepared textual evidence integration", () => {
+  test.each([
+    ["ts", "typescript", "export const retries = 2;\nthrow new Error('source must never execute');\n"],
+    ["qmd", "quarto-markdown", "---\ntitle: Context\n---\n\n# Findings\nA source observation.\n"],
+  ])("imports genuine prepared %s context with portable source metadata", async (extension, format, contents) => {
+    const root = await mkdtemp(join(tmpdir(), "rsi-text-contribution-")); roots.push(root);
+    const url = `https://example.test/pinned/document.${extension}`;
+    await put(root, "sources/source-manifest.json", { schema_version: "rsi.sources.v1", updated_at: at, sources: [{ id: "text-source", kind: "documentation", version: "pinned", title: "Source context", urls: { canonical: url, html: url }, tags: [] }] });
+    const remote = (async () => new Response(contents, { headers: { "content-type": "text/plain; charset=utf-8" } })) as unknown as typeof fetch;
+    await fetchSource(root, "text-source", { fetch: remote });
+    const prepared = await prepareSource(root, "text-source");
+    const leaf = prepared.artifacts.find(item => item.id === "document-context")!;
+    expect(leaf.format).toBe(format); expect(leaf.role).toBe("prompt_context"); expect(leaf.path).toEndWith(`document.${extension}`);
+    const input: Contribution = {
+      schema_version: "rsi.knowledge-contribution.v1", id: `text-${extension}`, generated: { by: "test/text-context", at },
+      source_manifest_sha256: sha256(await readFile(join(root, "sources/source-manifest.json"))),
+      pages: [{ path: `concepts/${extension}-source.md`, frontmatter: { type: "Reference", title: "Source observation" }, body: "The source has been inspected as text, without execution.[^text-source]\n\n[^text-source]: Exact pinned context.",
+        evidence: [{ source_id: "text-source", version: "pinned", prepared_manifest: String(prepared.manifest_path), prepared_manifest_sha256: String(prepared.manifest_sha256), artifact: leaf.path, sha256: leaf.sha256, locator: { start_line: 1, end_line: contents.trimEnd().split("\n").length } }] }],
+    };
+    expect((await importContribution(root, input)).ok).toBe(true);
+    expect((await lintKnowledge(root)).ok).toBe(true);
+    const wiki = await readFile(join(root, `wiki/concepts/${extension}-source.md`), "utf8");
+    expect(wiki).not.toContain(root); expect(wiki).not.toContain(".local/");
+    expect((await readKnowledge(root, `concepts/${extension}-source.md`)).trust).toBe("unverified");
+  });
+
+  test.each([
+    ["context_index", "markdown"], ["metadata", "text"], ["provenance", "json"],
+    ["configuration", "yaml"], ["prompt_context", "png"], ["source_extracted", "pdf"],
+  ])("rejects bound %s/%s artifacts despite a textual suffix", async (role, format) => {
+    const f = await fixture();
+    f.manifest.artifacts[0]!.role = role; f.manifest.artifacts[0]!.format = format;
+    await put(f.root, f.manifestPath, f.manifest);
+    f.contribution.pages[0]!.evidence[0]!.prepared_manifest_sha256 = sha256(await readFile(join(f.root, f.manifestPath)));
+    await expect(importContribution(f.root, f.contribution)).rejects.toThrow("evidence_requires_context_leaf");
+  });
+
+  test.each([
+    [new Uint8Array([0xff, 0xfe]), "text_invalid_utf8"],
+    [new TextEncoder().encode("%PDF-1.7\nNot a text source"), "binary_disguised_as_text"],
+  ])("validates actual context bytes after role/format binding", async (bytes, reason) => {
+    const f = await fixture(), artifact = f.manifest.artifacts[0]!;
+    await writeFile(join(f.root, f.artifact), bytes);
+    artifact.sha256 = sha256(bytes); artifact.bytes = bytes.byteLength;
+    await put(f.root, f.manifestPath, f.manifest);
+    const evidence = f.contribution.pages[0]!.evidence[0]!;
+    evidence.sha256 = artifact.sha256; evidence.prepared_manifest_sha256 = sha256(await readFile(join(f.root, f.manifestPath)));
+    await expect(importContribution(f.root, f.contribution)).rejects.toThrow(reason);
   });
 });
 

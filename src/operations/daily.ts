@@ -67,23 +67,78 @@ export function mergeDiscovered(existing:Source[], discovered:Source[]) {
   return {sources:merged,added,conflicts};
 }
 
-export async function resolveArxivVersions(candidates:Source[],options:{signal?:AbortSignal;deadlineAt?:number;fetch?:typeof fetch}={}){
+type ArxivRequestOptions={signal?:AbortSignal;deadlineAt?:number;fetch?:typeof fetch};
+type ArxivClock={now:()=>number;pause:(milliseconds:number,signal:AbortSignal)=>Promise<void>};
+
+/** One queue for actual metadata requests. The clock port is for deterministic tests only. */
+export function createArxivMetadataClient(clock:ArxivClock={now:Date.now,pause:abortablePause}){
+  let tail=Promise.resolve(),availableAt=0;
+  return async(url:string,options:ArxivRequestOptions={}):Promise<string>=>{
+    const deadline=Number.isFinite(options.deadlineAt)?options.deadlineAt!:clock.now()+30_000;
+    if(deadline<=clock.now())throw new Error("run_budget_exhausted");
+    const timeout=AbortSignal.timeout(Math.max(1,Math.ceil(deadline-clock.now())));
+    const signal=options.signal?AbortSignal.any([options.signal,timeout]):timeout;
+    signal.throwIfAborted();
+    const previous=tail;let release!:()=>void;
+    const ticket=new Promise<void>(resolveTicket=>{release=resolveTicket;});
+    tail=previous.then(()=>ticket);
+    try{
+      await new Promise<void>((resolveTurn,reject)=>{
+        const abort=()=>reject(signal.reason??new Error("run_cancelled"));
+        signal.addEventListener("abort",abort,{once:true});
+        previous.then(()=>{signal.removeEventListener("abort",abort);resolveTurn();});
+        if(signal.aborted)abort();
+      });
+      let retrying429=false;
+      for(let attempt=0;attempt<2;attempt++){
+        signal.throwIfAborted();
+        if(availableAt>=deadline||clock.now()>=deadline)throw new Error(retrying429?"arxiv_version_lookup_http:429:retry_after_exceeds_deadline":"run_budget_exhausted");
+        if(availableAt>clock.now())await clock.pause(availableAt-clock.now(),signal);
+        signal.throwIfAborted();
+        if(clock.now()>=deadline)throw new Error("run_budget_exhausted");
+        const requestSignal=AbortSignal.any([signal,AbortSignal.timeout(Math.max(1,Math.ceil(Math.min(30_000,deadline-clock.now()))))]);
+        let retryAfter=0;
+        try{
+          const response=await (options.fetch??globalThis.fetch)(url,{signal:requestSignal,headers:{Accept:"application/atom+xml"}});
+          if(!response.ok){
+            if(response.status===429){
+              const value=response.headers.get("Retry-After")?.trim();
+              if(value){const parsed=/^\d+(?:\.\d+)?$/.test(value)?clock.now()+Number(value)*1000:Date.parse(value);if(!Number.isNaN(parsed))retryAfter=parsed;}
+            }
+            await response.body?.cancel().catch(()=>{});
+            requestSignal.throwIfAborted();
+            if(response.status===429&&attempt===0){retrying429=true;continue;}
+            throw new Error(`arxiv_version_lookup_http:${response.status}`);
+          }
+          const reader=response.body?.getReader();if(!reader)throw new Error("arxiv_version_response_missing");
+          const chunks:Uint8Array[]=[];let total=0;
+          const cancel=()=>{void reader.cancel(requestSignal.reason).catch(()=>{});};
+          requestSignal.addEventListener("abort",cancel,{once:true});
+          try{
+            while(true){requestSignal.throwIfAborted();const next=await reader.read();if(next.done)break;total+=next.value.byteLength;if(total>2*1024*1024)throw new Error("arxiv_version_response_limit");chunks.push(next.value);}
+            requestSignal.throwIfAborted();
+            return Buffer.concat(chunks).toString("utf8");
+          }finally{requestSignal.removeEventListener("abort",cancel);await reader.cancel().catch(()=>{});}
+        }finally{
+          // arXiv API guidance asks for a 3-second delay between consecutive calls.
+          // Retain the queue through body consumption/cancellation, including 429 retries.
+          availableAt=Math.max(availableAt,clock.now()+3000,retryAfter);
+        }
+      }
+      throw new Error("arxiv_version_lookup_http:429");
+    }finally{release();}
+  };
+}
+const arxivMetadataClient=createArxivMetadataClient();
+
+export async function resolveArxivVersions(candidates:Source[],options:ArxivRequestOptions&{metadataClient?:ReturnType<typeof createArxivMetadataClient>}={}){
   const unresolved=candidates.filter(s=>s.kind==="paper"&&!s.version);
   if(!unresolved.length)return candidates;
   const ids=unresolved.map(s=>arxivIdentity(s.urls.canonical)?.id);
   if(ids.some(id=>!id))throw new Error("version_resolution_requires_arxiv_id");
   if(ids.length>100)throw new Error("arxiv_version_batch_exceeds_100");
-  const milliseconds=Math.min(30000,(options.deadlineAt??Infinity)-Date.now());
-  if(milliseconds<=0)throw new Error("run_budget_exhausted");
-  const signal=options.signal?AbortSignal.any([options.signal,AbortSignal.timeout(milliseconds)]):AbortSignal.timeout(milliseconds);
   const url=`https://export.arxiv.org/api/query?id_list=${ids.join(",")}&max_results=${ids.length}`;
-  const response=await (options.fetch??globalThis.fetch)(url,{signal,headers:{Accept:"application/atom+xml"}});
-  if(!response.ok)throw new Error(`arxiv_version_lookup_http:${response.status}`);
-  const reader=response.body?.getReader();if(!reader)throw new Error("arxiv_version_response_missing");
-  const chunks:Uint8Array[]=[];let total=0;
-  try{while(true){const next=await reader.read();if(next.done)break;total+=next.value.byteLength;if(total>2*1024*1024)throw new Error("arxiv_version_response_limit");chunks.push(next.value);}}
-  finally{await reader.cancel().catch(()=>{});}
-  const xml=Buffer.concat(chunks).toString("utf8"),doc=new DOMParser().parseFromString(xml,"text/xml");
+  const xml=await (options.metadataClient??arxivMetadataClient)(url,options),doc=new DOMParser().parseFromString(xml,"text/xml");
   const resolved=new Map<string,string>();
   for(const entry of Array.from(doc.getElementsByTagName("entry"))){const identifier=entry.getElementsByTagName("id")[0]?.textContent?.trim();const identity=identifier?arxivIdentity(identifier):null;if(identity?.version)resolved.set(identity.id,identity.version);}
   return candidates.map(s=>{
@@ -212,7 +267,6 @@ export async function runDaily(root:string, input:DailyConfigInput, options:Dail
             const candidates=delta.sources.filter(s=>!hasKnownArxivSource(s,[...registered,...discovered]));
             // Each resolver call has a byte/time ceiling; the total deadline bounds the list.
             for(let offset=0;offset<candidates.length;offset+=100){
-              if(offset)await abortablePause(3000,ctx.signal);
               discovered.push(...await resolveArxivVersions(candidates.slice(offset,offset+100),{signal:ctx.signal,deadlineAt}));
             }
           }
@@ -233,7 +287,6 @@ export async function runDaily(root:string, input:DailyConfigInput, options:Dail
           await writeJson(resolve(attemptDir,"selection.json"),{...selected,sources:undefined,raw_sha256:sha256(receipt.stdout),run_id:runId,request_sha256:requestSha});
           selections[discovery.id]={counts:selected.counts,receipt:relative(runDir,resolve(attemptDir,"selection.json"))};
           for(let offset=0;offset<selected.sources.length;offset+=100){
-            if(offset)await abortablePause(3000,ctx.signal);
             const batch=selected.sources.slice(offset,offset+100);
             discovered.push(...(discovery.resolveVersions?await resolveArxivVersions(batch,{signal:ctx.signal,deadlineAt}):batch));
           }

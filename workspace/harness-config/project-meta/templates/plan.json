@@ -1,0 +1,12 @@
+{
+  "schema_version": "project-meta.plan.v1",
+  "project_id": "awesome-rsi-self",
+  "id": null,
+  "status": "planned",
+  "objective": null,
+  "steps": [],
+  "acceptance": [],
+  "sources": [],
+  "evidence": [],
+  "next_action": null
+}

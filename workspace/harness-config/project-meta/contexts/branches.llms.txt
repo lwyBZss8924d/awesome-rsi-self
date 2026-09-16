@@ -1,0 +1,24 @@
+# Branches and worktrees
+
+Use this branch when isolation or delivery requires a branch/worktree decision.
+
+## Inspect before choosing
+
+Read git status, current branch/revision and git worktree list. Preserve staged and
+untracked user work. Read the repository's actual branch and merge convention;
+project.json's branch_policy records a selected local choice, not proof of state.
+
+## Select the smallest useful isolation
+
+Reuse a suitable worktree when ownership is clear. Use a new worktree when parallel
+edits, a dirty tree or independent review needs isolation. Do not create a fleet,
+branch or worktree merely because this branch was read.
+
+Record the selected repository/worktree, source revision, owner and intended change.
+Keep environment variables and shared resources scoped to their real owners.
+
+## Deliver and continue
+
+Validate the affected behavior, commit intended work when required, and follow the
+repository's note/backup workflow. Push, publication and remote cleanup have their
+own task authorization. Do not remove a worktree with foreign or live work.

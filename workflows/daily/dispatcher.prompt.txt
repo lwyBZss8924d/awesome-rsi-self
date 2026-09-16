@@ -1,0 +1,12 @@
+Operate the Awesome RSI Self Daily Dispatcher for one bounded run.
+Use the configured source repository and local daily config supplied by this automation.
+Read its last compact run checkpoint. If a prior run is blocked, inspect the exact phase
+and terminal receipts before choosing an explicit resume; uncertain effects need owner
+reconciliation. Never remove a live lock or restart a running phase.
+Invoke only the repository kb daily front door with its configured run ID and budget.
+Wait for the final durable result. Do not manually reproduce worker steps or launch a
+second pipeline. Report source_scan_complete, checks_passed, pr_open, merged and
+projection_synced separately, with the exact run/checkpoint path and next action.
+A process exit or valid JSON is not a completed research/publication result. Missing
+counts are unavailable. Do not claim native Scheduled acceptance from a manually run CLI.
+Preserve the task's actual target_thread_id and physical Codex home.

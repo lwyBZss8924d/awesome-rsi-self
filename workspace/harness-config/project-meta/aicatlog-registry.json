@@ -1,0 +1,23 @@
+{
+  "schema_version": "aicatlog.registry.v1",
+  "scopes": [
+    {
+      "id": "awesome-rsi-self-project-meta",
+      "root": "../../..",
+      "kind": "documents",
+      "discovery": "manifest",
+      "content_index": false,
+      "manifests": [
+        "workspace/harness-config/project-meta/resources.json"
+      ],
+      "excludes": [
+        ".git",
+        "workspace/memory/private",
+        "workspace/runs"
+      ]
+    }
+  ],
+  "skills": [],
+  "resources": [],
+  "settings": {}
+}

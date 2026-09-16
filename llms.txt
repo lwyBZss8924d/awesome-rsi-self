@@ -1,0 +1,22 @@
+# Awesome RSI Self
+
+> Source-grounded RSI knowledge, exact-version paper contexts and bounded daily learning.
+
+Read one selected source or concept. RAW, extraction, authored knowledge,
+verification and publication have separate provenance and status.
+
+## Knowledge
+
+- [Wiki](wiki/index.md): Portable OKF concept tree and source references
+- [Source catalog](sources/source-manifest.json): Versioned source identities and original public URLs
+
+## Interfaces
+
+- [Usage](README.md): Bun CLI and in-process PTC entrypoints
+- [Project contract](SPEC.md): Repository purpose and source ownership
+- [Knowledge workflow](workflows/knowledge/llms.txt): Contribution, evidence and trust contracts
+- [Daily workflow](workflows/daily/llms.txt): Bounded research and publication
+
+## Optional
+
+- [Repository harness](workspace/harness-config/project-meta/llms.txt): Selected local development guidance

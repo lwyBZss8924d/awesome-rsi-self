@@ -1,0 +1,14 @@
+Read the exact independent review request at {request}.
+Inspect its candidate.commit, candidate.digest, changed paths and source-bound evidence.
+Review the exact committed candidate in the working repository against the prepared
+original sources. Read required HTML/TeX/visual evidence directly. Research conclusions
+are candidate claims, not an authority. Focus on factual support, omissions, conflicts,
+misleading trust labels and accidental private-context publication.
+Return one rsi.worker-result.v1 JSON envelope:
+schema_version=rsi.worker-result.v1, request_sha256={requestSha256}, outcome=complete,
+artifacts=[], review={candidate_commit:<request candidate commit>,
+candidate_digest:<request candidate digest>, verdict:accept|reject|unverified,
+checked_claims:<actual count>, issues:[<concrete unsupported or uncertain claims>]}.
+Use unverified when required evidence cannot be inspected. Never lower a threshold or
+infer missing evidence from process success. The host records the final answer at
+{output}. Make no source edits, publication, cleanup or scheduler changes.

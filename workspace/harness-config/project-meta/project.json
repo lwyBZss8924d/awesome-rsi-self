@@ -1,0 +1,49 @@
+{
+  "schema_version": "self-skills-lab.project-meta.v1",
+  "project_id": "awesome-rsi-self",
+  "project_name": "Awesome RSI Self",
+  "purpose": "Maintain a source-grounded, portable RSI knowledge wiki with exact-version paper preprocessing and a bounded daily learning and publication workflow.",
+  "modules": [
+    "environment",
+    "branches",
+    "workspace",
+    "knowledge",
+    "skills",
+    "coordination"
+  ],
+  "areas": {
+    "harness_config": "workspace/harness-config",
+    "harness_tooling": "workspace/harness-tooling",
+    "issues": "workspace/issues",
+    "tasks": "workspace/tasks",
+    "plans": "workspace/exec-plans",
+    "state": "workspace/state",
+    "evidence": "workspace/tasks/artifacts",
+    "handoff": "workspace/handoff",
+    "runs": "workspace/runs",
+    "project_skills": "workspace/project-skills",
+    "knowledge": "workspace/knowledge",
+    "private_memory": "workspace/memory/private",
+    "worktrees": ".worktrees"
+  },
+  "root_contracts": "create_missing",
+  "checks": [
+    {
+      "id": "test",
+      "argv": [
+        "bun",
+        "test"
+      ],
+      "when": "Runtime parsing, state, indexing, publication, or projection behavior changes."
+    }
+  ],
+  "shared_skills": [],
+  "coordination": {
+    "roles": [],
+    "hook_candidates": []
+  },
+  "branch_policy": {
+    "base": "main",
+    "isolation": "when-useful"
+  }
+}

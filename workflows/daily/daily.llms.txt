@@ -1,0 +1,99 @@
+# Daily source-to-knowledge operation
+
+> The source repository owns code and accepted knowledge. Local private state owns run evidence; exports own only their previous digest-listed files.
+
+BEGIN_TOPIC interfaces
+schema: rsi.daily-config.v1
+api: dailyPlan(root, config); runDaily(root, config, options); exportKnowledge(root, options)
+cli: bun run cli -- kb daily --config LOCAL_CONFIG --json
+apply: bun run cli -- kb daily --config LOCAL_CONFIG --apply --runId RUN_ID --json
+resume: append --resume only for an intentionally resumed blocked run.
+default: one run per UTC date, 1800 seconds total, at most three exact-version sources.
+State and receipts remain under .local/daily. A run begins from a clean committed source
+revision and uses its own detached worktree. The caller supplies fetch/prepare/compile/
+lint/build callbacks; CLI adapters use the repository's owned implementations. Callbacks
+must honor context.signal and context.deadlineAt and must settle before returning.
+END_TOPIC interfaces
+
+BEGIN_TOPIC inputs
+Upstream repositories are input snapshots, never branches merged into the Wiki.
+Configured URLs must use HTTPS or file URLs. Each successful fetch binds an exact
+commit and selected file digests. A prior accepted commit is a separate cursor.
+Discovery invokes exact argument arrays, with no shell interpolation. Template variables
+are {root}, {runDir}, {request}, {output}; workers also receive {requestSha256}.
+Normalized discovery writes rsi.discovery.v1 with complete=true and Source[] sources.
+The hf_papers adapter parses stdout from an explicitly configured hf papers list --json.
+Its resolveVersions option defaults true and resolves unversioned IDs with one bounded
+arXiv Atom API lookup (maximum 100 items, 2 MiB and 30 seconds within the run budget).
+The exact response digest and resolved version are retained as provenance. Lookup failure
+blocks the scan rather than inventing v1. Setting resolveVersions=false queues unresolved
+entries; those entries are not selected for full-source research until explicitly versioned.
+Unknown response shapes and incomplete scans block; they are not successful empty lists.
+Unversioned papers remain visible candidates pending exact-version resolution. Discovery
+does not replace reviewed versions silently; conflicts are written into the input receipt.
+New normalized Sources enter the candidate manifest and are reviewed with the Wiki.
+END_TOPIC inputs
+
+BEGIN_TOPIC workers
+Each worker receives a persisted rsi.worker-request.v1. Its UTF-8 file SHA256 is the
+request_sha256 required in rsi.worker-result.v1. Output is complete, partial or failed;
+only complete with matching request digest can advance the pipeline.
+Research returns a rsi.knowledge-contribution.v1 object for the owned importer. It
+does not need write access to tracked files. HTML/TeX preparation precedes research;
+the raw originals, cleaned resource manifest, source maps and any visual inspection
+receipts remain separate artifacts. lit and view_image belong to explicitly selected
+preparation/inspection steps, not an unbounded implicit tool search in this runner.
+Every declared artifact path is relative to the candidate repository, cannot traverse
+symlinks, and must have matching bytes. Process outputs have time and byte ceilings.
+The worker env clears inherited Codex native identity fields. codexHome is the only
+physical-home selector; never copy credentials. Native session IDs are observed from
+provider thread.started events, never trusted from the worker's result JSON.
+END_TOPIC workers
+
+BEGIN_TOPIC acceptance
+The owned compile importer, lint and build run before creating a candidate commit.
+Only README/LICENSE/NOTICE/NOTICE.txt/llms.txt, sources/source-manifest.json,
+views/current.json, manifests/, wiki/ and docs/ are eligible daily publication content.
+Other code edits block publication.
+Candidate changed-file hashes and exact commit are fixed before the independent review.
+The reviewer must match both, return accept with no issues, and check at least one
+claim when sources were selected. This is a semantic review signal, not proof from
+JSON shape alone. The candidate must remain clean and unchanged after the review.
+A machine-readable PoUW note is attached to the local candidate. Process-derived IDs
+are recorded as observed; missing primary/native provenance remains null, not invented.
+END_TOPIC acceptance
+
+BEGIN_TOPIC publication
+Remote effects require publication.enabled and an explicit owner/repo slug. The Git
+remote URL must match that repository. Publication verifies a clean candidate, checks
+the deterministic run branch before pushing, finds or creates one PR, verifies its exact
+head, and requires every named CI check to pass. Auto-merge is requested with a matching
+head commit. Only an observed merged PR plus unchanged reviewed files can permit export.
+checks_passed, pr_open, merged and projection_synced remain separate result axes. Missing
+remote evidence stays null. A pending PR can be read/reconciled by an explicit resume;
+it does not rerun research or create another PR. A queued merge is not a completed merge.
+This package never asserts native Scheduled acceptance. Native task registration and a
+real Scheduled run are separately observed by the host's supported automation interface.
+END_TOPIC publication
+
+BEGIN_TOPIC continuation
+Each phase saves running before work, then passed/failed plus a result digest. An explicit
+resume reuses verified passed phase receipts. A phase left running by a crashed process
+requires owner reconciliation; it is never treated as unexecuted. Resume requires unchanged
+source commit and config. Publication reconciliation rechecks current remote identity.
+The run lock is exclusive. A live PID or process group remains blocking. A dead lock is
+recoverable only for the same explicitly resumed run with terminal quiescent subprocess
+receipts. Timeout/cancellation kills the owned process group and records the interruption.
+Never remove a live lock or replay uncertain effects solely to obtain a green result.
+END_TOPIC continuation
+
+BEGIN_TOPIC projection
+exportKnowledge stages a public whitelist from one clean exact source commit. It excludes
+Git metadata, RAW caches, private state, binary content without a policy, machine-local
+absolute paths and symlinks. A previous .rsi-projection.json receipt owns only its listed
+relative files and digests. Foreign edits or collisions stop before applying a change.
+Only exact owned stale files can be removed; other target files remain untouched.
+The projection has an exclusive target lock, a transaction record and matching-byte rollback.
+A catalog refresh uses a separately configured argv command. It cannot implicitly edit a
+foreign source catalog. File projection and catalog refresh outcomes are distinct.
+END_TOPIC projection

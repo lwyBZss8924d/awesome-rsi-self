@@ -1,0 +1,76 @@
+{
+  "schema_version": "aicatlog.registry.v1",
+  "scopes": [
+    {
+      "id": "awesome-rsi-self-project-meta",
+      "root": ".",
+      "kind": "documents",
+      "content_index": false,
+      "hidden": true,
+      "excludes": [
+        ".git",
+        "workspace/memory/private",
+        "workspace/runs"
+      ],
+      "no_require_git": true,
+      "max_file_bytes": 67108864,
+      "idle_seconds": 900,
+      "manifests": [
+        "workspace/harness-config/project-meta/resources.json"
+      ],
+      "manifest_base": "file",
+      "linked_roots": [],
+      "discovery": "manifest"
+    },
+    {
+      "id": "rsi-kb",
+      "root": ".",
+      "kind": "documents",
+      "content_index": true,
+      "hidden": false,
+      "excludes": [
+        ".git",
+        ".local",
+        "node_modules",
+        "vendor",
+        "dist",
+        "tests",
+        "workspace",
+        "src",
+        "scripts",
+        "tools",
+        ".github",
+        "rsi.config.json",
+        "docs",
+        "views",
+        "wiki/knowledge-manifest.json"
+      ],
+      "no_require_git": true,
+      "max_file_bytes": 67108864,
+      "idle_seconds": 900,
+      "manifests": [],
+      "manifest_base": "file",
+      "linked_roots": [],
+      "discovery": "recursive"
+    }
+  ],
+  "skills": [],
+  "clients": [],
+  "project_clients": [],
+  "normalization_rules": [],
+  "resources": [
+    {
+      "id": "rsi-kb:llms.txt",
+      "name": "Awesome RSI Self navigation",
+      "kind": "document",
+      "scope": "rsi-kb",
+      "owner": "awesome-rsi-self",
+      "summary": "Progressive source and knowledge navigation",
+      "path": "llms.txt",
+      "children": [],
+      "document_role": "context_index",
+      "context_format": "llms-txt-v2"
+    }
+  ],
+  "settings": {}
+}

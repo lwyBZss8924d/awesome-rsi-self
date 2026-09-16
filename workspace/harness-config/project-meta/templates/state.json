@@ -1,0 +1,14 @@
+{
+  "schema_version": "project-meta.state.v1",
+  "project_id": "awesome-rsi-self",
+  "objective": null,
+  "status": "active",
+  "confirmed_facts": [],
+  "artifacts": [],
+  "unresolved": [],
+  "next_action": null,
+  "source_revision": null,
+  "primary_session_id": null,
+  "partner_sessions": [],
+  "source_raw_session_ids": []
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "project-meta.checkpoint.v1",
+  "project_id": "awesome-rsi-self",
+  "task_id": null,
+  "objective": null,
+  "status": "active",
+  "completed": [],
+  "evidence": [],
+  "unresolved": [],
+  "next_action": null,
+  "source_revision": null,
+  "primary_session_id": null,
+  "partner_sessions": [],
+  "source_raw_session_ids": []
+}

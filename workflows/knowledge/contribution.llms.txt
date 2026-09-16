@@ -1,0 +1,53 @@
+# Source-grounded contribution workflow
+
+resource_role: prompt_context
+format: markdown
+contract: rsi.knowledge-contribution.v1
+owner: src/knowledge/index.ts
+
+## Input and reading
+
+1. Read the current source registry, select exact source IDs and versions, and compute the SHA-256 of its bytes. A registry edit before import requires rebinding the contribution after checking the edited source identities.
+2. Use the source's current preparation manifest to discover immutable generation artifacts. Read the relevant full text or sections; consult original TeX/visual evidence when extraction is incomplete. A successful parser is not proof of full reading.
+3. Record evidence for each claim cluster: source_id, version (explicit null for unversioned sources), prepared_manifest and its SHA-256, artifact path and its SHA-256, plus inclusive 1-based start_line/end_line. The artifact must belong to the bound generation and be a text context leaf. An index or source-map is not claim evidence.
+4. Distinguish source conclusions, limitations, cross-source synthesis and proposed local experiments in the body. Do not write an abstract copy and call it learned policy. Missing evidence remains unresolved.
+
+## Output envelope
+
+The input is one JSON object following contribution.schema.json:
+
+schema_version = rsi.knowledge-contribution.v1
+id = stable lowercase contribution identifier
+source_manifest_sha256 = exact source registry bytes
+generated.by = observed agent producer/version, for example codex/gpt-6-astra
+generated.at = ISO datetime with an explicit offset
+pages[] = independently addressable OKF concepts, patterns, comparisons or lessons
+
+Each page has:
+
+path = path relative to wiki, ending .md; no traversal, absolute path or encoded aliases
+frontmatter = type and useful title/description/tags plus domain-specific keys
+body = authored Markdown, including source-ID footnote references and definitions
+evidence[] = exact prepared artifact bindings and inclusive line ranges
+previous_sha256 = mandatory when replacing an already-owned authored page
+
+The import owns generated, sources, rsi_contribution and rsi_evidence frontmatter. Do not provide those fields yourself. Do not include verified or claim a human actor. New and revised contributions enter status=draft. Import validates source identity, digest, artifact membership, nonempty line bounds and footnote joins; it does not evaluate whether the text supports the claim.
+
+Every evidence source must be cited in the body using [^source-id], with a corresponding [^source-id]: definition. All claim footnotes must resolve to the supplied evidence. A page may have multiple evidence ranges for one source. Use explicit knowledge links for relationships between pages.
+
+## Import and ownership
+
+PTC: importContribution(root, contributionObject)
+CLI: bun run cli -- kb contribute --help
+
+The CLI contract is discovered from installed help. The function returns rsi.knowledge-import.v1, an import outcome, affected pages and content_support=not_evaluated.
+
+The import refuses unmanaged existing files, edited ownership receipts, stale page digests, an existing contribution ID with different content, symlink paths, and a concurrent writer lock. An exact contribution replay is idempotent. Unknown prior frontmatter fields survive updates; prior verification is cleared when authoring a new draft because the changed content needs its own confirmation.
+
+Public documents and wiki/knowledge-manifest.json contain source URLs/versions, content digests and logical generation/artifact locators. Actual prepared filesystem paths remain in the private adoption receipt under .local/knowledge/imports. Do not publish that private receipt or worker/session archives.
+
+## Recovery and review
+
+All ownership conflicts are checked before planned writes. Individual file replacements are atomic and the ownership manifest is written last. An interrupted multi-file write is detectable as ownership drift; this is not an automatic crash rollback. Preserve its private import receipt and inspect the exact changed files before owner recovery. Never erase a live lock or accept changed file bytes merely to make lint pass.
+
+Independent semantic review binds the candidate contribution and exact source ranges. The import's generation record and structural success are separate from that review. Publication belongs to the daily pipeline's checks and publication contract; this importer does not grant publish authority or mark a page human-reviewed.

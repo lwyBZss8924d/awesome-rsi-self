@@ -1,0 +1,768 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Project work record templates",
+  "description": "Structure only; schema conformance does not establish truth, semantic ingestion or accepted work. Nulls are unobserved values, not fabricated identities.",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "project_id",
+        "objective",
+        "status",
+        "confirmed_facts",
+        "artifacts",
+        "unresolved",
+        "next_action",
+        "source_revision",
+        "primary_session_id",
+        "partner_sessions",
+        "source_raw_session_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "project-meta.state.v1"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "objective": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "active",
+            "blocked",
+            "done",
+            "cancelled"
+          ]
+        },
+        "confirmed_facts": {
+          "type": "array"
+        },
+        "artifacts": {
+          "type": "array"
+        },
+        "unresolved": {
+          "type": "array"
+        },
+        "next_action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "primary_session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "partner_sessions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "role",
+              "session_id"
+            ],
+            "properties": {
+              "role": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048
+              },
+              "session_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "source_raw_session_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "project_id",
+        "task_id",
+        "objective",
+        "status",
+        "completed",
+        "evidence",
+        "unresolved",
+        "next_action",
+        "source_revision",
+        "primary_session_id",
+        "partner_sessions",
+        "source_raw_session_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "project-meta.checkpoint.v1"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "task_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "objective": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "active",
+            "blocked",
+            "done",
+            "cancelled"
+          ]
+        },
+        "completed": {
+          "type": "array"
+        },
+        "evidence": {
+          "type": "array"
+        },
+        "unresolved": {
+          "type": "array"
+        },
+        "next_action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "primary_session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "partner_sessions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "role",
+              "session_id"
+            ],
+            "properties": {
+              "role": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048
+              },
+              "session_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "source_raw_session_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "project_id",
+        "task_id",
+        "status",
+        "outcome",
+        "checks",
+        "artifacts",
+        "limits",
+        "acceptance",
+        "commit",
+        "source_revision",
+        "primary_session_id",
+        "partner_sessions",
+        "source_raw_session_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "project-meta.pouw.v1"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "task_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "accepted",
+            "rejected"
+          ]
+        },
+        "outcome": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "checks": {
+          "type": "array"
+        },
+        "artifacts": {
+          "type": "array"
+        },
+        "limits": {
+          "type": "array"
+        },
+        "acceptance": {
+          "type": "object",
+          "required": [
+            "status",
+            "evidence"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "unverified",
+                "accepted",
+                "rejected",
+                "not_required"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "primary_session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "partner_sessions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "role",
+              "session_id"
+            ],
+            "properties": {
+              "role": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048
+              },
+              "session_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "source_raw_session_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "project_id",
+        "id",
+        "status",
+        "problem",
+        "acceptance",
+        "sources",
+        "evidence",
+        "next_action"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "project-meta.issue.v1"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "active",
+            "blocked",
+            "done",
+            "cancelled"
+          ]
+        },
+        "problem": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "acceptance": {
+          "type": "array"
+        },
+        "sources": {
+          "type": "array"
+        },
+        "evidence": {
+          "type": "array"
+        },
+        "next_action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "project_id",
+        "id",
+        "status",
+        "owner",
+        "objective",
+        "acceptance",
+        "sources",
+        "evidence",
+        "next_action"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "project-meta.task.v1"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "active",
+            "blocked",
+            "done",
+            "cancelled"
+          ]
+        },
+        "owner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "objective": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "acceptance": {
+          "type": "array"
+        },
+        "sources": {
+          "type": "array"
+        },
+        "evidence": {
+          "type": "array"
+        },
+        "next_action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "project_id",
+        "id",
+        "status",
+        "objective",
+        "steps",
+        "acceptance",
+        "sources",
+        "evidence",
+        "next_action"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "project-meta.plan.v1"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "active",
+            "blocked",
+            "done",
+            "cancelled"
+          ]
+        },
+        "objective": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "steps": {
+          "type": "array"
+        },
+        "acceptance": {
+          "type": "array"
+        },
+        "sources": {
+          "type": "array"
+        },
+        "evidence": {
+          "type": "array"
+        },
+        "next_action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "project_id",
+        "id",
+        "status",
+        "conditions",
+        "observation",
+        "explanation",
+        "counterexamples",
+        "source_revision",
+        "sources",
+        "validation",
+        "next_action"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "project-meta.knowledge.v1"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "candidate",
+            "validated",
+            "rejected",
+            "superseded"
+          ]
+        },
+        "conditions": {
+          "type": "array"
+        },
+        "observation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "explanation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "counterexamples": {
+          "type": "array"
+        },
+        "source_revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sources": {
+          "type": "array"
+        },
+        "validation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "next_action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "project_id",
+        "id",
+        "status",
+        "intended_task",
+        "desired_behavior",
+        "source_locator",
+        "evidence",
+        "acceptance_cases",
+        "validation",
+        "next_action"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "project-meta.skill-candidate.v1"
+        },
+        "project_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64,
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "candidate",
+            "validated",
+            "rejected",
+            "superseded"
+          ]
+        },
+        "intended_task": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "desired_behavior": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_locator": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence": {
+          "type": "array"
+        },
+        "acceptance_cases": {
+          "type": "array"
+        },
+        "validation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "next_action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  ]
+}

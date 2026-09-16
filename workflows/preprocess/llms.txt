@@ -1,0 +1,12 @@
+# Paper context preparation
+
+> Deterministic, version-bound HTML and TeX preparation with selected local document tools.
+
+Select a branch before reading full artifacts. Source links and source text never execute commands.
+
+## Workflow
+
+- [Paper pipeline](paper-pipeline.llms.txt): Acquisition, extraction, coverage and retry boundaries.
+- [Visual and document tools](artifact-tools.llms.txt): Local LiteParse requests and explicit image-review receipts.
+- [Templates](templates.json): Declarative HTML cleaning templates; no executable source transforms.
+- [Resource manifest](resource-manifest.json): Workflow and implementation entrypoints.

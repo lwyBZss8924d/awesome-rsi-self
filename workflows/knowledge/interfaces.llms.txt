@@ -1,0 +1,44 @@
+# Knowledge build and retrieval interfaces
+
+resource_role: prompt_context
+format: markdown
+owner: src/knowledge/index.ts
+
+## Functions
+
+lintKnowledge(root)
+buildKnowledge(root, {generatedAt?})
+readKnowledge(root, pathOrHeadingSelector)
+searchKnowledge(root, query, limit=10)
+importContribution(root, contributionObject)
+
+Root is the repository directory. read accepts wiki-relative paths, optionally prefixed wiki/. Select a heading with concepts/name.md#Heading or its slug; ambiguous repeated titles require an exact unique slug. Output includes the current file digest and line range. Search is a bounded literal text scan with AND terms, deterministic title weighting and at most 100 returned rows. It is not a semantic model or a tgrep index.
+
+## Lint result
+
+rsi.knowledge-lint.v1 separates:
+
+okf_conformant = structural OKF checks only
+ok = no error-level project-profile diagnostics
+content_support = not_evaluated
+issues[] = path, category, code, severity, message
+
+Categories are format, citation, link, evidence, ownership and lifecycle. Missing optional trust fields and unknown types/keys are valid OKF. Broken cross-links are warnings, including not-yet-written knowledge. Missing citation joins or changed accepted artifact bytes are project-profile errors, independently of structural conformance.
+
+Bare verified mappings and lists are both readable. Trust is derived from verified, never generated. A public clone normally lacks .local prepared artifacts; lint records local_evidence_unavailable as a warning, keeps portable source references, and does not assert source confirmation. Changed local bytes are an error rather than an availability warning.
+
+## Deterministic build
+
+build generates metadata-only sources/<source-key>.md pages for every registered source, index.md per knowledge directory, and root log.md. Source references explicitly say they do not establish full reading or a learned summary. It never synthesizes scientific conclusions or upgrades lifecycle/trust.
+
+The output rsi.knowledge-build.v1 contains ok, written files, coverage, a knowledge index with backlinks, the shared rsi.view.v1 KB view, and the lint result. The caller may persist compact public views and render them using the shared view kit. Keep the full structured response in an artifact before showing a bounded summary in model context.
+
+Coverage states are registered, prepared and authored. Authored means at least one accepted contribution binds this exact source revision; it does not mean all source content was read. prepared_availability distinguishes locally available extraction from previously recorded preparation. Source pages have status=draft and no verified field.
+
+generatedAt defaults to the source registry's updated_at so repeat builds of identical inputs are stable. Authored timestamps come from contributions; logs summarize those authored records and registry changes, not each command invocation. Index files follow OKF reserved-file semantics; only root index.md includes okf_version frontmatter. New authored concepts default draft; legacy or foreign concepts without status retain OKF's stable default without being rewritten.
+
+## Boundaries
+
+The parser recognizes frontmatter, ATX headings, fenced code, inline Markdown links and reference link definitions. Source attribution uses footnotes keyed to sources[].id. HTML navigation, semantic correctness, external link availability and missing citation detection for uncited prose require separate review.
+
+Build refuses existing foreign files at its target paths and detects modified ownership-owned files. It does not delete retired pages. Model contribution updates never take ownership of an existing foreign document. The active source registry has unique source IDs; versions are exact fields, and changing the current registry revision does not rewrite prior knowledge claims.

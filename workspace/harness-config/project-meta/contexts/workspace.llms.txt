@@ -1,0 +1,29 @@
+# Work state, checkpoint and useful work
+
+Use this branch when ownership, execution evidence or continuation needs a record.
+
+## Select records that help the task
+
+project.json declares paths for issues, tasks, plans, state, evidence, handoff and
+runs. Templates are optional starting records, not a requirement to create one of
+each. A short task can finish without a new plan or extra routing document.
+
+Keep active state short: objective, confirmed facts, current revision, valid
+artifacts, unresolved questions and one next action. Retain exact source evidence
+for later drillback when a summary cannot answer a question.
+
+## Bind provenance accurately
+
+Observe native session/turn identifiers from the current runtime; never fabricate
+them from display labels. A checkpoint or PoUW distinguishes primary_session_id,
+role-labelled partner_sessions and source_raw_session_ids. Unknown values remain
+null or explicitly unavailable. Evidence pointers do not grant execution authority.
+
+## Close the actual task
+
+Record the delivered outcome and the checks that discriminate it. Keep process
+exit, transport, business outcome, independent acceptance and Human approval
+separate where those axes exist. Set done only with the required acceptance.
+
+Use the target's commit/PoUW/backup procedures. Private state and runtime artifacts
+stay ignored; shared tracked records contain only suitable project material.

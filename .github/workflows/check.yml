@@ -1,0 +1,26 @@
+name: Knowledge checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+      - run: bun install --frozen-lockfile
+      - run: bun run check
+      - name: Validate the public Wiki
+        run: >-
+          bun -e 'const { lintKnowledge } = await import("./src/knowledge/index.ts");
+          const result = await lintKnowledge(process.cwd()); console.log(JSON.stringify(result));
+          process.exit(result.ok ? 0 : 1);'

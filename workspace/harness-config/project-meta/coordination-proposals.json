@@ -1,0 +1,8 @@
+{
+  "schema_version": "project-meta.coordination.v1",
+  "project_id": "awesome-rsi-self",
+  "status": "proposed",
+  "runtime_enabled": false,
+  "roles": [],
+  "hook_candidates": []
+}

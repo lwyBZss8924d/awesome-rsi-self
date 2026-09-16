@@ -1,0 +1,104 @@
+# sources
+
+## Concepts
+
+- [AlphaEvolve: A coding agent for scientific and algorithmic discovery](arxiv-2506.13131-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](arxiv-2507.19457-v2--v2.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](arxiv-2510.04618-v3--v3.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Towards a Science of Scaling Agent Systems](arxiv-2512.08296-v3--v3.md) - Registered paper source; coverage: authored. Full reading is not asserted.
+- [Recursive Language Models](arxiv-2512.24601-v3--v3.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning](arxiv-2602.08234-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [SkillRouter: Retrieve-and-Rerank Skill Selection for LLM Agents at Scale](arxiv-2603.22455-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Meta-Harness: End-to-End Optimization of Model Harnesses](arxiv-2603.28052-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Skill0: In-Context Agentic Reinforcement Learning for Skill Internalization](arxiv-2604.02268-v2--v2.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Towards Secure Agent Skills: Architecture, Threat Taxonomy, and Security Analysis](arxiv-2604.02837-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction](arxiv-2605.05242-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Code as Agent Harness](arxiv-2605.18747-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [When Skills Don’t Help: A Negative Result on Procedural Knowledge for Tool-Grounded Agents in Offensive Cybersecurity](arxiv-2605.20023-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [From Raw Experience to Skill Consumption: A Systematic Study of Model-Generated Agent Skills](arxiv-2605.23899-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [SkillOpt: Executive Strategy for Self-Evolving Agent Skills](arxiv-2605.23904-v2--v2.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki](arxiv-2605.25480-v2--v2.md) - Registered paper source; coverage: authored. Full reading is not asserted.
+- [Self-Harness: Harnesses That Improve Themselves](arxiv-2606.09498-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [WikiKV: Schema-Evolving Path-Indexed Storage for Hierarchical Knowledge Navigation](arxiv-2606.14275-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation](arxiv-2606.17628-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Skill-MAS: Evolving Meta-Skill for Automatic Multi-Agent Systems](arxiv-2606.18837-v2--v2.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe](arxiv-2607.03451-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [LLM-as-a-Verifier: A General-Purpose Verification Framework](arxiv-2607.05391-v2--v2.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Self-Improvements in Modern Agentic Systems: A Survey](arxiv-2607.13104-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [From Memory to Skills: Evidence-Grounded Co-Evolution Governance for Long-Horizon LLM Agents](arxiv-2607.16621-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [WikiLoop: Jointly Learning to Build and Navigate Agent-Native Wikis with Downstream Feedback](arxiv-2607.26604-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [TrajWiki: Source-Grounded Memory Trajectories for Long-Horizon Dialogue Agents](arxiv-2608.00967-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Why Does CLAUDE.md Keep Growing? Catastrophic Remembering in Agentic Coding](arxiv-2608.11095-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Evo-Harness: Context-to-Harness Skill Compilation for Self-Evolving Agents](arxiv-2608.15071-v2--v2.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [EnvHarness: Awakening Static Worlds for Agent Learning](arxiv-2608.19880-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Prime Agent: A Self-Improving RLM Harness](arxiv-2608.23552-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [SKILL.state: Scalable Long-Horizon Agent Skills](arxiv-2608.26263-v3--v3.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution](arxiv-2608.27454-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Towards a Systems Foundation for Agentic Skills: Architecture, Lifecycle, and Security](arxiv-2608.29596-v1--v1.md) - Registered paper source; coverage: authored. Full reading is not asserted.
+- [S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?](arxiv-2608.31100-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Aspire: Can Models Self-Evolve from Vague Goals?](arxiv-2608.31111-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?](arxiv-2609.01437-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Procedural Graphs: Self-Evolving Execution Structures for LLM Agents](arxiv-2609.09153-v1--v1.md) - Registered paper source; coverage: authored. Full reading is not asserted.
+- [Awesome Self-Improving Agents](awesome-self-improving-agents--current.md) - Registered repository source; coverage: prepared. Full reading is not asserted.
+- [Claude Dynamic Workflows](claude-dynamic-workflows--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [DSPy](dspy--current.md) - Registered repository source; coverage: prepared. Full reading is not asserted.
+- [Hugging Face Papers](hf-papers--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Karpathy LLM Wiki](karpathy-llm-wiki--current.md) - Registered article source; coverage: prepared. Full reading is not asserted.
+- [Knowledge Index](knowledge-index--current.md) - Registered repository source; coverage: prepared. Full reading is not asserted.
+- [The llms.txt file v2](llms-txt-v2--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Metadata as Code](mdcode-concept--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Scaling Karpathy LLM wiki](neo4j-llm-wiki--current.md) - Registered article source; coverage: prepared. Full reading is not asserted.
+- [Open Knowledge Format v0.2](okf-spec--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [OpenKB](openkb--current.md) - Registered repository source; coverage: prepared. Full reading is not asserted.
+- [OpenViking](openviking--current.md) - Registered repository source; coverage: prepared. Full reading is not asserted.
+- [PageIndex](pageindex--current.md) - Registered documentation source; coverage: registered. Full reading is not asserted.
+- [Prime Agent](prime-agent--current.md) - Registered repository source; coverage: prepared. Full reading is not asserted.
+- [Prime Agent](prime-agent-blog--current.md) - Registered article source; coverage: prepared. Full reading is not asserted.
+- [Prime RLM](prime-rlm-blog--current.md) - Registered article source; coverage: prepared. Full reading is not asserted.
+- [Promptfoo](promptfoo--current.md) - Registered repository source; coverage: prepared. Full reading is not asserted.
+- [Reef](reef--current.md) - Registered repository source; coverage: prepared. Full reading is not asserted.
+- [agent-scaling primary code](ref-agent-scaling-primary-code-12586ab5--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [agentskills authority](ref-agentskills-authority-1f63d271--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [agentskills client guide](ref-agentskills-client-guide-2d64323a--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [agentskills client links](ref-agentskills-client-links-b93ad195--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [agentskills showcase](ref-agentskills-showcase-041da858--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [agentskills spec](ref-agentskills-spec-f1e2a866--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [anthropic readme](ref-anthropic-readme-2607ce13--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [anthropic spec](ref-anthropic-spec-a7553f99--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [anthropic template](ref-anthropic-template-fc6d7e60--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [claude docs](ref-claude-docs-194f0e28--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Codex 原始代码](ref-codex-8acdcd4d--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Codex instruction loading implementation](ref-codex-instruction-loading-implementation-d060d926--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Codex skills catalog rendering](ref-codex-skills-catalog-rendering-a8c989a0--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Custom instructions with AGENTS.md](ref-custom-instructions-with-agents-md-780d4cde--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [EnvHarness model parameter adapter](ref-envharness-model-parameter-adapter-5fbe9146--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [EnvHarness primary repository](ref-envharness-primary-repository-621a2f0b--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [llms core](ref-llms-core-ad673f47--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [llms core notebook](ref-llms-core-notebook-4e568c6a--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [llms javascript demo](ref-llms-javascript-demo-f31e3762--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [llms miniparse](ref-llms-miniparse-a2d1e148--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [llms upstream tests](ref-llms-upstream-tests-68a9c7ff--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [llms v2 changes](ref-llms-v2-changes-9071d809--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [llms v2 proposal](ref-llms-v2-proposal-c079de9e--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [oh-my-codex 原始代码](ref-oh-my-codex-77466071--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [openai build](ref-openai-build-575ba476--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [OpenAI Cookbook local reference snapshot](ref-openai-cookbook-local-reference-snapshot-99429ae9--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [openclaw docs](ref-openclaw-docs-611bf541--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [pi docs](ref-pi-docs-a408841d--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [pi live page](ref-pi-live-page-c733c1d4--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [pi loader](ref-pi-loader-9046a9fe--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [pi package manager](ref-pi-package-manager-f9ebd257--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [pi resource loader](ref-pi-resource-loader-83389135--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Reef: Evolve your harness; Harness adapters](ref-reef-evolve-your-harness-harness-adapters-a6b6775b--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Rethinking skills and prompts for GPT-6 Astra](ref-rethinking-skills-and-prompts-for-gpt-6-astra-dae8a87d--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Skill_MAS primary code and local checkout](ref-skill-mas-primary-code-and-local-checkout-35818dca--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Skill-MAS project page](ref-skill-mas-project-page-2862da21--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [skills ref parser](ref-skills-ref-parser-e424f892--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [skills ref validator](ref-skills-ref-validator-cecee4c6--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Teamwork agent teams (/teamwork-preview)](ref-teamwork-agent-teams-teamwork-preview-ea5fe46a--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Teamwork: When AI Becomes a Research Partner](ref-teamwork-when-ai-becomes-a-research-partner-6b0f99ec--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Using GPT-6 Astra](ref-using-gpt-6-astra-0aa00f0c--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
+- [Language model harnesses are compositional generalizers](rlm-harness--current.md) - Registered article source; coverage: prepared. Full reading is not asserted.
+- [Recursive Language Models](rlm-intro--current.md) - Registered article source; coverage: prepared. Full reading is not asserted.
+- [Skill-MAS source](skill-mas-code--current.md) - Registered repository source; coverage: prepared. Full reading is not asserted.
+- [Speculative Programmatic Tool Calling](speculative-ptc--current.md) - Registered article source; coverage: prepared. Full reading is not asserted.

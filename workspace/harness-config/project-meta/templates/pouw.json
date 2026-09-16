@@ -1,0 +1,19 @@
+{
+  "schema_version": "project-meta.pouw.v1",
+  "project_id": "awesome-rsi-self",
+  "task_id": null,
+  "status": "draft",
+  "outcome": null,
+  "checks": [],
+  "artifacts": [],
+  "limits": [],
+  "acceptance": {
+    "status": "unverified",
+    "evidence": []
+  },
+  "commit": null,
+  "source_revision": null,
+  "primary_session_id": null,
+  "partner_sessions": [],
+  "source_raw_session_ids": []
+}

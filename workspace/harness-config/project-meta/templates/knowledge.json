@@ -1,0 +1,14 @@
+{
+  "schema_version": "project-meta.knowledge.v1",
+  "project_id": "awesome-rsi-self",
+  "id": null,
+  "status": "candidate",
+  "conditions": [],
+  "observation": null,
+  "explanation": null,
+  "counterexamples": [],
+  "source_revision": null,
+  "sources": [],
+  "validation": null,
+  "next_action": null
+}

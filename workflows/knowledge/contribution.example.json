@@ -1,0 +1,33 @@
+{
+  "schema_version": "rsi.knowledge-contribution.v1",
+  "id": "example-bounded-learning",
+  "source_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "generated": {
+    "by": "codex/gpt-6-astra",
+    "at": "2026-09-16T00:00:00Z"
+  },
+  "pages": [
+    {
+      "path": "patterns/example-bounded-learning.md",
+      "frontmatter": {
+        "type": "Pattern",
+        "title": "Example bounded learning pattern",
+        "description": "Template only: replace this text with claims supported by the inspected evidence.",
+        "tags": ["example"],
+        "status": "draft"
+      },
+      "body": "# Source observation\n\nReplace this sentence with an observation from the exact inspected source.[^example-paper]\n\n# Local hypothesis\n\nLabel any proposed adaptation as a hypothesis, with its own measurable acceptance condition.\n\n[^example-paper]: Replace with the actual source title and version.",
+      "evidence": [
+        {
+          "source_id": "example-paper",
+          "version": "v1",
+          "prepared_manifest": ".local/prepared/example-paper--v1/generations/example-generation/resource-manifest.json",
+          "prepared_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "artifact": ".local/prepared/example-paper--v1/generations/example-generation/paper.llms.txt",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "locator": { "start_line": 1, "end_line": 3 }
+        }
+      ]
+    }
+  ]
+}

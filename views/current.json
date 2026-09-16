@@ -1,0 +1,3618 @@
+{
+  "schema_version": "rsi.view.v1",
+  "kind": "kb",
+  "id": "awesome-rsi-self",
+  "title": "Awesome RSI Self",
+  "description": "Source-grounded knowledge, processing coverage, and unverified drafts.",
+  "revision": "1696b09eece0814e2bce9c2e483ae42d08aea858495fcf7c904304897b348014",
+  "generated_at": "2026-09-16T08:06:57.223Z",
+  "notices": [
+    "Format conformance is separate from source support. No pipeline stage asserts full reading or human confirmation."
+  ],
+  "links": [],
+  "metrics": [
+    {
+      "label": "Registered sources",
+      "value": 100
+    },
+    {
+      "label": "Sources with authored drafts",
+      "value": 4
+    },
+    {
+      "label": "Authored concepts",
+      "value": 6
+    }
+  ],
+  "lanes": [
+    {
+      "id": "registered",
+      "label": "registered"
+    },
+    {
+      "id": "prepared",
+      "label": "prepared"
+    },
+    {
+      "id": "authored",
+      "label": "authored"
+    },
+    {
+      "id": "draft",
+      "label": "draft"
+    },
+    {
+      "id": "stable",
+      "label": "stable"
+    },
+    {
+      "id": "deprecated",
+      "label": "deprecated"
+    }
+  ],
+  "projects": [
+    {
+      "id": "knowledge",
+      "title": "RSI Knowledge",
+      "summary": "Registration, preprocessing and authored knowledge remain distinct.",
+      "status": "active",
+      "next_action": null,
+      "links": []
+    }
+  ],
+  "items": [
+    {
+      "id": "source:arxiv-2506.13131-v1--v1",
+      "project_id": "knowledge",
+      "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2506.13131v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2506.13131-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2507.19457-v2--v2",
+      "project_id": "knowledge",
+      "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
+      "summary": "Source v2; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2507.19457v2"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2507.19457-v2"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2510.04618-v3--v3",
+      "project_id": "knowledge",
+      "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models",
+      "summary": "Source v3; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2510.04618v3"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2510.04618-v3"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2512.08296-v3--v3",
+      "project_id": "knowledge",
+      "title": "Towards a Science of Scaling Agent Systems",
+      "summary": "Source v3; full reading is not asserted.",
+      "status": "authored",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2512.08296v3"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2512.08296-v3"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2512.24601-v3--v3",
+      "project_id": "knowledge",
+      "title": "Recursive Language Models",
+      "summary": "Source v3; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2512.24601v3"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2512.24601-v3"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2602.08234-v1--v1",
+      "project_id": "knowledge",
+      "title": "SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2602.08234v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2602.08234-v1"
+      ],
+      "badges": [
+        "partial"
+      ]
+    },
+    {
+      "id": "source:arxiv-2603.22455-v1--v1",
+      "project_id": "knowledge",
+      "title": "SkillRouter: Retrieve-and-Rerank Skill Selection for LLM Agents at Scale",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2603.22455v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2603.22455-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2603.28052-v1--v1",
+      "project_id": "knowledge",
+      "title": "Meta-Harness: End-to-End Optimization of Model Harnesses",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2603.28052v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2603.28052-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2604.02268-v2--v2",
+      "project_id": "knowledge",
+      "title": "Skill0: In-Context Agentic Reinforcement Learning for Skill Internalization",
+      "summary": "Source v2; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2604.02268v2"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2604.02268-v2"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2604.02837-v1--v1",
+      "project_id": "knowledge",
+      "title": "Towards Secure Agent Skills: Architecture, Threat Taxonomy, and Security Analysis",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2604.02837v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2604.02837-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2605.05242-v1--v1",
+      "project_id": "knowledge",
+      "title": "Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2605.05242v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2605.05242-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2605.18747-v1--v1",
+      "project_id": "knowledge",
+      "title": "Code as Agent Harness",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2605.18747v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2605.18747-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2605.20023-v1--v1",
+      "project_id": "knowledge",
+      "title": "When Skills Don’t Help: A Negative Result on Procedural Knowledge for Tool-Grounded Agents in Offensive Cybersecurity",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2605.20023v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2605.20023-v1"
+      ],
+      "badges": [
+        "partial"
+      ]
+    },
+    {
+      "id": "source:arxiv-2605.23899-v1--v1",
+      "project_id": "knowledge",
+      "title": "From Raw Experience to Skill Consumption: A Systematic Study of Model-Generated Agent Skills",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2605.23899v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2605.23899-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2605.23904-v2--v2",
+      "project_id": "knowledge",
+      "title": "SkillOpt: Executive Strategy for Self-Evolving Agent Skills",
+      "summary": "Source v2; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2605.23904v2"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2605.23904-v2"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2605.25480-v2--v2",
+      "project_id": "knowledge",
+      "title": "Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki",
+      "summary": "Source v2; full reading is not asserted.",
+      "status": "authored",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2605.25480v2"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2605.25480-v2"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2606.09498-v1--v1",
+      "project_id": "knowledge",
+      "title": "Self-Harness: Harnesses That Improve Themselves",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2606.09498v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2606.09498-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2606.14275-v1--v1",
+      "project_id": "knowledge",
+      "title": "WikiKV: Schema-Evolving Path-Indexed Storage for Hierarchical Knowledge Navigation",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2606.14275v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2606.14275-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2606.17628-v1--v1",
+      "project_id": "knowledge",
+      "title": "OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2606.17628v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2606.17628-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2606.18837-v2--v2",
+      "project_id": "knowledge",
+      "title": "Skill-MAS: Evolving Meta-Skill for Automatic Multi-Agent Systems",
+      "summary": "Source v2; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2606.18837v2"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2606.18837-v2"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2607.03451-v1--v1",
+      "project_id": "knowledge",
+      "title": "SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2607.03451v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2607.03451-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2607.05391-v2--v2",
+      "project_id": "knowledge",
+      "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
+      "summary": "Source v2; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2607.05391v2"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2607.05391-v2"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2607.13104-v1--v1",
+      "project_id": "knowledge",
+      "title": "Self-Improvements in Modern Agentic Systems: A Survey",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2607.13104v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2607.13104-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2607.16621-v1--v1",
+      "project_id": "knowledge",
+      "title": "From Memory to Skills: Evidence-Grounded Co-Evolution Governance for Long-Horizon LLM Agents",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2607.16621v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2607.16621-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2607.26604-v1--v1",
+      "project_id": "knowledge",
+      "title": "WikiLoop: Jointly Learning to Build and Navigate Agent-Native Wikis with Downstream Feedback",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2607.26604v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2607.26604-v1"
+      ],
+      "badges": [
+        "partial"
+      ]
+    },
+    {
+      "id": "source:arxiv-2608.00967-v1--v1",
+      "project_id": "knowledge",
+      "title": "TrajWiki: Source-Grounded Memory Trajectories for Long-Horizon Dialogue Agents",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2608.00967v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2608.00967-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2608.11095-v1--v1",
+      "project_id": "knowledge",
+      "title": "Why Does CLAUDE.md Keep Growing? Catastrophic Remembering in Agentic Coding",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2608.11095v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2608.11095-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2608.15071-v2--v2",
+      "project_id": "knowledge",
+      "title": "Evo-Harness: Context-to-Harness Skill Compilation for Self-Evolving Agents",
+      "summary": "Source v2; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2608.15071v2"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2608.15071-v2"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2608.19880-v1--v1",
+      "project_id": "knowledge",
+      "title": "EnvHarness: Awakening Static Worlds for Agent Learning",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2608.19880v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2608.19880-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2608.23552-v1--v1",
+      "project_id": "knowledge",
+      "title": "Prime Agent: A Self-Improving RLM Harness",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2608.23552v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2608.23552-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2608.26263-v3--v3",
+      "project_id": "knowledge",
+      "title": "SKILL.state: Scalable Long-Horizon Agent Skills",
+      "summary": "Source v3; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2608.26263v3"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2608.26263-v3"
+      ],
+      "badges": [
+        "partial"
+      ]
+    },
+    {
+      "id": "source:arxiv-2608.27454-v1--v1",
+      "project_id": "knowledge",
+      "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2608.27454v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2608.27454-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2608.29596-v1--v1",
+      "project_id": "knowledge",
+      "title": "Towards a Systems Foundation for Agentic Skills: Architecture, Lifecycle, and Security",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "authored",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2608.29596v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2608.29596-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2608.31100-v1--v1",
+      "project_id": "knowledge",
+      "title": "S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2608.31100v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2608.31100-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2608.31111-v1--v1",
+      "project_id": "knowledge",
+      "title": "Aspire: Can Models Self-Evolve from Vague Goals?",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2608.31111v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2608.31111-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:arxiv-2609.01437-v1--v1",
+      "project_id": "knowledge",
+      "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2609.01437v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2609.01437-v1"
+      ],
+      "badges": [
+        "partial"
+      ]
+    },
+    {
+      "id": "source:arxiv-2609.09153-v1--v1",
+      "project_id": "knowledge",
+      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "summary": "Source v1; full reading is not asserted.",
+      "status": "authored",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://arxiv.org/abs/2609.09153v1"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2609.09153-v1"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:awesome-self-improving-agents--current",
+      "project_id": "knowledge",
+      "title": "Awesome Self-Improving Agents",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents"
+        }
+      ],
+      "source_refs": [
+        "awesome-self-improving-agents"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:claude-dynamic-workflows--current",
+      "project_id": "knowledge",
+      "title": "Claude Dynamic Workflows",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://code.claude.com/docs/en/workflows"
+        }
+      ],
+      "source_refs": [
+        "claude-dynamic-workflows"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:dspy--current",
+      "project_id": "knowledge",
+      "title": "DSPy",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/stanfordnlp/dspy"
+        }
+      ],
+      "source_refs": [
+        "dspy"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:hf-papers--current",
+      "project_id": "knowledge",
+      "title": "Hugging Face Papers",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://huggingface.co/papers"
+        }
+      ],
+      "source_refs": [
+        "hf-papers"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:karpathy-llm-wiki--current",
+      "project_id": "knowledge",
+      "title": "Karpathy LLM Wiki",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+        }
+      ],
+      "source_refs": [
+        "karpathy-llm-wiki"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:knowledge-index--current",
+      "project_id": "knowledge",
+      "title": "Knowledge Index",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/zach-blumenfeld/knowledge-index"
+        }
+      ],
+      "source_refs": [
+        "knowledge-index"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:llms-txt-v2--current",
+      "project_id": "knowledge",
+      "title": "The llms.txt file v2",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://raw.githubusercontent.com/AnswerDotAI/llms-txt/main/nbs/index.qmd"
+        }
+      ],
+      "source_refs": [
+        "llms-txt-v2"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:mdcode-concept--current",
+      "project_id": "knowledge",
+      "title": "Metadata as Code",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/toolbox/mdcode/docs/concept.md"
+        }
+      ],
+      "source_refs": [
+        "mdcode-concept"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:neo4j-llm-wiki--current",
+      "project_id": "knowledge",
+      "title": "Scaling Karpathy LLM wiki",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://neo4j.com/blog/agentic-ai/scaling-karpathy-llm-wiki-graph/"
+        }
+      ],
+      "source_refs": [
+        "neo4j-llm-wiki"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:okf-spec--current",
+      "project_id": "knowledge",
+      "title": "Open Knowledge Format v0.2",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://raw.githubusercontent.com/GoogleCloudPlatform/open-knowledge-format/main/SPEC.md"
+        }
+      ],
+      "source_refs": [
+        "okf-spec"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:openkb--current",
+      "project_id": "knowledge",
+      "title": "OpenKB",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/VectifyAI/OpenKB"
+        }
+      ],
+      "source_refs": [
+        "openkb"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:openviking--current",
+      "project_id": "knowledge",
+      "title": "OpenViking",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/volcengine/OpenViking"
+        }
+      ],
+      "source_refs": [
+        "openviking"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:pageindex--current",
+      "project_id": "knowledge",
+      "title": "PageIndex",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "registered",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://docs.pageindex.ai/"
+        }
+      ],
+      "source_refs": [
+        "pageindex"
+      ],
+      "badges": [
+        "not prepared"
+      ]
+    },
+    {
+      "id": "source:prime-agent--current",
+      "project_id": "knowledge",
+      "title": "Prime Agent",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/PrimeIntellect-ai/prime-agent"
+        }
+      ],
+      "source_refs": [
+        "prime-agent"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:prime-agent-blog--current",
+      "project_id": "knowledge",
+      "title": "Prime Agent",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://www.primeintellect.ai/blog/prime-agent"
+        }
+      ],
+      "source_refs": [
+        "prime-agent-blog"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:prime-rlm-blog--current",
+      "project_id": "knowledge",
+      "title": "Prime RLM",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://www.primeintellect.ai/blog/rlm"
+        }
+      ],
+      "source_refs": [
+        "prime-rlm-blog"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:promptfoo--current",
+      "project_id": "knowledge",
+      "title": "Promptfoo",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/promptfoo/promptfoo"
+        }
+      ],
+      "source_refs": [
+        "promptfoo"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:reef--current",
+      "project_id": "knowledge",
+      "title": "Reef",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/Human-Agent-Society/reef"
+        }
+      ],
+      "source_refs": [
+        "reef"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-agent-scaling-primary-code-12586ab5--current",
+      "project_id": "knowledge",
+      "title": "agent-scaling primary code",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/ybkim95/agent-scaling/tree/6f3bfb78a6481c1098d182680f39b0f904b292a2"
+        }
+      ],
+      "source_refs": [
+        "ref-agent-scaling-primary-code-12586ab5"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-agentskills-authority-1f63d271--current",
+      "project_id": "knowledge",
+      "title": "agentskills authority",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/AGENTS.md"
+        }
+      ],
+      "source_refs": [
+        "ref-agentskills-authority-1f63d271"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-agentskills-client-guide-2d64323a--current",
+      "project_id": "knowledge",
+      "title": "agentskills client guide",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/client-implementation/adding-skills-support.mdx"
+        }
+      ],
+      "source_refs": [
+        "ref-agentskills-client-guide-2d64323a"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-agentskills-client-links-b93ad195--current",
+      "project_id": "knowledge",
+      "title": "agentskills client links",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/snippets/clients.jsx"
+        }
+      ],
+      "source_refs": [
+        "ref-agentskills-client-links-b93ad195"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-agentskills-showcase-041da858--current",
+      "project_id": "knowledge",
+      "title": "agentskills showcase",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/clients.mdx"
+        }
+      ],
+      "source_refs": [
+        "ref-agentskills-showcase-041da858"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-agentskills-spec-f1e2a866--current",
+      "project_id": "knowledge",
+      "title": "agentskills spec",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/specification.mdx"
+        }
+      ],
+      "source_refs": [
+        "ref-agentskills-spec-f1e2a866"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-anthropic-readme-2607ce13--current",
+      "project_id": "knowledge",
+      "title": "anthropic readme",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/README.md"
+        }
+      ],
+      "source_refs": [
+        "ref-anthropic-readme-2607ce13"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-anthropic-spec-a7553f99--current",
+      "project_id": "knowledge",
+      "title": "anthropic spec",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/spec/agent-skills-spec.md"
+        }
+      ],
+      "source_refs": [
+        "ref-anthropic-spec-a7553f99"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-anthropic-template-fc6d7e60--current",
+      "project_id": "knowledge",
+      "title": "anthropic template",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/template/SKILL.md"
+        }
+      ],
+      "source_refs": [
+        "ref-anthropic-template-fc6d7e60"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-claude-docs-194f0e28--current",
+      "project_id": "knowledge",
+      "title": "claude docs",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://code.claude.com/docs/en/skills.md"
+        }
+      ],
+      "source_refs": [
+        "ref-claude-docs-194f0e28"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-codex-8acdcd4d--current",
+      "project_id": "knowledge",
+      "title": "Codex 原始代码",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/openai/codex/tree/de40696ec49815df76ec683f5ca6aea2b0f8760d"
+        }
+      ],
+      "source_refs": [
+        "ref-codex-8acdcd4d"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-codex-instruction-loading-implementation-d060d926--current",
+      "project_id": "knowledge",
+      "title": "Codex instruction loading implementation",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/openai/codex/blob/3abbf9fe2c6b6910e9de61f6a0c5bb468f74b5c8/codex-rs/core/src/agents_md.rs"
+        }
+      ],
+      "source_refs": [
+        "ref-codex-instruction-loading-implementation-d060d926"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-codex-skills-catalog-rendering-a8c989a0--current",
+      "project_id": "knowledge",
+      "title": "Codex skills catalog rendering",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/openai/codex/blob/3abbf9fe2c6b6910e9de61f6a0c5bb468f74b5c8/codex-rs/ext/skills/src/render.rs"
+        }
+      ],
+      "source_refs": [
+        "ref-codex-skills-catalog-rendering-a8c989a0"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-custom-instructions-with-agents-md-780d4cde--current",
+      "project_id": "knowledge",
+      "title": "Custom instructions with AGENTS.md",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+        }
+      ],
+      "source_refs": [
+        "ref-custom-instructions-with-agents-md-780d4cde"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-envharness-model-parameter-adapter-5fbe9146--current",
+      "project_id": "knowledge",
+      "title": "EnvHarness model parameter adapter",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/google-research/envharness/blob/fab7d57441f06b75c73a900e04561d4d7600f361/envharness/infra/model.py"
+        }
+      ],
+      "source_refs": [
+        "ref-envharness-model-parameter-adapter-5fbe9146"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-envharness-primary-repository-621a2f0b--current",
+      "project_id": "knowledge",
+      "title": "EnvHarness primary repository",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/google-research/envharness"
+        }
+      ],
+      "source_refs": [
+        "ref-envharness-primary-repository-621a2f0b"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-llms-core-ad673f47--current",
+      "project_id": "knowledge",
+      "title": "llms core",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/llms_txt/core.py"
+        }
+      ],
+      "source_refs": [
+        "ref-llms-core-ad673f47"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-llms-core-notebook-4e568c6a--current",
+      "project_id": "knowledge",
+      "title": "llms core notebook",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/01_core.ipynb"
+        }
+      ],
+      "source_refs": [
+        "ref-llms-core-notebook-4e568c6a"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-llms-javascript-demo-f31e3762--current",
+      "project_id": "knowledge",
+      "title": "llms javascript demo",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/llmstxt-js.html"
+        }
+      ],
+      "source_refs": [
+        "ref-llms-javascript-demo-f31e3762"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-llms-miniparse-a2d1e148--current",
+      "project_id": "knowledge",
+      "title": "llms miniparse",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/llms_txt/miniparse.py"
+        }
+      ],
+      "source_refs": [
+        "ref-llms-miniparse-a2d1e148"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-llms-upstream-tests-68a9c7ff--current",
+      "project_id": "knowledge",
+      "title": "llms upstream tests",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/tests/test-parse.py"
+        }
+      ],
+      "source_refs": [
+        "ref-llms-upstream-tests-68a9c7ff"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-llms-v2-changes-9071d809--current",
+      "project_id": "knowledge",
+      "title": "llms v2 changes",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/changes.qmd"
+        }
+      ],
+      "source_refs": [
+        "ref-llms-v2-changes-9071d809"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-llms-v2-proposal-c079de9e--current",
+      "project_id": "knowledge",
+      "title": "llms v2 proposal",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/index.qmd"
+        }
+      ],
+      "source_refs": [
+        "ref-llms-v2-proposal-c079de9e"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-oh-my-codex-77466071--current",
+      "project_id": "knowledge",
+      "title": "oh-my-codex 原始代码",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/Yeachan-Heo/oh-my-codex/tree/cb955b0d5becbef76d2c1f0096b6e1f238e1e7f7"
+        }
+      ],
+      "source_refs": [
+        "ref-oh-my-codex-77466071"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-openai-build-575ba476--current",
+      "project_id": "knowledge",
+      "title": "openai build",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://learn.chatgpt.com/docs/build-skills.md"
+        }
+      ],
+      "source_refs": [
+        "ref-openai-build-575ba476"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-openai-cookbook-local-reference-snapshot-99429ae9--current",
+      "project_id": "knowledge",
+      "title": "OpenAI Cookbook local reference snapshot",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/openai/openai-cookbook/tree/9aad95f0aa4f8e12991ef9b9201df28747860bfc"
+        }
+      ],
+      "source_refs": [
+        "ref-openai-cookbook-local-reference-snapshot-99429ae9"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-openclaw-docs-611bf541--current",
+      "project_id": "knowledge",
+      "title": "openclaw docs",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://raw.githubusercontent.com/openclaw/openclaw/8b4754c73279d8b4fa20965a38a59e4ded422d8d/docs/tools/skills.md"
+        }
+      ],
+      "source_refs": [
+        "ref-openclaw-docs-611bf541"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-pi-docs-a408841d--current",
+      "project_id": "knowledge",
+      "title": "pi docs",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/docs/skills.md"
+        }
+      ],
+      "source_refs": [
+        "ref-pi-docs-a408841d"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-pi-live-page-c733c1d4--current",
+      "project_id": "knowledge",
+      "title": "pi live page",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://pi.dev/docs/latest/skills"
+        }
+      ],
+      "source_refs": [
+        "ref-pi-live-page-c733c1d4"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-pi-loader-9046a9fe--current",
+      "project_id": "knowledge",
+      "title": "pi loader",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/skills.ts"
+        }
+      ],
+      "source_refs": [
+        "ref-pi-loader-9046a9fe"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-pi-package-manager-f9ebd257--current",
+      "project_id": "knowledge",
+      "title": "pi package manager",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/package-manager.ts"
+        }
+      ],
+      "source_refs": [
+        "ref-pi-package-manager-f9ebd257"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-pi-resource-loader-83389135--current",
+      "project_id": "knowledge",
+      "title": "pi resource loader",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/resource-loader.ts"
+        }
+      ],
+      "source_refs": [
+        "ref-pi-resource-loader-83389135"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-reef-evolve-your-harness-harness-adapters-a6b6775b--current",
+      "project_id": "knowledge",
+      "title": "Reef: Evolve your harness; Harness adapters",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://www.reefinfra.ai/docs/user-guide/evolve-your-harness/"
+        }
+      ],
+      "source_refs": [
+        "ref-reef-evolve-your-harness-harness-adapters-a6b6775b"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-rethinking-skills-and-prompts-for-gpt-6-astra-dae8a87d--current",
+      "project_id": "knowledge",
+      "title": "Rethinking skills and prompts for GPT-6 Astra",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra"
+        }
+      ],
+      "source_refs": [
+        "ref-rethinking-skills-and-prompts-for-gpt-6-astra-dae8a87d"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-skill-mas-primary-code-and-local-checkout-35818dca--current",
+      "project_id": "knowledge",
+      "title": "Skill_MAS primary code and local checkout",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/linhh29/Skill_MAS/tree/b55d47ee7a08b34afda420bb3c5f2ca53efa64a4"
+        }
+      ],
+      "source_refs": [
+        "ref-skill-mas-primary-code-and-local-checkout-35818dca"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-skill-mas-project-page-2862da21--current",
+      "project_id": "knowledge",
+      "title": "Skill-MAS project page",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://linhh29.github.io/blog/Skill-MAS/index.html"
+        }
+      ],
+      "source_refs": [
+        "ref-skill-mas-project-page-2862da21"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-skills-ref-parser-e424f892--current",
+      "project_id": "knowledge",
+      "title": "skills ref parser",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/skills-ref/src/skills_ref/parser.py"
+        }
+      ],
+      "source_refs": [
+        "ref-skills-ref-parser-e424f892"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-skills-ref-validator-cecee4c6--current",
+      "project_id": "knowledge",
+      "title": "skills ref validator",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/skills-ref/src/skills_ref/validator.py"
+        }
+      ],
+      "source_refs": [
+        "ref-skills-ref-validator-cecee4c6"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-teamwork-agent-teams-teamwork-preview-ea5fe46a--current",
+      "project_id": "knowledge",
+      "title": "Teamwork agent teams (/teamwork-preview)",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://antigravity.google/docs/teamwork"
+        }
+      ],
+      "source_refs": [
+        "ref-teamwork-agent-teams-teamwork-preview-ea5fe46a"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-teamwork-when-ai-becomes-a-research-partner-6b0f99ec--current",
+      "project_id": "knowledge",
+      "title": "Teamwork: When AI Becomes a Research Partner",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner"
+        }
+      ],
+      "source_refs": [
+        "ref-teamwork-when-ai-becomes-a-research-partner-6b0f99ec"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:ref-using-gpt-6-astra-0aa00f0c--current",
+      "project_id": "knowledge",
+      "title": "Using GPT-6 Astra",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra"
+        }
+      ],
+      "source_refs": [
+        "ref-using-gpt-6-astra-0aa00f0c"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:rlm-harness--current",
+      "project_id": "knowledge",
+      "title": "Language model harnesses are compositional generalizers",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://alexzhang13.github.io/blog/2026/harness/"
+        }
+      ],
+      "source_refs": [
+        "rlm-harness"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:rlm-intro--current",
+      "project_id": "knowledge",
+      "title": "Recursive Language Models",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://alexzhang13.github.io/blog/2025/rlm/"
+        }
+      ],
+      "source_refs": [
+        "rlm-intro"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:skill-mas-code--current",
+      "project_id": "knowledge",
+      "title": "Skill-MAS source",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://github.com/linhh29/Skill_MAS"
+        }
+      ],
+      "source_refs": [
+        "skill-mas-code"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "source:speculative-ptc--current",
+      "project_id": "knowledge",
+      "title": "Speculative Programmatic Tool Calling",
+      "summary": "Source unversioned; full reading is not asserted.",
+      "status": "prepared",
+      "phase": "source",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Original source",
+          "href": "https://alexzhang13.github.io/blog/2026/spec-ptc/"
+        }
+      ],
+      "source_refs": [
+        "speculative-ptc"
+      ],
+      "badges": [
+        "prepared"
+      ]
+    },
+    {
+      "id": "concept:concepts/evidence-layers.md",
+      "project_id": "knowledge",
+      "title": "原件、提取、编译与执行证据分别记录",
+      "summary": "保留可追溯转换链，同时区分结构正确与主张受支持。",
+      "status": "draft",
+      "phase": "knowledge",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Wiki document",
+          "href": "../wiki/concepts/evidence-layers.md"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2605.25480-v2"
+      ],
+      "badges": [
+        "unverified"
+      ]
+    },
+    {
+      "id": "concept:concepts/orchestration-baselines-and-limits.md",
+      "project_id": "knowledge",
+      "title": "先比较单代理基线，再选择有界编排",
+      "summary": "把任务可分解性、协调开销和模型外推风险作为选型输入。",
+      "status": "draft",
+      "phase": "knowledge",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Wiki document",
+          "href": "../wiki/concepts/orchestration-baselines-and-limits.md"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2512.08296-v3"
+      ],
+      "badges": [
+        "unverified"
+      ]
+    },
+    {
+      "id": "concept:concepts/procedural-graphs-as-local-hypothesis.md",
+      "project_id": "knowledge",
+      "title": "程序图的演化先作为可检验假设",
+      "summary": "从冻结运行版本、拒绝记忆和独立验证学习，而不把论文曲线当成本地收益。",
+      "status": "draft",
+      "phase": "knowledge",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Wiki document",
+          "href": "../wiki/concepts/procedural-graphs-as-local-hypothesis.md"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2609.09153-v1"
+      ],
+      "badges": [
+        "unverified"
+      ]
+    },
+    {
+      "id": "concept:concepts/retrieval-error-book.md",
+      "project_id": "knowledge",
+      "title": "用错误簿维护可导航知识",
+      "summary": "对复现的结构和内容错误分别定位、修复、复查并记录适用条件。",
+      "status": "draft",
+      "phase": "knowledge",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Wiki document",
+          "href": "../wiki/concepts/retrieval-error-book.md"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2605.25480-v2"
+      ],
+      "badges": [
+        "unverified"
+      ]
+    },
+    {
+      "id": "concept:concepts/skill-contract-components.md",
+      "project_id": "knowledge",
+      "title": "技能六元组是检查视角",
+      "summary": "把触发、约束、工具、控制流和结果连起来，避免只优化文本外形。",
+      "status": "draft",
+      "phase": "knowledge",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Wiki document",
+          "href": "../wiki/concepts/skill-contract-components.md"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2608.29596-v1"
+      ],
+      "badges": [
+        "unverified"
+      ]
+    },
+    {
+      "id": "concept:concepts/task-state-and-knowledge-ownership.md",
+      "project_id": "knowledge",
+      "title": "任务状态与知识状态分别拥有写入权",
+      "summary": "以任务结果和来源知识的不同生命周期避免完成状态互相冒充。",
+      "status": "draft",
+      "phase": "knowledge",
+      "control": null,
+      "priority": 100,
+      "depends_on": [],
+      "next_action": null,
+      "updated_at": null,
+      "evidence": [
+        {
+          "label": "Wiki document",
+          "href": "../wiki/concepts/task-state-and-knowledge-ownership.md"
+        }
+      ],
+      "source_refs": [
+        "arxiv-2608.29596-v1"
+      ],
+      "badges": [
+        "unverified"
+      ]
+    }
+  ],
+  "findings": [],
+  "sources": [
+    {
+      "id": "arxiv-2506.13131-v1",
+      "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2506.13131v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2507.19457-v2",
+      "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2507.19457v2",
+      "version": "v2",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2510.04618-v3",
+      "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2510.04618v3",
+      "version": "v3",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2512.08296-v3",
+      "title": "Towards a Science of Scaling Agent Systems",
+      "kind": "paper",
+      "status": "authored",
+      "href": "https://arxiv.org/abs/2512.08296v3",
+      "version": "v3",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2512.24601-v3",
+      "title": "Recursive Language Models",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2512.24601v3",
+      "version": "v3",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2602.08234-v1",
+      "title": "SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2602.08234v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2603.22455-v1",
+      "title": "SkillRouter: Retrieve-and-Rerank Skill Selection for LLM Agents at Scale",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2603.22455v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2603.28052-v1",
+      "title": "Meta-Harness: End-to-End Optimization of Model Harnesses",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2603.28052v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2604.02268-v2",
+      "title": "Skill0: In-Context Agentic Reinforcement Learning for Skill Internalization",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2604.02268v2",
+      "version": "v2",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2604.02837-v1",
+      "title": "Towards Secure Agent Skills: Architecture, Threat Taxonomy, and Security Analysis",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2604.02837v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2605.05242-v1",
+      "title": "Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2605.05242v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2605.18747-v1",
+      "title": "Code as Agent Harness",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2605.18747v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2605.20023-v1",
+      "title": "When Skills Don’t Help: A Negative Result on Procedural Knowledge for Tool-Grounded Agents in Offensive Cybersecurity",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2605.20023v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2605.23899-v1",
+      "title": "From Raw Experience to Skill Consumption: A Systematic Study of Model-Generated Agent Skills",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2605.23899v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2605.23904-v2",
+      "title": "SkillOpt: Executive Strategy for Self-Evolving Agent Skills",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2605.23904v2",
+      "version": "v2",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2605.25480-v2",
+      "title": "Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki",
+      "kind": "paper",
+      "status": "authored",
+      "href": "https://arxiv.org/abs/2605.25480v2",
+      "version": "v2",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2606.09498-v1",
+      "title": "Self-Harness: Harnesses That Improve Themselves",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2606.09498v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2606.14275-v1",
+      "title": "WikiKV: Schema-Evolving Path-Indexed Storage for Hierarchical Knowledge Navigation",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2606.14275v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2606.17628-v1",
+      "title": "OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2606.17628v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2606.18837-v2",
+      "title": "Skill-MAS: Evolving Meta-Skill for Automatic Multi-Agent Systems",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2606.18837v2",
+      "version": "v2",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2607.03451-v1",
+      "title": "SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2607.03451v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2607.05391-v2",
+      "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2607.05391v2",
+      "version": "v2",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2607.13104-v1",
+      "title": "Self-Improvements in Modern Agentic Systems: A Survey",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2607.13104v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2607.16621-v1",
+      "title": "From Memory to Skills: Evidence-Grounded Co-Evolution Governance for Long-Horizon LLM Agents",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2607.16621v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2607.26604-v1",
+      "title": "WikiLoop: Jointly Learning to Build and Navigate Agent-Native Wikis with Downstream Feedback",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2607.26604v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2608.00967-v1",
+      "title": "TrajWiki: Source-Grounded Memory Trajectories for Long-Horizon Dialogue Agents",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2608.00967v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2608.11095-v1",
+      "title": "Why Does CLAUDE.md Keep Growing? Catastrophic Remembering in Agentic Coding",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2608.11095v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2608.15071-v2",
+      "title": "Evo-Harness: Context-to-Harness Skill Compilation for Self-Evolving Agents",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2608.15071v2",
+      "version": "v2",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2608.19880-v1",
+      "title": "EnvHarness: Awakening Static Worlds for Agent Learning",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2608.19880v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2608.23552-v1",
+      "title": "Prime Agent: A Self-Improving RLM Harness",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2608.23552v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2608.26263-v3",
+      "title": "SKILL.state: Scalable Long-Horizon Agent Skills",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2608.26263v3",
+      "version": "v3",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2608.27454-v1",
+      "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2608.27454v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2608.29596-v1",
+      "title": "Towards a Systems Foundation for Agentic Skills: Architecture, Lifecycle, and Security",
+      "kind": "paper",
+      "status": "authored",
+      "href": "https://arxiv.org/abs/2608.29596v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2608.31100-v1",
+      "title": "S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2608.31100v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2608.31111-v1",
+      "title": "Aspire: Can Models Self-Evolve from Vague Goals?",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2608.31111v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2609.01437-v1",
+      "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+      "kind": "paper",
+      "status": "prepared",
+      "href": "https://arxiv.org/abs/2609.01437v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "arxiv-2609.09153-v1",
+      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "kind": "paper",
+      "status": "authored",
+      "href": "https://arxiv.org/abs/2609.09153v1",
+      "version": "v1",
+      "description": ""
+    },
+    {
+      "id": "awesome-self-improving-agents",
+      "title": "Awesome Self-Improving Agents",
+      "kind": "repository",
+      "status": "prepared",
+      "href": "https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "claude-dynamic-workflows",
+      "title": "Claude Dynamic Workflows",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://code.claude.com/docs/en/workflows",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "dspy",
+      "title": "DSPy",
+      "kind": "repository",
+      "status": "prepared",
+      "href": "https://github.com/stanfordnlp/dspy",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "hf-papers",
+      "title": "Hugging Face Papers",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://huggingface.co/papers",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "karpathy-llm-wiki",
+      "title": "Karpathy LLM Wiki",
+      "kind": "article",
+      "status": "prepared",
+      "href": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "knowledge-index",
+      "title": "Knowledge Index",
+      "kind": "repository",
+      "status": "prepared",
+      "href": "https://github.com/zach-blumenfeld/knowledge-index",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "llms-txt-v2",
+      "title": "The llms.txt file v2",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://raw.githubusercontent.com/AnswerDotAI/llms-txt/main/nbs/index.qmd",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "mdcode-concept",
+      "title": "Metadata as Code",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/toolbox/mdcode/docs/concept.md",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "neo4j-llm-wiki",
+      "title": "Scaling Karpathy LLM wiki",
+      "kind": "article",
+      "status": "prepared",
+      "href": "https://neo4j.com/blog/agentic-ai/scaling-karpathy-llm-wiki-graph/",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "okf-spec",
+      "title": "Open Knowledge Format v0.2",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://raw.githubusercontent.com/GoogleCloudPlatform/open-knowledge-format/main/SPEC.md",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "openkb",
+      "title": "OpenKB",
+      "kind": "repository",
+      "status": "prepared",
+      "href": "https://github.com/VectifyAI/OpenKB",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "openviking",
+      "title": "OpenViking",
+      "kind": "repository",
+      "status": "prepared",
+      "href": "https://github.com/volcengine/OpenViking",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "pageindex",
+      "title": "PageIndex",
+      "kind": "documentation",
+      "status": "registered",
+      "href": "https://docs.pageindex.ai/",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "prime-agent",
+      "title": "Prime Agent",
+      "kind": "repository",
+      "status": "prepared",
+      "href": "https://github.com/PrimeIntellect-ai/prime-agent",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "prime-agent-blog",
+      "title": "Prime Agent",
+      "kind": "article",
+      "status": "prepared",
+      "href": "https://www.primeintellect.ai/blog/prime-agent",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "prime-rlm-blog",
+      "title": "Prime RLM",
+      "kind": "article",
+      "status": "prepared",
+      "href": "https://www.primeintellect.ai/blog/rlm",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "promptfoo",
+      "title": "Promptfoo",
+      "kind": "repository",
+      "status": "prepared",
+      "href": "https://github.com/promptfoo/promptfoo",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "reef",
+      "title": "Reef",
+      "kind": "repository",
+      "status": "prepared",
+      "href": "https://github.com/Human-Agent-Society/reef",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-agent-scaling-primary-code-12586ab5",
+      "title": "agent-scaling primary code",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/ybkim95/agent-scaling/tree/6f3bfb78a6481c1098d182680f39b0f904b292a2",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-agentskills-authority-1f63d271",
+      "title": "agentskills authority",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/AGENTS.md",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-agentskills-client-guide-2d64323a",
+      "title": "agentskills client guide",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/client-implementation/adding-skills-support.mdx",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-agentskills-client-links-b93ad195",
+      "title": "agentskills client links",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/snippets/clients.jsx",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-agentskills-showcase-041da858",
+      "title": "agentskills showcase",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/clients.mdx",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-agentskills-spec-f1e2a866",
+      "title": "agentskills spec",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/specification.mdx",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-anthropic-readme-2607ce13",
+      "title": "anthropic readme",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/README.md",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-anthropic-spec-a7553f99",
+      "title": "anthropic spec",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/spec/agent-skills-spec.md",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-anthropic-template-fc6d7e60",
+      "title": "anthropic template",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/template/SKILL.md",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-claude-docs-194f0e28",
+      "title": "claude docs",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://code.claude.com/docs/en/skills.md",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-codex-8acdcd4d",
+      "title": "Codex 原始代码",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/openai/codex/tree/de40696ec49815df76ec683f5ca6aea2b0f8760d",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-codex-instruction-loading-implementation-d060d926",
+      "title": "Codex instruction loading implementation",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/openai/codex/blob/3abbf9fe2c6b6910e9de61f6a0c5bb468f74b5c8/codex-rs/core/src/agents_md.rs",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-codex-skills-catalog-rendering-a8c989a0",
+      "title": "Codex skills catalog rendering",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/openai/codex/blob/3abbf9fe2c6b6910e9de61f6a0c5bb468f74b5c8/codex-rs/ext/skills/src/render.rs",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-custom-instructions-with-agents-md-780d4cde",
+      "title": "Custom instructions with AGENTS.md",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-envharness-model-parameter-adapter-5fbe9146",
+      "title": "EnvHarness model parameter adapter",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/google-research/envharness/blob/fab7d57441f06b75c73a900e04561d4d7600f361/envharness/infra/model.py",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-envharness-primary-repository-621a2f0b",
+      "title": "EnvHarness primary repository",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/google-research/envharness",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-llms-core-ad673f47",
+      "title": "llms core",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/llms_txt/core.py",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-llms-core-notebook-4e568c6a",
+      "title": "llms core notebook",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/01_core.ipynb",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-llms-javascript-demo-f31e3762",
+      "title": "llms javascript demo",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/llmstxt-js.html",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-llms-miniparse-a2d1e148",
+      "title": "llms miniparse",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/llms_txt/miniparse.py",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-llms-upstream-tests-68a9c7ff",
+      "title": "llms upstream tests",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/tests/test-parse.py",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-llms-v2-changes-9071d809",
+      "title": "llms v2 changes",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/changes.qmd",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-llms-v2-proposal-c079de9e",
+      "title": "llms v2 proposal",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/index.qmd",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-oh-my-codex-77466071",
+      "title": "oh-my-codex 原始代码",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/Yeachan-Heo/oh-my-codex/tree/cb955b0d5becbef76d2c1f0096b6e1f238e1e7f7",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-openai-build-575ba476",
+      "title": "openai build",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://learn.chatgpt.com/docs/build-skills.md",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-openai-cookbook-local-reference-snapshot-99429ae9",
+      "title": "OpenAI Cookbook local reference snapshot",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/openai/openai-cookbook/tree/9aad95f0aa4f8e12991ef9b9201df28747860bfc",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-openclaw-docs-611bf541",
+      "title": "openclaw docs",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://raw.githubusercontent.com/openclaw/openclaw/8b4754c73279d8b4fa20965a38a59e4ded422d8d/docs/tools/skills.md",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-pi-docs-a408841d",
+      "title": "pi docs",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/docs/skills.md",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-pi-live-page-c733c1d4",
+      "title": "pi live page",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://pi.dev/docs/latest/skills",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-pi-loader-9046a9fe",
+      "title": "pi loader",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/skills.ts",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-pi-package-manager-f9ebd257",
+      "title": "pi package manager",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/package-manager.ts",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-pi-resource-loader-83389135",
+      "title": "pi resource loader",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/resource-loader.ts",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-reef-evolve-your-harness-harness-adapters-a6b6775b",
+      "title": "Reef: Evolve your harness; Harness adapters",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://www.reefinfra.ai/docs/user-guide/evolve-your-harness/",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-rethinking-skills-and-prompts-for-gpt-6-astra-dae8a87d",
+      "title": "Rethinking skills and prompts for GPT-6 Astra",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-skill-mas-primary-code-and-local-checkout-35818dca",
+      "title": "Skill_MAS primary code and local checkout",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/linhh29/Skill_MAS/tree/b55d47ee7a08b34afda420bb3c5f2ca53efa64a4",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-skill-mas-project-page-2862da21",
+      "title": "Skill-MAS project page",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://linhh29.github.io/blog/Skill-MAS/index.html",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-skills-ref-parser-e424f892",
+      "title": "skills ref parser",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/skills-ref/src/skills_ref/parser.py",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-skills-ref-validator-cecee4c6",
+      "title": "skills ref validator",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/skills-ref/src/skills_ref/validator.py",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-teamwork-agent-teams-teamwork-preview-ea5fe46a",
+      "title": "Teamwork agent teams (/teamwork-preview)",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://antigravity.google/docs/teamwork",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-teamwork-when-ai-becomes-a-research-partner-6b0f99ec",
+      "title": "Teamwork: When AI Becomes a Research Partner",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "ref-using-gpt-6-astra-0aa00f0c",
+      "title": "Using GPT-6 Astra",
+      "kind": "documentation",
+      "status": "prepared",
+      "href": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "rlm-harness",
+      "title": "Language model harnesses are compositional generalizers",
+      "kind": "article",
+      "status": "prepared",
+      "href": "https://alexzhang13.github.io/blog/2026/harness/",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "rlm-intro",
+      "title": "Recursive Language Models",
+      "kind": "article",
+      "status": "prepared",
+      "href": "https://alexzhang13.github.io/blog/2025/rlm/",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "skill-mas-code",
+      "title": "Skill-MAS source",
+      "kind": "repository",
+      "status": "prepared",
+      "href": "https://github.com/linhh29/Skill_MAS",
+      "version": null,
+      "description": ""
+    },
+    {
+      "id": "speculative-ptc",
+      "title": "Speculative Programmatic Tool Calling",
+      "kind": "article",
+      "status": "prepared",
+      "href": "https://alexzhang13.github.io/blog/2026/spec-ptc/",
+      "version": null,
+      "description": ""
+    }
+  ]
+}

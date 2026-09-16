@@ -1,0 +1,28 @@
+# Environment and harness
+
+Use this branch when a task needs project setup, tool ownership or harness changes.
+
+## Establish the current contract
+
+Read the project's actual authority and relevant configuration. Record available
+front doors, their current help, required inputs and allowed effects. Inspect only
+the environment facts needed for the task. A tool being listed is not connectivity.
+
+Use project.json's checks as argument vectors and select only relevant checks.
+They are not installation commands or a permission grant. Preserve existing
+toolchain ownership, runtime authentication and service boundaries.
+
+## Adopt incrementally
+
+Select the missing behavior and its observable result. Generate a candidate
+profile, inspect the aicatlog plan, apply the authorized scope and check the result.
+Keep existing normative files. Resolve unmanaged-file conflicts through their owner;
+do not manufacture ownership receipts or force replacements.
+
+If another foundation owns the installation record, extend or compose that owner's
+profile first. This generator does not merge arbitrary installation histories.
+
+## Verify the result
+
+Distinguish available files, structural installation, successful commands and
+accepted task outcomes. Retain concrete checks and any unverified dependency.

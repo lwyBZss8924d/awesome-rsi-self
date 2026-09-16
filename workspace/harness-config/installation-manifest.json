@@ -1,0 +1,106 @@
+{
+  "schema_version": "aicatlog.foundation-installation.v1",
+  "profile": "self-skills-lab-project-meta-awesome-rsi-self",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "7d1276aa9bd6af3c0e1d2fec1e366aee3d1e65907621ee4085b32456b514c98d"
+    },
+    {
+      "path": "SPEC.md",
+      "sha256": "82480062b2a706714a6060bc156efee887b229fd5ccb7edc3eea0ce98671a0cd"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/project.json",
+      "sha256": "fdbe87cbc17ce057989d01357bae7a50b0fe36c0fc5e4932fcd69eafb8c232e1"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/contexts/environment.llms.txt",
+      "sha256": "b90cadae90c7660f9f31968c121c6a820bf4ae530d34bcee795439a7bc9a4c9f"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/contexts/branches.llms.txt",
+      "sha256": "785eccf2461a9c31dfad29fc7d2729637aef9e9d3bd7027b70c7b39cf867d427"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/contexts/workspace.llms.txt",
+      "sha256": "679da109b63437d0cd0bd25cd0e7068964e9cd31b54d80b16d16df25bad09d3b"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/contexts/knowledge.llms.txt",
+      "sha256": "fb6ed377e1c848c7d0c4ba962aadafac61afb00449e89d0bfaad089699fda62d"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/contexts/skills.llms.txt",
+      "sha256": "fd525f61a236a82ea2bc472240e6d8aed10efd90ad2d84f9b5f0577adb92befc"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/contexts/coordination.llms.txt",
+      "sha256": "1dce60c2a03b413a498b0bca1f43a460a6f1b10ae4974db1f5cf4ad306d966e5"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/templates/state.json",
+      "sha256": "621ee8f3ab30ffa414dee69ffb1655ef8b1ddc2ff2a8316fbf626941a49541a3"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/templates/checkpoint.json",
+      "sha256": "d898d7f5d350de91f21b3099e8feebc86daff48193da37194a98daa82454e282"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/templates/pouw.json",
+      "sha256": "3d117ed9fc77d3aa11892c2dbba912aac7c75888cac512a2edffeb53e24eed53"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/templates/issue.json",
+      "sha256": "01291b5604c9b636b15cfebf1a1e1ac530a7262018207c6179ce705e4c23abd8"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/templates/task.json",
+      "sha256": "2038fb222b8906c429bc80022fed32e5157fbedffcc66c14d0542638709021c5"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/templates/plan.json",
+      "sha256": "4b53c11a485afa85be91e362adec6b4ef3dce6c5a96b3f29757f4cbf32dbc359"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/templates/knowledge.json",
+      "sha256": "bb4fbeb920d80e3baefcacc0c86af8515164b7c1b8e5abd5b43fdfefc84d4d87"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/templates/skill-candidate.json",
+      "sha256": "08e436305077149ca6821af5b808a2baf884c6531bb72f97bc51b4b5c4258314"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/record.schema.json",
+      "sha256": "d30f6162dfc4c7a353b8dd0c0139ba7c1ad8fd7a37189acfcb44caf79ef560a2"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/coordination-proposals.json",
+      "sha256": "6af8d019643c168cc81481a46457c614d93058531f140ca3c3bece19572bcee7"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/llms.txt",
+      "sha256": "1b08ba3ef2aada463a8397da5352b03d6768a349b44a3c60f600a7553881c240"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/resources.json",
+      "sha256": "5e5287b3cce37a8d5b1211eb518167d5124f726d54cf008e915113422b269afc"
+    },
+    {
+      "path": "aicatlog-manifest.json",
+      "sha256": "706fc3365181b2c9933ccf8a4ddc2d78a68538ab79d340eec974bcb546c3bf72"
+    },
+    {
+      "path": "workspace/harness-config/project-meta/aicatlog-registry.json",
+      "sha256": "89b9b344b63db9dafa1cadbc19999c2b2ff6300a8b4d3b9dee26a4acf3d60fe6"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "401b8d5788518741aea036f83a93e3bb1fafe88d53355ac2de2869016584448a"
+    },
+    {
+      "path": "workspace/harness-tooling/project-meta-check.py",
+      "sha256": "2fb86c2d4d16211d59cc9207a1d1da6b888f9c3176e73797448969ab10779c17"
+    }
+  ]
+}

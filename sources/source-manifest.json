@@ -1,0 +1,2007 @@
+{
+  "schema_version": "rsi.sources.v1",
+  "updated_at": "2026-09-16T08:06:57.223Z",
+  "sources": [
+    {
+      "id": "arxiv-2607.13104-v1",
+      "kind": "paper",
+      "title": "Self-Improvements in Modern Agentic Systems: A Survey",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2607.13104v1",
+        "html": "https://arxiv.org/html/2607.13104v1",
+        "tex": "https://arxiv.org/src/2607.13104v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "Self-Improvements in Modern Agentic Systems: A Survey",
+        "title_observation": {
+          "source_artifact_sha256": "ebd476db0bee19b4f99c33730632fb606c5fbff6991e9e43b5dca9b3855a0cf3",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:50.434Z"
+        }
+      },
+      "arxiv_id": "2607.13104"
+    },
+    {
+      "id": "arxiv-2512.08296-v3",
+      "kind": "paper",
+      "title": "Towards a Science of Scaling Agent Systems",
+      "version": "v3",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2512.08296v3",
+        "html": "https://arxiv.org/html/2512.08296v3",
+        "tex": "https://arxiv.org/src/2512.08296v3"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "Towards a Science of Scaling Agent Systems",
+        "title_observation": {
+          "source_artifact_sha256": "e19cfd16776f06ca693fc99e1ad4ef30335c5e063a3025acd0b62c8e8c09a39e",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:50.503Z"
+        }
+      },
+      "arxiv_id": "2512.08296"
+    },
+    {
+      "id": "arxiv-2608.29596-v1",
+      "kind": "paper",
+      "title": "Towards a Systems Foundation for Agentic Skills: Architecture, Lifecycle, and Security",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2608.29596v1",
+        "html": "https://arxiv.org/html/2608.29596v1",
+        "tex": "https://arxiv.org/src/2608.29596v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "Towards a Systems Foundation for Agentic Skills: Architecture, Lifecycle, and Security",
+        "title_observation": {
+          "source_artifact_sha256": "f57d18fa9e847bb7debe094224940781ad89598e8f48be4c70dff5c36a2e997d",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:50.585Z"
+        }
+      },
+      "arxiv_id": "2608.29596"
+    },
+    {
+      "id": "arxiv-2606.18837-v2",
+      "kind": "paper",
+      "title": "Skill-MAS: Evolving Meta-Skill for Automatic Multi-Agent Systems",
+      "version": "v2",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2606.18837v2",
+        "html": "https://arxiv.org/html/2606.18837v2",
+        "tex": "https://arxiv.org/src/2606.18837v2"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "Skill-MAS: Evolving Meta-Skill for Automatic Multi-Agent Systems",
+        "title_observation": {
+          "source_artifact_sha256": "320e65d57ff4f3d70062548daa252937d5d7eee6cbdad24b189acb6ff5d3aff3",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:50.645Z"
+        }
+      },
+      "arxiv_id": "2606.18837"
+    },
+    {
+      "id": "arxiv-2608.27454-v1",
+      "kind": "paper",
+      "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2608.27454v1",
+        "html": "https://arxiv.org/html/2608.27454v1",
+        "tex": "https://arxiv.org/src/2608.27454v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+        "title_observation": {
+          "source_artifact_sha256": "829f38f5cb66ac3dddbd4d978fe9219e8a9d314a23330d8b93998c767a74daa2",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:50.706Z"
+        }
+      },
+      "arxiv_id": "2608.27454"
+    },
+    {
+      "id": "arxiv-2608.19880-v1",
+      "kind": "paper",
+      "title": "EnvHarness: Awakening Static Worlds for Agent Learning",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2608.19880v1",
+        "html": "https://arxiv.org/html/2608.19880v1",
+        "tex": "https://arxiv.org/src/2608.19880v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "EnvHarness: Awakening Static Worlds for Agent Learning",
+        "title_observation": {
+          "source_artifact_sha256": "eee1091cc1d9fe30afb965b9bb097de73a016f76169b253ded54e0d087d10978",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:50.770Z"
+        }
+      },
+      "arxiv_id": "2608.19880"
+    },
+    {
+      "id": "arxiv-2608.26263-v3",
+      "kind": "paper",
+      "title": "SKILL.state: Scalable Long-Horizon Agent Skills",
+      "version": "v3",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2608.26263v3",
+        "html": "https://arxiv.org/html/2608.26263v3",
+        "tex": "https://arxiv.org/src/2608.26263v3"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "SKILL.state: Scalable Long-Horizon Agent Skills",
+        "title_observation": {
+          "source_artifact_sha256": "1ec22f107b69b416518acdf3eb4ca3310ef3314123293fdd275554f8a6618d27",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:50.805Z"
+        }
+      },
+      "arxiv_id": "2608.26263"
+    },
+    {
+      "id": "arxiv-2605.23904-v2",
+      "kind": "paper",
+      "title": "SkillOpt: Executive Strategy for Self-Evolving Agent Skills",
+      "version": "v2",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2605.23904v2",
+        "html": "https://arxiv.org/html/2605.23904v2",
+        "tex": "https://arxiv.org/src/2605.23904v2"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending"
+      },
+      "arxiv_id": "2605.23904"
+    },
+    {
+      "id": "arxiv-2607.03451-v1",
+      "kind": "paper",
+      "title": "SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2607.03451v1",
+        "html": "https://arxiv.org/html/2607.03451v1",
+        "tex": "https://arxiv.org/src/2607.03451v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending"
+      },
+      "arxiv_id": "2607.03451"
+    },
+    {
+      "id": "arxiv-2605.23899-v1",
+      "kind": "paper",
+      "title": "From Raw Experience to Skill Consumption: A Systematic Study of Model-Generated Agent Skills",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2605.23899v1",
+        "html": "https://arxiv.org/html/2605.23899v1",
+        "tex": "https://arxiv.org/src/2605.23899v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending"
+      },
+      "arxiv_id": "2605.23899"
+    },
+    {
+      "id": "arxiv-2608.15071-v2",
+      "kind": "paper",
+      "title": "Evo-Harness: Context-to-Harness Skill Compilation for Self-Evolving Agents",
+      "version": "v2",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2608.15071v2",
+        "html": "https://arxiv.org/html/2608.15071v2",
+        "tex": "https://arxiv.org/src/2608.15071v2"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "Evo-Harness: Context-to-Harness Skill Compilation for Self-Evolving Agents",
+        "title_observation": {
+          "source_artifact_sha256": "c7caf4b1ca9e2cebe76cea03621dd020e169eb06c173bd2c28c1be9bf629759f",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:50.937Z"
+        }
+      },
+      "arxiv_id": "2608.15071"
+    },
+    {
+      "id": "arxiv-2609.01437-v1",
+      "kind": "paper",
+      "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2609.01437v1",
+        "html": "https://arxiv.org/html/2609.01437v1",
+        "tex": "https://arxiv.org/src/2609.01437v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+        "title_observation": {
+          "source_artifact_sha256": "0bbc8ed36a571a31bea861747c91722946b67c5fa352eb4bd39bb9aa94c73f93",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.010Z"
+        }
+      },
+      "arxiv_id": "2609.01437"
+    },
+    {
+      "id": "arxiv-2608.31100-v1",
+      "kind": "paper",
+      "title": "S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2608.31100v1",
+        "html": "https://arxiv.org/html/2608.31100v1",
+        "tex": "https://arxiv.org/src/2608.31100v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?",
+        "title_observation": {
+          "url": "https://arxiv.org/abs/2608.31100v1",
+          "sha256": "e8f850d40cf772c8b3aa713c2754f2ca7d92f227fe87120f06aecda4915aff69",
+          "format": "arxiv-citation_title",
+          "observed_at": "2026-09-16T08:06:56.705Z"
+        }
+      },
+      "arxiv_id": "2608.31100"
+    },
+    {
+      "id": "arxiv-2608.31111-v1",
+      "kind": "paper",
+      "title": "Aspire: Can Models Self-Evolve from Vague Goals?",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2608.31111v1",
+        "html": "https://arxiv.org/html/2608.31111v1",
+        "tex": "https://arxiv.org/src/2608.31111v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "Aspire: Can Models Self-Evolve from Vague Goals?",
+        "title_observation": {
+          "source_artifact_sha256": "b111da59c78d8e9ebe3806c3379f1f9387777c92f6acfded6e60c7f26811d858",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.088Z"
+        }
+      },
+      "arxiv_id": "2608.31111"
+    },
+    {
+      "id": "arxiv-2512.24601-v3",
+      "kind": "paper",
+      "title": "Recursive Language Models",
+      "version": "v3",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2512.24601v3",
+        "html": "https://arxiv.org/html/2512.24601v3",
+        "tex": "https://arxiv.org/src/2512.24601v3"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "Recursive Language Models",
+        "title_observation": {
+          "source_artifact_sha256": "1be5ec7d2700811a2a6f4a6ddeb63654e458f80c9bc5ed5159a96dde15152393",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.206Z"
+        }
+      },
+      "arxiv_id": "2512.24601"
+    },
+    {
+      "id": "arxiv-2608.23552-v1",
+      "kind": "paper",
+      "title": "Prime Agent: A Self-Improving RLM Harness",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2608.23552v1",
+        "html": "https://arxiv.org/html/2608.23552v1",
+        "tex": "https://arxiv.org/src/2608.23552v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "Prime Agent: source title pending verification",
+        "title_observation": {
+          "source_artifact_sha256": "14e64b1ae601fec9169d257584bc0f40602d0df898f9d93efbbbd8bbdc2f7cb1",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.259Z"
+        }
+      },
+      "arxiv_id": "2608.23552"
+    },
+    {
+      "id": "arxiv-2605.25480-v2",
+      "kind": "paper",
+      "title": "Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki",
+      "version": "v2",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2605.25480v2",
+        "html": "https://arxiv.org/html/2605.25480v2",
+        "tex": "https://arxiv.org/src/2605.25480v2"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki",
+        "title_observation": {
+          "source_artifact_sha256": "6eb24bd84aea33282900f9b3fcf8f3440f1bbfbbca9c28c82521550d4b3c602b",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.281Z"
+        }
+      },
+      "arxiv_id": "2605.25480"
+    },
+    {
+      "id": "arxiv-2606.14275-v1",
+      "kind": "paper",
+      "title": "WikiKV: Schema-Evolving Path-Indexed Storage for Hierarchical Knowledge Navigation",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2606.14275v1",
+        "html": "https://arxiv.org/html/2606.14275v1",
+        "tex": "https://arxiv.org/src/2606.14275v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "WikiKV: Schema-Evolving Path-Indexed Storage for Hierarchical Knowledge Navigation",
+        "title_observation": {
+          "source_artifact_sha256": "ddedd41f561297a4a4685e5a01375f7ea6e171ecddb2f7ab8f98dec05242ce34",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.309Z"
+        }
+      },
+      "arxiv_id": "2606.14275"
+    },
+    {
+      "id": "arxiv-2607.26604-v1",
+      "kind": "paper",
+      "title": "WikiLoop: Jointly Learning to Build and Navigate Agent-Native Wikis with Downstream Feedback",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2607.26604v1",
+        "html": "https://arxiv.org/html/2607.26604v1",
+        "tex": "https://arxiv.org/src/2607.26604v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "WikiLoop: Jointly Learning to Build and Navigate Agent-Native Wikis with Downstream Feedback",
+        "title_observation": {
+          "source_artifact_sha256": "9b41bfe33ea197508af069dbed0146b24fcf093ab441675920c1c416214cb0e1",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.333Z"
+        }
+      },
+      "arxiv_id": "2607.26604"
+    },
+    {
+      "id": "arxiv-2608.00967-v1",
+      "kind": "paper",
+      "title": "TrajWiki: Source-Grounded Memory Trajectories for Long-Horizon Dialogue Agents",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2608.00967v1",
+        "html": "https://arxiv.org/html/2608.00967v1",
+        "tex": "https://arxiv.org/src/2608.00967v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "TrajWiki: Source-Grounded Memory Trajectories for Long-Horizon Dialogue Agents",
+        "title_observation": {
+          "source_artifact_sha256": "3f2a4a3e36bda9e202bfe9cc85ea946715fa8fb68bbb736f837babc18e7c4820",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.381Z"
+        }
+      },
+      "arxiv_id": "2608.00967"
+    },
+    {
+      "id": "arxiv-2609.09153-v1",
+      "kind": "paper",
+      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2609.09153v1",
+        "html": "https://arxiv.org/html/2609.09153v1",
+        "tex": "https://arxiv.org/src/2609.09153v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+        "title_observation": {
+          "source_artifact_sha256": "c06db200c83940a708097dd2645989c90223fc324170f502bdb94586b49eb823",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.427Z"
+        }
+      },
+      "arxiv_id": "2609.09153"
+    },
+    {
+      "id": "arxiv-2507.19457-v2",
+      "kind": "paper",
+      "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
+      "version": "v2",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2507.19457v2",
+        "html": "https://arxiv.org/html/2507.19457v2",
+        "tex": "https://arxiv.org/src/2507.19457v2"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "arXiv 2507.19457v2 (metadata pending)",
+        "title_observation": {
+          "source_artifact_sha256": "8e32a16820146f3fba8dce2cb7f2adae778e6912b8b98aa242698a220eca2923",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.723Z"
+        }
+      },
+      "arxiv_id": "2507.19457"
+    },
+    {
+      "id": "arxiv-2602.08234-v1",
+      "kind": "paper",
+      "title": "SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2602.08234v1",
+        "html": "https://arxiv.org/html/2602.08234v1",
+        "tex": "https://arxiv.org/src/2602.08234v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "arXiv 2602.08234v1 (metadata pending)",
+        "title_observation": {
+          "source_artifact_sha256": "66877c63cb1b8639d5415fc5c5c24798b807b1741afc02216c748fd43dd6ba1d",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.837Z"
+        }
+      },
+      "arxiv_id": "2602.08234"
+    },
+    {
+      "id": "arxiv-2603.28052-v1",
+      "kind": "paper",
+      "title": "Meta-Harness: End-to-End Optimization of Model Harnesses",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2603.28052v1",
+        "html": "https://arxiv.org/html/2603.28052v1",
+        "tex": "https://arxiv.org/src/2603.28052v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "arXiv 2603.28052v1 (metadata pending)",
+        "title_observation": {
+          "source_artifact_sha256": "d28989aa57f49e45d1fdaf0849e60d0be2d18a0baf253fb276c7b9c047ada73d",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.879Z"
+        }
+      },
+      "arxiv_id": "2603.28052"
+    },
+    {
+      "id": "arxiv-2606.17628-v1",
+      "kind": "paper",
+      "title": "OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2606.17628v1",
+        "html": "https://arxiv.org/html/2606.17628v1",
+        "tex": "https://arxiv.org/src/2606.17628v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "arXiv 2606.17628v1 (metadata pending)",
+        "title_observation": {
+          "source_artifact_sha256": "b1f69e308c6e6cd30195538a6a59c03cf89ae53302f4cc471621b9a0583c40ec",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.925Z"
+        }
+      },
+      "arxiv_id": "2606.17628"
+    },
+    {
+      "id": "arxiv-2510.04618-v3",
+      "kind": "paper",
+      "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models",
+      "version": "v3",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2510.04618v3",
+        "html": "https://arxiv.org/html/2510.04618v3",
+        "tex": "https://arxiv.org/src/2510.04618v3"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "arXiv 2510.04618v3 (metadata pending)",
+        "title_observation": {
+          "source_artifact_sha256": "cd5e69ef613b8a8fad4b2010b05a671362763f8f569f7a9598d414ce153c1f2d",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:51.973Z"
+        }
+      },
+      "arxiv_id": "2510.04618"
+    },
+    {
+      "id": "arxiv-2607.16621-v1",
+      "kind": "paper",
+      "title": "From Memory to Skills: Evidence-Grounded Co-Evolution Governance for Long-Horizon LLM Agents",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2607.16621v1",
+        "html": "https://arxiv.org/html/2607.16621v1",
+        "tex": "https://arxiv.org/src/2607.16621v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "arXiv 2607.16621v1 (metadata pending)",
+        "title_observation": {
+          "source_artifact_sha256": "76b65608fefe037c8ff9d6564179ede1b9be6c71b771217845855de39b870258",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:52.045Z"
+        }
+      },
+      "arxiv_id": "2607.16621"
+    },
+    {
+      "id": "arxiv-2608.11095-v1",
+      "kind": "paper",
+      "title": "Why Does CLAUDE.md Keep Growing? Catastrophic Remembering in Agentic Coding",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2608.11095v1",
+        "html": "https://arxiv.org/html/2608.11095v1",
+        "tex": "https://arxiv.org/src/2608.11095v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "arXiv 2608.11095v1 (metadata pending)",
+        "title_observation": {
+          "source_artifact_sha256": "80d73dcd45deace47b268e774c07bc0ec92c574cc96711fc0695c9b01afbcce2",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:52.121Z"
+        }
+      },
+      "arxiv_id": "2608.11095"
+    },
+    {
+      "id": "arxiv-2605.05242-v1",
+      "kind": "paper",
+      "title": "Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2605.05242v1",
+        "html": "https://arxiv.org/html/2605.05242v1",
+        "tex": "https://arxiv.org/src/2605.05242v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "arXiv 2605.05242v1 (metadata pending)",
+        "title_observation": {
+          "source_artifact_sha256": "4ec00dab036866817e940b6cbfeca7748a450cf639b67e9f8a2f583ae03cee3b",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:52.211Z"
+        }
+      },
+      "arxiv_id": "2605.05242"
+    },
+    {
+      "id": "arxiv-2605.18747-v1",
+      "kind": "paper",
+      "title": "Code as Agent Harness",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2605.18747v1",
+        "html": "https://arxiv.org/html/2605.18747v1",
+        "tex": "https://arxiv.org/src/2605.18747v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "arXiv 2605.18747v1 (metadata pending)",
+        "title_observation": {
+          "url": "https://arxiv.org/abs/2605.18747v1",
+          "sha256": "48edaa9f0ff36c0a4f6f40681ad625e104795108a7a4e7bc9c94ea841918f309",
+          "format": "arxiv-citation_title",
+          "observed_at": "2026-09-16T08:06:56.975Z"
+        }
+      },
+      "arxiv_id": "2605.18747"
+    },
+    {
+      "id": "arxiv-2604.02268-v2",
+      "kind": "paper",
+      "title": "Skill0: In-Context Agentic Reinforcement Learning for Skill Internalization",
+      "version": "v2",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2604.02268v2",
+        "html": "https://arxiv.org/html/2604.02268v2",
+        "tex": "https://arxiv.org/src/2604.02268v2"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "arXiv 2604.02268v2 (metadata pending)",
+        "title_observation": {
+          "source_artifact_sha256": "096167a3d9f0ffbe6f39ec7cfc069697c151aaae185ebf64a7531fb41785bfa2",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:52.340Z"
+        }
+      },
+      "arxiv_id": "2604.02268"
+    },
+    {
+      "id": "arxiv-2607.05391-v2",
+      "kind": "paper",
+      "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
+      "version": "v2",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2607.05391v2",
+        "html": "https://arxiv.org/html/2607.05391v2",
+        "tex": "https://arxiv.org/src/2607.05391v2"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "arXiv 2607.05391v2 (metadata pending)",
+        "title_observation": {
+          "source_artifact_sha256": "8f2a2355ba64fd4707e735474320d0a988c6eb453ae4a4b95ef7a516bf65b28f",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:52.394Z"
+        }
+      },
+      "arxiv_id": "2607.05391"
+    },
+    {
+      "id": "arxiv-2506.13131-v1",
+      "kind": "paper",
+      "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2506.13131v1",
+        "html": "https://arxiv.org/html/2506.13131v1",
+        "tex": "https://arxiv.org/src/2506.13131v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed",
+        "verification": "metadata_pending",
+        "supplied_title": "arXiv 2506.13131v1 (metadata pending)",
+        "title_observation": {
+          "source_artifact_sha256": "eccec3409ca6f57f1fd28f8fec27f024af7eb4b96cd1f6254ab1084b55955d4e",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:52.460Z"
+        }
+      },
+      "arxiv_id": "2506.13131"
+    },
+    {
+      "id": "awesome-self-improving-agents",
+      "kind": "repository",
+      "title": "Awesome Self-Improving Agents",
+      "urls": {
+        "canonical": "https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents",
+        "html": "https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents"
+      },
+      "tags": [
+        "rsi",
+        "toolbox"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "karpathy-llm-wiki",
+      "kind": "article",
+      "title": "Karpathy LLM Wiki",
+      "urls": {
+        "canonical": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+        "html": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "okf-spec",
+      "kind": "documentation",
+      "title": "Open Knowledge Format v0.2",
+      "urls": {
+        "canonical": "https://raw.githubusercontent.com/GoogleCloudPlatform/open-knowledge-format/main/SPEC.md",
+        "html": "https://raw.githubusercontent.com/GoogleCloudPlatform/open-knowledge-format/main/SPEC.md"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "llms-txt-v2",
+      "kind": "documentation",
+      "title": "The llms.txt file v2",
+      "urls": {
+        "canonical": "https://raw.githubusercontent.com/AnswerDotAI/llms-txt/main/nbs/index.qmd",
+        "html": "https://raw.githubusercontent.com/AnswerDotAI/llms-txt/main/nbs/index.qmd"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "openkb",
+      "kind": "repository",
+      "title": "OpenKB",
+      "urls": {
+        "canonical": "https://github.com/VectifyAI/OpenKB",
+        "html": "https://github.com/VectifyAI/OpenKB"
+      },
+      "tags": [
+        "rsi",
+        "toolbox"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "openviking",
+      "kind": "repository",
+      "title": "OpenViking",
+      "urls": {
+        "canonical": "https://github.com/volcengine/OpenViking",
+        "html": "https://github.com/volcengine/OpenViking"
+      },
+      "tags": [
+        "rsi",
+        "toolbox"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "prime-agent",
+      "kind": "repository",
+      "title": "Prime Agent",
+      "urls": {
+        "canonical": "https://github.com/PrimeIntellect-ai/prime-agent",
+        "html": "https://github.com/PrimeIntellect-ai/prime-agent"
+      },
+      "tags": [
+        "rsi",
+        "toolbox"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "reef",
+      "kind": "repository",
+      "title": "Reef",
+      "urls": {
+        "canonical": "https://github.com/Human-Agent-Society/reef",
+        "html": "https://github.com/Human-Agent-Society/reef"
+      },
+      "tags": [
+        "rsi",
+        "toolbox"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "dspy",
+      "kind": "repository",
+      "title": "DSPy",
+      "urls": {
+        "canonical": "https://github.com/stanfordnlp/dspy",
+        "html": "https://github.com/stanfordnlp/dspy"
+      },
+      "tags": [
+        "rsi",
+        "toolbox"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "promptfoo",
+      "kind": "repository",
+      "title": "Promptfoo",
+      "urls": {
+        "canonical": "https://github.com/promptfoo/promptfoo",
+        "html": "https://github.com/promptfoo/promptfoo"
+      },
+      "tags": [
+        "rsi",
+        "toolbox"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "knowledge-index",
+      "kind": "repository",
+      "title": "Knowledge Index",
+      "urls": {
+        "canonical": "https://github.com/zach-blumenfeld/knowledge-index",
+        "html": "https://github.com/zach-blumenfeld/knowledge-index"
+      },
+      "tags": [
+        "rsi",
+        "toolbox"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "pageindex",
+      "kind": "documentation",
+      "title": "PageIndex",
+      "urls": {
+        "canonical": "https://docs.pageindex.ai/",
+        "html": "https://docs.pageindex.ai/"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "claude-dynamic-workflows",
+      "kind": "documentation",
+      "title": "Claude Dynamic Workflows",
+      "urls": {
+        "canonical": "https://code.claude.com/docs/en/workflows",
+        "html": "https://code.claude.com/docs/en/workflows"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "skill-mas-code",
+      "kind": "repository",
+      "title": "Skill-MAS source",
+      "urls": {
+        "canonical": "https://github.com/linhh29/Skill_MAS",
+        "html": "https://github.com/linhh29/Skill_MAS"
+      },
+      "tags": [
+        "rsi",
+        "toolbox"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "mdcode-concept",
+      "kind": "documentation",
+      "title": "Metadata as Code",
+      "urls": {
+        "canonical": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/toolbox/mdcode/docs/concept.md",
+        "html": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/main/toolbox/mdcode/docs/concept.md"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "neo4j-llm-wiki",
+      "kind": "article",
+      "title": "Scaling Karpathy LLM wiki",
+      "urls": {
+        "canonical": "https://neo4j.com/blog/agentic-ai/scaling-karpathy-llm-wiki-graph/",
+        "html": "https://neo4j.com/blog/agentic-ai/scaling-karpathy-llm-wiki-graph/"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "rlm-harness",
+      "kind": "article",
+      "title": "Language model harnesses are compositional generalizers",
+      "urls": {
+        "canonical": "https://alexzhang13.github.io/blog/2026/harness/",
+        "html": "https://alexzhang13.github.io/blog/2026/harness/"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "rlm-intro",
+      "kind": "article",
+      "title": "Recursive Language Models",
+      "urls": {
+        "canonical": "https://alexzhang13.github.io/blog/2025/rlm/",
+        "html": "https://alexzhang13.github.io/blog/2025/rlm/"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "speculative-ptc",
+      "kind": "article",
+      "title": "Speculative Programmatic Tool Calling",
+      "urls": {
+        "canonical": "https://alexzhang13.github.io/blog/2026/spec-ptc/",
+        "html": "https://alexzhang13.github.io/blog/2026/spec-ptc/"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "prime-agent-blog",
+      "kind": "article",
+      "title": "Prime Agent",
+      "urls": {
+        "canonical": "https://www.primeintellect.ai/blog/prime-agent",
+        "html": "https://www.primeintellect.ai/blog/prime-agent"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "prime-rlm-blog",
+      "kind": "article",
+      "title": "Prime RLM",
+      "urls": {
+        "canonical": "https://www.primeintellect.ai/blog/rlm",
+        "html": "https://www.primeintellect.ai/blog/rlm"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "hf-papers",
+      "kind": "documentation",
+      "title": "Hugging Face Papers",
+      "urls": {
+        "canonical": "https://huggingface.co/papers",
+        "html": "https://huggingface.co/papers"
+      },
+      "tags": [
+        "rsi",
+        "knowledge"
+      ],
+      "provenance": {
+        "origin": "user-r6-seed"
+      }
+    },
+    {
+      "id": "ref-using-gpt-6-astra-0aa00f0c",
+      "kind": "documentation",
+      "title": "Using GPT-6 Astra",
+      "urls": {
+        "canonical": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra",
+        "html": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r0-research",
+        "source_revision": null,
+        "prior_observation_at": "2026-09-14T04:19:23.866197+00:00"
+      }
+    },
+    {
+      "id": "ref-rethinking-skills-and-prompts-for-gpt-6-astra-dae8a87d",
+      "kind": "documentation",
+      "title": "Rethinking skills and prompts for GPT-6 Astra",
+      "urls": {
+        "canonical": "https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra",
+        "html": "https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r0-research",
+        "source_revision": null,
+        "prior_observation_at": "2026-09-14T04:19:23.866197+00:00"
+      }
+    },
+    {
+      "id": "ref-custom-instructions-with-agents-md-780d4cde",
+      "kind": "documentation",
+      "title": "Custom instructions with AGENTS.md",
+      "urls": {
+        "canonical": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+        "html": "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r0-research",
+        "source_revision": null,
+        "prior_observation_at": "2026-09-14T04:19:23.866197+00:00"
+      }
+    },
+    {
+      "id": "ref-codex-instruction-loading-implementation-d060d926",
+      "kind": "documentation",
+      "title": "Codex instruction loading implementation",
+      "urls": {
+        "canonical": "https://github.com/openai/codex/blob/3abbf9fe2c6b6910e9de61f6a0c5bb468f74b5c8/codex-rs/core/src/agents_md.rs",
+        "html": "https://github.com/openai/codex/blob/3abbf9fe2c6b6910e9de61f6a0c5bb468f74b5c8/codex-rs/core/src/agents_md.rs"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r0-research",
+        "source_revision": null,
+        "prior_observation_at": "2026-09-14T04:19:23.866197+00:00"
+      }
+    },
+    {
+      "id": "ref-codex-skills-catalog-rendering-a8c989a0",
+      "kind": "documentation",
+      "title": "Codex skills catalog rendering",
+      "urls": {
+        "canonical": "https://github.com/openai/codex/blob/3abbf9fe2c6b6910e9de61f6a0c5bb468f74b5c8/codex-rs/ext/skills/src/render.rs",
+        "html": "https://github.com/openai/codex/blob/3abbf9fe2c6b6910e9de61f6a0c5bb468f74b5c8/codex-rs/ext/skills/src/render.rs"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r0-research",
+        "source_revision": null,
+        "prior_observation_at": "2026-09-14T04:19:23.866197+00:00"
+      }
+    },
+    {
+      "id": "ref-reef-evolve-your-harness-harness-adapters-a6b6775b",
+      "kind": "documentation",
+      "title": "Reef: Evolve your harness; Harness adapters",
+      "urls": {
+        "canonical": "https://www.reefinfra.ai/docs/user-guide/evolve-your-harness/",
+        "html": "https://www.reefinfra.ai/docs/user-guide/evolve-your-harness/"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r0-research",
+        "source_revision": null,
+        "prior_observation_at": "2026-09-14T04:19:23.866197+00:00"
+      }
+    },
+    {
+      "id": "ref-openai-cookbook-local-reference-snapshot-99429ae9",
+      "kind": "documentation",
+      "title": "OpenAI Cookbook local reference snapshot",
+      "urls": {
+        "canonical": "https://github.com/openai/openai-cookbook/tree/9aad95f0aa4f8e12991ef9b9201df28747860bfc",
+        "html": "https://github.com/openai/openai-cookbook/tree/9aad95f0aa4f8e12991ef9b9201df28747860bfc"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r0-research",
+        "source_revision": null,
+        "prior_observation_at": "2026-09-14T04:19:23.866197+00:00"
+      }
+    },
+    {
+      "id": "ref-envharness-model-parameter-adapter-5fbe9146",
+      "kind": "documentation",
+      "title": "EnvHarness model parameter adapter",
+      "urls": {
+        "canonical": "https://github.com/google-research/envharness/blob/fab7d57441f06b75c73a900e04561d4d7600f361/envharness/infra/model.py",
+        "html": "https://github.com/google-research/envharness/blob/fab7d57441f06b75c73a900e04561d4d7600f361/envharness/infra/model.py"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r0-research",
+        "source_revision": null,
+        "prior_observation_at": "2026-09-14T04:19:23.866197+00:00"
+      }
+    },
+    {
+      "id": "ref-agentskills-authority-1f63d271",
+      "kind": "documentation",
+      "title": "agentskills authority",
+      "urls": {
+        "canonical": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/AGENTS.md",
+        "html": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/AGENTS.md"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-agentskills-spec-f1e2a866",
+      "kind": "documentation",
+      "title": "agentskills spec",
+      "urls": {
+        "canonical": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/specification.mdx",
+        "html": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/specification.mdx"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-agentskills-client-guide-2d64323a",
+      "kind": "documentation",
+      "title": "agentskills client guide",
+      "urls": {
+        "canonical": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/client-implementation/adding-skills-support.mdx",
+        "html": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/client-implementation/adding-skills-support.mdx"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-agentskills-showcase-041da858",
+      "kind": "documentation",
+      "title": "agentskills showcase",
+      "urls": {
+        "canonical": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/clients.mdx",
+        "html": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/clients.mdx"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-agentskills-client-links-b93ad195",
+      "kind": "documentation",
+      "title": "agentskills client links",
+      "urls": {
+        "canonical": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/snippets/clients.jsx",
+        "html": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/docs/snippets/clients.jsx"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-skills-ref-parser-e424f892",
+      "kind": "documentation",
+      "title": "skills ref parser",
+      "urls": {
+        "canonical": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/skills-ref/src/skills_ref/parser.py",
+        "html": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/skills-ref/src/skills_ref/parser.py"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-skills-ref-validator-cecee4c6",
+      "kind": "documentation",
+      "title": "skills ref validator",
+      "urls": {
+        "canonical": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/skills-ref/src/skills_ref/validator.py",
+        "html": "https://github.com/agentskills/agentskills/blob/69ef37e9424c0a7ea9dd2293b559e43ec8176379/skills-ref/src/skills_ref/validator.py"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-llms-v2-proposal-c079de9e",
+      "kind": "documentation",
+      "title": "llms v2 proposal",
+      "urls": {
+        "canonical": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/index.qmd",
+        "html": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/index.qmd"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "f5aed2aeab1df0ea11e49909a3af86739a09d9a3",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-llms-v2-changes-9071d809",
+      "kind": "documentation",
+      "title": "llms v2 changes",
+      "urls": {
+        "canonical": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/changes.qmd",
+        "html": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/changes.qmd"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "f5aed2aeab1df0ea11e49909a3af86739a09d9a3",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-llms-core-notebook-4e568c6a",
+      "kind": "documentation",
+      "title": "llms core notebook",
+      "urls": {
+        "canonical": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/01_core.ipynb",
+        "html": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/01_core.ipynb"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "f5aed2aeab1df0ea11e49909a3af86739a09d9a3",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-llms-miniparse-a2d1e148",
+      "kind": "documentation",
+      "title": "llms miniparse",
+      "urls": {
+        "canonical": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/llms_txt/miniparse.py",
+        "html": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/llms_txt/miniparse.py"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "f5aed2aeab1df0ea11e49909a3af86739a09d9a3",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-llms-core-ad673f47",
+      "kind": "documentation",
+      "title": "llms core",
+      "urls": {
+        "canonical": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/llms_txt/core.py",
+        "html": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/llms_txt/core.py"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "f5aed2aeab1df0ea11e49909a3af86739a09d9a3",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-llms-upstream-tests-68a9c7ff",
+      "kind": "documentation",
+      "title": "llms upstream tests",
+      "urls": {
+        "canonical": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/tests/test-parse.py",
+        "html": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/tests/test-parse.py"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "f5aed2aeab1df0ea11e49909a3af86739a09d9a3",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-llms-javascript-demo-f31e3762",
+      "kind": "documentation",
+      "title": "llms javascript demo",
+      "urls": {
+        "canonical": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/llmstxt-js.html",
+        "html": "https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/llmstxt-js.html"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "f5aed2aeab1df0ea11e49909a3af86739a09d9a3",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-pi-docs-a408841d",
+      "kind": "documentation",
+      "title": "pi docs",
+      "urls": {
+        "canonical": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/docs/skills.md",
+        "html": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/docs/skills.md"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "d7296c063b7971a7298769cfff1a167a9a16f8ed",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-pi-loader-9046a9fe",
+      "kind": "documentation",
+      "title": "pi loader",
+      "urls": {
+        "canonical": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/skills.ts",
+        "html": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/skills.ts"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "d7296c063b7971a7298769cfff1a167a9a16f8ed",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-anthropic-readme-2607ce13",
+      "kind": "documentation",
+      "title": "anthropic readme",
+      "urls": {
+        "canonical": "https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/README.md",
+        "html": "https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/README.md"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "34040c9c568585f6929bedeaad110ad08f079624",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-anthropic-spec-a7553f99",
+      "kind": "documentation",
+      "title": "anthropic spec",
+      "urls": {
+        "canonical": "https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/spec/agent-skills-spec.md",
+        "html": "https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/spec/agent-skills-spec.md"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "34040c9c568585f6929bedeaad110ad08f079624",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-anthropic-template-fc6d7e60",
+      "kind": "documentation",
+      "title": "anthropic template",
+      "urls": {
+        "canonical": "https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/template/SKILL.md",
+        "html": "https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/template/SKILL.md"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "34040c9c568585f6929bedeaad110ad08f079624",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-openclaw-docs-611bf541",
+      "kind": "documentation",
+      "title": "openclaw docs",
+      "urls": {
+        "canonical": "https://raw.githubusercontent.com/openclaw/openclaw/8b4754c73279d8b4fa20965a38a59e4ded422d8d/docs/tools/skills.md",
+        "html": "https://raw.githubusercontent.com/openclaw/openclaw/8b4754c73279d8b4fa20965a38a59e4ded422d8d/docs/tools/skills.md"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "8b4754c73279d8b4fa20965a38a59e4ded422d8d",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-claude-docs-194f0e28",
+      "kind": "documentation",
+      "title": "claude docs",
+      "urls": {
+        "canonical": "https://code.claude.com/docs/en/skills.md",
+        "html": "https://code.claude.com/docs/en/skills.md"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": null,
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-pi-resource-loader-83389135",
+      "kind": "documentation",
+      "title": "pi resource loader",
+      "urls": {
+        "canonical": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/resource-loader.ts",
+        "html": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/resource-loader.ts"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "d7296c063b7971a7298769cfff1a167a9a16f8ed",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-pi-package-manager-f9ebd257",
+      "kind": "documentation",
+      "title": "pi package manager",
+      "urls": {
+        "canonical": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/package-manager.ts",
+        "html": "https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/package-manager.ts"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "d7296c063b7971a7298769cfff1a167a9a16f8ed",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-openai-build-575ba476",
+      "kind": "documentation",
+      "title": "openai build",
+      "urls": {
+        "canonical": "https://learn.chatgpt.com/docs/build-skills.md",
+        "html": "https://learn.chatgpt.com/docs/build-skills.md"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": null,
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-pi-live-page-c733c1d4",
+      "kind": "documentation",
+      "title": "pi live page",
+      "urls": {
+        "canonical": "https://pi.dev/docs/latest/skills",
+        "html": "https://pi.dev/docs/latest/skills"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": null,
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "arxiv-2605.20023-v1",
+      "kind": "paper",
+      "title": "When Skills Don’t Help: A Negative Result on Procedural Knowledge for Tool-Grounded Agents in Offensive Cybersecurity",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2605.20023v1",
+        "html": "https://arxiv.org/html/2605.20023v1",
+        "tex": "https://arxiv.org/src/2605.20023v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "inherited-r5",
+        "verification": "metadata_pending",
+        "supplied_title": "When Skills Don’t Help: A Negative Result on Procedural Knowledge for Tool-Grounded Agents in Offensive Cybersecurity",
+        "title_observation": {
+          "source_artifact_sha256": "9bd352859c0474d98ad80b1f34db152a5e6c7a1eb90914df42676fad8bf2a514",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:52.487Z"
+        }
+      },
+      "arxiv_id": "2605.20023"
+    },
+    {
+      "id": "arxiv-2604.02837-v1",
+      "kind": "paper",
+      "title": "Towards Secure Agent Skills: Architecture, Threat Taxonomy, and Security Analysis",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2604.02837v1",
+        "html": "https://arxiv.org/html/2604.02837v1",
+        "tex": "https://arxiv.org/src/2604.02837v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "inherited-r5",
+        "verification": "metadata_pending",
+        "supplied_title": "Towards Secure Agent Skills: Architecture, Threat Taxonomy, and Security Analysis",
+        "title_observation": {
+          "source_artifact_sha256": "3d0166f985a0f4df9cf1033c31a6196b16344221d5784c66800d3ad93214a3e0",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:52.503Z"
+        }
+      },
+      "arxiv_id": "2604.02837"
+    },
+    {
+      "id": "arxiv-2603.22455-v1",
+      "kind": "paper",
+      "title": "SkillRouter: Retrieve-and-Rerank Skill Selection for LLM Agents at Scale",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2603.22455v1",
+        "html": "https://arxiv.org/html/2603.22455v1",
+        "tex": "https://arxiv.org/src/2603.22455v1"
+      },
+      "tags": [
+        "rsi"
+      ],
+      "provenance": {
+        "origin": "inherited-r5",
+        "verification": "metadata_pending",
+        "supplied_title": "SkillRouter: Retrieve-and-Rerank Skill Selection for LLM Agents at Scale",
+        "title_observation": {
+          "source_artifact_sha256": "0736bbb8dfd45fe6e2c5cc1471efac8de826824db3e09fda8b8b8ceb170f12fc",
+          "format": "raw-arxiv-html-metadata",
+          "observed_at": "2026-09-16T08:05:52.542Z"
+        }
+      },
+      "arxiv_id": "2603.22455"
+    },
+    {
+      "id": "ref-teamwork-agent-teams-teamwork-preview-ea5fe46a",
+      "kind": "documentation",
+      "title": "Teamwork agent teams (/teamwork-preview)",
+      "urls": {
+        "canonical": "https://antigravity.google/docs/teamwork",
+        "html": "https://antigravity.google/docs/teamwork"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "live documentation snapshot; fetched 2026-09-15",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-teamwork-when-ai-becomes-a-research-partner-6b0f99ec",
+      "kind": "documentation",
+      "title": "Teamwork: When AI Becomes a Research Partner",
+      "urls": {
+        "canonical": "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner",
+        "html": "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "official blog dated 2026-08-27; fetched 2026-09-15",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-agent-scaling-primary-code-12586ab5",
+      "kind": "documentation",
+      "title": "agent-scaling primary code",
+      "urls": {
+        "canonical": "https://github.com/ybkim95/agent-scaling/tree/6f3bfb78a6481c1098d182680f39b0f904b292a2",
+        "html": "https://github.com/ybkim95/agent-scaling/tree/6f3bfb78a6481c1098d182680f39b0f904b292a2"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "6f3bfb78a6481c1098d182680f39b0f904b292a2",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-skill-mas-primary-code-and-local-checkout-35818dca",
+      "kind": "documentation",
+      "title": "Skill_MAS primary code and local checkout",
+      "urls": {
+        "canonical": "https://github.com/linhh29/Skill_MAS/tree/b55d47ee7a08b34afda420bb3c5f2ca53efa64a4",
+        "html": "https://github.com/linhh29/Skill_MAS/tree/b55d47ee7a08b34afda420bb3c5f2ca53efa64a4"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "b55d47ee7a08b34afda420bb3c5f2ca53efa64a4",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-skill-mas-project-page-2862da21",
+      "kind": "documentation",
+      "title": "Skill-MAS project page",
+      "urls": {
+        "canonical": "https://linhh29.github.io/blog/Skill-MAS/index.html",
+        "html": "https://linhh29.github.io/blog/Skill-MAS/index.html"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "live snapshot 2026-09-15",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-envharness-primary-repository-621a2f0b",
+      "kind": "documentation",
+      "title": "EnvHarness primary repository",
+      "urls": {
+        "canonical": "https://github.com/google-research/envharness",
+        "html": "https://github.com/google-research/envharness"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "live repository page 2026-09-15",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-codex-8acdcd4d",
+      "kind": "documentation",
+      "title": "Codex 原始代码",
+      "urls": {
+        "canonical": "https://github.com/openai/codex/tree/de40696ec49815df76ec683f5ca6aea2b0f8760d",
+        "html": "https://github.com/openai/codex/tree/de40696ec49815df76ec683f5ca6aea2b0f8760d"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "de40696ec49815df76ec683f5ca6aea2b0f8760d",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "ref-oh-my-codex-77466071",
+      "kind": "documentation",
+      "title": "oh-my-codex 原始代码",
+      "urls": {
+        "canonical": "https://github.com/Yeachan-Heo/oh-my-codex/tree/cb955b0d5becbef76d2c1f0096b6e1f238e1e7f7",
+        "html": "https://github.com/Yeachan-Heo/oh-my-codex/tree/cb955b0d5becbef76d2c1f0096b6e1f238e1e7f7"
+      },
+      "tags": [
+        "rsi",
+        "inherited"
+      ],
+      "provenance": {
+        "origin": "r5-research",
+        "source_revision": "cb955b0d5becbef76d2c1f0096b6e1f238e1e7f7",
+        "prior_observation_at": null
+      }
+    },
+    {
+      "id": "arxiv-2606.09498-v1",
+      "kind": "paper",
+      "title": "Self-Harness: Harnesses That Improve Themselves",
+      "version": "v1",
+      "urls": {
+        "canonical": "https://arxiv.org/abs/2606.09498v1",
+        "html": "https://arxiv.org/html/2606.09498v1",
+        "tex": "https://arxiv.org/src/2606.09498v1"
+      },
+      "tags": [
+        "rsi",
+        "legacy-reference"
+      ],
+      "provenance": {
+        "origin": "migrated-shared-research",
+        "version_selection": "explicit baseline v1 for preserved unversioned legacy reference; not a latest-version claim",
+        "supplied_title": "Self-Harness (arXiv 2606.09498v1; metadata pending)",
+        "title_observation": {
+          "url": "https://arxiv.org/abs/2606.09498v1",
+          "sha256": "b67afaef49554c7612eb55a46b3b1e3ab23cc9a3d2100673bbdcb18f7b5660dd",
+          "format": "arxiv-citation_title",
+          "observed_at": "2026-09-16T08:06:57.223Z"
+        }
+      },
+      "arxiv_id": "2606.09498"
+    }
+  ]
+}

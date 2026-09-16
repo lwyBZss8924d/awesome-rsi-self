@@ -1,0 +1,30 @@
+# Evidence-selected roles and hooks
+
+Use this branch only when repeated workflow evidence supports a coordination change.
+
+## Choose an observed problem
+
+A role proposal names the bounded responsibility, needed independence and evidence.
+A hook proposal names the observed trigger, intended effect, owner and completion
+condition. Do not infer a permanent multi-agent team or a nine-stage process from
+a single task or a research taxonomy.
+
+Use the smallest useful team allowed by the current session. Independent review is
+selected when the target contract or actual change requires it. Explicit ownership
+and separate working paths avoid conflicting edits.
+
+## Prepare, then validate
+
+project.json accepts roles/hook_candidates only with evidence pointers. Those
+pointers still need inspection: a nonempty string is not verified evidence.
+Generated coordination-proposals.json always has runtime_enabled=false.
+
+Test a proposal against a bounded task and compare actual outcomes and total
+preparation/execution cost. Keep raw results, rejected candidates and uncertainty.
+Do not claim broad efficiency from smaller files or a single completed fixture.
+
+## Adopt through the actual owner
+
+No client hook file, service or standing agent is installed by this generator.
+Review native hook contracts and current authorization before an explicit adoption.
+Do not reuse a paused Goal, consumed experiment or private history as authority.

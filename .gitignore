@@ -1,0 +1,13 @@
+# Project-local work state; explicit promotion uses the owning workflow.
+/workspace/state/
+/workspace/memory/private/
+/workspace/tasks/artifacts/
+/workspace/handoff/
+/workspace/runs/
+/.worktrees/
+/.local/
+/node_modules/
+/dist/
+/rsi.config.json
+/.aicatlog/
+*.tsbuildinfo

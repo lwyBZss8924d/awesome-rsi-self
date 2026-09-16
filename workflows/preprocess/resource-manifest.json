@@ -1,0 +1,16 @@
+{
+  "schema_version": "rsi.workflow-resources.v1",
+  "id": "paper-preprocess",
+  "resources": [
+    {"id": "index", "path": "llms.txt", "role": "context_index", "format": "llms-txt-v2"},
+    {"id": "paper-pipeline", "path": "paper-pipeline.llms.txt", "role": "prompt_context", "format": "markdown"},
+    {"id": "artifact-tools", "path": "artifact-tools.llms.txt", "role": "prompt_context", "format": "markdown"},
+    {"id": "templates", "path": "templates.json", "role": "configuration", "format": "json"}
+  ],
+  "entrypoints": {
+    "library": "../../src/ingest/index.ts",
+    "artifact_library": "../../src/ingest/artifacts.ts",
+    "tex_helper": "../../scripts/ingest/tex_source.py",
+    "tests": "../../tests/ingest.test.ts"
+  }
+}

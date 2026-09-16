@@ -1,0 +1,13 @@
+{
+  "schema_version": "project-meta.skill-candidate.v1",
+  "project_id": "awesome-rsi-self",
+  "id": null,
+  "status": "candidate",
+  "intended_task": null,
+  "desired_behavior": null,
+  "source_locator": null,
+  "evidence": [],
+  "acceptance_cases": [],
+  "validation": null,
+  "next_action": null
+}

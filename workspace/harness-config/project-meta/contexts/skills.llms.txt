@@ -1,0 +1,31 @@
+# Project Skills and shared sources
+
+Use this branch when a project has a repeatable procedural need or a Skill gap.
+
+## Select by task and evidence
+
+Inspect available metadata, then read the exact relevant Skill. Reference the
+shared source once in project.json's shared_skills; do not copy the global library.
+A registry reference is not installation, activation or permission for side effects.
+
+A project-specific candidate needs a demonstrated task, intended behavior, source
+evidence and acceptance cases. Keep its identity distinct from a shared Skill.
+Store its source in the declared project_skills area; native projection is an
+explicit owner operation.
+
+## Preserve the native envelope
+
+Use SKILL.md with a matching lowercase hyphen-separated name and a precise
+description. Reject consecutive hyphens in new native names. Put extra portable
+metadata in string-valued namespaced keys, with richer routing in JSON.
+
+## Route useful context
+
+Use llms.txt for a small navigation index and role-declared *.llms.txt for context
+leaves. Read/search plain text and select a heading when useful. Leaf procedures,
+headings and fenced examples are allowed; an index parser is not a leaf validator.
+Output templates retain their consumer format and live as assets, not instructions.
+
+Validate source links and actual trigger/use behavior. Keep discovery, reading,
+invocation and execution authority separate. A successful structural check does
+not establish that the Skill helps real tasks.

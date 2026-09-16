@@ -1,0 +1,21 @@
+{
+  "schema_version": "rsi.cleaning-templates.v1",
+  "templates": [
+    {
+      "schema_version": "rsi.cleaning-template.v1",
+      "id": "arxiv-latexml-v1",
+      "body_selectors": ["article.ltx_document", ".ltx_document", "article", "main", "body"],
+      "remove_selectors": ["nav", ".ltx_page_header", ".ltx_page_footer", ".ltx_page_navbar", "style", "noscript", "button", "form"],
+      "title_selectors": ["h1.ltx_title", "h1", "title"]
+    },
+    {
+      "schema_version": "rsi.cleaning-template.v1",
+      "id": "generic-article-v1",
+      "body_selectors": ["article", "main", "body"],
+      "remove_selectors": ["nav", "header", "footer", "style", "noscript", "button", "form"],
+      "title_selectors": ["h1", "title"]
+    }
+  ],
+  "execution_templates": ["lit-parse-json-v1", "lit-screenshot-v1", "view-image-v1"],
+  "source_code_execution": false
+}

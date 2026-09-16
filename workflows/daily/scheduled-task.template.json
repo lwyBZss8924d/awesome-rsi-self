@@ -1,0 +1,18 @@
+{
+  "schema_version": "rsi.scheduled-task-template.v1",
+  "name": "Awesome RSI Self Daily Dispatcher",
+  "rrule": "FREQ=DAILY;BYHOUR=10;BYMINUTE=0;BYSECOND=0",
+  "timezone": "UTC",
+  "target_thread_id": null,
+  "physical_home": "codex-main",
+  "prompt": "workflows/daily/dispatcher.prompt.txt",
+  "local_config": null,
+  "registered_via_supported_native_interface": false,
+  "activation_state": "template_only",
+  "native_scheduled_accepted": false,
+  "requirements": [
+    "Bind actual dedicated native thread identity from host evidence.",
+    "Register and enable through the supported host automation interface.",
+    "Observe a native Scheduled run separately from CLI acceptance."
+  ]
+}

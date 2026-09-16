@@ -1,0 +1,94 @@
+# Paper acquisition and preparation
+
+> Bind an exact publication version, preserve original bytes, then expose selected source context.
+
+## Interface
+
+Library: src/ingest/index.ts.
+fetchSource(root, sourceId, {refresh?, timeout_ms?, max_html_bytes?, max_tex_bytes?, signal?})
+prepareSource(root, sourceId, {template?, max_expanded_bytes?, max_file_bytes?, max_files?, signal?})
+inspectSource(root, sourceId)
+getPreparedManifest(root, sourceId)
+
+All results include source_id, source_key, version, status, artifacts and warnings.
+CLI routing belongs to the repository root CLI. Use its installed help for the current command shape.
+
+## Select and acquire
+
+The source registry supplies URLs. arXiv HTML and TeX URLs must contain the same explicit ID and vN;
+source.version must equal vN. Fetch rejects mixed versions, unpinned paths and version-changing redirects.
+The source canonical URL may be unversioned only when its arXiv ID matches the explicit fetched identity.
+
+Each successful response is stored below .local/raw/<sourceKey>/<kind>/<sha256>.<format>.
+Each attempt has its own immutable acquisition receipt. The current raw manifest is a navigation pointer;
+existing bytes never change. Success requires valid response content, not only HTTP status or MIME type.
+Partial acquisition retains available originals and failed-attempt reasons. It is not a completed read.
+Existing valid bytes and receipts are reused unless refresh is explicitly requested. Refresh retains old bytes.
+
+Limits: HTML 24 MiB, compressed TeX 32 MiB, one request 60 seconds by default. The caller can use smaller
+bounded limits and a shared cancellation signal. A cancelled fetch records the attempted phase and stops
+before remaining requests. Do not use an unbounded retry loop for rate limits or provider errors.
+
+## Non-paper text sources
+
+For kind=documentation/article/repository, a configured urls.html endpoint can return raw UTF-8 text,
+Markdown, QMD/MDX or code. The acquisition records kind=raw_text, url_field=html, the actual content_type,
+text_encoding=utf-8 and the observed artifact format. The bytes are stored unchanged under raw/<sourceKey>/text.
+No source code or QMD cell executes. Binary signatures, NUL/control bytes, invalid UTF-8 and unsupported
+charsets remain unavailable; TLS/certificate errors remain errors. This route never accepts plain text
+in place of paper HTML or relaxes an arXiv ID/version binding.
+
+Preparation emits document.llms.txt for plain text/Markdown, or document.<source extension> for QMD,
+MDX, code and structured text. Format metadata stays truthful. Each is an exact byte copy with 1-based
+LF-delimited source line maps in bounded 200-line blocks, not an HTML transform or summary. The index
+links this document-context resource. Prior unsuccessful acquisition receipts remain immutable when a
+later scoped retry succeeds; only current navigation changes.
+
+## Prepare context
+
+HTML uses an explicit, source-owned cleaning template: body selectors, removal selectors and title selectors.
+The worker may compose a template from the allowlisted schema after inspecting a source. CSS selectors
+are data; source scripts, source commands and arbitrary shell transforms never execute.
+
+The extractor keeps headings, paragraphs, TeX alttext/MathML, tables, figures, captions, citations,
+footnotes and appendices. Tables with row/column spans remain HTML source fragments to retain spans.
+Every output block points back to its original element ID or structural DOM selector. Normalized HTML
+text is a structural map, not a byte-for-byte or original-HTML-line claim. HTML raw bytes remain available.
+
+TeX input supports tar, gzip-tar, plain TeX and gzip-TeX. The Python standard-library helper extracts into
+a fresh owned directory after rejecting archive traversal, links, device/special entries, duplicate names,
+oversized members and expanded-size/file-count excess. Defaults: 96 MiB expanded, 32 MiB per file,
+4096 members. No TeX engine, shell escape, package installer, Lua, or source code runs.
+
+The helper identifies a unique main document, includes, missing/dynamic inputs, cycles and macro
+definitions. It keeps .tex/.sty/.cls/.bib/.bbl/.ltx source and exact raw file digests. Macros are preserved
+without expansion; dynamic includes inside macro definitions are separately labelled. Ambiguous main
+documents, actual unresolved inputs or extraction errors remain partial. TeX decoding records an explicit
+Latin-1 fallback when UTF-8 is unavailable. Archive bytes remain the exact authority.
+
+## Artifacts and caching
+
+.local/prepared/<sourceKey>/generations/<preparationKey>/ contains:
+paper.llms.txt; sections/*.llms.txt; tex-context.llms.txt; tex-files/*; tex-inspection.json;
+source-map.json; assets.json; preparation-recipe.json; resource-manifest.json; llms.txt.
+
+The preparation key binds raw digests, parser version and implementation digest, template and bounds.
+The generation is immutable. current.json points to an exact resource manifest and its digest.
+Each resource has repo-relative path, sha256, bytes, role and format. Consumers can cite an older exact
+generation if they validate its manifest, source identity and artifact digests. Tampering is an error.
+
+llms.txt is the v2 navigation index: H1, summary, H2 sections with links. *.llms.txt leaves are Markdown
+source-context documents, a local naming convention, not additional upstream llms.txt schemas.
+Source map output line ranges are inclusive and 1-based. TeX maps cite source file plus original lines;
+HTML maps cite original element selectors. No model summarization happens in deterministic extraction.
+
+## Acceptance and limits
+
+prepared means requested source formats were structurally extracted. It does not mean the paper was
+fully read, every figure was interpreted, every equation matches across HTML and TeX, or claims were verified.
+Cross-format equivalence, full read and visual verification remain independent explicit observations.
+Inspect missing assets and partial coverage before promoting a source-grounded knowledge contribution.
+Broken acquisition or preparation never becomes a successful empty source.
+
+An archive may contain copyrighted source and figures. Keep RAW and extracted complete-source files
+inside the private .local layer. Public knowledge uses its publication/permission policy and source links.

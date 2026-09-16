@@ -1,0 +1,58 @@
+# Selected local artifact processing
+
+> Use LiteParse once per selected artifact digest and configuration; record visual observations separately.
+
+## Discovery
+
+Read assets.json in the selected prepared generation. It lists archive-local PDFs/images and remote HTML
+images. Assets have no implied parse or visual-review status. Select only a figure or page needed to
+resolve an actual extraction or interpretation question.
+
+For an HTML asset, fetchAsset(root, sourceId, assetId, options) downloads exactly that selection into
+.local/raw/<sourceKey>/assets/<sha256>.<format>. Same-origin HTTP(S) is the default; additional origins
+require explicit source-owned configuration. Redirects are checked before following. Content signatures
+must be PDF, PNG, JPEG, GIF or WebP. Bytes and provenance receipt are immutable and reused by digest.
+Do not infer permission to traverse arbitrary links or fetch other private services from source HTML.
+
+## Request
+
+requestArtifact(root, sourceId, {asset_id, operation, pages?, max_pages?, dpi?, no_ocr?})
+
+operation is parse, screenshot or view_image.
+parse: fixed lit parse argv; JSON, blocks, embedded images, one worker, no OCR by default, max 10 pages.
+screenshot: fixed lit screenshot argv; explicit pages required; 150 to 200 DPI.
+view_image: native image tool request only; the library does not call a model.
+
+Requests bind the exact source artifact, preparation and configuration. They are saved under
+.local/prepared/<sourceKey>/artifact-jobs/<requestId>/request.json. CLI tool argv is built only by the
+allowlisted template. Shell snippets, remote OCR URLs, passwords and provider credentials are not accepted.
+Current installed help remains the authority for lit flags. Missing optional converters/OCR are reported
+as environment failures; the pipeline does not install them or start a LiteParse server.
+
+## Execute selected parsing
+
+runArtifactRequest(root, requestPath, {lit?, timeout_ms?})
+
+The default binary is the local home .cargo/bin/lit. An explicit absolute binary is allowed for a
+governed local toolchain. Results, bounded output artifacts and logs stay in that job directory.
+Success is cached only after output existence/parseability and digest checks. A failed job is retained
+for diagnosis and is not automatically rerun. An exclusive started marker prevents duplicate execution.
+If interrupted, inspect the process and marker; never remove a live marker to admit another parser.
+Parse/screenshot success always leaves visual_verification=not_performed.
+
+## Observe and record
+
+For selected raster output, call the host's actual view_image tool with that exact local path.
+Use recordVisualReceipt(root, requestPath, {actor, method:'view_image', observed_image_sha256,
+finding, outcome:'verified'|'discrepancy'|'uncertain', evidence_ref}) only after the image call.
+
+The receipt must bind a request source raster or a produced screenshot/image digest. It records an
+actor attestation and actual tool-event pointer; the library cannot independently prove what the actor
+saw. It never silently upgrades a paper, source, or knowledge claim. A screenshot alone is not review.
+
+## Dynamic PTC composition
+
+A parse worker can inspect a manifest, choose a cleaning template or exact page, issue a local request,
+query the persisted parse JSON with bounded text tools, inspect a selected image, and return evidence.
+Keep intermediate artifacts on disk and pass digests/locators between steps. No stage executes code
+supplied by a paper, retries without a limit, or loads every image/PDF into the active context.

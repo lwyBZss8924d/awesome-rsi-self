@@ -1,0 +1,27 @@
+# Project knowledge and private memory
+
+Use this branch when retaining a finding would reduce future rediscovery.
+
+## Distinguish the records
+
+Raw evidence records what happened. A knowledge item records applicable conditions,
+the observed result, supported explanation, counterexamples and source revision.
+A procedural Skill describes a reusable action. A checkpoint records current work.
+These records have different evidence and lifetimes.
+
+## Retain only what is justified
+
+Create or update private memory only within the user's requested memory scope.
+Private memory lives at project.json's private_memory area, which the profile
+ignores. Keep credentials and raw private trajectories out of tracked knowledge.
+
+A knowledge candidate preserves source pointers, uncertainty and validation status.
+A failed candidate can retain its rejection evidence without becoming a default.
+Project knowledge promotion uses its existing owner workflow.
+
+## Confirm the claimed capability
+
+A file proves storage; an index proves the specific lookup it actually supports.
+Neither alone proves semantic retrieval, ingestion or improved task completion.
+When semantic memory is requested, use its real owner interface and verify that
+operation separately. This package starts no service and registers no memory cell.

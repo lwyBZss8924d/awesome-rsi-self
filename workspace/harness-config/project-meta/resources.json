@@ -1,0 +1,174 @@
+{
+  "schema_version": "aicatlog.resources.v1",
+  "resources": [
+    {
+      "id": "project-config",
+      "path": "project.json",
+      "kind": "document",
+      "owner": "project",
+      "when": "Inspect selected project-specific paths, checks and references.",
+      "document_role": "configuration",
+      "media_type": "application/json"
+    },
+    {
+      "id": "context-index",
+      "path": "llms.txt",
+      "kind": "document",
+      "owner": "project",
+      "when": "Select one relevant governance branch.",
+      "document_role": "context_index",
+      "media_type": "text/markdown",
+      "context_format": "llms-txt-v2"
+    },
+    {
+      "id": "environment",
+      "path": "contexts/environment.llms.txt",
+      "kind": "document",
+      "owner": "project",
+      "when": "Use the environment branch when the current task needs it.",
+      "document_role": "prompt_context",
+      "media_type": "text/markdown",
+      "context_format": "markdown"
+    },
+    {
+      "id": "branches",
+      "path": "contexts/branches.llms.txt",
+      "kind": "document",
+      "owner": "project",
+      "when": "Use the branches branch when the current task needs it.",
+      "document_role": "prompt_context",
+      "media_type": "text/markdown",
+      "context_format": "markdown"
+    },
+    {
+      "id": "workspace",
+      "path": "contexts/workspace.llms.txt",
+      "kind": "document",
+      "owner": "project",
+      "when": "Use the workspace branch when the current task needs it.",
+      "document_role": "prompt_context",
+      "media_type": "text/markdown",
+      "context_format": "markdown"
+    },
+    {
+      "id": "knowledge",
+      "path": "contexts/knowledge.llms.txt",
+      "kind": "document",
+      "owner": "project",
+      "when": "Use the knowledge branch when the current task needs it.",
+      "document_role": "prompt_context",
+      "media_type": "text/markdown",
+      "context_format": "markdown"
+    },
+    {
+      "id": "skills",
+      "path": "contexts/skills.llms.txt",
+      "kind": "document",
+      "owner": "project",
+      "when": "Use the skills branch when the current task needs it.",
+      "document_role": "prompt_context",
+      "media_type": "text/markdown",
+      "context_format": "markdown"
+    },
+    {
+      "id": "coordination",
+      "path": "contexts/coordination.llms.txt",
+      "kind": "document",
+      "owner": "project",
+      "when": "Use the coordination branch when the current task needs it.",
+      "document_role": "prompt_context",
+      "media_type": "text/markdown",
+      "context_format": "markdown"
+    },
+    {
+      "id": "state-template",
+      "path": "templates/state.json",
+      "kind": "document",
+      "owner": "project",
+      "when": "Create a state record only when useful.",
+      "document_role": "output_template",
+      "media_type": "application/json"
+    },
+    {
+      "id": "checkpoint-template",
+      "path": "templates/checkpoint.json",
+      "kind": "document",
+      "owner": "project",
+      "when": "Create a checkpoint record only when useful.",
+      "document_role": "output_template",
+      "media_type": "application/json"
+    },
+    {
+      "id": "pouw-template",
+      "path": "templates/pouw.json",
+      "kind": "document",
+      "owner": "project",
+      "when": "Create a pouw record only when useful.",
+      "document_role": "output_template",
+      "media_type": "application/json"
+    },
+    {
+      "id": "issue-template",
+      "path": "templates/issue.json",
+      "kind": "document",
+      "owner": "project",
+      "when": "Create a issue record only when useful.",
+      "document_role": "output_template",
+      "media_type": "application/json"
+    },
+    {
+      "id": "task-template",
+      "path": "templates/task.json",
+      "kind": "document",
+      "owner": "project",
+      "when": "Create a task record only when useful.",
+      "document_role": "output_template",
+      "media_type": "application/json"
+    },
+    {
+      "id": "plan-template",
+      "path": "templates/plan.json",
+      "kind": "document",
+      "owner": "project",
+      "when": "Create a plan record only when useful.",
+      "document_role": "output_template",
+      "media_type": "application/json"
+    },
+    {
+      "id": "knowledge-template",
+      "path": "templates/knowledge.json",
+      "kind": "document",
+      "owner": "project",
+      "when": "Create a knowledge record only when useful.",
+      "document_role": "output_template",
+      "media_type": "application/json"
+    },
+    {
+      "id": "skill-candidate-template",
+      "path": "templates/skill-candidate.json",
+      "kind": "document",
+      "owner": "project",
+      "when": "Create a skill-candidate record only when useful.",
+      "document_role": "output_template",
+      "media_type": "application/json"
+    },
+    {
+      "id": "record-schema",
+      "path": "record.schema.json",
+      "kind": "document",
+      "owner": "project",
+      "when": "Validate a work record's structure; acceptance remains separate.",
+      "document_role": "schema",
+      "media_type": "application/schema+json"
+    },
+    {
+      "id": "coordination-proposals",
+      "path": "coordination-proposals.json",
+      "kind": "document",
+      "owner": "project",
+      "when": "Review evidence-selected roles and hooks; nothing is enabled.",
+      "document_role": "configuration",
+      "media_type": "application/json"
+    }
+  ]
+}

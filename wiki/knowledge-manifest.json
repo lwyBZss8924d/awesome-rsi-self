@@ -1,0 +1,745 @@
+{
+  "schema_version": "rsi.knowledge-manifest.v1",
+  "files": {
+    "sources/arxiv-2607.13104-v1--v1.md": {
+      "kind": "source",
+      "sha256": "41da8af073b59e0aee5cb87a2038f7ecce4c871c47a32662ad93ed5527e3e3a2"
+    },
+    "sources/arxiv-2512.08296-v3--v3.md": {
+      "kind": "source",
+      "sha256": "d7be937faeb1c4a90e215fbee5267ad3279ce57084378a7ac4365f2fb0cdf18e"
+    },
+    "sources/arxiv-2608.29596-v1--v1.md": {
+      "kind": "source",
+      "sha256": "7230f3845afb10f672871b84d51b936e5fec7c8277f08bab1be3a41e9e9805c3"
+    },
+    "sources/arxiv-2606.18837-v2--v2.md": {
+      "kind": "source",
+      "sha256": "f48e909f1521e7473de7689071d9de52e5d2349302aca546c8488483bce01fd7"
+    },
+    "sources/arxiv-2608.27454-v1--v1.md": {
+      "kind": "source",
+      "sha256": "94cbab3b33e52f9e8c33d347f17eea4346227373929945f1507baaccdc9bcf25"
+    },
+    "sources/arxiv-2608.19880-v1--v1.md": {
+      "kind": "source",
+      "sha256": "285c69af5e5cd68ad144ed35f233719903b192c3eefe262b7576a4c747bcf68e"
+    },
+    "sources/arxiv-2608.26263-v3--v3.md": {
+      "kind": "source",
+      "sha256": "a74fbc9b0cb58fae886ba59655b5e0974eae73373bd9c0944b6ce6b4dad5c4bf"
+    },
+    "sources/arxiv-2605.23904-v2--v2.md": {
+      "kind": "source",
+      "sha256": "e3b2c19ee0dbfe9507c6dc8d1ed712f342be177df1db3ec51126bdae0b04a3cb"
+    },
+    "sources/arxiv-2607.03451-v1--v1.md": {
+      "kind": "source",
+      "sha256": "ef0c3b535812e44452eb6b10c14d61c68b75519d1efd793362706f580d311b08"
+    },
+    "sources/arxiv-2605.23899-v1--v1.md": {
+      "kind": "source",
+      "sha256": "388cee6ae70862ee8d6773a3c5667b5c6dd542702cbef037cdbb5c815de36bb3"
+    },
+    "sources/arxiv-2608.15071-v2--v2.md": {
+      "kind": "source",
+      "sha256": "2fefbba77359928b4246ec728100df9327390602276ae5f03c6245ecc3c2cb12"
+    },
+    "sources/arxiv-2609.01437-v1--v1.md": {
+      "kind": "source",
+      "sha256": "0a7ca2e01d0ddb9af54d3e116b1c1195b5be56bf6b870ae32a731f3999129bc5"
+    },
+    "sources/arxiv-2608.31100-v1--v1.md": {
+      "kind": "source",
+      "sha256": "f5fdef28681b450aabdfacc9d4fdacaf66a77a2636e7891f44bfac6d296d8b80"
+    },
+    "sources/arxiv-2608.31111-v1--v1.md": {
+      "kind": "source",
+      "sha256": "94c1387fd8cdb269fb8564fad155987747329e006d642e685be80a43fcb13522"
+    },
+    "sources/arxiv-2512.24601-v3--v3.md": {
+      "kind": "source",
+      "sha256": "8057518735aa8bf819873e4214281b8a1beeb9e1605c8498fe778729d9c81a8c"
+    },
+    "sources/arxiv-2608.23552-v1--v1.md": {
+      "kind": "source",
+      "sha256": "3fe1d9d8a0d1ad983551b3b2d05487946d3057a892dedcca93e993b360e63c66"
+    },
+    "sources/arxiv-2605.25480-v2--v2.md": {
+      "kind": "source",
+      "sha256": "a3b0269973609b17cbd53b6a1a8ca5527abacd41fc6b8f5e3a7496437484ba97"
+    },
+    "sources/arxiv-2606.14275-v1--v1.md": {
+      "kind": "source",
+      "sha256": "45d74ccfb1e264740d9f182fd661d648c82e3e575a0cbc52350838bb82527da8"
+    },
+    "sources/arxiv-2607.26604-v1--v1.md": {
+      "kind": "source",
+      "sha256": "32f9ac2059524a7503dd8b10eb72dfd231c7d822b0d21e627aef510f719404ea"
+    },
+    "sources/arxiv-2608.00967-v1--v1.md": {
+      "kind": "source",
+      "sha256": "e178a0787c3359d7130e0cae9b023ce6ea41b45a5b55ff31f2bae750d70f48e6"
+    },
+    "sources/arxiv-2609.09153-v1--v1.md": {
+      "kind": "source",
+      "sha256": "2c53ff84c8734748590edecd97f138d06cb94b9949fcb60f01185f558dd7f923"
+    },
+    "sources/arxiv-2507.19457-v2--v2.md": {
+      "kind": "source",
+      "sha256": "704cc380e0d07ede048d915eb5ea7a37d4f8c42f52f3b98186555c5c383f1a3d"
+    },
+    "sources/arxiv-2602.08234-v1--v1.md": {
+      "kind": "source",
+      "sha256": "4c9fed30ab7c74dede5a21213499bb2680d3ea938f560505624b4144ad5d7316"
+    },
+    "sources/arxiv-2603.28052-v1--v1.md": {
+      "kind": "source",
+      "sha256": "b4b1b8ddd44baa8825bd07bf1b4935a23286781e6bc8e262379b2f3ee82152af"
+    },
+    "sources/arxiv-2606.17628-v1--v1.md": {
+      "kind": "source",
+      "sha256": "65e1e9745d0c82ca4506f1f08f1153f8b85c538d04c15e4ccaa996aa541ee6e1"
+    },
+    "sources/arxiv-2510.04618-v3--v3.md": {
+      "kind": "source",
+      "sha256": "d002fdadc2bdc30b5fba1043981230bba4c3f9db3fce122d27cb8f9bbc2b9879"
+    },
+    "sources/arxiv-2607.16621-v1--v1.md": {
+      "kind": "source",
+      "sha256": "556b3809d10545cc54f7e23f89902871b191ac1888726c859c43fa615baafaa3"
+    },
+    "sources/arxiv-2608.11095-v1--v1.md": {
+      "kind": "source",
+      "sha256": "6773f53cf6db28c95569336e1f12296157a8c37b3e7951fee0017e33c371aafb"
+    },
+    "sources/arxiv-2605.05242-v1--v1.md": {
+      "kind": "source",
+      "sha256": "3830a75046a2a812eb08cb8b158acf49cc1d934fa060c6e104f4a92d448d670c"
+    },
+    "sources/arxiv-2605.18747-v1--v1.md": {
+      "kind": "source",
+      "sha256": "d5886b234c786a120cf05956929d84b464bb21f00c259782609308d5f6090276"
+    },
+    "sources/arxiv-2604.02268-v2--v2.md": {
+      "kind": "source",
+      "sha256": "ec5884c82f378bd7406064cf35143eebb59e75bb9818ff68aec732cf2e41928a"
+    },
+    "sources/arxiv-2607.05391-v2--v2.md": {
+      "kind": "source",
+      "sha256": "9b760314a4e971dbbfa5482943bbc38a0291012d8ae25755523e169d25b99c3d"
+    },
+    "sources/arxiv-2506.13131-v1--v1.md": {
+      "kind": "source",
+      "sha256": "ec006e8a09ca4356b2a97948e11970912ac704ef6990b9a2b7559ba4ff6d8041"
+    },
+    "sources/awesome-self-improving-agents--current.md": {
+      "kind": "source",
+      "sha256": "366e949aa0d54774ad6095705f5929eaf5267131619ea201947696de4fa3609d"
+    },
+    "sources/karpathy-llm-wiki--current.md": {
+      "kind": "source",
+      "sha256": "7ae7dc1c8594a20196e432919cdcd0864847054672a1c9d566115f2a76ffaab6"
+    },
+    "sources/okf-spec--current.md": {
+      "kind": "source",
+      "sha256": "6c8f1d069aa33a50338e5119ce952c87715a95f612695467872346e2cb1378f3"
+    },
+    "sources/llms-txt-v2--current.md": {
+      "kind": "source",
+      "sha256": "ceaea44061c708d052ba718e8c1769e325c5ee57fcce2808c63d4deac87339f9"
+    },
+    "sources/openkb--current.md": {
+      "kind": "source",
+      "sha256": "0649a9c09ff455b3992fe37c6c801473e012462d71376f2a21cbdd107a25364b"
+    },
+    "sources/openviking--current.md": {
+      "kind": "source",
+      "sha256": "70eb8f156430c49223503e955b5ac00b928b2d3059594b82159a1e7996c98cf8"
+    },
+    "sources/prime-agent--current.md": {
+      "kind": "source",
+      "sha256": "56ef13428dba47c1376aa45f7098810314879608209f0829ec9f239afff0c520"
+    },
+    "sources/reef--current.md": {
+      "kind": "source",
+      "sha256": "2eb570167392c3850bb3f5fd950542f3d90fb6837827b32f8b4f58a94946864a"
+    },
+    "sources/dspy--current.md": {
+      "kind": "source",
+      "sha256": "e3b713a34ac7b1364506d9a0daa1171d858dea813bf3ab34b13a94e23a8ad4db"
+    },
+    "sources/promptfoo--current.md": {
+      "kind": "source",
+      "sha256": "d874a46d68ccd5bfbcf6e6c54cbb977a837bdff1225e6c5060d5245456c85e32"
+    },
+    "sources/knowledge-index--current.md": {
+      "kind": "source",
+      "sha256": "8ff7f8a6cf98cc74edaa567f178ee1aa5548a77a666645282114bd5ea344540f"
+    },
+    "sources/pageindex--current.md": {
+      "kind": "source",
+      "sha256": "fc19c38acaa4f098f09c5ccf772fe5a31c150e753e02d633efefe9757effb952"
+    },
+    "sources/claude-dynamic-workflows--current.md": {
+      "kind": "source",
+      "sha256": "5000d85fa2abee0fe41895e0a12ca113f6161e3e27dd66aeef7d83b9b448cef7"
+    },
+    "sources/skill-mas-code--current.md": {
+      "kind": "source",
+      "sha256": "ced93921fda3e840d103f35d43a6d9e8ef27f561562d8c292725aa6bb15e991c"
+    },
+    "sources/mdcode-concept--current.md": {
+      "kind": "source",
+      "sha256": "94cfd8c9ad227745582cbe8c71270ea7e2eba193142952857d8c81ff1f7fd1a0"
+    },
+    "sources/neo4j-llm-wiki--current.md": {
+      "kind": "source",
+      "sha256": "527d974bc2d22e4a0be34db0b4f4e0c700a5efd17684cc316dac6af1eff234b8"
+    },
+    "sources/rlm-harness--current.md": {
+      "kind": "source",
+      "sha256": "5f36baf908d33fe03ff402d9561cc40abd36c10628f0548e7ef805c0cb35d766"
+    },
+    "sources/rlm-intro--current.md": {
+      "kind": "source",
+      "sha256": "8076948fedaf29d556f3dddf319297f8984205fc7002742db70210179938df71"
+    },
+    "sources/speculative-ptc--current.md": {
+      "kind": "source",
+      "sha256": "8bf94e146cdd238708cba3943f692ae581b27dd85a212d117070f32efbbbf9d0"
+    },
+    "sources/prime-agent-blog--current.md": {
+      "kind": "source",
+      "sha256": "f8f1103a35e2e11fab78c28de310002cf87723a26d1d953fd8ecbd29f4a65500"
+    },
+    "sources/prime-rlm-blog--current.md": {
+      "kind": "source",
+      "sha256": "8c23dc7438de7d780a250dfde2133f571b6d305579da469638f020f9a1a32f4e"
+    },
+    "sources/hf-papers--current.md": {
+      "kind": "source",
+      "sha256": "63bd846548971c899cdac0a85d9a972272206849c28c6a0e9c49aaabcc7e9722"
+    },
+    "sources/ref-using-gpt-6-astra-0aa00f0c--current.md": {
+      "kind": "source",
+      "sha256": "4adc4a1a44c4a3887964cb8464fce61669647db80729ff0a44b889b7ee7369f5"
+    },
+    "sources/ref-rethinking-skills-and-prompts-for-gpt-6-astra-dae8a87d--current.md": {
+      "kind": "source",
+      "sha256": "53c2f9e47ee70957f0d2f71ddaa6423a32a43d6203c8715f15a42bb522c01394"
+    },
+    "sources/ref-custom-instructions-with-agents-md-780d4cde--current.md": {
+      "kind": "source",
+      "sha256": "225538edbbfba4c5b98fc3c8b52783483c8f0f2fef4c8a273507dec936c82a93"
+    },
+    "sources/ref-codex-instruction-loading-implementation-d060d926--current.md": {
+      "kind": "source",
+      "sha256": "b69294994ee8d27a3e8517effd69c9dc407b424bf877d47c929dbfae5640fc1b"
+    },
+    "sources/ref-codex-skills-catalog-rendering-a8c989a0--current.md": {
+      "kind": "source",
+      "sha256": "6eedc65af643ff3970a86addbb836e75bc7517d8ec43147dbfeb29d23fcbd016"
+    },
+    "sources/ref-reef-evolve-your-harness-harness-adapters-a6b6775b--current.md": {
+      "kind": "source",
+      "sha256": "8b892612e38f306a5eebb8b3d1a623d21547c702223da8819b57a3d593567a3e"
+    },
+    "sources/ref-openai-cookbook-local-reference-snapshot-99429ae9--current.md": {
+      "kind": "source",
+      "sha256": "c4776fc6e04f20371f3d8ca6c058d7154892bbb3312b393fb79168eb81379490"
+    },
+    "sources/ref-envharness-model-parameter-adapter-5fbe9146--current.md": {
+      "kind": "source",
+      "sha256": "d4b0c113895659054a7f36db7d15610a97f6b5b3631068145de94fa1e65dace1"
+    },
+    "sources/ref-agentskills-authority-1f63d271--current.md": {
+      "kind": "source",
+      "sha256": "42a84ec22c1d99f51d19b2b251bd51d8ec35fbb5b738c6dcf41199c556c2228c"
+    },
+    "sources/ref-agentskills-spec-f1e2a866--current.md": {
+      "kind": "source",
+      "sha256": "9e7709fe26b6ec847644e0920859942bfcf8e6eac8e6692f133d1bb4b15cafa3"
+    },
+    "sources/ref-agentskills-client-guide-2d64323a--current.md": {
+      "kind": "source",
+      "sha256": "76d7531cbb15de02050b415ce31c325d18b6e022c87b11b0bf667376e7898ef3"
+    },
+    "sources/ref-agentskills-showcase-041da858--current.md": {
+      "kind": "source",
+      "sha256": "d586eaed9000b662cc9e5768632590f5dec37a0a2ec71dafda6be6f2fe6d517e"
+    },
+    "sources/ref-agentskills-client-links-b93ad195--current.md": {
+      "kind": "source",
+      "sha256": "b7506a5fb4e33f5d4356e79c190d409415f5787b3783a994dcec5999ce030f59"
+    },
+    "sources/ref-skills-ref-parser-e424f892--current.md": {
+      "kind": "source",
+      "sha256": "dabe1b573e0a3092edf06d5762d86437550f2a747b0d673532a15a79f6f34e7a"
+    },
+    "sources/ref-skills-ref-validator-cecee4c6--current.md": {
+      "kind": "source",
+      "sha256": "5450ca3ef388b4c68bf24c44b4c5ca4a0683b3caf783e10ba64ad6daf9a9f944"
+    },
+    "sources/ref-llms-v2-proposal-c079de9e--current.md": {
+      "kind": "source",
+      "sha256": "562e793a69fc0cd9758105a29a4ddb487ae06632556104520d3b3dfebebe4101"
+    },
+    "sources/ref-llms-v2-changes-9071d809--current.md": {
+      "kind": "source",
+      "sha256": "6d032e692aaf0b0dd6e89fa93768049330fa69ddf1edfa85cfc226648b28681b"
+    },
+    "sources/ref-llms-core-notebook-4e568c6a--current.md": {
+      "kind": "source",
+      "sha256": "7caa616c3149eff4b8895fccc11eb74a0e0807588f264937c236ce31d737ff0c"
+    },
+    "sources/ref-llms-miniparse-a2d1e148--current.md": {
+      "kind": "source",
+      "sha256": "d9c78a99a2e0f263a69d5fd07e149324a4b89b193c8f1ff3d3bc4f5d642bc737"
+    },
+    "sources/ref-llms-core-ad673f47--current.md": {
+      "kind": "source",
+      "sha256": "f63b0d7b6ca27ec60d8eaba7b7c40b60aff46f49b6cfdbe1121153470b348343"
+    },
+    "sources/ref-llms-upstream-tests-68a9c7ff--current.md": {
+      "kind": "source",
+      "sha256": "86a62a5e3a14adbbca87900eca2dea52d0d8966a8c23c6a7ef7b91d551964278"
+    },
+    "sources/ref-llms-javascript-demo-f31e3762--current.md": {
+      "kind": "source",
+      "sha256": "210c5570ed4bf2af9d3b11b0e1303916f65563cb8802d637b3f480c326951759"
+    },
+    "sources/ref-pi-docs-a408841d--current.md": {
+      "kind": "source",
+      "sha256": "6bf7f1ac76c62aecb4b1222ebc4f3a005b8fc57f18342261474ac8d447a0f33e"
+    },
+    "sources/ref-pi-loader-9046a9fe--current.md": {
+      "kind": "source",
+      "sha256": "2d416904c87e11f4842935b3b34c40bd3cf1a5040f781ac075c4c6aa4ba00883"
+    },
+    "sources/ref-anthropic-readme-2607ce13--current.md": {
+      "kind": "source",
+      "sha256": "6287e346e96f862f799d35f32b5163ade2f03ebec55f279f739b8780c2cde1ce"
+    },
+    "sources/ref-anthropic-spec-a7553f99--current.md": {
+      "kind": "source",
+      "sha256": "e10accfb748d7965beb0bf96361d985311fa73802acdf37dba6519051086b408"
+    },
+    "sources/ref-anthropic-template-fc6d7e60--current.md": {
+      "kind": "source",
+      "sha256": "966c8e66722282808cf73a52ae427734f74706e99a17d6153051e0961550af3a"
+    },
+    "sources/ref-openclaw-docs-611bf541--current.md": {
+      "kind": "source",
+      "sha256": "8a42aa4bf6a2a34769dae8b913dbb424d37ae8f8669ff2b6038ac6d6291277b7"
+    },
+    "sources/ref-claude-docs-194f0e28--current.md": {
+      "kind": "source",
+      "sha256": "bef211f38bb019d04154338e3012f059d89a0bbb1325243b273bc3d3210e24cc"
+    },
+    "sources/ref-pi-resource-loader-83389135--current.md": {
+      "kind": "source",
+      "sha256": "948e33e2939e04284ca37e7501a6e1d1772ee533c3739f20eaab26bc73e82a3d"
+    },
+    "sources/ref-pi-package-manager-f9ebd257--current.md": {
+      "kind": "source",
+      "sha256": "b32932c63f48ce04ac7bb8923394123d630be7437ea32d4adb0bee9c054cc3ed"
+    },
+    "sources/ref-openai-build-575ba476--current.md": {
+      "kind": "source",
+      "sha256": "506fd22e759948145852962aef4a6be928a3e862f1a9ea242e278db315483e73"
+    },
+    "sources/ref-pi-live-page-c733c1d4--current.md": {
+      "kind": "source",
+      "sha256": "fddcfc54a8b9742d7678a7a997b3903f23060c61104cce24e247cf94c0c6b893"
+    },
+    "sources/arxiv-2605.20023-v1--v1.md": {
+      "kind": "source",
+      "sha256": "66500b112e83cc01358606093bf89241a8fe8a6b8547ac1a9097d94e34b51d6b"
+    },
+    "sources/arxiv-2604.02837-v1--v1.md": {
+      "kind": "source",
+      "sha256": "5af9a6ceb3541d600cb794f2b775b55e531d8caf424232686fe1ac2065360d31"
+    },
+    "sources/arxiv-2603.22455-v1--v1.md": {
+      "kind": "source",
+      "sha256": "bdf1e4984d052bcbdb430bc061f39955182c51e03e8483fb1900c19c57d8a9f2"
+    },
+    "sources/ref-teamwork-agent-teams-teamwork-preview-ea5fe46a--current.md": {
+      "kind": "source",
+      "sha256": "4f85069bb68ebcc1fc4f06cb9de9a371cb3fde4597370abe24202d1e56fe20bb"
+    },
+    "sources/ref-teamwork-when-ai-becomes-a-research-partner-6b0f99ec--current.md": {
+      "kind": "source",
+      "sha256": "4fa377e218a0d8b099aa2cf24f93e992da4bc61749658531776ec088166f179b"
+    },
+    "sources/ref-agent-scaling-primary-code-12586ab5--current.md": {
+      "kind": "source",
+      "sha256": "3cc4e77f2a57d4340d5c036060c0f7ed83f59d3c30b4e44d604a54f03b4647be"
+    },
+    "sources/ref-skill-mas-primary-code-and-local-checkout-35818dca--current.md": {
+      "kind": "source",
+      "sha256": "aed0a82dc4a6a5c0e816449b25da8363da524312b3369f70a3e26673d8417d95"
+    },
+    "sources/ref-skill-mas-project-page-2862da21--current.md": {
+      "kind": "source",
+      "sha256": "c5bd1fc331ebb4cff55dfc106ffad4925dad8f628338c9b1aeaed09bbf37836d"
+    },
+    "sources/ref-envharness-primary-repository-621a2f0b--current.md": {
+      "kind": "source",
+      "sha256": "3bf0304124a07c359141ba437df1fd6f56418ff998180a1fa5126f749ff5ed61"
+    },
+    "sources/ref-codex-8acdcd4d--current.md": {
+      "kind": "source",
+      "sha256": "b6a04308f09bf2c9947478ed842380d3b8b1e6c73b97652cdcf677718d2e59fc"
+    },
+    "sources/ref-oh-my-codex-77466071--current.md": {
+      "kind": "source",
+      "sha256": "c701ee2c103783dffbcd0988e2ced17c0273708c371ed9d3d2769683a2113551"
+    },
+    "index.md": {
+      "kind": "derived",
+      "sha256": "600110ec9cb2aafca166a043c286fb4eb1b7d4203e526bbb02ec92b54ffe20ac"
+    },
+    "sources/index.md": {
+      "kind": "derived",
+      "sha256": "2d3ab13c3690d2102e111b118d1ceffc603a6429cfc08c36007631f48aa7026b"
+    },
+    "log.md": {
+      "kind": "derived",
+      "sha256": "dd127e2a6dd47aae40c490de725d9fa66687d6df1b8bd720c3b1df8f11ba49f5"
+    },
+    "concepts/task-state-and-knowledge-ownership.md": {
+      "kind": "authored",
+      "sha256": "8b0f8b242f929e2e1d97d5fd5eb779a93259970be6465b93a5ce2ed3348c8bc8",
+      "contribution_id": "r6-bootstrap-learning-20260916",
+      "evidence": [
+        {
+          "source_id": "arxiv-2608.29596-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "eebf58c7caea35099a3be91890af6f11bb36d134b5c36bf043cbbf4f2c5d50ab",
+          "artifact": "paper.llms.txt",
+          "sha256": "e22346d669a0e1092795eb2c8d6eb0f3fb3563063fa59a276bf9755500a0c771",
+          "locator": {
+            "start_line": 30,
+            "end_line": 43
+          },
+          "preparation_key": "6e6a718e93bd3f812d50ee0217316ad1667f1ceb75b4404acf3699a57d86f635"
+        },
+        {
+          "source_id": "arxiv-2608.29596-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "eebf58c7caea35099a3be91890af6f11bb36d134b5c36bf043cbbf4f2c5d50ab",
+          "artifact": "paper.llms.txt",
+          "sha256": "e22346d669a0e1092795eb2c8d6eb0f3fb3563063fa59a276bf9755500a0c771",
+          "locator": {
+            "start_line": 1161,
+            "end_line": 1164
+          },
+          "preparation_key": "6e6a718e93bd3f812d50ee0217316ad1667f1ceb75b4404acf3699a57d86f635"
+        }
+      ],
+      "generated": {
+        "by": "codex/gpt-6-astra",
+        "at": "2026-09-16T07:30:18.269807Z"
+      }
+    },
+    "concepts/orchestration-baselines-and-limits.md": {
+      "kind": "authored",
+      "sha256": "8ca07125471e97955777d201f9a6fca2ea2d15ef946a461d7e9f54daece1f033",
+      "contribution_id": "r6-bootstrap-learning-20260916",
+      "evidence": [
+        {
+          "source_id": "arxiv-2512.08296-v3",
+          "version": "v3",
+          "prepared_manifest_sha256": "8bfe470bb396448d584cf56130c1a0d4af224ce0d14f39c73213f8bf226fb1cf",
+          "artifact": "paper.llms.txt",
+          "sha256": "e36272cb28817cc8b6f93edddbab3d5b101925400d0dcf0b3a50334a289f9c65",
+          "locator": {
+            "start_line": 179,
+            "end_line": 197
+          },
+          "preparation_key": "8f01beaed5f9e68ed0cd7a17b8710af7e1f386f1ee432be00d7701e3ce663c94"
+        },
+        {
+          "source_id": "arxiv-2512.08296-v3",
+          "version": "v3",
+          "prepared_manifest_sha256": "8bfe470bb396448d584cf56130c1a0d4af224ce0d14f39c73213f8bf226fb1cf",
+          "artifact": "paper.llms.txt",
+          "sha256": "e36272cb28817cc8b6f93edddbab3d5b101925400d0dcf0b3a50334a289f9c65",
+          "locator": {
+            "start_line": 244,
+            "end_line": 254
+          },
+          "preparation_key": "8f01beaed5f9e68ed0cd7a17b8710af7e1f386f1ee432be00d7701e3ce663c94"
+        },
+        {
+          "source_id": "arxiv-2512.08296-v3",
+          "version": "v3",
+          "prepared_manifest_sha256": "8bfe470bb396448d584cf56130c1a0d4af224ce0d14f39c73213f8bf226fb1cf",
+          "artifact": "paper.llms.txt",
+          "sha256": "e36272cb28817cc8b6f93edddbab3d5b101925400d0dcf0b3a50334a289f9c65",
+          "locator": {
+            "start_line": 574,
+            "end_line": 584
+          },
+          "preparation_key": "8f01beaed5f9e68ed0cd7a17b8710af7e1f386f1ee432be00d7701e3ce663c94"
+        },
+        {
+          "source_id": "arxiv-2512.08296-v3",
+          "version": "v3",
+          "prepared_manifest_sha256": "8bfe470bb396448d584cf56130c1a0d4af224ce0d14f39c73213f8bf226fb1cf",
+          "artifact": "paper.llms.txt",
+          "sha256": "e36272cb28817cc8b6f93edddbab3d5b101925400d0dcf0b3a50334a289f9c65",
+          "locator": {
+            "start_line": 824,
+            "end_line": 836
+          },
+          "preparation_key": "8f01beaed5f9e68ed0cd7a17b8710af7e1f386f1ee432be00d7701e3ce663c94"
+        }
+      ],
+      "generated": {
+        "by": "codex/gpt-6-astra",
+        "at": "2026-09-16T07:30:18.269807Z"
+      }
+    },
+    "concepts/skill-contract-components.md": {
+      "kind": "authored",
+      "sha256": "986f9100cc306cdcbbc9c7d6a497e2fa860e3131a6879da2733bed6763932462",
+      "contribution_id": "r6-bootstrap-learning-20260916",
+      "evidence": [
+        {
+          "source_id": "arxiv-2608.29596-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "eebf58c7caea35099a3be91890af6f11bb36d134b5c36bf043cbbf4f2c5d50ab",
+          "artifact": "paper.llms.txt",
+          "sha256": "e22346d669a0e1092795eb2c8d6eb0f3fb3563063fa59a276bf9755500a0c771",
+          "locator": {
+            "start_line": 19,
+            "end_line": 43
+          },
+          "preparation_key": "6e6a718e93bd3f812d50ee0217316ad1667f1ceb75b4404acf3699a57d86f635"
+        },
+        {
+          "source_id": "arxiv-2608.29596-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "eebf58c7caea35099a3be91890af6f11bb36d134b5c36bf043cbbf4f2c5d50ab",
+          "artifact": "paper.llms.txt",
+          "sha256": "e22346d669a0e1092795eb2c8d6eb0f3fb3563063fa59a276bf9755500a0c771",
+          "locator": {
+            "start_line": 1961,
+            "end_line": 1963
+          },
+          "preparation_key": "6e6a718e93bd3f812d50ee0217316ad1667f1ceb75b4404acf3699a57d86f635"
+        }
+      ],
+      "generated": {
+        "by": "codex/gpt-6-astra",
+        "at": "2026-09-16T07:30:18.269807Z"
+      }
+    },
+    "concepts/evidence-layers.md": {
+      "kind": "authored",
+      "sha256": "4337135ce1484e5be0050a597f8fa448aaf71212f405e06b69882621eef93548",
+      "contribution_id": "r6-bootstrap-learning-20260916",
+      "evidence": [
+        {
+          "source_id": "arxiv-2605.25480-v2",
+          "version": "v2",
+          "prepared_manifest_sha256": "136418bc798d3bb42ef6f4db3e4beb8b9570ef9cb1d7afe522e340afa15bf103",
+          "artifact": "paper.llms.txt",
+          "sha256": "2643b16fde8b04ac1fee5f857911e0ee3089a4af10f0fe8d2507fe8a1cd250c3",
+          "locator": {
+            "start_line": 59,
+            "end_line": 63
+          },
+          "preparation_key": "f93c9c110a4908c5480c307ce0f18eb79a93874be6f0ab2feaa031ccf427d83e"
+        },
+        {
+          "source_id": "arxiv-2605.25480-v2",
+          "version": "v2",
+          "prepared_manifest_sha256": "136418bc798d3bb42ef6f4db3e4beb8b9570ef9cb1d7afe522e340afa15bf103",
+          "artifact": "paper.llms.txt",
+          "sha256": "2643b16fde8b04ac1fee5f857911e0ee3089a4af10f0fe8d2507fe8a1cd250c3",
+          "locator": {
+            "start_line": 94,
+            "end_line": 116
+          },
+          "preparation_key": "f93c9c110a4908c5480c307ce0f18eb79a93874be6f0ab2feaa031ccf427d83e"
+        }
+      ],
+      "generated": {
+        "by": "codex/gpt-6-astra",
+        "at": "2026-09-16T07:30:18.269807Z"
+      }
+    },
+    "concepts/retrieval-error-book.md": {
+      "kind": "authored",
+      "sha256": "74014d3cb08a67345a9f961310959e00435fba6bd15e2f85652fadeae2e518d4",
+      "contribution_id": "r6-bootstrap-learning-20260916",
+      "evidence": [
+        {
+          "source_id": "arxiv-2605.25480-v2",
+          "version": "v2",
+          "prepared_manifest_sha256": "136418bc798d3bb42ef6f4db3e4beb8b9570ef9cb1d7afe522e340afa15bf103",
+          "artifact": "paper.llms.txt",
+          "sha256": "2643b16fde8b04ac1fee5f857911e0ee3089a4af10f0fe8d2507fe8a1cd250c3",
+          "locator": {
+            "start_line": 65,
+            "end_line": 116
+          },
+          "preparation_key": "f93c9c110a4908c5480c307ce0f18eb79a93874be6f0ab2feaa031ccf427d83e"
+        },
+        {
+          "source_id": "arxiv-2605.25480-v2",
+          "version": "v2",
+          "prepared_manifest_sha256": "136418bc798d3bb42ef6f4db3e4beb8b9570ef9cb1d7afe522e340afa15bf103",
+          "artifact": "paper.llms.txt",
+          "sha256": "2643b16fde8b04ac1fee5f857911e0ee3089a4af10f0fe8d2507fe8a1cd250c3",
+          "locator": {
+            "start_line": 120,
+            "end_line": 124
+          },
+          "preparation_key": "f93c9c110a4908c5480c307ce0f18eb79a93874be6f0ab2feaa031ccf427d83e"
+        },
+        {
+          "source_id": "arxiv-2605.25480-v2",
+          "version": "v2",
+          "prepared_manifest_sha256": "136418bc798d3bb42ef6f4db3e4beb8b9570ef9cb1d7afe522e340afa15bf103",
+          "artifact": "paper.llms.txt",
+          "sha256": "2643b16fde8b04ac1fee5f857911e0ee3089a4af10f0fe8d2507fe8a1cd250c3",
+          "locator": {
+            "start_line": 142,
+            "end_line": 148
+          },
+          "preparation_key": "f93c9c110a4908c5480c307ce0f18eb79a93874be6f0ab2feaa031ccf427d83e"
+        },
+        {
+          "source_id": "arxiv-2605.25480-v2",
+          "version": "v2",
+          "prepared_manifest_sha256": "136418bc798d3bb42ef6f4db3e4beb8b9570ef9cb1d7afe522e340afa15bf103",
+          "artifact": "paper.llms.txt",
+          "sha256": "2643b16fde8b04ac1fee5f857911e0ee3089a4af10f0fe8d2507fe8a1cd250c3",
+          "locator": {
+            "start_line": 309,
+            "end_line": 311
+          },
+          "preparation_key": "f93c9c110a4908c5480c307ce0f18eb79a93874be6f0ab2feaa031ccf427d83e"
+        }
+      ],
+      "generated": {
+        "by": "codex/gpt-6-astra",
+        "at": "2026-09-16T07:30:18.269807Z"
+      }
+    },
+    "concepts/procedural-graphs-as-local-hypothesis.md": {
+      "kind": "authored",
+      "sha256": "0d25b7cbdc10e1cc131014ea66264c9f46afa0b604951f68a4585af7032d2ad8",
+      "contribution_id": "r6-bootstrap-learning-20260916",
+      "evidence": [
+        {
+          "source_id": "arxiv-2609.09153-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "13fe2a7b66ada2a7c5b8932626778848160b1e54dc6c14b00c2cdcbad39f4fce",
+          "artifact": "paper.llms.txt",
+          "sha256": "d0c6b644c84fcc68f94cd4a37d7c4e89252c25afe04e30dd636be6cc1e598818",
+          "locator": {
+            "start_line": 40,
+            "end_line": 106
+          },
+          "preparation_key": "4083147a677649ba45902c11b3d1121341a56a0d4b441c59864455c55e2d9c6a"
+        },
+        {
+          "source_id": "arxiv-2609.09153-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "13fe2a7b66ada2a7c5b8932626778848160b1e54dc6c14b00c2cdcbad39f4fce",
+          "artifact": "paper.llms.txt",
+          "sha256": "d0c6b644c84fcc68f94cd4a37d7c4e89252c25afe04e30dd636be6cc1e598818",
+          "locator": {
+            "start_line": 120,
+            "end_line": 126
+          },
+          "preparation_key": "4083147a677649ba45902c11b3d1121341a56a0d4b441c59864455c55e2d9c6a"
+        },
+        {
+          "source_id": "arxiv-2609.09153-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "13fe2a7b66ada2a7c5b8932626778848160b1e54dc6c14b00c2cdcbad39f4fce",
+          "artifact": "paper.llms.txt",
+          "sha256": "d0c6b644c84fcc68f94cd4a37d7c4e89252c25afe04e30dd636be6cc1e598818",
+          "locator": {
+            "start_line": 528,
+            "end_line": 536
+          },
+          "preparation_key": "4083147a677649ba45902c11b3d1121341a56a0d4b441c59864455c55e2d9c6a"
+        },
+        {
+          "source_id": "arxiv-2609.09153-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "13fe2a7b66ada2a7c5b8932626778848160b1e54dc6c14b00c2cdcbad39f4fce",
+          "artifact": "paper.llms.txt",
+          "sha256": "d0c6b644c84fcc68f94cd4a37d7c4e89252c25afe04e30dd636be6cc1e598818",
+          "locator": {
+            "start_line": 853,
+            "end_line": 863
+          },
+          "preparation_key": "4083147a677649ba45902c11b3d1121341a56a0d4b441c59864455c55e2d9c6a"
+        },
+        {
+          "source_id": "arxiv-2609.09153-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "13fe2a7b66ada2a7c5b8932626778848160b1e54dc6c14b00c2cdcbad39f4fce",
+          "artifact": "paper.llms.txt",
+          "sha256": "d0c6b644c84fcc68f94cd4a37d7c4e89252c25afe04e30dd636be6cc1e598818",
+          "locator": {
+            "start_line": 1698,
+            "end_line": 1708
+          },
+          "preparation_key": "4083147a677649ba45902c11b3d1121341a56a0d4b441c59864455c55e2d9c6a"
+        },
+        {
+          "source_id": "arxiv-2609.09153-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "13fe2a7b66ada2a7c5b8932626778848160b1e54dc6c14b00c2cdcbad39f4fce",
+          "artifact": "paper.llms.txt",
+          "sha256": "d0c6b644c84fcc68f94cd4a37d7c4e89252c25afe04e30dd636be6cc1e598818",
+          "locator": {
+            "start_line": 1728,
+            "end_line": 1732
+          },
+          "preparation_key": "4083147a677649ba45902c11b3d1121341a56a0d4b441c59864455c55e2d9c6a"
+        }
+      ],
+      "generated": {
+        "by": "codex/gpt-6-astra",
+        "at": "2026-09-16T07:30:18.269807Z"
+      }
+    },
+    "sources/arxiv-2606.09498-v1--v1.md": {
+      "kind": "source",
+      "sha256": "a069b234bbbab21b11b2231da698b00829db3973903966e12282efc600f982ed"
+    },
+    "concepts/index.md": {
+      "kind": "derived",
+      "sha256": "f0ea6207401cf669d88a2ac726e59ca8d45f77080651a075537875e8daf346c0"
+    }
+  },
+  "imports": {
+    "r6-bootstrap-learning-20260916": {
+      "sha256": "ee4cf5ef5d88102151ebdd3b606fc289cfe7af92be83b8c2b0e9660697f99239",
+      "generated": {
+        "by": "codex/gpt-6-astra",
+        "at": "2026-09-16T07:30:18.269807Z"
+      },
+      "pages": [
+        "concepts/task-state-and-knowledge-ownership.md",
+        "concepts/orchestration-baselines-and-limits.md",
+        "concepts/skill-contract-components.md",
+        "concepts/evidence-layers.md",
+        "concepts/retrieval-error-book.md",
+        "concepts/procedural-graphs-as-local-hypothesis.md"
+      ],
+      "source_manifest_sha256": "990bccb1e2109b5a8d06ab932e21121b9931a266dadf8c37014ab72dbdcb7ac9"
+    }
+  }
+}

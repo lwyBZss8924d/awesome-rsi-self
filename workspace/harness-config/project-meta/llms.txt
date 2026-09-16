@@ -1,0 +1,30 @@
+# Awesome RSI Self project governance
+
+> Selective context for this repository.
+
+Use project.json for declared paths and checks; index links are inert until selected.
+
+## Context
+
+- [Environment](contexts/environment.llms.txt): Read only for that task branch.
+- [Branches](contexts/branches.llms.txt): Read only for that task branch.
+- [Workspace](contexts/workspace.llms.txt): Read only for that task branch.
+- [Knowledge](contexts/knowledge.llms.txt): Read only for that task branch.
+- [Skills](contexts/skills.llms.txt): Read only for that task branch.
+- [Coordination](contexts/coordination.llms.txt): Read only for that task branch.
+
+## Output templates
+
+- [state template](templates/state.json): Copy and fill actual observations.
+- [checkpoint template](templates/checkpoint.json): Copy and fill actual observations.
+- [pouw template](templates/pouw.json): Copy and fill actual observations.
+- [issue template](templates/issue.json): Copy and fill actual observations.
+- [task template](templates/task.json): Copy and fill actual observations.
+- [plan template](templates/plan.json): Copy and fill actual observations.
+- [knowledge template](templates/knowledge.json): Copy and fill actual observations.
+- [skill-candidate template](templates/skill-candidate.json): Copy and fill actual observations.
+
+## Metadata
+
+- [Project configuration](project.json): Paths, checks, shared source references.
+- [Record schema](record.schema.json): Structure only, not task acceptance.

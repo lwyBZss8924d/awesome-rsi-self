@@ -1,0 +1,39 @@
+{
+  "schema_version": "rsi.daily-config.v1",
+  "budgetSeconds": 1800,
+  "maxSources": 3,
+  "upstreams": [{
+    "id": "self-improving-agents",
+    "url": "https://github.com/selfimproving-agent/awesome-Self-Improving-Agents.git",
+    "ref": "HEAD",
+    "paths": ["README.md"]
+  }],
+  "discovery": [{
+    "id": "hf-daily",
+    "format": "hf_papers",
+    "command": {"argv": ["hf", "papers", "list", "--json"], "timeoutSeconds": 60}
+  }],
+  "research": {
+    "argv": ["codex", "exec", "--json", "--sandbox", "read-only", "--model", "gpt-6-astra", "-c", "model_reasoning_effort=xhigh", "--output-last-message", "{output}", "-"],
+    "codexHome": "/path/to/existing/codex-test",
+    "stdinTemplate": "workflows/daily/research.prompt.txt",
+    "timeoutSeconds": 900,
+    "maxOutputBytes": 1048576
+  },
+  "verifier": {
+    "argv": ["codex", "exec", "--json", "--sandbox", "read-only", "--model", "gpt-6-astra", "-c", "model_reasoning_effort=xhigh", "--output-last-message", "{output}", "-"],
+    "codexHome": "/path/to/existing/codex-main",
+    "stdinTemplate": "workflows/daily/verify.prompt.txt",
+    "timeoutSeconds": 600,
+    "maxOutputBytes": 1048576
+  },
+  "publication": {
+    "enabled": false,
+    "repoSlug": "OWNER/REPOSITORY",
+    "remote": "origin",
+    "base": "main",
+    "branchPrefix": "rsi-daily",
+    "requiredChecks": ["check"],
+    "autoMerge": true
+  }
+}

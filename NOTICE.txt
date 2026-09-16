@@ -1,0 +1,7 @@
+Repository code and original authored documentation: MIT, see LICENSE.
+Third-party papers and downloaded sources retain their respective licenses.
+Private raw downloads are not redistributed by this repository's code license.
+Public source manifests identify original URLs, versions and provenance.
+
+The vendored aicatlog SDK and Codex RSI view kit retain the licenses included
+in their package archives. Runtime dependencies retain their own package licenses.

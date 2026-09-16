@@ -1,0 +1,16 @@
+# RSI Knowledge Workflow
+
+> Author source-grounded OKF drafts from exact prepared resources, then derive portable indexes and views without changing trust.
+
+Use a selected source's preprocessing manifest and bounded context leaves. Registration and extraction alone do not establish reading or accepted knowledge.
+
+## Author and import
+
+- [Contribution workflow](contribution.llms.txt): Evidence binding, draft authorship, update ownership and private receipt boundaries.
+- [Contribution schema](contribution.schema.json): Machine-readable rsi.knowledge-contribution.v1 input; runtime enforces filesystem and citation constraints.
+- [Contribution template](contribution.example.json): Non-executable example with zero digest placeholders; replace from exact observed source evidence.
+
+## Build and inspect
+
+- [Knowledge interfaces](interfaces.llms.txt): Deterministic build, OKF lint, retrieval and public clone semantics.
+- [Open Knowledge Format v0.2](https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md): Upstream format, optional provenance, trust and lifecycle semantics.

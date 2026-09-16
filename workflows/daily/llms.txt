@@ -1,0 +1,17 @@
+# Awesome RSI Self daily workflow
+
+> One bounded, source-grounded learning run with separate research, publication, projection and native schedule observations.
+
+Select the contract before supplying local command templates. This directory contains portable workflow source, not an activated automation.
+
+## Contract
+
+- [Daily operation](daily.llms.txt): Phase contracts, continuation, ownership and useful completion.
+- [Configuration example](config.example.json): Explicit argv and physical-home bindings to fill locally.
+- [Native task template](scheduled-task.template.json): UTC schedule and actual-thread requirement.
+
+## Worker prompts
+
+- [Research worker](research.prompt.txt): Source-bound contribution envelope.
+- [Independent verifier](verify.prompt.txt): Exact-commit changed-claim acceptance.
+- [Scheduled dispatcher](dispatcher.prompt.txt): One finite dispatcher invocation and truthful result reporting.

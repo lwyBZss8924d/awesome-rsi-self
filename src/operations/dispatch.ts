@@ -15,13 +15,19 @@ type DispatchOptions=Pick<DailyOptions,"hooks"|"signal"|"runId">&{dryRun?:boolea
 export async function runScheduledCycle(root:string,input:DailyConfigInput,options:DispatchOptions={}){
   root=await absoluteNoSymlink(root);
   const config=dailyConfigSchema.parse(input),base=await noSymlinkPath(root,".local/daily");
-  const attempt=randomUUID(),attemptDir=resolve(base,"dispatch",attempt),lockPath=resolve(base,"dispatch.lock.json");
+  const attempt=randomUUID(),attemptPrefix=`.local/daily/dispatch/${attempt}`;
+  const ownedAttempt=(item="")=>noSymlinkPath(root,item?`${attemptPrefix}/${item}`:attemptPrefix);
+  const attemptDir=await ownedAttempt(),lockPath=await noSymlinkPath(root,".local/daily/dispatch.lock.json");
   await mkdir(attemptDir,{recursive:true});
   let lock;
   try{lock=await open(lockPath,"wx",0o600);await lock.writeFile(JSON.stringify({schema_version:"rsi.dispatch-lock.v1",pid:process.pid,attempt,created_at:new Date().toISOString()}));}
   catch(error:any){if(error.code==="EEXIST")return {schema_version:"rsi.dispatch-result.v1",action:"blocked",reason:"dispatch_lock_held",native_scheduled_accepted:false};throw error;}
   const cycleStarted=Date.now();let deadlineAt=cycleStarted+config.budgetSeconds*1000,sequence=0;
-  const git=async(args:string[])=> (await checkedProcess({argv:["git",...args],timeoutSeconds:Math.min(config.budgetSeconds,120)},{cwd:root,evidenceDir:resolve(attemptDir,`git-${++sequence}`),deadlineAt,signal:options.signal})).stdout.trim();
+  const git=async(args:string[])=> {
+    const key=`git-${++sequence}`,evidenceDir=await ownedAttempt(key);
+    await ownedAttempt(`${key}/started.json`);await ownedAttempt(`${key}/process.json`);
+    return (await checkedProcess({argv:["git",...args],timeoutSeconds:Math.min(config.budgetSeconds,120)},{cwd:root,evidenceDir,deadlineAt,signal:options.signal})).stdout.trim();
+  };
   const snapshot=async()=>({revision:await git(["rev-parse","HEAD"]),branch:await git(["branch","--show-current"]),dirty:await git(["status","--porcelain=v1","--untracked-files=all"])});
   let before:Awaited<ReturnType<typeof snapshot>>|null=null;
   const finish=async(value:Record<string,unknown>)=>{
@@ -29,7 +35,7 @@ export async function runScheduledCycle(root:string,input:DailyConfigInput,optio
     try{after=await snapshot();}catch(error){after={available:false,error:String(error)};}
     const fullRun=value.run as DailyState|undefined;
     const run=fullRun?{schema_version:"rsi.daily-run-summary.v1",run_id:fullRun.run_id,status:fullRun.status,source_revision:fullRun.source_revision,selected_sources:fullRun.selected_sources,outcome:fullRun.outcome,error:fullRun.error??null,record_path:resolve(base,"runs",fullRun.run_id,"state.json")}:undefined;
-    const result={schema_version:"rsi.dispatch-result.v1",attempt_id:attempt,...value,...(run?{run}:{}),source_before:before,source_after:after,native_scheduled_accepted:false,record_path:resolve(attemptDir,"result.json")};
+    const result={schema_version:"rsi.dispatch-result.v1",attempt_id:attempt,...value,...(run?{run}:{}),source_before:before,source_after:after,native_scheduled_accepted:false,record_path:await ownedAttempt("result.json")};
     await writeJson(result.record_path,result);return result;
   };
   try{
@@ -71,6 +77,7 @@ export async function runScheduledCycle(root:string,input:DailyConfigInput,optio
     // Hold the same lock used by manual daily runs only while synchronizing the source.
     const syncLock=await noSymlinkPath(root,".local/daily/lock.json");
     const sync=await open(syncLock,"wx",0o600);
+    let synchronizedRevision=before.revision;
     try{
       await sync.writeFile(JSON.stringify({run_id:`dispatch-${attempt}`,pid:process.pid,token:attempt,started_at:new Date().toISOString()}));
       if((await snapshot()).dirty)throw new Error("dispatch_source_changed_before_sync");
@@ -80,13 +87,19 @@ export async function runScheduledCycle(root:string,input:DailyConfigInput,optio
       await git(["merge","--ff-only",fetched]);
       const synced=await snapshot();
       if(synced.revision!==fetched||synced.branch!==pub.base||synced.dirty)throw new Error("dispatch_base_sync_mismatch");
-      await writeJson(resolve(attemptDir,"base-sync.json"),{before:before.revision,after:synced.revision,remote:pub.remote,branch:pub.base});
-    }finally{await sync.close();if((await readJson(syncLock)).token===attempt)await unlink(syncLock);}
+      synchronizedRevision=synced.revision;
+      await writeJson(await ownedAttempt("base-sync.json"),{before:before.revision,after:synced.revision,remote:pub.remote,branch:pub.base});
+    }finally{await sync.close();if((await readJson(await noSymlinkPath(root,".local/daily/lock.json"))).token===attempt)await unlink(syncLock);}
+    if(synchronizedRevision!==before.revision)return await finish({
+      action:"restart_required",reason:"source_revision_changed",run_id:runId,config_source:"supplied",
+      restart:{expected_revision:synchronizedRevision,budget_deadline_at:new Date(deadlineAt).toISOString(),remaining_budget_seconds:Math.max(0,(deadlineAt-Date.now())/1000),
+        next_action:"Start a fresh CLI process from this revision with the same config and run ID; do not reuse loaded API hooks. Respect the remaining cycle budget or defer to a later scheduled invocation."},
+    });
     const result=await runDaily(root,config,{...options,runId,deadlineAt});
     return await finish({action:"start",run_id:runId,config_source:"supplied",run:result});
   }catch(error){
     return await finish({action:"blocked",reason:String(error)});
   }finally{
-    await lock.close();if((await readJson(lockPath)).attempt===attempt)await unlink(lockPath);
+    await lock.close();if((await readJson(await noSymlinkPath(root,".local/daily/dispatch.lock.json"))).attempt===attempt)await unlink(lockPath);
   }
 }

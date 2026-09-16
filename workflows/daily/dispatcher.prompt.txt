@@ -7,6 +7,12 @@ it never creates a replacement research run while that publication is unresolved
 Unknown/running/ambiguous run states require owner reconciliation. Never remove a live
 lock or restart a running phase. If no run is pending, the dispatcher requires a clean
 configured base branch and fast-forwards it before starting one finite fresh run.
+If action=restart_required, source synchronization changed HEAD and no daily worker
+has started. End that CLI process. Invoke the same kb dispatch command and run ID in a
+fresh process loaded from restart.expected_revision; do not reuse cached API bindings or
+hooks. Keep the reported budget_deadline_at/remaining budget for this scheduled cycle.
+If that budget is exhausted, retain the receipt and defer to the next scheduled
+invocation. Do not report restart_required as a completed knowledge run.
 Wait for the final durable result. Do not manually reproduce worker steps or launch a
 second pipeline. Report action, source_before, source_after, source_scan_complete,
 checks_passed, pr_open, merged and

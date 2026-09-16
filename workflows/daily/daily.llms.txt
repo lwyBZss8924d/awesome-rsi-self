@@ -120,6 +120,15 @@ source revision. Multiple/unknown/running or failed phases stop for reconciliati
 they never trigger a second research run. With no pending run, a clean configured base
 branch is fetched and fast-forwarded under the daily lock before a new run. It never
 resets or rebases source. Before/after snapshots and native acceptance remain separate.
+Any HEAD change during that fast-forward returns a durable restart_required result
+before runDaily or loaded hooks execute. This conservative boundary also applies to
+knowledge-only revisions. The CLI caller must start a fresh process at the reported
+revision with the same config and run ID, respecting the reported remaining cycle budget.
+A long-lived PTC host must reload in a fresh process, not call cached module bindings.
+If the remaining budget is exhausted, the next scheduled invocation can continue.
+No daily state or consumed-source cursor is created by a restart-required attempt.
+Dispatch attempt, process-evidence and JSON receipt paths are checked from the absolute
+owner root before directory creation or writes; pre-existing symlinks are rejected.
 Unpublished candidates remain blocked/pending: they cannot consume source cursors or
 project an unadopted tree. A new direct daily run must include all consumed knowledge
 revisions in its base. kb dispatch synchronizes the clean base before starting it.

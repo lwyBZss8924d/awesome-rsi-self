@@ -227,17 +227,41 @@ describe("review regressions and autonomous discovery",()=>{
       const resumed=await runDaily(root,cfg,{runId:"external-merge",resume:true,hooks:hooks()});expect(resumed.status).toBe("blocked");expect(resumed.outcome.merged).toBe(true);expect(resumed.error).toContain("required_checks_failed");expect((resumed.phases.publish!.result as any).publication_accepted).toBe(false);expect(await Bun.file(resolve(cfg.projection.target,".rsi-projection.json")).exists()).toBe(false);
     }finally{remote.restore();}
   },10000);
-  test("dispatch resumes one prior PR with saved config then fast-forwards before next day",async()=>{
+  test("dispatch resumes saved publication then requires restart after next-day fast-forward",async()=>{
     const root=await repo(),count={compile:0},remote=await remoteFixture(root),cfg=config();cfg.publication={enabled:true,repoSlug:"fixture/wiki",waitSeconds:0};cfg.projection={target:resolve(await temp(),"projection")};
     try{
       const original=git(root,"rev-parse","HEAD"),first=await runDaily(root,cfg,{runId:"yesterday",hooks:hooks(count)});expect(first.status).toBe("blocked");
       const observed=JSON.parse(await readFile(remote.stateFile,"utf8"));observed.checks=true;await writeFile(remote.stateFile,JSON.stringify(observed));
       const changed={...cfg,sourceIds:["different-preference"]};
       const resumed:any=await runScheduledCycle(root,changed,{runId:"today",hooks:hooks(count)});expect(resumed.action).toBe("resume");expect(resumed.run_id).toBe("yesterday");expect(resumed.config_source).toBe("saved_run");expect(resumed.supplied_config_differs).toBe(true);expect(resumed.run.status).toBe("completed");expect(count.compile).toBe(1);
-      const next:any=await runScheduledCycle(root,cfg,{runId:"today",hooks:hooks(count)});expect(next.action).toBe("start");expect(next.run.status).toBe("completed");expect(next.source_before.revision).toBe(original);expect(next.source_after.revision).not.toBe(original);expect(await readFile(resolve(root,"wiki/fixture.md"),"utf8")).toContain("Fixture");expect(await readFile(resolve(cfg.projection.target,"wiki/fixture.md"),"utf8")).toContain("Fixture");
+      const next:any=await runScheduledCycle(root,cfg,{runId:"today",hooks:hooks(count)});expect(next.action).toBe("restart_required");expect(next.run).toBeUndefined();expect(next.source_before.revision).toBe(original);expect(next.source_after.revision).not.toBe(original);expect(next.restart.expected_revision).toBe(next.source_after.revision);expect(await Bun.file(resolve(root,".local/daily/runs/today/state.json")).exists()).toBe(false);expect(await readFile(resolve(root,"wiki/fixture.md"),"utf8")).toContain("Fixture");expect(await readFile(resolve(cfg.projection.target,"wiki/fixture.md"),"utf8")).toContain("Fixture");
       const final=JSON.parse(await readFile(remote.stateFile,"utf8"));expect(final.pushes).toBe(1);expect(final.creates).toBe(1);expect(count.compile).toBe(1);
     }finally{remote.restore();}
   },15000);
+  test("runtime-changing fast-forward never invokes previously loaded hooks",async()=>{
+    const root=await repo(),runtime=resolve(root,"runtime.mjs");
+    await writeFile(runtime,"export const behavior = 'old-runtime';\n");git(root,"add","runtime.mjs");git(root,"commit","-m","old runtime");
+    const loaded=await import(`file://${runtime}`),before=git(root,"rev-parse","HEAD");expect(loaded.behavior).toBe("old-runtime");
+    git(root,"checkout","-b","incoming-runtime");await writeFile(runtime,"export const behavior = 'new-runtime';\n");git(root,"add","runtime.mjs");git(root,"commit","-m","new runtime");const updated=git(root,"rev-parse","HEAD");git(root,"checkout","main");
+    const remote=await remoteFixture(root,{base:updated}),cfg=config();cfg.publication={enabled:true,repoSlug:"fixture/wiki"};let staleCalls=0;
+    try{
+      const h=hooks();h.fetch=async()=>{staleCalls++;throw new Error(`unexpected ${loaded.behavior}`);};
+      const result:any=await runScheduledCycle(root,cfg,{runId:"runtime-advance",hooks:h});
+      expect(result.action).toBe("restart_required");expect(result.source_before.revision).toBe(before);expect(result.source_after.revision).toBe(updated);expect(result.restart.expected_revision).toBe(updated);expect(result.restart.remaining_budget_seconds).toBeGreaterThan(0);expect(staleCalls).toBe(0);
+      expect(await readFile(runtime,"utf8")).toContain("new-runtime");expect(await Bun.file(resolve(root,".local/daily/runs/runtime-advance/state.json")).exists()).toBe(false);expect(await Bun.file(resolve(root,".local/daily/lock.json")).exists()).toBe(false);
+      const receipt=JSON.parse(await readFile(result.record_path,"utf8"));expect(receipt.action).toBe("restart_required");expect(receipt.run).toBeUndefined();
+    }finally{remote.restore();}
+  },10000);
+  test("dispatch evidence symlink is rejected before mkdir or any Git process",async()=>{
+    for(const dryRun of [true,false]){
+      const root=await repo(),outside=await temp(),sentinel=resolve(outside,"sentinel.txt"),marker=resolve(root,".local/git-called");
+      await writeFile(sentinel,"untouched");await mkdir(resolve(root,".local/daily"),{recursive:true});await symlink(outside,resolve(root,".local/daily/dispatch"));
+      const bin=resolve(root,".local/git-trap");await mkdir(bin);const trap=resolve(bin,"git");await writeFile(trap,`#!/usr/bin/env bun\nimport {writeFileSync} from 'node:fs';writeFileSync(${JSON.stringify(marker)},'called');process.exit(71);\n`);await chmod(trap,0o755);
+      const previous=process.env.PATH;process.env.PATH=`${bin}:${previous}`;
+      try{await expect(runScheduledCycle(root,config(),{dryRun,hooks:hooks()})).rejects.toThrow("symlink_path");expect(await readFile(sentinel,"utf8")).toBe("untouched");expect(await readdir(outside)).toEqual(["sentinel.txt"]);expect(await Bun.file(marker).exists()).toBe(false);expect(await Bun.file(resolve(root,".local/daily/dispatch.lock.json")).exists()).toBe(false);}
+      finally{if(previous===undefined)delete process.env.PATH;else process.env.PATH=previous;}
+    }
+  });
   test("projection retains public navigation context without activating AGENTS",async()=>{
     const root=await repo(),target=resolve(await temp(),"projection");await mkdir(resolve(root,"workflows/daily"),{recursive:true});await writeFile(resolve(root,"SPEC.md"),"# Specification\n");await writeFile(resolve(root,"workflows/daily/llms.txt"),"# Daily\n");await writeFile(resolve(root,"AGENTS.md"),"# Active source instructions\n");git(root,"add",".");git(root,"commit","-m","public contexts");
     await exportKnowledge(root,{target});expect(await Bun.file(resolve(target,"SPEC.md")).exists()).toBe(true);expect(await Bun.file(resolve(target,"workflows/daily/llms.txt")).exists()).toBe(true);expect(await Bun.file(resolve(target,"AGENTS.md")).exists()).toBe(false);

@@ -21,10 +21,11 @@ export function extractArxivReferences(markdown:string):ArxivReference[] {
     if(cells){const header=cells.findIndex(cell=>/^[^\p{L}\p{N}]*(?:paper\s+)?title$/iu.test(cell));if(header>=0&&!/https?:\/\//.test(line))titleColumn=header;}
     else titleColumn=null;
     const pattern=new RegExp(`https?://(?:www\\.)?arxiv\\.org/(?:abs|html|pdf|src)/(${ARXIV_ID_PATTERN})(v\\d+)?(?:\\.pdf)?`,"gi");
-    for(const match of line.matchAll(pattern)){
+    const matches=[...line.matchAll(pattern)],unambiguous=new Set(matches.map(match=>`${match[1]!.toLowerCase()}@${match[2]??"unversioned"}`)).size===1;
+    for(const match of matches){
       const id=match[1]!,version=match[2],key=`${id.toLowerCase()}@${version??"unversioned"}`;
-      const link=[...line.matchAll(/\[([^\]]+)\]\(([^\s)]+)\)/g)].find(item=>item[2]===match[0]);
-      const candidates=[{value:cells&&titleColumn!==null?cells[titleColumn]:undefined,method:"upstream_table_title"},{value:link?.[1],method:"upstream_named_link"},{value:line.match(/\*\*([^*]+)\*\*/)?.[1],method:"upstream_emphasis"}];
+      const link=[...line.matchAll(/\[([^\]]+)\]\(([^\s)]+)\)/g)].find(item=>item[2]===match[0]&&item.index!<=match.index!&&item.index!+item[0].length>match.index!);
+      const candidates=[{value:link?.[1],method:"upstream_named_link"},{value:unambiguous&&cells&&titleColumn!==null?cells[titleColumn]:undefined,method:"upstream_table_title"},{value:unambiguous?line.match(/\*\*([^*]+)\*\*/)?.[1]:undefined,method:"upstream_emphasis"}];
       const supplied=candidates.find(item=>item.value&&meaningfulDiscoveryTitle(item.value));
       const title=supplied?cleanTitle(supplied.value!):`arXiv ${id}${version??""} (title unresolved)`;
       if(found.has(key)&&(found.get(key)!.title_status==="supplied"||!supplied))continue;

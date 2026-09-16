@@ -49,6 +49,16 @@ describe("retained Atom metadata and meaningful titles",()=>{
     const rows=extractArxivReferences("- **Named method**: [paper](https://arxiv.org/abs/2609.00211)\n- [paper](https://arxiv.org/abs/2609.00212)\n- [Later named title](https://arxiv.org/html/2609.00212)\n- [PDF](https://arxiv.org/pdf/2609.00213.pdf)\n");
     expect(rows[0]!.title).toBe("Named method");expect(rows[1]!.title).toBe("Later named title");expect(rows[2]!.title).toContain("title unresolved");expect(rows[2]!.title_status).toBe("placeholder");expect(rows[2]!.title_resolution).toBe("identifier_placeholder");
   });
+  test("different explicit-version papers in one row keep exact-link titles and flag ambiguous fallback",async()=>{
+    for(const primaryLabel of ["Primary Method","paper"]){
+      const markdown=`| Title | Paper | Related |\n|---|---|---|\n| **Primary Method** | [${primaryLabel}](https://arxiv.org/abs/2609.00211v1) | [Other Method](https://arxiv.org/abs/2609.00212v1) |\n`;
+      const delta=upstreamArxivDelta(markdown,null,{upstream_id:"fixture",commit:"a".repeat(40),previous_commit:null,path:"README.md",sha256:sha256(markdown),url:"https://github.com/example/research"});
+      let requests=0;const resolved=await resolveArxivVersions(delta.sources,{fetch:(async()=>{requests++;throw new Error("explicit versions must not fetch");}) as unknown as typeof fetch});
+      expect(requests).toBe(0);expect(resolved.map(s=>s.version)).toEqual(["v1","v1"]);expect(resolved[1]!.title).toBe("Other Method");expect(resolved[1]!.provenance?.title_resolution).toBe("upstream_named_link");expect(resolved[1]!.provenance?.title_status).toBe("supplied");
+      if(primaryLabel==="paper"){expect(resolved[0]!.title).toContain("title unresolved");expect(resolved[0]!.provenance?.title_status).toBe("placeholder");expect(resolved[0]!.provenance?.title_resolution).toBe("identifier_placeholder");}
+      else{expect(resolved[0]!.title).toBe("Primary Method");expect(resolved[0]!.provenance?.title_resolution).toBe("upstream_named_link");expect(resolved[0]!.provenance?.title_status).toBe("supplied");}
+    }
+  });
   test("ambiguous Atom identities retain original evidence but cannot assign a version",async()=>{
     const context=await fixture(),bytes=Buffer.from('<feed><entry><id>https://arxiv.org/abs/2607.13104v1</id><title>First</title></entry><entry><id>https://arxiv.org/abs/2607.13104v2</id><title>Second</title></entry></feed>');
     await expect(resolveArxivVersions(source(),{metadataClient:client(),fetch:fakeFetch(bytes),evidence:context})).rejects.toThrow("arxiv_metadata_identity_ambiguous");expect(await readFile(resolve(context.runDir,`inputs/arxiv-metadata/${sha256(bytes)}.xml`))).toEqual(bytes);

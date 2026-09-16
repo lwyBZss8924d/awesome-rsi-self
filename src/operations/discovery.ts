@@ -8,17 +8,28 @@ export function arxivIdentity(url:string) {
   const match=url.match(new RegExp(`^https?://(?:www\\.)?arxiv\\.org/(?:abs|html|pdf|src)/(${ARXIV_ID_PATTERN})(v\\d+)?(?:\\.pdf)?(?:[?#].*)?$`,"i"));
   return match?{id:match[1]!,version:match[2]}:null;
 }
-export interface ArxivReference {id:string;version?:string;title:string;url:string;line:number;line_sha256:string;}
+export interface ArxivReference {id:string;version?:string;title:string;title_status:"supplied"|"placeholder";title_resolution:string;url:string;line:number;line_sha256:string;}
+const cleanTitle=(value:string)=>value.replace(/\[([^\]]+)\]\([^)]*\)/g,"$1").replace(/^\*\*|\*\*$/g,"").replace(/\\\|/g,"|").replace(/\s+/g," ").trim();
+export function meaningfulDiscoveryTitle(value:string){
+  const title=cleanTitle(value);
+  return !!title&&!/^(?:paper|pdf|arxiv|abstract|html|full[ -]?text|link|source|tex|here|download|📄)$/i.test(title)&&!/^https?:\/\//i.test(title)&&!/^arXiv .+\(title unresolved\)$/.test(title);
+}
 export function extractArxivReferences(markdown:string):ArxivReference[] {
-  const found=new Map<string,ArxivReference>();
+  const found=new Map<string,ArxivReference>();let titleColumn:number|null=null;
   for(const [offset,line] of markdown.split(/\r?\n/).entries()){
+    const trimmed=line.trim(),cells=trimmed.startsWith("|")?trimmed.replace(/^\||\|$/g,"").split(/(?<!\\)\|/).map(cleanTitle):null;
+    if(cells){const header=cells.findIndex(cell=>/^[^\p{L}\p{N}]*(?:paper\s+)?title$/iu.test(cell));if(header>=0&&!/https?:\/\//.test(line))titleColumn=header;}
+    else titleColumn=null;
     const pattern=new RegExp(`https?://(?:www\\.)?arxiv\\.org/(?:abs|html|pdf|src)/(${ARXIV_ID_PATTERN})(v\\d+)?(?:\\.pdf)?`,"gi");
-    for(const match of line.matchAll(pattern)){
+    const matches=[...line.matchAll(pattern)],unambiguous=new Set(matches.map(match=>`${match[1]!.toLowerCase()}@${match[2]??"unversioned"}`)).size===1;
+    for(const match of matches){
       const id=match[1]!,version=match[2],key=`${id.toLowerCase()}@${version??"unversioned"}`;
-      if(found.has(key))continue;
-      const link=[...line.matchAll(/\[([^\]]+)\]\(([^\s)]+)\)/g)].find(item=>item[2]===match[0]);
-      const title=link?.[1]?.trim() || line.match(/\*\*([^*]+)\*\*/)?.[1]?.trim() || `arXiv ${id}${version??""}`;
-      found.set(key,{id,version,title,url:match[0],line:offset+1,line_sha256:sha256(line)});
+      const link=[...line.matchAll(/\[([^\]]+)\]\(([^\s)]+)\)/g)].find(item=>item[2]===match[0]&&item.index!<=match.index!&&item.index!+item[0].length>match.index!);
+      const candidates=[{value:link?.[1],method:"upstream_named_link"},{value:unambiguous&&cells&&titleColumn!==null?cells[titleColumn]:undefined,method:"upstream_table_title"},{value:unambiguous?line.match(/\*\*([^*]+)\*\*/)?.[1]:undefined,method:"upstream_emphasis"}];
+      const supplied=candidates.find(item=>item.value&&meaningfulDiscoveryTitle(item.value));
+      const title=supplied?cleanTitle(supplied.value!):`arXiv ${id}${version??""} (title unresolved)`;
+      if(found.has(key)&&(found.get(key)!.title_status==="supplied"||!supplied))continue;
+      found.set(key,{id,version,title,title_status:supplied?"supplied":"placeholder",title_resolution:supplied?.method??"identifier_placeholder",url:match[0],line:offset+1,line_sha256:sha256(line)});
     }
   }
   return [...found.values()];
@@ -33,6 +44,7 @@ export function upstreamArxivDelta(current:string,previous:string|null, provenan
     tags:["upstream-discovery"],
     provenance:{discovered_by:"upstream-arxiv-links",upstream_id:provenance.upstream_id,upstream_commit:provenance.commit,upstream_previous_commit:provenance.previous_commit,
       upstream_path:provenance.path,upstream_file_sha256:provenance.sha256,upstream_line:ref.line,upstream_line_sha256:ref.line_sha256,
+      title_status:ref.title_status,title_resolution:ref.title_resolution,
       ...(provenance.url.startsWith("https://")?{upstream_url:provenance.url}:{}),version_resolution:ref.version?"explicit":"pending"},
   }));
   return {schema_version:"rsi.upstream-discovery.v1",bootstrap:previous===null,scanned_links:after.length,added:after.filter(r=>!oldKeys.has(key(r))),removed:before.filter(r=>!newKeys.has(key(r))),unchanged:after.filter(r=>oldKeys.has(key(r))).length,sources};

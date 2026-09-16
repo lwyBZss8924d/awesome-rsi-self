@@ -1,5 +1,5 @@
-import { mkdir, readFile, readdir, lstat, open, unlink, writeFile } from "node:fs/promises";
-import { resolve, relative, dirname } from "node:path";
+import { mkdir, readFile, readdir, lstat, open, unlink, writeFile, link } from "node:fs/promises";
+import { resolve, relative, dirname, basename } from "node:path";
 import { randomUUID } from "node:crypto";
 import { DOMParser } from "linkedom";
 import { sourceSchema, sourceKey, SOURCE_MANIFEST, type Source } from "../contracts.ts";
@@ -7,7 +7,7 @@ import { readJson, writeJson, loadSources, sha256, noSymlinkPath } from "../io.t
 import { dailyConfigSchema, workerResultSchema, type DailyConfigInput, type DailyConfig, type DailyState, type DailyOptions, type DailyContext, type CommandSpec } from "./contracts.ts";
 import { checkedProcess, commandInput, type ProcessResult } from "./process.ts";
 import { absoluteNoSymlink, EXPORT_PATHS, exportKnowledge } from "./projection.ts";
-import { arxivIdentity, arxivSourceId, filterRelevant, hasKnownArxivSource, hfRows, upstreamArxivDelta } from "./discovery.ts";
+import { arxivIdentity, arxivSourceId, filterRelevant, hasKnownArxivSource, hfRows, meaningfulDiscoveryTitle, upstreamArxivDelta } from "./discovery.ts";
 
 const stamp=()=>new Date().toISOString();
 const digest=(value:unknown)=>sha256(JSON.stringify(value));
@@ -69,11 +69,39 @@ export function mergeDiscovered(existing:Source[], discovered:Source[]) {
 
 type ArxivRequestOptions={signal?:AbortSignal;deadlineAt?:number;fetch?:typeof fetch};
 type ArxivClock={now:()=>number;pause:(milliseconds:number,signal:AbortSignal)=>Promise<void>};
+type ArxivMetadataResponse={bytes:Buffer;request_url:string;response_url:string;status:number;content_type:string|null;requested_at:string;completed_at:string};
+type ArxivEvidenceContext={runDir:string;runId:string};
+
+async function retainArxivMetadata(response:ArxivMetadataResponse,context:ArxivEvidenceContext){
+  if(!idPattern.test(context.runId)||basename(resolve(context.runDir))!==context.runId)throw new Error("metadata_evidence_run_identity");
+  const root=await absoluteNoSymlink(context.runDir),bodyHash=sha256(response.bytes);
+  const bodyPath=`inputs/arxiv-metadata/${bodyHash}.xml`,receiptPath=`inputs/arxiv-metadata/${bodyHash}.${randomUUID()}.response.json`;
+  async function immutable(path:string,bytes:Buffer){
+    const file=await noSymlinkPath(root,path),temp=await noSymlinkPath(root,`${path}.${randomUUID()}.tmp`);
+    await mkdir(dirname(file),{recursive:true});
+    let temporaryOwned=false;
+    try{
+      const handle=await open(temp,"wx",0o600);temporaryOwned=true;
+      try{await handle.writeFile(bytes);}finally{await handle.close();}
+      try{await link(temp,await noSymlinkPath(root,path));}
+      catch(error:any){
+        if(error.code!=="EEXIST")throw error;
+        const existing=await noSymlinkPath(root,path),stat=await lstat(existing);
+        if(!stat.isFile()||stat.size!==bytes.length||sha256(await readFile(existing))!==sha256(bytes))throw new Error("metadata_evidence_conflict");
+      }
+    }finally{if(temporaryOwned)await unlink(temp).catch((error:any)=>{if(error.code!=="ENOENT")throw error;});}
+  }
+  await immutable(bodyPath,response.bytes);
+  const {bytes:_,...transport}=response;
+  const receipt=Buffer.from(JSON.stringify({schema_version:"rsi.arxiv-metadata-response.v1",run_id:context.runId,...transport,body:{path:bodyPath,sha256:bodyHash,bytes:response.bytes.length}},null,2)+"\n");
+  await immutable(receiptPath,receipt);
+  return {scope:"daily_run_inputs",run_id:context.runId,path:bodyPath,sha256:bodyHash,bytes:response.bytes.length,receipt_path:receiptPath,receipt_sha256:sha256(receipt)};
+}
 
 /** One queue for actual metadata requests. The clock port is for deterministic tests only. */
 export function createArxivMetadataClient(clock:ArxivClock={now:Date.now,pause:abortablePause}){
   let tail=Promise.resolve(),availableAt=0;
-  return async(url:string,options:ArxivRequestOptions={}):Promise<string>=>{
+  return async(url:string,options:ArxivRequestOptions={}):Promise<ArxivMetadataResponse>=>{
     const deadline=Number.isFinite(options.deadlineAt)?options.deadlineAt!:clock.now()+30_000;
     if(deadline<=clock.now())throw new Error("run_budget_exhausted");
     const timeout=AbortSignal.timeout(Math.max(1,Math.ceil(deadline-clock.now())));
@@ -99,6 +127,7 @@ export function createArxivMetadataClient(clock:ArxivClock={now:Date.now,pause:a
         const requestSignal=AbortSignal.any([signal,AbortSignal.timeout(Math.max(1,Math.ceil(Math.min(30_000,deadline-clock.now()))))]);
         let retryAfter=0;
         try{
+          const requestedAt=new Date(clock.now()).toISOString();
           const response=await (options.fetch??globalThis.fetch)(url,{signal:requestSignal,headers:{Accept:"application/atom+xml"}});
           if(!response.ok){
             if(response.status===429){
@@ -117,7 +146,7 @@ export function createArxivMetadataClient(clock:ArxivClock={now:Date.now,pause:a
           try{
             while(true){requestSignal.throwIfAborted();const next=await reader.read();if(next.done)break;total+=next.value.byteLength;if(total>2*1024*1024)throw new Error("arxiv_version_response_limit");chunks.push(next.value);}
             requestSignal.throwIfAborted();
-            return Buffer.concat(chunks).toString("utf8");
+            return {bytes:Buffer.concat(chunks),request_url:url,response_url:response.url||url,status:response.status,content_type:response.headers.get("content-type"),requested_at:requestedAt,completed_at:new Date(clock.now()).toISOString()};
           }finally{requestSignal.removeEventListener("abort",cancel);await reader.cancel().catch(()=>{});}
         }finally{
           // arXiv API guidance asks for a 3-second delay between consecutive calls.
@@ -131,21 +160,36 @@ export function createArxivMetadataClient(clock:ArxivClock={now:Date.now,pause:a
 }
 const arxivMetadataClient=createArxivMetadataClient();
 
-export async function resolveArxivVersions(candidates:Source[],options:ArxivRequestOptions&{metadataClient?:ReturnType<typeof createArxivMetadataClient>}={}){
+export async function resolveArxivVersions(candidates:Source[],options:ArxivRequestOptions&{metadataClient?:ReturnType<typeof createArxivMetadataClient>;evidence?:ArxivEvidenceContext}={}){
   const unresolved=candidates.filter(s=>s.kind==="paper"&&!s.version);
   if(!unresolved.length)return candidates;
   const ids=unresolved.map(s=>arxivIdentity(s.urls.canonical)?.id);
   if(ids.some(id=>!id))throw new Error("version_resolution_requires_arxiv_id");
   if(ids.length>100)throw new Error("arxiv_version_batch_exceeds_100");
   const url=`https://export.arxiv.org/api/query?id_list=${ids.join(",")}&max_results=${ids.length}`;
-  const xml=await (options.metadataClient??arxivMetadataClient)(url,options),doc=new DOMParser().parseFromString(xml,"text/xml");
-  const resolved=new Map<string,string>();
-  for(const entry of Array.from(doc.getElementsByTagName("entry"))){const identifier=entry.getElementsByTagName("id")[0]?.textContent?.trim();const identity=identifier?arxivIdentity(identifier):null;if(identity?.version)resolved.set(identity.id,identity.version);}
+  const response=await (options.metadataClient??arxivMetadataClient)(url,options);
+  options.signal?.throwIfAborted();
+  const evidence=options.evidence?await retainArxivMetadata(response,options.evidence):undefined;
+  options.signal?.throwIfAborted();
+  const xml=new TextDecoder("utf-8",{fatal:true}).decode(response.bytes),doc=new DOMParser().parseFromString(xml,"text/xml"),bodyHash=sha256(response.bytes);
+  const resolved=new Map<string,{version:string;title:string|null}>();
+  for(const entry of Array.from(doc.getElementsByTagName("entry"))){
+    const identifier=entry.getElementsByTagName("id")[0]?.textContent?.trim(),identity=identifier?arxivIdentity(identifier):null;
+    if(identity?.version){
+      const value={version:identity.version,title:entry.getElementsByTagName("title")[0]?.textContent?.replace(/\s+/g," ").trim()||null};
+      const previous=resolved.get(identity.id);if(previous&&(previous.version!==value.version||previous.title!==value.title))throw new Error(`arxiv_metadata_identity_ambiguous:${identity.id}`);
+      resolved.set(identity.id,value);
+    }
+  }
   return candidates.map(s=>{
     if(s.kind!=="paper"||s.version)return s;
-    const id=arxivIdentity(s.urls.canonical)!.id,version=resolved.get(id);
-    if(!version)throw new Error(`arxiv_version_unavailable:${id}`);
-    return sourceSchema.parse({...s,id:arxivSourceId(id,version),version,urls:{canonical:`https://arxiv.org/abs/${id}${version}`,html:`https://arxiv.org/html/${id}${version}`,tex:`https://arxiv.org/src/${id}${version}`},provenance:{...s.provenance,version_resolution:"arxiv_atom",version_lookup_url:url,version_lookup_sha256:sha256(xml)}});
+    const id=arxivIdentity(s.urls.canonical)!.id,entry=resolved.get(id);
+    if(!entry)throw new Error(`arxiv_version_unavailable:${id}`);
+    const version=entry.version,title=entry.title||(meaningfulDiscoveryTitle(s.title)?s.title:`arXiv ${id}${version} (title unresolved)`);
+    return sourceSchema.parse({...s,id:arxivSourceId(id,version),title,version,urls:{canonical:`https://arxiv.org/abs/${id}${version}`,html:`https://arxiv.org/html/${id}${version}`,tex:`https://arxiv.org/src/${id}${version}`},provenance:{...s.provenance,version_resolution:"arxiv_atom",version_lookup_url:url,version_lookup_sha256:bodyHash,
+      ...(evidence?{version_lookup_evidence:evidence}:{version_lookup_evidence_status:"not_retained"}),
+      title_status:entry.title?"bibliographic":meaningfulDiscoveryTitle(s.title)?"supplied":"placeholder",title_resolution:entry.title?"arxiv_atom":meaningfulDiscoveryTitle(s.title)?s.provenance?.title_resolution??"provided":"identifier_placeholder",
+      ...(title!==s.title?{title_previous:{value:s.title,resolution:s.provenance?.title_resolution??"provided"}}:{}),title_atom_entry:entry.title?`${id}${version}`:undefined}});
   });
 }
 
@@ -242,6 +286,8 @@ export async function runDaily(root:string, input:DailyConfigInput, options:Dail
     const inputs=await phase("input-scan",async()=>{
       if(!config.upstreams.length&&!config.discovery.length)throw new Error("source_scan_not_configured");
       const upstreams:Record<string,unknown>={},discovered:Source[]=[],selections:Record<string,unknown>={};
+      const metadataResponses=new Map<string,unknown>();
+      const recordResolved=(rows:Source[])=>{for(const source of rows){const evidence=source.provenance?.version_lookup_evidence as any;if(evidence?.scope==="daily_run_inputs"&&evidence.run_id===runId)metadataResponses.set(evidence.receipt_path,evidence);}discovered.push(...rows);};
       const registered=(await loadSources(ctx.root)).sources;
       for(const upstream of config.upstreams){
         if(!/^(https:\/\/|file:\/\/)/.test(upstream.url) || upstream.ref.startsWith("-") || upstream.ref.includes(".."))throw new Error("unsafe_upstream_address");
@@ -267,7 +313,7 @@ export async function runDaily(root:string, input:DailyConfigInput, options:Dail
             const candidates=delta.sources.filter(s=>!hasKnownArxivSource(s,[...registered,...discovered]));
             // Each resolver call has a byte/time ceiling; the total deadline bounds the list.
             for(let offset=0;offset<candidates.length;offset+=100){
-              discovered.push(...await resolveArxivVersions(candidates.slice(offset,offset+100),{signal:ctx.signal,deadlineAt}));
+              recordResolved(await resolveArxivVersions(candidates.slice(offset,offset+100),{signal:ctx.signal,deadlineAt,evidence:{runDir,runId}}));
             }
           }
         }
@@ -288,7 +334,7 @@ export async function runDaily(root:string, input:DailyConfigInput, options:Dail
           selections[discovery.id]={counts:selected.counts,receipt:relative(runDir,resolve(attemptDir,"selection.json"))};
           for(let offset=0;offset<selected.sources.length;offset+=100){
             const batch=selected.sources.slice(offset,offset+100);
-            discovered.push(...(discovery.resolveVersions?await resolveArxivVersions(batch,{signal:ctx.signal,deadlineAt}):batch));
+            if(discovery.resolveVersions)recordResolved(await resolveArxivVersions(batch,{signal:ctx.signal,deadlineAt,evidence:{runDir,runId}}));else discovered.push(...batch);
           }
         }
         else{
@@ -304,7 +350,8 @@ export async function runDaily(root:string, input:DailyConfigInput, options:Dail
       }
       const current=await loadSources(ctx.root),merge=mergeDiscovered(current.sources,discovered);
       if(merge.added.length)await writeJson(resolve(ctx.root,SOURCE_MANIFEST),{...current,updated_at:stamp(),sources:merge.sources});
-      return {complete:true,upstreams,selections,discovered:discovered.length,added:merge.added.map(s=>s.id),conflicts:merge.conflicts};
+      const metadata_evidence={schema_version:"rsi.metadata-evidence-route.v1",run_id:runId,root:runDir,responses:[...metadataResponses.values()],instruction:"Resolve response path and receipt_path relative to root. Verify exact raw SHA-256 before reading matching Atom entry id and title. Researchers can select relevant entries; verification must check changed version/title assignments against these original responses, not a later refetch."};
+      return {complete:true,upstreams,selections,metadata_evidence,discovered:discovered.length,added:merge.added.map(s=>s.id),conflicts:merge.conflicts};
     });
     state!.outcome.source_scan_complete=inputs.complete;
     const selection=await phase("selection",async()=>{
@@ -322,7 +369,7 @@ export async function runDaily(root:string, input:DailyConfigInput, options:Dail
     if(selection.length){
       const research=await phase("research",async()=>{
         if(!config.research)throw new Error("research_command_required");
-        return runWorker(config.research,"research",{sources:selection,prepared,source_manifest_sha256:sha256(await readFile(resolve(ctx.root,SOURCE_MANIFEST)))},ctx);
+        return runWorker(config.research,"research",{sources:selection,prepared,metadata_evidence:inputs.metadata_evidence,source_manifest_sha256:sha256(await readFile(resolve(ctx.root,SOURCE_MANIFEST)))},ctx);
       });
       researchProcess=research.process;
       await phase("compile",async()=>{
@@ -349,7 +396,7 @@ export async function runDaily(root:string, input:DailyConfigInput, options:Dail
       const review=await phase("verify",async()=>{
         if(!config.verifier)throw new Error("independent_verifier_required");
         const researchReceipt=state!.phases.research?.result as any;
-        const result=await runWorker(config.verifier,"verify",{candidate,source_manifest_sha256:sha256(await readFile(resolve(ctx.root,SOURCE_MANIFEST))),sources:selection,prepared,research_result_file:researchReceipt?.result_file ?? null,research_contribution:researchReceipt?.result?.contribution ?? null},ctx);
+        const result=await runWorker(config.verifier,"verify",{candidate,source_manifest_sha256:sha256(await readFile(resolve(ctx.root,SOURCE_MANIFEST))),sources:selection,prepared,metadata_evidence:inputs.metadata_evidence,research_result_file:researchReceipt?.result_file ?? null,research_contribution:researchReceipt?.result?.contribution ?? null},ctx);
         const judgment=result.result.review;
         if(!judgment || judgment.candidate_commit!==candidate.commit || judgment.candidate_digest!==candidate.digest || judgment.verdict!=="accept" || judgment.issues.length || (selection.length>0 && judgment.checked_claims<1))throw new Error("candidate_review_not_accepted");
         if(await git(["rev-parse","HEAD"],ctx.root)!==candidate.commit || await git(["status","--porcelain=v1","--untracked-files=all"],ctx.root))throw new Error("candidate_changed_during_review");

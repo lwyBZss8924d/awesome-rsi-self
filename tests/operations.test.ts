@@ -166,6 +166,25 @@ describe("review regressions and autonomous discovery",()=>{
     const registered=JSON.parse(await readFile(resolve(r.worktree,"sources/source-manifest.json"),"utf8"));const added=registered.sources.find((s:any)=>s.id==="arxiv-2609.00211-v2");
     expect(added.provenance.upstream_commit).toBe(git(upstream,"rev-parse","HEAD"));expect(added.provenance.upstream_line).toBe(3);expect(added.version).toBe("v2");
   },10000);
+  test("research and verifier receive routes to the original retained Atom responses",async()=>{
+    const root=await repo(),upstream=await repo(),cfg=config();
+    await writeFile(resolve(upstream,"README.md"),"[Metadata source](https://arxiv.org/abs/2609.00221)\n");git(upstream,"add","README.md");git(upstream,"commit","-m","metadata reference");
+    cfg.upstreams=[{id:"research",url:`file://${upstream}`,paths:["README.md"]}];cfg.sourceIds=[source.id];
+    const bytes=Buffer.from('<feed><entry><id>https://arxiv.org/abs/2609.00221v2</id><title>Original bibliographic title</title></entry></feed>'),previous=globalThis.fetch;
+    globalThis.fetch=(async()=>new Response(new Uint8Array(bytes),{headers:{"content-type":"application/atom+xml"}})) as unknown as typeof fetch;
+    try{
+      const isolated=new URL("../src/operations/daily.ts",import.meta.url);isolated.search="metadata-route-fixture";
+      const {runDaily:run}=await import(isolated.href),result=await run(root,cfg,{runId:"metadata-route",hooks:hooks()});expect(result.outcome.checks_passed).toBe(true);
+      const runDir=resolve(root,".local/daily/runs/metadata-route");
+      for(const stage of ["research","verify"]){
+        const attempt=(await readdir(resolve(runDir,"workers",stage)))[0]!,request=JSON.parse(await readFile(resolve(runDir,"workers",stage,attempt,"request.json"),"utf8"));
+        const route=request.payload.metadata_evidence;expect(route.root).toBe(runDir);expect(route.run_id).toBe("metadata-route");expect(route.responses).toHaveLength(1);
+        expect(await readFile(resolve(route.root,route.responses[0].path))).toEqual(bytes);expect(await Bun.file(resolve(route.root,route.responses[0].receipt_path)).exists()).toBe(true);
+      }
+      const registry=JSON.parse(await readFile(resolve(result.worktree,"sources/source-manifest.json"),"utf8")),registered=registry.sources.find((s:any)=>s.id==="arxiv-2609.00221-v2");
+      expect(registered.title).toBe("Original bibliographic title");expect(registered.provenance.version_lookup_evidence.run_id).toBe("metadata-route");expect(JSON.stringify(registered)).not.toContain(root);
+    }finally{globalThis.fetch=previous;}
+  },10000);
   test("HF RAW filtering counts include, defer and exclude before registration",async()=>{
     const root=await repo(),cfg=config();cfg.sourceIds=[source.id];
     cfg.discovery=[{id:"hf",format:"hf_papers",resolveVersions:false,relevance:{includeAny:["self-improving","agent memory"],deferAny:["survey"],excludeAny:["game"],unmatched:"defer"},command:{argv:["bun",worker,"hf","{request}","{output}"]}}];

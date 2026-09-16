@@ -1,18 +1,37 @@
 import { createAicatlog, type Extension } from "aicatlog";
 import { z } from "zod";
-import { resolve } from "node:path";
-import { writeFile, mkdir } from "node:fs/promises";
+import { resolve, dirname } from "node:path";
+import { writeFile, mkdir, rename, unlink } from "node:fs/promises";
+import { randomUUID } from "node:crypto";
 import { fileURLToPath } from "node:url";
-import { loadSources, readJson } from "./io.ts";
+import { loadSources, readJson, noSymlinkPath } from "./io.ts";
 import { renderDashboard, viewSchema } from "@codex-rsi/view-kit";
+import { absoluteNoSymlink } from "./operations/projection.ts";
+import type { DailyContext } from "./operations/contracts.ts";
+
+async function writeDerived(root:string,path:string,text:string){
+  const output=await noSymlinkPath(root,path),temp=await noSymlinkPath(root,`${path}.${randomUUID()}.tmp`);
+  await mkdir(dirname(output),{recursive:true});
+  try{await writeFile(temp,text,{flag:"wx",mode:0o644});await noSymlinkPath(root,path);await rename(temp,output);}
+  finally{await unlink(temp).catch((error:any)=>{if(error.code!=="ENOENT")throw error;});}
+}
+
+export async function prepareDailySource(id:string,ctx:DailyContext){
+  const remaining=Math.floor(ctx.deadlineAt-Date.now());
+  if(remaining<=0)throw new Error("daily_prepare_budget_exhausted");
+  const signal=AbortSignal.any([ctx.signal,AbortSignal.timeout(Math.min(60_000,remaining))]);
+  return (await import("./ingest/index.ts")).prepareSource(ctx.root,id,{signal});
+}
 
 async function buildAndView(root: string, render = false) {
+  root=await absoluteNoSymlink(root);
+  await noSymlinkPath(root,"views/current.json");
+  if(render)await noSymlinkPath(root,"docs/index.html");
   const result = await (await import("./knowledge/index.ts")).buildKnowledge(root);
   if (!result.ok || !result.coverage || !result.view) return result;
   const view = viewSchema.parse(result.view);
-  await mkdir(resolve(root, "views"), { recursive: true });
-  await writeFile(resolve(root, "views/current.json"), JSON.stringify(view, null, 2) + "\n");
-  if (render) { await mkdir(resolve(root, "docs"), { recursive: true }); await writeFile(resolve(root, "docs/index.html"), renderDashboard(view)); }
+  await writeDerived(root,"views/current.json",JSON.stringify(view,null,2)+"\n");
+  if(render)await writeDerived(root,"docs/index.html",renderDashboard(view));
   return { schema_version: result.schema_version, ok: result.ok, generated_at: result.generated_at,
     written_count: result.written.length, source_count: result.coverage.length,
     view: "views/current.json", dashboard: render ? "docs/index.html" : null, lint: result.lint };
@@ -68,7 +87,18 @@ export function createKnowledgeApi(defaultRoot = process.cwd()) {
         const ingest = await import("./ingest/index.ts"), wiki = await import("./knowledge/index.ts");
         return ops.runDaily(root(i), cfg, { runId: i.runId, resume: i.resume, hooks: {
           fetch: (source: any, ctx: any) => ingest.fetchSource(ctx.root, source.id, { signal: ctx.signal, timeout_ms: Math.max(1, Math.min(60000, ctx.deadlineAt - Date.now())) }),
-          prepare: (source: any, ctx: any) => ingest.prepareSource(ctx.root, source.id),
+          prepare: (source: any, ctx: any) => prepareDailySource(source.id,ctx),
+          compile: (contribution: any, ctx: any) => wiki.importContribution(ctx.root, contribution),
+          lint: (ctx: any) => wiki.lintKnowledge(ctx.root),
+          build: (ctx: any) => buildAndView(ctx.root, true),
+        } }); }) },
+    dispatch: { description: "Resume one safely pending publication, or fast-forward a clean base and start one bounded daily run.", sourceWrite: true,
+      options: z.object({ ...rootOption, config: z.string(), apply: z.boolean().default(false), runId: z.string().optional() }),
+      run: checked(async i => { const ops = await import("./operations/index.ts"); const cfg = await readJson(resolve(i.config));
+        const ingest = await import("./ingest/index.ts"), wiki = await import("./knowledge/index.ts");
+        return ops.runScheduledCycle(root(i), cfg, { runId: i.runId, dryRun: !i.apply, hooks: {
+          fetch: (source: any, ctx: any) => ingest.fetchSource(ctx.root, source.id, { signal: ctx.signal, timeout_ms: Math.max(1, Math.min(60000, ctx.deadlineAt - Date.now())) }),
+          prepare: (source: any, ctx: any) => prepareDailySource(source.id,ctx),
           compile: (contribution: any, ctx: any) => wiki.importContribution(ctx.root, contribution),
           lint: (ctx: any) => wiki.lintKnowledge(ctx.root),
           build: (ctx: any) => buildAndView(ctx.root, true),

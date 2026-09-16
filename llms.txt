@@ -19,4 +19,4 @@ verification and publication have separate provenance and status.
 
 ## Optional
 
-- [Repository harness](workspace/harness-config/project-meta/llms.txt): Selected local development guidance
+- [Repository harness](https://github.com/lwyBZss8924d/awesome-rsi-self/blob/main/workspace/harness-config/project-meta/llms.txt): Optional development guidance at the source owner; not projected execution authority

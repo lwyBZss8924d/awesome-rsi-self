@@ -5,7 +5,7 @@ import { sha256, readJson, writeJson, noSymlinkPath, confined } from "../io.ts";
 import { checkedProcess } from "./process.ts";
 import type { CommandSpec } from "./contracts.ts";
 
-export const EXPORT_PATHS = ["README.md", "LICENSE", "NOTICE", "NOTICE.txt", "llms.txt", "sources/source-manifest.json", "views/current.json", "manifests", "wiki", "docs"];
+export const EXPORT_PATHS = ["README.md", "SPEC.md", "LICENSE", "NOTICE", "NOTICE.txt", "llms.txt", "sources/source-manifest.json", "views/current.json", "manifests", "wiki", "docs", "workflows"];
 const RECEIPT = ".rsi-projection.json";
 const SHA = /^[a-f0-9]{64}$/;
 export interface ExportOptions {
@@ -29,7 +29,7 @@ export async function absoluteNoSymlink(target:string) {
   return absolute;
 }
 function publicPath(item:string) {
-  if(item.split(/[\\/]/).some(part=>!part || part.startsWith(".") || part === "raw" || part === "auth.json"))return false;
+  if(item.split(/[\\/]/).some(part=>!part || part.startsWith(".") || part === "raw" || part === "auth.json" || /^AGENTS(?:\.override)?\.md$/i.test(part)))return false;
   return EXPORT_PATHS.some(p=>item === p || item.startsWith(`${p}/`));
 }
 async function collect(root:string) {

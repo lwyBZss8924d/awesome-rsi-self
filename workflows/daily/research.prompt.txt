@@ -10,6 +10,10 @@ prepared manifest digest, artifact digest and line range. Do not mark concepts v
 Return a single rsi.worker-result.v1 JSON envelope in your final answer:
 schema_version=rsi.worker-result.v1, request_sha256={requestSha256}, outcome=complete,
 artifacts=[], contribution=<the actual validated contribution structure>.
+Include notes=["This is a read-only worker. Existing candidate changes are owned by
+the dispatcher, which will validate and commit them; this worker has no source changes
+to commit."] if a repository closeout guard needs that ownership explanation.
+Notes are inert commentary and do not change outcomes, evidence or acceptance.
 Use partial or failed if source support is unavailable; do not fabricate evidence.
 The host records the final answer at {output}. Do not modify tracked source files or
 launch other agents, publication, cleanup, package installation or scheduler operations.

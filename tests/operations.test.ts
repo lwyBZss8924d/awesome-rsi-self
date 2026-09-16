@@ -1,11 +1,14 @@
 import { afterEach, describe, expect, test } from "bun:test";
-import { mkdtemp, mkdir, writeFile, readFile, rm, realpath, symlink, unlink, chmod } from "node:fs/promises";
+import { mkdtemp, mkdir, writeFile, readFile, rm, realpath, symlink, unlink, chmod, readdir } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 import { spawnSync } from "node:child_process";
-import { dailyPlan, runDaily, normalizeHfPapers, resolveArxivVersions, mergeDiscovered, exportKnowledge, type DailyConfigInput } from "../src/operations/index.ts";
+import { dailyPlan, runDaily, runScheduledCycle, upstreamArxivDelta, filterRelevant, normalizeHfPapers, resolveArxivVersions, mergeDiscovered, exportKnowledge, type DailyConfigInput } from "../src/operations/index.ts";
 import { boundedProcess } from "../src/operations/process.ts";
+import { takeDailyLock } from "../src/operations/daily.ts";
 import { sourceSchema } from "../src/contracts.ts";
+import { createKnowledgeApi, prepareDailySource } from "../src/cli.ts";
+import { fetchSource } from "../src/ingest/index.ts";
 
 const roots:string[]=[];
 const worker=resolve(import.meta.dir,"fixtures/operations/worker.ts");
@@ -34,6 +37,16 @@ function hooks(counter={compile:0}){return {
   compile:async(_c:unknown,ctx:{root:string})=>{counter.compile++;await mkdir(resolve(ctx.root,"wiki"),{recursive:true});await writeFile(resolve(ctx.root,"wiki/fixture.md"),"# Fixture\nSource-grounded implementation transport test only.\n");return {ok:true};},
   lint:async()=>({ok:true}),build:async()=>({ok:true}),
 };}
+async function remoteFixture(root:string,overrides:Record<string,unknown>={}){
+  git(root,"remote","add","origin","https://github.com/fixture/wiki.git");
+  const bin=resolve(root,".local/bin"),stateFile=resolve(root,".local/remote.json");await mkdir(bin,{recursive:true});
+  const module=resolve(import.meta.dir,"fixtures/operations/remote.ts");
+  for(const command of ["git","gh"]){const file=resolve(bin,command);await writeFile(file,`#!/usr/bin/env bun\nimport ${JSON.stringify(module)};\n`);await chmod(file,0o755);}
+  await writeFile(stateFile,JSON.stringify({base:git(root,"rev-parse","HEAD"),head:null,pr:false,merged:false,checks:false,pushes:0,creates:0,merges:0,...overrides}));
+  const previous={PATH:process.env.PATH,RSI_TEST_REAL_GIT:process.env.RSI_TEST_REAL_GIT,RSI_TEST_REMOTE_STATE:process.env.RSI_TEST_REMOTE_STATE};
+  process.env.RSI_TEST_REAL_GIT=spawnSync("which",["git"],{encoding:"utf8"}).stdout.trim();process.env.RSI_TEST_REMOTE_STATE=stateFile;process.env.PATH=`${bin}:${previous.PATH}`;
+  return {stateFile,restore:()=>{for(const [key,value]of Object.entries(previous)){if(value===undefined)delete process.env[key];else process.env[key]=value;}}};
+}
 
 describe("bounded process",()=>{
   test("clears inherited native identities and retains bounded stdout",async()=>{
@@ -91,13 +104,16 @@ describe("curated projection",()=>{
   });
 });
 describe("finite daily state machine",()=>{
-  test("real local Git candidate, fixture workers, separate outcome axes and idempotency",async()=>{
+  test("unpublished candidates remain pending without consuming sources or projecting",async()=>{
     const root=await repo(),count={compile:0},cfg=config();
+    const target=resolve(await temp(),"projection");cfg.projection={target};
+    await exportKnowledge(root,{target});const original=await readFile(resolve(target,".rsi-projection.json"),"utf8");
     const plan=await dailyPlan(root,cfg);expect(plan.sources).toHaveLength(1);
     const result=await runDaily(root,cfg,{runId:"fixture-day",hooks:hooks(count)});
-    expect(result.status).toBe("completed");expect(result.outcome.checks_passed).toBe(true);expect(result.outcome.pr_open).toBe(false);expect(result.outcome.merged).toBe(false);expect(result.outcome.native_scheduled_accepted).toBe(false);
-    const repeated=await runDaily(root,cfg,{runId:"fixture-day",hooks:hooks(count)});expect(repeated.status).toBe("completed");expect(count.compile).toBe(1);
-    expect((await dailyPlan(root,cfg)).pending_sources).toBe(0);
+    expect(result.status).toBe("blocked");expect(result.error).toContain("publication_disabled_candidate_pending");expect(result.outcome.checks_passed).toBe(true);expect(result.outcome.pr_open).toBe(false);expect(result.outcome.merged).toBe(false);expect(result.outcome.native_scheduled_accepted).toBe(false);
+    const repeated=await runDaily(root,cfg,{runId:"fixture-day",resume:true,hooks:hooks(count)});expect(repeated.status).toBe("blocked");expect(count.compile).toBe(1);
+    const next=await runDaily(root,cfg,{runId:"fixture-next-day",hooks:hooks(count)});expect(next.error).toContain("publication_disabled_candidate_pending");expect((await dailyPlan(root,cfg)).pending_sources).toBe(1);
+    expect(await readFile(resolve(target,".rsi-projection.json"),"utf8")).toBe(original);
     expect(git(root,"status","--porcelain")).toBe("");
   },20000);
   test("wrong commit review blocks and does not consume the source",async()=>{
@@ -135,4 +151,95 @@ describe("finite daily state machine",()=>{
       const final=JSON.parse(await readFile(stateFile,"utf8"));expect(final.pushes).toBe(1);expect(final.creates).toBe(1);expect(final.merges).toBe(1);
     }finally{for(const [key,value]of Object.entries(previous)){if(value===undefined)delete process.env[key];else process.env[key]=value;}}
   },20000);
+});
+
+describe("review regressions and autonomous discovery",()=>{
+  test("upstream links retain exact provenance; removals are only observations",()=>{
+    const delta=upstreamArxivDelta("[New](https://arxiv.org/html/2609.00201v2) [same](https://arxiv.org/src/2609.00201v2)\n[Pending](https://arxiv.org/abs/2609.00202)","[Old](https://arxiv.org/abs/2608.00200v1)",{upstream_id:"research",commit:"a".repeat(40),previous_commit:"b".repeat(40),path:"README.md",sha256:"c".repeat(64),url:"https://github.com/example/research"});
+    expect(delta.scanned_links).toBe(2);expect(delta.added).toHaveLength(2);expect(delta.removed).toHaveLength(1);expect(delta.sources[1]!.version).toBeUndefined();expect(delta.sources[0]!.provenance?.upstream_line).toBe(1);expect(delta.sources[0]!.provenance?.upstream_commit).toBe("a".repeat(40));
+  });
+  test("real local upstream scan registers links while one selected source is researched",async()=>{
+    const root=await repo(),upstream=await repo(),cfg=config();
+    await writeFile(resolve(upstream,"README.md"),"# RSI\n\n[New source](https://arxiv.org/abs/2609.00211v2)\n");git(upstream,"add","README.md");git(upstream,"commit","-m","new reference");
+    cfg.upstreams=[{id:"research",url:`file://${upstream}`,paths:["README.md"]}];cfg.sourceIds=[source.id];
+    const r=await runDaily(root,cfg,{runId:"upstream",hooks:hooks()});expect(r.outcome.source_scan_complete).toBe(true);expect(r.selected_sources).toEqual([source.id]);
+    const registered=JSON.parse(await readFile(resolve(r.worktree,"sources/source-manifest.json"),"utf8"));const added=registered.sources.find((s:any)=>s.id==="arxiv-2609.00211-v2");
+    expect(added.provenance.upstream_commit).toBe(git(upstream,"rev-parse","HEAD"));expect(added.provenance.upstream_line).toBe(3);expect(added.version).toBe("v2");
+  },10000);
+  test("HF RAW filtering counts include, defer and exclude before registration",async()=>{
+    const root=await repo(),cfg=config();cfg.sourceIds=[source.id];
+    cfg.discovery=[{id:"hf",format:"hf_papers",resolveVersions:false,relevance:{includeAny:["self-improving","agent memory"],deferAny:["survey"],excludeAny:["game"],unmatched:"defer"},command:{argv:["bun",worker,"hf","{request}","{output}"]}}];
+    const r=await runDaily(root,cfg,{runId:"hf-filter",hooks:hooks()});const scan=r.phases["input-scan"]!.result as any;
+    expect(scan.selections.hf.counts).toEqual({scanned:5,include:2,defer:2,exclude:1});expect(scan.added).toEqual(["arxiv-2609.00101-v1","arxiv-2609.00102-v1"]);expect(r.selected_sources).toEqual([source.id]);
+    const rawPath=resolve(root,".local/daily/runs/hf-filter",scan.selections.hf.receipt.replace("selection.json","raw.json"));expect(JSON.parse(await readFile(rawPath,"utf8"))).toHaveLength(5);
+  },10000);
+  test("worker commits cannot hide code or an entirely committed contribution",async()=>{
+    for(const mode of ["committed-code","all-committed"]){
+      const root=await repo(),h=hooks();h.compile=async(_c,ctx)=>{
+        if(mode==="committed-code"){await writeFile(resolve(ctx.root,"runtime.ts"),"// outside publication scope\n");git(ctx.root,"add","runtime.ts");git(ctx.root,"commit","-m","worker runtime");}
+        await mkdir(resolve(ctx.root,"wiki"),{recursive:true});await writeFile(resolve(ctx.root,"wiki/committed.md"),"# Worker page\n");
+        if(mode==="all-committed"){git(ctx.root,"add","wiki");git(ctx.root,"commit","-m","worker page");}return {ok:true};
+      };
+      const r=await runDaily(root,config(),{runId:mode,hooks:h});expect(r.error).toContain("unexpected_worker_commit");expect(r.phases.verify).toBeUndefined();expect(r.outcome.checks_passed).toBe(false);
+    }
+  },10000);
+  test("concurrent dead-lock recovery permits exactly one holder",async()=>{
+    const root=await temp(),base=resolve(root,"daily");await mkdir(base);await writeFile(resolve(base,"lock.json"),JSON.stringify({pid:2_000_000_000,run_id:"dead",token:"old"}));
+    const results=await Promise.allSettled([takeDailyLock(base,"dead",true),takeDailyLock(base,"dead",true)]);expect(results.filter(r=>r.status==="fulfilled")).toHaveLength(1);expect(results.filter(r=>r.status==="rejected")).toHaveLength(1);
+    const current=JSON.parse(await readFile(resolve(base,"lock.json"),"utf8"));expect(current.pid).toBe(process.pid);expect(current.token).not.toBe("old");
+    for(const result of results)if(result.status==="fulfilled")await result.value();
+  });
+  test("failed discovery output cannot satisfy a later zero-output attempt",async()=>{
+    const root=await repo(),cfg=config();cfg.discovery![0]!.command.argv=["bun",worker,"stale-discovery","{request}","{output}","{requestSha256}","{root}/.local/discovery-marker"];
+    const first=await runDaily(root,cfg,{runId:"stale-scan",hooks:hooks()});expect(first.outcome.source_scan_complete).toBe(false);
+    const second=await runDaily(root,cfg,{runId:"stale-scan",resume:true,hooks:hooks()});expect(second.outcome.source_scan_complete).toBe(false);expect(second.error).toContain("ENOENT");
+    const dir=resolve(root,".local/daily/runs/stale-scan/discovery/test"),attempts=await readdir(dir);expect(attempts).toHaveLength(2);
+    const requests=await Promise.all(attempts.map(id=>readFile(resolve(dir,id,"request.json"),"utf8")));expect(requests[0]).not.toBe(requests[1]);
+    const results=await Promise.all(attempts.map(async id=>await Bun.file(resolve(dir,id,"result.json")).exists()));expect(results.filter(Boolean)).toHaveLength(1);
+  },10000);
+  test("render rejects directory and leaf symlinks before touching external targets",async()=>{
+    for(const target of ["views","views/current.json","docs","docs/index.html"]){
+      const root=await repo(),external=await temp(),outside=resolve(external,"sentinel.txt");await writeFile(outside,"preserve");
+      if(target.includes("/")){await mkdir(resolve(root,target.split("/")[0]!));await symlink(outside,resolve(root,target));}else await symlink(external,resolve(root,target));
+      const api=createKnowledgeApi(root);await expect(api.call("kb render",{})).rejects.toThrow("symlink_path");expect(await readFile(outside,"utf8")).toBe("preserve");
+    }
+  });
+  test("production prepare adapter cancels and reaps its helper within daily budget",async()=>{
+    const root=await repo(),bin=resolve(root,".local/helper-bin"),pidPath=resolve(root,".local/helper.pid");await mkdir(bin,{recursive:true});
+    const python=resolve(bin,"python3");await writeFile(python,`#!/usr/bin/env bun\nimport {writeFileSync} from 'node:fs';writeFileSync(${JSON.stringify(pidPath)},String(process.pid));setInterval(()=>{},1000);\n`);await chmod(python,0o755);
+    const previous=process.env.PATH;process.env.PATH=`${bin}:${previous}`;
+    try{
+      const cfg=config();cfg.budgetSeconds=2;
+      const h={...hooks(),fetch:async(s:any,ctx:any)=>fetchSource(ctx.root,s.id,{fetch:(async(url:any)=>new Response(String(url).includes("/html/")?"<article><h1>Fixture</h1><p>Text.</p></article>":"\\documentclass{article}\\begin{document}Fixture\\end{document}",{headers:{"content-type":String(url).includes("/html/")?"text/html":"application/octet-stream"}})) as unknown as typeof fetch}),prepare:async(s:any,ctx:any)=>prepareDailySource(s.id,ctx)};
+      const started=Date.now(),r=await runDaily(root,cfg,{runId:"prepare-cancel",hooks:h});expect(r.status).toBe("cancelled");expect(Date.now()-started).toBeLessThan(4000);
+      const pid=Number(await readFile(pidPath,"utf8"));expect(()=>process.kill(pid,0)).toThrow();expect(r.phases.research).toBeUndefined();
+    }finally{if(previous===undefined)delete process.env.PATH;else process.env.PATH=previous;}
+  },6000);
+  test("bounded polling observes CI and a queued merge without another run",async()=>{
+    const root=await repo(),remote=await remoteFixture(root,{autoChecksAfterViews:3,mergeAfterViews:3}),cfg=config();cfg.budgetSeconds=90;cfg.publication={enabled:true,repoSlug:"fixture/wiki",waitSeconds:1,pollSeconds:0.01};
+    try{const r=await runDaily(root,cfg,{runId:"poll",hooks:hooks()});expect(r.status).toBe("completed");expect(r.outcome.merged).toBe(true);const observed=JSON.parse(await readFile(remote.stateFile,"utf8"));expect(observed.views).toBeGreaterThanOrEqual(6);expect(observed.merges).toBe(1);expect((r.phases.publish!.result as any).publication_accepted).toBe(true);}finally{remote.restore();}
+  },10000);
+  test("externally merged PR with failed CI is observed but never accepted or projected",async()=>{
+    const root=await repo(),remote=await remoteFixture(root),cfg=config();cfg.publication={enabled:true,repoSlug:"fixture/wiki",waitSeconds:0};cfg.projection={target:resolve(await temp(),"projection")};
+    try{
+      const first=await runDaily(root,cfg,{runId:"external-merge",hooks:hooks()});expect(first.outcome.merged).toBe(false);
+      const observed=JSON.parse(await readFile(remote.stateFile,"utf8"));observed.merged=true;observed.base=observed.head;observed.checkConclusion="FAILURE";await writeFile(remote.stateFile,JSON.stringify(observed));
+      const resumed=await runDaily(root,cfg,{runId:"external-merge",resume:true,hooks:hooks()});expect(resumed.status).toBe("blocked");expect(resumed.outcome.merged).toBe(true);expect(resumed.error).toContain("required_checks_failed");expect((resumed.phases.publish!.result as any).publication_accepted).toBe(false);expect(await Bun.file(resolve(cfg.projection.target,".rsi-projection.json")).exists()).toBe(false);
+    }finally{remote.restore();}
+  },10000);
+  test("dispatch resumes one prior PR with saved config then fast-forwards before next day",async()=>{
+    const root=await repo(),count={compile:0},remote=await remoteFixture(root),cfg=config();cfg.publication={enabled:true,repoSlug:"fixture/wiki",waitSeconds:0};cfg.projection={target:resolve(await temp(),"projection")};
+    try{
+      const original=git(root,"rev-parse","HEAD"),first=await runDaily(root,cfg,{runId:"yesterday",hooks:hooks(count)});expect(first.status).toBe("blocked");
+      const observed=JSON.parse(await readFile(remote.stateFile,"utf8"));observed.checks=true;await writeFile(remote.stateFile,JSON.stringify(observed));
+      const changed={...cfg,sourceIds:["different-preference"]};
+      const resumed:any=await runScheduledCycle(root,changed,{runId:"today",hooks:hooks(count)});expect(resumed.action).toBe("resume");expect(resumed.run_id).toBe("yesterday");expect(resumed.config_source).toBe("saved_run");expect(resumed.supplied_config_differs).toBe(true);expect(resumed.run.status).toBe("completed");expect(count.compile).toBe(1);
+      const next:any=await runScheduledCycle(root,cfg,{runId:"today",hooks:hooks(count)});expect(next.action).toBe("start");expect(next.run.status).toBe("completed");expect(next.source_before.revision).toBe(original);expect(next.source_after.revision).not.toBe(original);expect(await readFile(resolve(root,"wiki/fixture.md"),"utf8")).toContain("Fixture");expect(await readFile(resolve(cfg.projection.target,"wiki/fixture.md"),"utf8")).toContain("Fixture");
+      const final=JSON.parse(await readFile(remote.stateFile,"utf8"));expect(final.pushes).toBe(1);expect(final.creates).toBe(1);expect(count.compile).toBe(1);
+    }finally{remote.restore();}
+  },15000);
+  test("projection retains public navigation context without activating AGENTS",async()=>{
+    const root=await repo(),target=resolve(await temp(),"projection");await mkdir(resolve(root,"workflows/daily"),{recursive:true});await writeFile(resolve(root,"SPEC.md"),"# Specification\n");await writeFile(resolve(root,"workflows/daily/llms.txt"),"# Daily\n");await writeFile(resolve(root,"AGENTS.md"),"# Active source instructions\n");git(root,"add",".");git(root,"commit","-m","public contexts");
+    await exportKnowledge(root,{target});expect(await Bun.file(resolve(target,"SPEC.md")).exists()).toBe(true);expect(await Bun.file(resolve(target,"workflows/daily/llms.txt")).exists()).toBe(true);expect(await Bun.file(resolve(target,"AGENTS.md")).exists()).toBe(false);
+  });
 });

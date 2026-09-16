@@ -6,11 +6,18 @@
     "id": "self-improving-agents",
     "url": "https://github.com/selfimproving-agent/awesome-Self-Improving-Agents.git",
     "ref": "HEAD",
-    "paths": ["README.md"]
+    "paths": ["README.md"],
+    "discoverArxiv": true
   }],
   "discovery": [{
     "id": "hf-daily",
     "format": "hf_papers",
+    "relevance": {
+      "includeAny": ["self-improv", "self-evol", "recursive", "skill evolution", "harness", "agent memory", "llm wiki", "multi-agent", "long-horizon"],
+      "excludeAny": [],
+      "deferAny": [],
+      "unmatched": "defer"
+    },
     "command": {"argv": ["hf", "papers", "list", "--json"], "timeoutSeconds": 60}
   }],
   "research": {
@@ -34,6 +41,8 @@
     "base": "main",
     "branchPrefix": "rsi-daily",
     "requiredChecks": ["check"],
-    "autoMerge": true
+    "autoMerge": true,
+    "waitSeconds": 300,
+    "pollSeconds": 10
   }
 }

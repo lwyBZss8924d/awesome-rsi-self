@@ -5,6 +5,8 @@
 BEGIN_TOPIC interfaces
 schema: rsi.daily-config.v1
 api: dailyPlan(root, config); runDaily(root, config, options); exportKnowledge(root, options)
+scheduled_api: runScheduledCycle(root, config, options)
+scheduled_cli: bun run cli -- kb dispatch --config LOCAL_CONFIG --apply --json
 cli: bun run cli -- kb daily --config LOCAL_CONFIG --json
 apply: bun run cli -- kb daily --config LOCAL_CONFIG --apply --runId RUN_ID --json
 resume: append --resume only for an intentionally resumed blocked run.
@@ -19,10 +21,25 @@ BEGIN_TOPIC inputs
 Upstream repositories are input snapshots, never branches merged into the Wiki.
 Configured URLs must use HTTPS or file URLs. Each successful fetch binds an exact
 commit and selected file digests. A prior accepted commit is a separate cursor.
+discoverArxiv defaults true. README links are normalized across abs/html/pdf/src;
+the exact upstream commit, file digest, line and line digest accompany each candidate.
+Link additions/removals are compared to the previous accepted snapshot; removals are
+observations only. Unregistered current links stay eligible after an unchanged commit.
+Unversioned new candidates use the existing bounded Atom resolver, never guessed v1.
 Discovery invokes exact argument arrays, with no shell interpolation. Template variables
 are {root}, {runDir}, {request}, {output}; workers also receive {requestSha256}.
-Normalized discovery writes rsi.discovery.v1 with complete=true and Source[] sources.
+Every discovery attempt has a new immutable directory. Normalized discovery writes
+rsi.discovery.v1 with the current run_id, exact request-file request_sha256,
+complete=true and Source[] sources. A bounded regular result file is required;
+failed attempt outputs and process receipts are retained and never reused implicitly.
 The hf_papers adapter parses stdout from an explicitly configured hf papers list --json.
+HF RAW is retained before configurable title/abstract relevance filtering. Literal
+excludeAny rules take precedence, then deferAny, then includeAny; unmatched defaults
+defer. Selection receipts retain scanned/include/defer/exclude counts, matching fields,
+terms and input/policy digests. Only included candidates enter registration. No configured
+relevance policy means unfiltered compatibility behavior; use the example's RSI policy
+for this workspace. sourceIds selects research after scanning, allowing one-source real
+acceptance without disabling upstream/HF scanning.
 Its resolveVersions option defaults true and resolves unversioned IDs with one bounded
 arXiv Atom API lookup (maximum 100 items, 2 MiB and 30 seconds within the run budget).
 The exact response digest and resolved version are retained as provenance. Lookup failure
@@ -38,6 +55,8 @@ BEGIN_TOPIC workers
 Each worker receives a persisted rsi.worker-request.v1. Its UTF-8 file SHA256 is the
 request_sha256 required in rsi.worker-result.v1. Output is complete, partial or failed;
 only complete with matching request digest can advance the pipeline.
+Optional notes are inert strings for read-only worker ownership/closeout explanations.
+They do not influence acceptance, trust labels, source consumption or publication.
 Research returns a rsi.knowledge-contribution.v1 object for the owned importer. It
 does not need write access to tracked files. HTML/TeX preparation precedes research;
 the raw originals, cleaned resource manifest, source maps and any visual inspection
@@ -52,8 +71,10 @@ END_TOPIC workers
 
 BEGIN_TOPIC acceptance
 The owned compile importer, lint and build run before creating a candidate commit.
-Only README/LICENSE/NOTICE/NOTICE.txt/llms.txt, sources/source-manifest.json,
-views/current.json, manifests/, wiki/ and docs/ are eligible daily publication content.
+The worktree HEAD must still match the frozen source revision: unexpected worker commits
+are rejected before inspecting the allowed uncommitted delta.
+Only README/SPEC/LICENSE/NOTICE/NOTICE.txt/llms.txt, sources/source-manifest.json,
+views/current.json, manifests/, wiki/, docs/ and workflows/ are eligible daily content.
 Other code edits block publication.
 Candidate changed-file hashes and exact commit are fixed before the independent review.
 The reviewer must match both, return accept with no issues, and check at least one
@@ -68,10 +89,17 @@ Remote effects require publication.enabled and an explicit owner/repo slug. The 
 remote URL must match that repository. Publication verifies a clean candidate, checks
 the deterministic run branch before pushing, finds or creates one PR, verifies its exact
 head, and requires every named CI check to pass. Auto-merge is requested with a matching
-head commit. Only an observed merged PR plus unchanged reviewed files can permit export.
+head commit. Required checks are evaluated on every reconciliation, including an already
+merged PR and the observation after requesting a merge. Observed merged=true is separate
+from publication_accepted=true; failed/missing CI cannot authorize export or consumption.
+Only an accepted merged PR plus unchanged reviewed files can permit export.
 checks_passed, pr_open, merged and projection_synced remain separate result axes. Missing
 remote evidence stays null. A pending PR can be read/reconciled by an explicit resume;
 it does not rerun research or create another PR. A queued merge is not a completed merge.
+Publication polls checks and merge with pollSeconds=10 and waitSeconds=300 defaults,
+bounded by the current remaining budget while reserving 60 seconds for closeout.
+Failed checks stop distinctly; missing/running checks and queued merge may be safely
+continued. Tests can shorten the configured interval without changing those semantics.
 This package never asserts native Scheduled acceptance. Native task registration and a
 real Scheduled run are separately observed by the host's supported automation interface.
 END_TOPIC publication
@@ -81,10 +109,23 @@ Each phase saves running before work, then passed/failed plus a result digest. A
 resume reuses verified passed phase receipts. A phase left running by a crashed process
 requires owner reconciliation; it is never treated as unexecuted. Resume requires unchanged
 source commit and config. Publication reconciliation rechecks current remote identity.
-The run lock is exclusive. A live PID or process group remains blocking. A dead lock is
-recoverable only for the same explicitly resumed run with terminal quiescent subprocess
-receipts. Timeout/cancellation kills the owned process group and records the interruption.
+The run lock is exclusive. A live PID or process group remains blocking. Dead-lock
+recovery holds an exclusive recovery lock, re-reads ownership and checks terminal
+quiescent subprocess receipts before removal. A replacement owner is never removed.
+Timeout/cancellation kills the owned process group and records the interruption.
 Never remove a live lock or replay uncertain effects solely to obtain a green result.
+The scheduled dispatcher examines existing run state before moving the source checkout.
+Exactly one known pending-publication run resumes with its saved config and unchanged
+source revision. Multiple/unknown/running or failed phases stop for reconciliation;
+they never trigger a second research run. With no pending run, a clean configured base
+branch is fetched and fast-forwarded under the daily lock before a new run. It never
+resets or rebases source. Before/after snapshots and native acceptance remain separate.
+Unpublished candidates remain blocked/pending: they cannot consume source cursors or
+project an unadopted tree. A new direct daily run must include all consumed knowledge
+revisions in its base. kb dispatch synchronizes the clean base before starting it.
+The dispatch result returns compact run status plus exact record_path values for its
+own receipt and full run state; phase payloads remain on disk. For manual kb daily, use
+the existing --filter-output interface to bound displayed state without truncating it.
 END_TOPIC continuation
 
 BEGIN_TOPIC projection
@@ -96,4 +137,7 @@ Only exact owned stale files can be removed; other target files remain untouched
 The projection has an exclusive target lock, a transaction record and matching-byte rollback.
 A catalog refresh uses a separately configured argv command. It cannot implicitly edit a
 foreign source catalog. File projection and catalog refresh outcomes are distinct.
+SPEC and workflow context are projected so root navigation stays usable. Active AGENTS
+instructions, executable tooling, credentials, .local state and private RAW are excluded.
+The optional repository-harness link goes to public source; execute tools at that owner.
 END_TOPIC projection

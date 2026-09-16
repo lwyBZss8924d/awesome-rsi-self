@@ -11,6 +11,13 @@ export const commandSchema = z.object({
   stdinTemplate: z.string().optional(),
 }).strict();
 export type CommandSpec = z.infer<typeof commandSchema>;
+export const relevanceSchema = z.object({
+  includeAny: z.array(z.string().min(1)).min(1),
+  excludeAny: z.array(z.string().min(1)).default([]),
+  deferAny: z.array(z.string().min(1)).default([]),
+  unmatched: z.enum(["defer", "exclude"]).default("defer"),
+}).strict();
+export type RelevancePolicy = z.infer<typeof relevanceSchema>;
 export const dailyConfigSchema = z.object({
   schema_version: z.literal("rsi.daily-config.v1"),
   budgetSeconds: z.number().positive().max(1800).default(1800),
@@ -18,10 +25,12 @@ export const dailyConfigSchema = z.object({
   upstreams: z.array(z.object({
     id: identifier, url: z.string().min(1), ref: z.string().min(1).default("HEAD"),
     paths: z.array(z.string().min(1)).min(1).default(["README.md"]),
+    discoverArxiv: z.boolean().default(true),
   }).strict()).default([]),
   discovery: z.array(z.object({
     id: identifier, format: z.enum(["normalized", "hf_papers"]).default("normalized"),
     resolveVersions: z.boolean().default(true),
+    relevance: relevanceSchema.optional(),
     command: commandSchema,
   }).strict()).default([]),
   sourceIds: z.array(z.string()).optional(),
@@ -34,6 +43,8 @@ export const dailyConfigSchema = z.object({
     branchPrefix: z.string().regex(/^[a-zA-Z0-9][a-zA-Z0-9._/-]*$/).default("rsi-daily"),
     requiredChecks: z.array(z.string().min(1)).min(1).default(["check"]),
     autoMerge: z.boolean().default(true),
+    waitSeconds: z.number().nonnegative().max(1800).default(300),
+    pollSeconds: z.number().positive().max(60).default(10),
   }).strict().optional(),
   projection: z.object({
     target: z.string().min(1), catalogCommand: commandSchema.optional(),
@@ -66,6 +77,7 @@ export interface DailyOptions {
   resume?: boolean;
   signal?: AbortSignal;
   hooks?: Partial<DailyHooks>;
+  deadlineAt?: number;
 }
 export type StageState = "running" | "passed" | "failed";
 export interface PhaseReceipt {
@@ -101,6 +113,7 @@ export const workerResultSchema = z.object({
   schema_version: z.literal("rsi.worker-result.v1"),
   request_sha256: z.string().regex(/^[a-f0-9]{64}$/),
   outcome: z.enum(["complete", "partial", "failed"]),
+  notes: z.array(z.string().max(4000)).max(20).optional(),
   artifacts: z.array(z.object({path: z.string().min(1), sha256: z.string().regex(/^[a-f0-9]{64}$/)}).strict()).default([]),
   contribution: z.unknown().optional(),
   review: z.object({

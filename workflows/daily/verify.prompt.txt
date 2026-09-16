@@ -9,6 +9,9 @@ schema_version=rsi.worker-result.v1, request_sha256={requestSha256}, outcome=com
 artifacts=[], review={candidate_commit:<request candidate commit>,
 candidate_digest:<request candidate digest>, verdict:accept|reject|unverified,
 checked_claims:<actual count>, issues:[<concrete unsupported or uncertain claims>]}.
+You may include notes=["This is a read-only verifier. Candidate changes and their Git
+closeout belong to the dispatcher; this verifier has no source changes to commit."]
+to explain ownership to a repository closeout guard. Notes cannot grant acceptance.
 Use unverified when required evidence cannot be inspected. Never lower a threshold or
 infer missing evidence from process success. The host records the final answer at
 {output}. Make no source edits, publication, cleanup or scheduler changes.

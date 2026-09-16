@@ -44,3 +44,8 @@ feeds, preserves RAW, compiles and validates a candidate Wiki, and may publish t
 the explicitly configured repository. Each phase records its actual outcome.
 
 See [Agent navigation](llms.txt) and [Knowledge overview](wiki/index.md).
+
+Curated knowledge projections contain the Wiki, context navigation and workflow
+contracts, not the executable toolchain or active repository AGENTS instructions.
+Run the CLI from this source repository when using a projected knowledge copy.
+The optional development harness link points back to the public source owner.

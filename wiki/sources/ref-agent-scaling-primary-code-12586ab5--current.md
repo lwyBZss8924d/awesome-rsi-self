@@ -9,7 +9,7 @@ tags:
 status: draft
 generated:
   by: process:rsi-source-registry
-  at: 2026-09-16T08:06:57.223Z
+  at: 2026-09-16T10:53:25.873Z
 sources:
   - id: ref-agent-scaling-primary-code-12586ab5
     resource: https://github.com/ybkim95/agent-scaling/tree/6f3bfb78a6481c1098d182680f39b0f904b292a2

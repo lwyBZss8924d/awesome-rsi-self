@@ -9,7 +9,7 @@ tags:
 status: draft
 generated:
   by: process:rsi-source-registry
-  at: 2026-09-16T08:06:57.223Z
+  at: 2026-09-16T10:53:25.873Z
 sources:
   - id: ref-rethinking-skills-and-prompts-for-gpt-6-astra-dae8a87d
     resource: https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra

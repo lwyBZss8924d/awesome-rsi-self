@@ -9,7 +9,7 @@ tags:
 status: draft
 generated:
   by: process:rsi-source-registry
-  at: 2026-09-16T08:06:57.223Z
+  at: 2026-09-16T10:53:25.873Z
 sources:
   - id: ref-anthropic-readme-2607ce13
     resource: https://raw.githubusercontent.com/anthropics/skills/34040c9c568585f6929bedeaad110ad08f079624/README.md

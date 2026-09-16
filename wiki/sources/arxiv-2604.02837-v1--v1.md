@@ -8,7 +8,7 @@ tags:
 status: draft
 generated:
   by: process:rsi-source-registry
-  at: 2026-09-16T08:06:57.223Z
+  at: 2026-09-16T10:53:25.873Z
 sources:
   - id: arxiv-2604.02837-v1
     resource: https://arxiv.org/abs/2604.02837v1

@@ -9,7 +9,7 @@ tags:
 status: draft
 generated:
   by: process:rsi-source-registry
-  at: 2026-09-16T08:06:57.223Z
+  at: 2026-09-16T10:53:25.873Z
 sources:
   - id: ref-skill-mas-project-page-2862da21
     resource: https://linhh29.github.io/blog/Skill-MAS/index.html

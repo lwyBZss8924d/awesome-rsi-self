@@ -3,399 +3,399 @@
   "files": {
     "sources/arxiv-2607.13104-v1--v1.md": {
       "kind": "source",
-      "sha256": "41da8af073b59e0aee5cb87a2038f7ecce4c871c47a32662ad93ed5527e3e3a2"
+      "sha256": "badf523b4edc247a18302620aa1f5571b7364833f868dba19fb651ac70af2320"
     },
     "sources/arxiv-2512.08296-v3--v3.md": {
       "kind": "source",
-      "sha256": "d7be937faeb1c4a90e215fbee5267ad3279ce57084378a7ac4365f2fb0cdf18e"
+      "sha256": "77d7a2c6fd0016eaca0137bc6c23c58b098c3eaabb8297202890404026e6737e"
     },
     "sources/arxiv-2608.29596-v1--v1.md": {
       "kind": "source",
-      "sha256": "7230f3845afb10f672871b84d51b936e5fec7c8277f08bab1be3a41e9e9805c3"
+      "sha256": "f5ddec0a31897d0c7c46c4d91eceef064c1e81468ac55390e92606939505693b"
     },
     "sources/arxiv-2606.18837-v2--v2.md": {
       "kind": "source",
-      "sha256": "f48e909f1521e7473de7689071d9de52e5d2349302aca546c8488483bce01fd7"
+      "sha256": "618f1dd6f7b14b3f5efe3b9ff38e4af2d7ffd385bce77740830c1e46fafe704b"
     },
     "sources/arxiv-2608.27454-v1--v1.md": {
       "kind": "source",
-      "sha256": "94cbab3b33e52f9e8c33d347f17eea4346227373929945f1507baaccdc9bcf25"
+      "sha256": "218e1c99ea3b5b3eb1152456ace947e3a3c9758566308b19b15347d09122da97"
     },
     "sources/arxiv-2608.19880-v1--v1.md": {
       "kind": "source",
-      "sha256": "285c69af5e5cd68ad144ed35f233719903b192c3eefe262b7576a4c747bcf68e"
+      "sha256": "89c638b7b7ce2dbf8d505ebc3bfd835bc9691aca67f904e2b3dba1b8b4f6a6b3"
     },
     "sources/arxiv-2608.26263-v3--v3.md": {
       "kind": "source",
-      "sha256": "a74fbc9b0cb58fae886ba59655b5e0974eae73373bd9c0944b6ce6b4dad5c4bf"
+      "sha256": "be64b1e26907c674203e4dfab751707302be9de0643339dc28efa79497785185"
     },
     "sources/arxiv-2605.23904-v2--v2.md": {
       "kind": "source",
-      "sha256": "e3b2c19ee0dbfe9507c6dc8d1ed712f342be177df1db3ec51126bdae0b04a3cb"
+      "sha256": "b510e7a8214cb6977d8ede7cfa81c4cf2bda2c308ca6b870a7e5569100778544"
     },
     "sources/arxiv-2607.03451-v1--v1.md": {
       "kind": "source",
-      "sha256": "ef0c3b535812e44452eb6b10c14d61c68b75519d1efd793362706f580d311b08"
+      "sha256": "0745b274ae442a1e0f47799474a7bcc52b823d4778290fd8dc18cb58a254cbc8"
     },
     "sources/arxiv-2605.23899-v1--v1.md": {
       "kind": "source",
-      "sha256": "388cee6ae70862ee8d6773a3c5667b5c6dd542702cbef037cdbb5c815de36bb3"
+      "sha256": "c6ad63e64ddccd9f14e3121be3a8f2795e3bcfbf0d7079d702acf6c9a8306484"
     },
     "sources/arxiv-2608.15071-v2--v2.md": {
       "kind": "source",
-      "sha256": "2fefbba77359928b4246ec728100df9327390602276ae5f03c6245ecc3c2cb12"
+      "sha256": "0d58478800a18fc3ce2099f15bd068842c0b80bec52a6e3f8b990a2b366e592d"
     },
     "sources/arxiv-2609.01437-v1--v1.md": {
       "kind": "source",
-      "sha256": "0a7ca2e01d0ddb9af54d3e116b1c1195b5be56bf6b870ae32a731f3999129bc5"
+      "sha256": "158396011195ac4f4791e301cd40b21108ea60c1b667d8c908cf833df4488c7b"
     },
     "sources/arxiv-2608.31100-v1--v1.md": {
       "kind": "source",
-      "sha256": "f5fdef28681b450aabdfacc9d4fdacaf66a77a2636e7891f44bfac6d296d8b80"
+      "sha256": "bacb4ae5d04ec74d9fea345ab9befee4ee7164e16e700ebf40cbc05913091890"
     },
     "sources/arxiv-2608.31111-v1--v1.md": {
       "kind": "source",
-      "sha256": "94c1387fd8cdb269fb8564fad155987747329e006d642e685be80a43fcb13522"
+      "sha256": "d84d6d5e6d6b3b410ac5177624e82e99b2c7c295d444e6f0d4007156ecd01494"
     },
     "sources/arxiv-2512.24601-v3--v3.md": {
       "kind": "source",
-      "sha256": "8057518735aa8bf819873e4214281b8a1beeb9e1605c8498fe778729d9c81a8c"
+      "sha256": "050d0ec8ecc382c885334168bea9b80d0925300fff06c61e53dd06eed07bf716"
     },
     "sources/arxiv-2608.23552-v1--v1.md": {
       "kind": "source",
-      "sha256": "3fe1d9d8a0d1ad983551b3b2d05487946d3057a892dedcca93e993b360e63c66"
+      "sha256": "bca7c6c90d81b086ddc835e8101dd641cbe146af1574efdee156d73581ad692e"
     },
     "sources/arxiv-2605.25480-v2--v2.md": {
       "kind": "source",
-      "sha256": "a3b0269973609b17cbd53b6a1a8ca5527abacd41fc6b8f5e3a7496437484ba97"
+      "sha256": "7340d9a0b103379d3b0abe55ce65005b902074ae5348b77ae35b042fd98f4396"
     },
     "sources/arxiv-2606.14275-v1--v1.md": {
       "kind": "source",
-      "sha256": "45d74ccfb1e264740d9f182fd661d648c82e3e575a0cbc52350838bb82527da8"
+      "sha256": "855576fdd95cebdb3d3bb098b69bd1e0051e519e649fe184f2e2058cb9ef5ab4"
     },
     "sources/arxiv-2607.26604-v1--v1.md": {
       "kind": "source",
-      "sha256": "32f9ac2059524a7503dd8b10eb72dfd231c7d822b0d21e627aef510f719404ea"
+      "sha256": "89cc4e82341fb528d49e56b94d79bd535c3004510c5c9a68e93a4b264d1733c6"
     },
     "sources/arxiv-2608.00967-v1--v1.md": {
       "kind": "source",
-      "sha256": "e178a0787c3359d7130e0cae9b023ce6ea41b45a5b55ff31f2bae750d70f48e6"
+      "sha256": "be9de2efd4dfce200ac998d30f30354a410b81dcd9efba5b3f0b499634e73c62"
     },
     "sources/arxiv-2609.09153-v1--v1.md": {
       "kind": "source",
-      "sha256": "2c53ff84c8734748590edecd97f138d06cb94b9949fcb60f01185f558dd7f923"
+      "sha256": "c87752343342bff1e031f0c756f57ddbb0464eb1e32b87d733fa8a3975f1769f"
     },
     "sources/arxiv-2507.19457-v2--v2.md": {
       "kind": "source",
-      "sha256": "704cc380e0d07ede048d915eb5ea7a37d4f8c42f52f3b98186555c5c383f1a3d"
+      "sha256": "b5d86030b5ebe044fd793f297ac603b0d05a0ca192a5e3d08b11f8a482754973"
     },
     "sources/arxiv-2602.08234-v1--v1.md": {
       "kind": "source",
-      "sha256": "4c9fed30ab7c74dede5a21213499bb2680d3ea938f560505624b4144ad5d7316"
+      "sha256": "03c414c1028304ffcb06b493fdf4d9e3bd1d1e921fd3e741888ce0af6686cf06"
     },
     "sources/arxiv-2603.28052-v1--v1.md": {
       "kind": "source",
-      "sha256": "b4b1b8ddd44baa8825bd07bf1b4935a23286781e6bc8e262379b2f3ee82152af"
+      "sha256": "9761d7f92459f8864f4841d4b124f4dfd6b01348cb64da012f12c4d23e6b34ad"
     },
     "sources/arxiv-2606.17628-v1--v1.md": {
       "kind": "source",
-      "sha256": "65e1e9745d0c82ca4506f1f08f1153f8b85c538d04c15e4ccaa996aa541ee6e1"
+      "sha256": "dc73a3082e7b85f7a0c2b16ab409c33d27a4fab889cc8c36ebac8a8e18d810df"
     },
     "sources/arxiv-2510.04618-v3--v3.md": {
       "kind": "source",
-      "sha256": "d002fdadc2bdc30b5fba1043981230bba4c3f9db3fce122d27cb8f9bbc2b9879"
+      "sha256": "c5e2f7b7391f2a3153b86ee846fb65e94aeb255e744360e31e8b43e5f36cad03"
     },
     "sources/arxiv-2607.16621-v1--v1.md": {
       "kind": "source",
-      "sha256": "556b3809d10545cc54f7e23f89902871b191ac1888726c859c43fa615baafaa3"
+      "sha256": "1c22859de5cb6b2ff12654a41c01340cc7d6a645c8f83e33c8d01a7f370d5998"
     },
     "sources/arxiv-2608.11095-v1--v1.md": {
       "kind": "source",
-      "sha256": "6773f53cf6db28c95569336e1f12296157a8c37b3e7951fee0017e33c371aafb"
+      "sha256": "44c129cefaa8a721eff09574e6e6eb2b21f3d536f7ef5ed8278196f898d43787"
     },
     "sources/arxiv-2605.05242-v1--v1.md": {
       "kind": "source",
-      "sha256": "3830a75046a2a812eb08cb8b158acf49cc1d934fa060c6e104f4a92d448d670c"
+      "sha256": "d8646eacc58733d09697ba11f04614333d0cfb2f61dd6f224a2ed3bb575af281"
     },
     "sources/arxiv-2605.18747-v1--v1.md": {
       "kind": "source",
-      "sha256": "d5886b234c786a120cf05956929d84b464bb21f00c259782609308d5f6090276"
+      "sha256": "987eeb3830178af7b6c4f4a6a007e1f3424a20fd3c1368222571608ebd773794"
     },
     "sources/arxiv-2604.02268-v2--v2.md": {
       "kind": "source",
-      "sha256": "ec5884c82f378bd7406064cf35143eebb59e75bb9818ff68aec732cf2e41928a"
+      "sha256": "28dabaabd6921584ec5b6292ec56e975929f61783a655f7bdd60442cfa942da0"
     },
     "sources/arxiv-2607.05391-v2--v2.md": {
       "kind": "source",
-      "sha256": "9b760314a4e971dbbfa5482943bbc38a0291012d8ae25755523e169d25b99c3d"
+      "sha256": "f3cfe050797ea7f737609d4f8aafa38e7be743a6e024bb764c9d3c5378e5a406"
     },
     "sources/arxiv-2506.13131-v1--v1.md": {
       "kind": "source",
-      "sha256": "ec006e8a09ca4356b2a97948e11970912ac704ef6990b9a2b7559ba4ff6d8041"
+      "sha256": "1d8a5797af5197b3d83b862a338d8c1faa754577c68ce275dfa0d9af57b33df6"
     },
     "sources/awesome-self-improving-agents--current.md": {
       "kind": "source",
-      "sha256": "366e949aa0d54774ad6095705f5929eaf5267131619ea201947696de4fa3609d"
+      "sha256": "652dd60e3472eea885cc8be458db1d840a63587debb03936277b6a2011ac3c49"
     },
     "sources/karpathy-llm-wiki--current.md": {
       "kind": "source",
-      "sha256": "7ae7dc1c8594a20196e432919cdcd0864847054672a1c9d566115f2a76ffaab6"
+      "sha256": "4ad7ae7325133f8148ef628766c1f163a6607d3c76b1724d70a4b75cb7692791"
     },
     "sources/okf-spec--current.md": {
       "kind": "source",
-      "sha256": "6c8f1d069aa33a50338e5119ce952c87715a95f612695467872346e2cb1378f3"
+      "sha256": "c5187de82cc329d96cb57ef77f3a90b0ba7866c0b9a2d817523a03c17e997d1b"
     },
     "sources/llms-txt-v2--current.md": {
       "kind": "source",
-      "sha256": "ceaea44061c708d052ba718e8c1769e325c5ee57fcce2808c63d4deac87339f9"
+      "sha256": "9d3017d277daedc21f9d35a8759c226a0d297fc91b9a1bf0ae7f78fab12be990"
     },
     "sources/openkb--current.md": {
       "kind": "source",
-      "sha256": "0649a9c09ff455b3992fe37c6c801473e012462d71376f2a21cbdd107a25364b"
+      "sha256": "19ce5486bbc3c07418f72864290b4ea1eb783102ed9c90dfd20516515ab3bf7e"
     },
     "sources/openviking--current.md": {
       "kind": "source",
-      "sha256": "70eb8f156430c49223503e955b5ac00b928b2d3059594b82159a1e7996c98cf8"
+      "sha256": "f5f6525cb78c40e2346ec6e61ca800a231680cf7584599e1c77b157dd5f25086"
     },
     "sources/prime-agent--current.md": {
       "kind": "source",
-      "sha256": "56ef13428dba47c1376aa45f7098810314879608209f0829ec9f239afff0c520"
+      "sha256": "ebf7e4976190bb61598f0e543c4ce075bd6d5312edab9d510ec8704697029dff"
     },
     "sources/reef--current.md": {
       "kind": "source",
-      "sha256": "2eb570167392c3850bb3f5fd950542f3d90fb6837827b32f8b4f58a94946864a"
+      "sha256": "cd17de51c77f61fc6aa38faed225ddff4e62b4f35e43a64285aa28ed6ca14388"
     },
     "sources/dspy--current.md": {
       "kind": "source",
-      "sha256": "e3b713a34ac7b1364506d9a0daa1171d858dea813bf3ab34b13a94e23a8ad4db"
+      "sha256": "0676599bcbbbe876c9c4bf8b9270c02bb98ec39970eedd3bbaaf5a274c8025d7"
     },
     "sources/promptfoo--current.md": {
       "kind": "source",
-      "sha256": "d874a46d68ccd5bfbcf6e6c54cbb977a837bdff1225e6c5060d5245456c85e32"
+      "sha256": "eba4764a01aa164b06aed41125499b3fef5fd7f4ac0f8fc6b87e6c74185017f1"
     },
     "sources/knowledge-index--current.md": {
       "kind": "source",
-      "sha256": "8ff7f8a6cf98cc74edaa567f178ee1aa5548a77a666645282114bd5ea344540f"
+      "sha256": "253dd04ffbca68487c8a5abd081d5696d4df0a9d4b6b365c493ca2f9cbfbf233"
     },
     "sources/pageindex--current.md": {
       "kind": "source",
-      "sha256": "fc19c38acaa4f098f09c5ccf772fe5a31c150e753e02d633efefe9757effb952"
+      "sha256": "d0539c4a83ce39cac6259669bcfc9f723121bb31c7d64f08c66937fcfb52d91f"
     },
     "sources/claude-dynamic-workflows--current.md": {
       "kind": "source",
-      "sha256": "5000d85fa2abee0fe41895e0a12ca113f6161e3e27dd66aeef7d83b9b448cef7"
+      "sha256": "82d791688e613e3ef5a91296398f6f022554b585c1643dc0cd4654f592c291e3"
     },
     "sources/skill-mas-code--current.md": {
       "kind": "source",
-      "sha256": "ced93921fda3e840d103f35d43a6d9e8ef27f561562d8c292725aa6bb15e991c"
+      "sha256": "e9bf7bfa75102058f416c02c7a55715bc54df8d27d8bd7974a62a5755ca26d68"
     },
     "sources/mdcode-concept--current.md": {
       "kind": "source",
-      "sha256": "94cfd8c9ad227745582cbe8c71270ea7e2eba193142952857d8c81ff1f7fd1a0"
+      "sha256": "8d3895d993c71e891c8233b4fa6232a22382489402a5705b52a33d080dcd261b"
     },
     "sources/neo4j-llm-wiki--current.md": {
       "kind": "source",
-      "sha256": "527d974bc2d22e4a0be34db0b4f4e0c700a5efd17684cc316dac6af1eff234b8"
+      "sha256": "5ab603b4b5f4028480cc2121ec6cb17448a8e22100b926139d7392a2b12e21a6"
     },
     "sources/rlm-harness--current.md": {
       "kind": "source",
-      "sha256": "5f36baf908d33fe03ff402d9561cc40abd36c10628f0548e7ef805c0cb35d766"
+      "sha256": "3d17e9aa46e67567ccfd1ba6731775047a85a49a281a1766403460e20d07c577"
     },
     "sources/rlm-intro--current.md": {
       "kind": "source",
-      "sha256": "8076948fedaf29d556f3dddf319297f8984205fc7002742db70210179938df71"
+      "sha256": "e88c50ff4a65812b44cb5cb3354a652ebb436e30d557631717f550a6fe610f3a"
     },
     "sources/speculative-ptc--current.md": {
       "kind": "source",
-      "sha256": "8bf94e146cdd238708cba3943f692ae581b27dd85a212d117070f32efbbbf9d0"
+      "sha256": "8bcb3b65654cbc68dab8268116d9205505be9bcca26960e3c35a64e9d81875d5"
     },
     "sources/prime-agent-blog--current.md": {
       "kind": "source",
-      "sha256": "f8f1103a35e2e11fab78c28de310002cf87723a26d1d953fd8ecbd29f4a65500"
+      "sha256": "76cb7a1989d0a0291f10a6744f18f7fe19d1f76c974db910acb730cff5a39d81"
     },
     "sources/prime-rlm-blog--current.md": {
       "kind": "source",
-      "sha256": "8c23dc7438de7d780a250dfde2133f571b6d305579da469638f020f9a1a32f4e"
+      "sha256": "81b0b885de7e75ea1c707116cde4c3ef77539073edb03a33864d4bed66f7e682"
     },
     "sources/hf-papers--current.md": {
       "kind": "source",
-      "sha256": "63bd846548971c899cdac0a85d9a972272206849c28c6a0e9c49aaabcc7e9722"
+      "sha256": "907fa4b6c4695192802c2bf7104cf485ed5a4a9edb465ec3de1383b1be60b34d"
     },
     "sources/ref-using-gpt-6-astra-0aa00f0c--current.md": {
       "kind": "source",
-      "sha256": "4adc4a1a44c4a3887964cb8464fce61669647db80729ff0a44b889b7ee7369f5"
+      "sha256": "f5a80119f091b81a3a7a7ae2b27f8c03190423e79417f197cd94a7c3c30a7cc6"
     },
     "sources/ref-rethinking-skills-and-prompts-for-gpt-6-astra-dae8a87d--current.md": {
       "kind": "source",
-      "sha256": "53c2f9e47ee70957f0d2f71ddaa6423a32a43d6203c8715f15a42bb522c01394"
+      "sha256": "252b061064d748b76f871d3e798bd384935daaac0c4a36d8085ad2b54bfac705"
     },
     "sources/ref-custom-instructions-with-agents-md-780d4cde--current.md": {
       "kind": "source",
-      "sha256": "225538edbbfba4c5b98fc3c8b52783483c8f0f2fef4c8a273507dec936c82a93"
+      "sha256": "c906dc44be3964cfa9c14a9777edc110c50aa20b010c1bfd5adfa1c70be9179a"
     },
     "sources/ref-codex-instruction-loading-implementation-d060d926--current.md": {
       "kind": "source",
-      "sha256": "b69294994ee8d27a3e8517effd69c9dc407b424bf877d47c929dbfae5640fc1b"
+      "sha256": "3b9bffbd8659a38507eecc6218817554ca21006bc1f9a03cf6720aaebd25d636"
     },
     "sources/ref-codex-skills-catalog-rendering-a8c989a0--current.md": {
       "kind": "source",
-      "sha256": "6eedc65af643ff3970a86addbb836e75bc7517d8ec43147dbfeb29d23fcbd016"
+      "sha256": "e449139bf4a7bc3c0dd6d1328155fd4b201b9ee90a7e2abebb3ffd9d63ba9f68"
     },
     "sources/ref-reef-evolve-your-harness-harness-adapters-a6b6775b--current.md": {
       "kind": "source",
-      "sha256": "8b892612e38f306a5eebb8b3d1a623d21547c702223da8819b57a3d593567a3e"
+      "sha256": "1d96a29d41351f7c0a5f2cf11c4321794ae62b2d101c805fcb598ec7390b37a3"
     },
     "sources/ref-openai-cookbook-local-reference-snapshot-99429ae9--current.md": {
       "kind": "source",
-      "sha256": "c4776fc6e04f20371f3d8ca6c058d7154892bbb3312b393fb79168eb81379490"
+      "sha256": "bd85d9222681822c7889cd18ae629c4e2b8bb3563f29dbc2bac4170a1332adeb"
     },
     "sources/ref-envharness-model-parameter-adapter-5fbe9146--current.md": {
       "kind": "source",
-      "sha256": "d4b0c113895659054a7f36db7d15610a97f6b5b3631068145de94fa1e65dace1"
+      "sha256": "e04a7ea0b3047fb2e891f7c069cd43ea1b041fc443733aa50e3c6386b8ca88f9"
     },
     "sources/ref-agentskills-authority-1f63d271--current.md": {
       "kind": "source",
-      "sha256": "42a84ec22c1d99f51d19b2b251bd51d8ec35fbb5b738c6dcf41199c556c2228c"
+      "sha256": "98e97c1bb19c6d3e460db2711465b626dd785db6edd2f476557ddf639cf1df3c"
     },
     "sources/ref-agentskills-spec-f1e2a866--current.md": {
       "kind": "source",
-      "sha256": "9e7709fe26b6ec847644e0920859942bfcf8e6eac8e6692f133d1bb4b15cafa3"
+      "sha256": "05377151f87fece9aec809b4385a0b1c87d7aa5250b8830fb65437927ff1b786"
     },
     "sources/ref-agentskills-client-guide-2d64323a--current.md": {
       "kind": "source",
-      "sha256": "76d7531cbb15de02050b415ce31c325d18b6e022c87b11b0bf667376e7898ef3"
+      "sha256": "a87516a9dee232d2c998fdafc02139bca5f8650d4e8c6b2af9327217e1b5d481"
     },
     "sources/ref-agentskills-showcase-041da858--current.md": {
       "kind": "source",
-      "sha256": "d586eaed9000b662cc9e5768632590f5dec37a0a2ec71dafda6be6f2fe6d517e"
+      "sha256": "dde45ba41cc673320068d6a10936147ed3ef85fde2680675fdee5dfe202e8350"
     },
     "sources/ref-agentskills-client-links-b93ad195--current.md": {
       "kind": "source",
-      "sha256": "b7506a5fb4e33f5d4356e79c190d409415f5787b3783a994dcec5999ce030f59"
+      "sha256": "ec1789edcd9572a6ad8bab16ff6cebf021310395171799b4f2003ea256659bee"
     },
     "sources/ref-skills-ref-parser-e424f892--current.md": {
       "kind": "source",
-      "sha256": "dabe1b573e0a3092edf06d5762d86437550f2a747b0d673532a15a79f6f34e7a"
+      "sha256": "f175fe852604c8896272164004fcc1d5f14f23d978e20e29cf1fd77e77597112"
     },
     "sources/ref-skills-ref-validator-cecee4c6--current.md": {
       "kind": "source",
-      "sha256": "5450ca3ef388b4c68bf24c44b4c5ca4a0683b3caf783e10ba64ad6daf9a9f944"
+      "sha256": "90ef53637ff3ef18aa276edce37f635416e15e17e2398f4f7f628c0022a64a9a"
     },
     "sources/ref-llms-v2-proposal-c079de9e--current.md": {
       "kind": "source",
-      "sha256": "562e793a69fc0cd9758105a29a4ddb487ae06632556104520d3b3dfebebe4101"
+      "sha256": "f3eacd4730641cfff7e95df1bcf7bc1b97d694cfc3b53e15079179b1e1fe2398"
     },
     "sources/ref-llms-v2-changes-9071d809--current.md": {
       "kind": "source",
-      "sha256": "6d032e692aaf0b0dd6e89fa93768049330fa69ddf1edfa85cfc226648b28681b"
+      "sha256": "aab7993615b8213a1f3c5aef1b47b36b6af2a126a288d39fde8f6fa30f49027d"
     },
     "sources/ref-llms-core-notebook-4e568c6a--current.md": {
       "kind": "source",
-      "sha256": "7caa616c3149eff4b8895fccc11eb74a0e0807588f264937c236ce31d737ff0c"
+      "sha256": "7bd8650011002f64d173c494c1aadc653d57cf986abda3fae46a4b3b2aa74d67"
     },
     "sources/ref-llms-miniparse-a2d1e148--current.md": {
       "kind": "source",
-      "sha256": "d9c78a99a2e0f263a69d5fd07e149324a4b89b193c8f1ff3d3bc4f5d642bc737"
+      "sha256": "67e282f8e95950196cb9b7f3745838f8f52beaac2f9389e39b87a38146eb1bcb"
     },
     "sources/ref-llms-core-ad673f47--current.md": {
       "kind": "source",
-      "sha256": "f63b0d7b6ca27ec60d8eaba7b7c40b60aff46f49b6cfdbe1121153470b348343"
+      "sha256": "1218a1e0fae5361324febed5e895ad82b8ecc74bda0afa99b8b7a7bba01df71b"
     },
     "sources/ref-llms-upstream-tests-68a9c7ff--current.md": {
       "kind": "source",
-      "sha256": "86a62a5e3a14adbbca87900eca2dea52d0d8966a8c23c6a7ef7b91d551964278"
+      "sha256": "f7224f36b6ee1e2a6f56c7fe1d1eab86fc225e4edba3af9e4b71d89ee7905103"
     },
     "sources/ref-llms-javascript-demo-f31e3762--current.md": {
       "kind": "source",
-      "sha256": "210c5570ed4bf2af9d3b11b0e1303916f65563cb8802d637b3f480c326951759"
+      "sha256": "26463c1fcba97f20d5282f324c53f81a6fc9713508324b5e740dc548a875d53f"
     },
     "sources/ref-pi-docs-a408841d--current.md": {
       "kind": "source",
-      "sha256": "6bf7f1ac76c62aecb4b1222ebc4f3a005b8fc57f18342261474ac8d447a0f33e"
+      "sha256": "a625f218e702964c129d77cdf7d3f39327d5ec633d6bac56db5b3b7be8c1b9d2"
     },
     "sources/ref-pi-loader-9046a9fe--current.md": {
       "kind": "source",
-      "sha256": "2d416904c87e11f4842935b3b34c40bd3cf1a5040f781ac075c4c6aa4ba00883"
+      "sha256": "4bca444b9b70bbb9233e93bbb0c0b0854ae20c79c71ca393cccdce957ad2a0b5"
     },
     "sources/ref-anthropic-readme-2607ce13--current.md": {
       "kind": "source",
-      "sha256": "6287e346e96f862f799d35f32b5163ade2f03ebec55f279f739b8780c2cde1ce"
+      "sha256": "5b3936665de1314b33b00be0610c84f11858787e5acaf4046933dea42ad58841"
     },
     "sources/ref-anthropic-spec-a7553f99--current.md": {
       "kind": "source",
-      "sha256": "e10accfb748d7965beb0bf96361d985311fa73802acdf37dba6519051086b408"
+      "sha256": "8588a3f005f7dea666fa6f0823e2b8e513cab03920eb714339b0152fe7f6fcc7"
     },
     "sources/ref-anthropic-template-fc6d7e60--current.md": {
       "kind": "source",
-      "sha256": "966c8e66722282808cf73a52ae427734f74706e99a17d6153051e0961550af3a"
+      "sha256": "370f7fd04923ee57fe1a294e6eb6e93c7c9a77843b9e332760742b4763e9abd2"
     },
     "sources/ref-openclaw-docs-611bf541--current.md": {
       "kind": "source",
-      "sha256": "8a42aa4bf6a2a34769dae8b913dbb424d37ae8f8669ff2b6038ac6d6291277b7"
+      "sha256": "9f0b587b58222061b6026d8c97bd7aa5aec5ad646892c3d22126bb5552261ed2"
     },
     "sources/ref-claude-docs-194f0e28--current.md": {
       "kind": "source",
-      "sha256": "bef211f38bb019d04154338e3012f059d89a0bbb1325243b273bc3d3210e24cc"
+      "sha256": "dd16fa067c8d18ab1b586b18c27076127ee545b556a0975ac37c01acc6c75d6a"
     },
     "sources/ref-pi-resource-loader-83389135--current.md": {
       "kind": "source",
-      "sha256": "948e33e2939e04284ca37e7501a6e1d1772ee533c3739f20eaab26bc73e82a3d"
+      "sha256": "38e2a0489756ce672e357d60aec1fb159e8d19ade7a1bca3f29074953b774488"
     },
     "sources/ref-pi-package-manager-f9ebd257--current.md": {
       "kind": "source",
-      "sha256": "b32932c63f48ce04ac7bb8923394123d630be7437ea32d4adb0bee9c054cc3ed"
+      "sha256": "08048d57c556dd71fd11337b41d1e77460ebed504e7288f1b4c8d88b5188b78f"
     },
     "sources/ref-openai-build-575ba476--current.md": {
       "kind": "source",
-      "sha256": "506fd22e759948145852962aef4a6be928a3e862f1a9ea242e278db315483e73"
+      "sha256": "865aa995f1cbb7cd88635362af08fe5914f27ac2e2c348a4bb048a9f53e8f1ae"
     },
     "sources/ref-pi-live-page-c733c1d4--current.md": {
       "kind": "source",
-      "sha256": "fddcfc54a8b9742d7678a7a997b3903f23060c61104cce24e247cf94c0c6b893"
+      "sha256": "884fde0d97a70799da89750c9eaa19025c57372a7b9a2ee7134d8b30ac9b3da6"
     },
     "sources/arxiv-2605.20023-v1--v1.md": {
       "kind": "source",
-      "sha256": "66500b112e83cc01358606093bf89241a8fe8a6b8547ac1a9097d94e34b51d6b"
+      "sha256": "1f98b34cec6580d23e14949a75388b6520bbd341d775d62b8d54281ed2edd3a4"
     },
     "sources/arxiv-2604.02837-v1--v1.md": {
       "kind": "source",
-      "sha256": "5af9a6ceb3541d600cb794f2b775b55e531d8caf424232686fe1ac2065360d31"
+      "sha256": "d3d13ee7bdd050b5ce9d5aefce881f3233dd085415b63055f82267055d12822c"
     },
     "sources/arxiv-2603.22455-v1--v1.md": {
       "kind": "source",
-      "sha256": "bdf1e4984d052bcbdb430bc061f39955182c51e03e8483fb1900c19c57d8a9f2"
+      "sha256": "7fcc3d6048200ce8aeeabb3643569b94508261a5a5e6e33ddef2851aac90d716"
     },
     "sources/ref-teamwork-agent-teams-teamwork-preview-ea5fe46a--current.md": {
       "kind": "source",
-      "sha256": "4f85069bb68ebcc1fc4f06cb9de9a371cb3fde4597370abe24202d1e56fe20bb"
+      "sha256": "b1391b3c19a9f85576b903520d8d0ba4dd9b1864b18e0e3223d8ca643a485269"
     },
     "sources/ref-teamwork-when-ai-becomes-a-research-partner-6b0f99ec--current.md": {
       "kind": "source",
-      "sha256": "4fa377e218a0d8b099aa2cf24f93e992da4bc61749658531776ec088166f179b"
+      "sha256": "65fe6bc6ce8c0c663ff98b896462612cdcb20e84cf9cf0a84653471adbe39b15"
     },
     "sources/ref-agent-scaling-primary-code-12586ab5--current.md": {
       "kind": "source",
-      "sha256": "3cc4e77f2a57d4340d5c036060c0f7ed83f59d3c30b4e44d604a54f03b4647be"
+      "sha256": "c868968d1801a36e687fe1923c31f35d5ca7f7a6e29e75652ce30509be6cbcb2"
     },
     "sources/ref-skill-mas-primary-code-and-local-checkout-35818dca--current.md": {
       "kind": "source",
-      "sha256": "aed0a82dc4a6a5c0e816449b25da8363da524312b3369f70a3e26673d8417d95"
+      "sha256": "1246933f9130e210782b7b5621ecfe0f1957bc3abec31821e66789c139e0a374"
     },
     "sources/ref-skill-mas-project-page-2862da21--current.md": {
       "kind": "source",
-      "sha256": "c5bd1fc331ebb4cff55dfc106ffad4925dad8f628338c9b1aeaed09bbf37836d"
+      "sha256": "33f8625738abad814f764264dd798577381852c09709475b5650a79a5f3a9f7f"
     },
     "sources/ref-envharness-primary-repository-621a2f0b--current.md": {
       "kind": "source",
-      "sha256": "3bf0304124a07c359141ba437df1fd6f56418ff998180a1fa5126f749ff5ed61"
+      "sha256": "642b11a968f377a4732d12cffbb42e323fda70310614827f06deedaf1760b3c0"
     },
     "sources/ref-codex-8acdcd4d--current.md": {
       "kind": "source",
-      "sha256": "b6a04308f09bf2c9947478ed842380d3b8b1e6c73b97652cdcf677718d2e59fc"
+      "sha256": "9add676211aa5ee0cf4386fa14f18a388404d5192334a70741df251ee07c3ea0"
     },
     "sources/ref-oh-my-codex-77466071--current.md": {
       "kind": "source",
-      "sha256": "c701ee2c103783dffbcd0988e2ced17c0273708c371ed9d3d2769683a2113551"
+      "sha256": "f1e89083a8ac5e5044d2e561b0cf15479d758bcf7916d9711de5577759b6043d"
     },
     "index.md": {
       "kind": "derived",
@@ -403,11 +403,11 @@
     },
     "sources/index.md": {
       "kind": "derived",
-      "sha256": "2d3ab13c3690d2102e111b118d1ceffc603a6429cfc08c36007631f48aa7026b"
+      "sha256": "b5fc5e6b86b2d736a6d52ad8a2268c6af532d633455db9177757784a3db2eecc"
     },
     "log.md": {
       "kind": "derived",
-      "sha256": "dd127e2a6dd47aae40c490de725d9fa66687d6df1b8bd720c3b1df8f11ba49f5"
+      "sha256": "a0876dd02ff0e0608053770dc26278e941375b56e69db1b71efb80ec7a78ed69"
     },
     "concepts/task-state-and-knowledge-ownership.md": {
       "kind": "authored",
@@ -717,11 +717,1094 @@
     },
     "sources/arxiv-2606.09498-v1--v1.md": {
       "kind": "source",
-      "sha256": "a069b234bbbab21b11b2231da698b00829db3973903966e12282efc600f982ed"
+      "sha256": "02abbe6763da7d7ce1ecaab2da6bdf16d1f9ab5357963d3a0ba28ec050e00518"
     },
     "concepts/index.md": {
       "kind": "derived",
-      "sha256": "f0ea6207401cf669d88a2ac726e59ca8d45f77080651a075537875e8daf346c0"
+      "sha256": "337b0bf62d71c655b9d021d216382b77492e8876534580cd1ceb8c11c3f89205"
+    },
+    "concepts/evaluator-change-and-improvement.md": {
+      "kind": "authored",
+      "sha256": "5eeefa842502acc80067de68e39f6157c1c81e64a7947cc387de0b7ba4b92188",
+      "contribution_id": "r6-evaluator-change-and-improvement-20260916",
+      "evidence": [
+        {
+          "source_id": "arxiv-2607.13104-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "3143cea42e1efde4081411e7dd648e46f588981dd58447774f1828812232f9c5",
+          "artifact": "sections/009-8-evaluation.llms.txt",
+          "sha256": "1fdd8022b47f49c121c2525ac805587787a76cf2193a98e3aec715bd14d9aeb7",
+          "locator": {
+            "start_line": 23,
+            "end_line": 31
+          },
+          "preparation_key": "c6ccf46cdcb15722c5d0bad41be0ca0a29d070b96b1d4c43d47f43651fff0754"
+        },
+        {
+          "source_id": "arxiv-2607.13104-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "3143cea42e1efde4081411e7dd648e46f588981dd58447774f1828812232f9c5",
+          "artifact": "sections/009-8-evaluation.llms.txt",
+          "sha256": "1fdd8022b47f49c121c2525ac805587787a76cf2193a98e3aec715bd14d9aeb7",
+          "locator": {
+            "start_line": 39,
+            "end_line": 39
+          },
+          "preparation_key": "c6ccf46cdcb15722c5d0bad41be0ca0a29d070b96b1d4c43d47f43651fff0754"
+        },
+        {
+          "source_id": "arxiv-2607.13104-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "3143cea42e1efde4081411e7dd648e46f588981dd58447774f1828812232f9c5",
+          "artifact": "sections/009-8-evaluation.llms.txt",
+          "sha256": "1fdd8022b47f49c121c2525ac805587787a76cf2193a98e3aec715bd14d9aeb7",
+          "locator": {
+            "start_line": 43,
+            "end_line": 43
+          },
+          "preparation_key": "c6ccf46cdcb15722c5d0bad41be0ca0a29d070b96b1d4c43d47f43651fff0754"
+        },
+        {
+          "source_id": "arxiv-2607.13104-v1",
+          "version": "v1",
+          "prepared_manifest_sha256": "3143cea42e1efde4081411e7dd648e46f588981dd58447774f1828812232f9c5",
+          "artifact": "tex-files/tex/evaluation.tex",
+          "sha256": "c748f8438452767856b1e966035549686551fb64be13b958a50a0fae02af139c",
+          "locator": {
+            "start_line": 59,
+            "end_line": 62
+          },
+          "preparation_key": "c6ccf46cdcb15722c5d0bad41be0ca0a29d070b96b1d4c43d47f43651fff0754"
+        }
+      ],
+      "generated": {
+        "by": "codex/gpt-6",
+        "at": "2026-09-16T09:56:34Z"
+      }
+    },
+    "sources/arxiv-2212.10560-v2--v2.md": {
+      "kind": "source",
+      "sha256": "e947634edb9fd868ab1d8465174718c813120492eec06966dbee71c6aceb4764"
+    },
+    "sources/arxiv-2210.11610-v2--v2.md": {
+      "kind": "source",
+      "sha256": "0cb75814f851275176a0ab5fa9d30401b52c5882a8eeb3f7595d6260ff1e6c76"
+    },
+    "sources/arxiv-2306.02707-v1--v1.md": {
+      "kind": "source",
+      "sha256": "8bb8ac63cc01d8012da0cc02202f64a759c6510c59eb434098107a502748cdc8"
+    },
+    "sources/arxiv-2310.00533-v4--v4.md": {
+      "kind": "source",
+      "sha256": "81323eef92cbdbce5614a7d34d85e264ca92bf0a7bf78945de709e0b2a37675b"
+    },
+    "sources/arxiv-2407.12874-v2--v2.md": {
+      "kind": "source",
+      "sha256": "56238320a42b754408ed8f712cbcc69f925aa2df1ce069382e25e8faf1803df7"
+    },
+    "sources/arxiv-2505.03059-v1--v1.md": {
+      "kind": "source",
+      "sha256": "a9053bb7e5d6918787457f2686d0f9d78512dff897ba70e792a93094003eae57"
+    },
+    "sources/arxiv-2503.02103-v2--v2.md": {
+      "kind": "source",
+      "sha256": "8145f95e6008c5e60eecae684b1be35b3e76eefec0a11bade8d507d6bf27d506"
+    },
+    "sources/arxiv-2503.12303-v6--v6.md": {
+      "kind": "source",
+      "sha256": "a0572821b226859f8dff72489e969f336b4d0df9e606774a9dd0e58b3cd34515"
+    },
+    "sources/arxiv-2506.10055-v2--v2.md": {
+      "kind": "source",
+      "sha256": "2930bb424dde0cdf9028d02e887c58e0574c889ab43eae52378f312e4ae09a93"
+    },
+    "sources/arxiv-2504.21561-v5--v5.md": {
+      "kind": "source",
+      "sha256": "2bb23f7751e666f0d3bad32d3195f5ac2354c7e96ac729d7236970b35101325f"
+    },
+    "sources/arxiv-2505.22660-v4--v4.md": {
+      "kind": "source",
+      "sha256": "1dac45dde0665fe613cdb77eafd8df3df3fdb4c053c5a76811f363e8794431a5"
+    },
+    "sources/arxiv-2501.00747-v1--v1.md": {
+      "kind": "source",
+      "sha256": "2b8a782cc5e0c10a0e1d0b2568feeab84ad5227324ddf2e4630696b301627f9b"
+    },
+    "sources/arxiv-2506.10943-v2--v2.md": {
+      "kind": "source",
+      "sha256": "f31d864f012fed9f50ea5489f443d35fc95d959661d3107d730e9043d303d68a"
+    },
+    "sources/arxiv-2505.22453-v2--v2.md": {
+      "kind": "source",
+      "sha256": "9881e8616e499dcfd24074825f6aa2b4684e2a3b1408536a15866cf3c3ff20ab"
+    },
+    "sources/arxiv-2503.00735-v3--v3.md": {
+      "kind": "source",
+      "sha256": "60bb78e963ee3e9a3b669f244e2bc854339bf8c5b9050030fa320a90a8c82c38"
+    },
+    "sources/arxiv-2411.04109-v3--v3.md": {
+      "kind": "source",
+      "sha256": "f9e25c230b01eb690c4b6d51f672c27a74a2e37a40182175befe060d51f6a3e8"
+    },
+    "sources/arxiv-2411.00412-v4--v4.md": {
+      "kind": "source",
+      "sha256": "09345db71da86f361297b35f47d40d9ea510ce8a387bfcbe22edfd598c89e4b0"
+    },
+    "sources/arxiv-2505.21493-v1--v1.md": {
+      "kind": "source",
+      "sha256": "b6877a8619c677b24b88ead1d38ef3fa891da28d56616f6e89984a0ab5b1d3e9"
+    },
+    "sources/arxiv-2603.15255-v2--v2.md": {
+      "kind": "source",
+      "sha256": "80818021612311b1c9ec297cbef874f5f5f88a16cee8172f2d34f588fee06d11"
+    },
+    "sources/arxiv-2606.01279-v1--v1.md": {
+      "kind": "source",
+      "sha256": "3e51b9673a68e35f97dcabcff063d952feeca8af2b2daf015a21b1aa708e7d22"
+    },
+    "sources/arxiv-2605.13803-v1--v1.md": {
+      "kind": "source",
+      "sha256": "baec8943c2a639e25dd09b8474ae28960f38890cdf0b6fe2df220b2f1c0af516"
+    },
+    "sources/arxiv-2212.08073-v1--v1.md": {
+      "kind": "source",
+      "sha256": "c65846f7bd62c45d26c1e267bba1a6fa73ae92e67f06b37f8b4b19867e4ce763"
+    },
+    "sources/arxiv-2312.10003-v1--v1.md": {
+      "kind": "source",
+      "sha256": "2b5f5dfb9105579c66c468731b9bc3fd401f4eeb59147dfa363bccb6343ee706"
+    },
+    "sources/arxiv-2502.11959-v2--v2.md": {
+      "kind": "source",
+      "sha256": "ef05987c33bc35c693978d154fe7c1a02e1f4d118ee012421d253e88046c5abd"
+    },
+    "sources/arxiv-2504.02902-v1--v1.md": {
+      "kind": "source",
+      "sha256": "284bf46ef28a8a3df26406bd4ec02370f39a3f1bc73cadffabd6cfe306d94f30"
+    },
+    "sources/arxiv-2411.00418-v3--v3.md": {
+      "kind": "source",
+      "sha256": "b598b4b424a81f8c9c68d82eded18ecb53f3091169290c6b87e706cfa7072ad9"
+    },
+    "sources/arxiv-2506.02918-v1--v1.md": {
+      "kind": "source",
+      "sha256": "b0972d01f8900ab3ebb18b4a1ecbe9050a4aefed9a1d12243860b69e860e793c"
+    },
+    "sources/arxiv-2505.08827-v2--v2.md": {
+      "kind": "source",
+      "sha256": "8547c16b9d70b2ae1d3ce6cce493847b697b36472024f7cb955909097fed34b0"
+    },
+    "sources/arxiv-2504.05812-v3--v3.md": {
+      "kind": "source",
+      "sha256": "a63b291d8ddc375f7d852aae28d7524db8f7ab7673a310596739b617e85151f2"
+    },
+    "sources/arxiv-2504.16084-v3--v3.md": {
+      "kind": "source",
+      "sha256": "ff8b0e26349d8f7f87432886cb9beb10877e1031453ff668ae70963e33985e14"
+    },
+    "sources/arxiv-2505.21444-v2--v2.md": {
+      "kind": "source",
+      "sha256": "7a1ea19102561fc8e6502e998192e4682d199e9565804a84c499c1d71201715d"
+    },
+    "sources/arxiv-2505.08827-v1--v1.md": {
+      "kind": "source",
+      "sha256": "3f09854e6444288ef30e0bf9814c592b86e73bd3b28b5940c3d9bcc218ad6c1a"
+    },
+    "sources/arxiv-2505.14970-v4--v4.md": {
+      "kind": "source",
+      "sha256": "6e858eb692c99e28c65ce56c6192135ba28404c2e76e5c25b44b0b5b59dd493c"
+    },
+    "sources/arxiv-2505.24726-v1--v1.md": {
+      "kind": "source",
+      "sha256": "85f65d2a82dfc5aa925d4d680a120f20e22244ac25b4058f8fedd72e530db461"
+    },
+    "sources/arxiv-2502.02534-v2--v2.md": {
+      "kind": "source",
+      "sha256": "bc0d2cf66e4498a47bc5fc21d92c257e904eb29de3ca03c48158ef01f47e6dbc"
+    },
+    "sources/arxiv-2505.19590-v5--v5.md": {
+      "kind": "source",
+      "sha256": "8087c6421bc77bcc8239e46a9270da72e6a6e40d8953655ec8b11b8acef9e07e"
+    },
+    "sources/arxiv-2601.07180-v1--v1.md": {
+      "kind": "source",
+      "sha256": "12cf488ee9197bbcc97c8809309c07d247a097a3cf1da0a565b85ac7d092a6d1"
+    },
+    "sources/arxiv-2601.03193-v2--v2.md": {
+      "kind": "source",
+      "sha256": "827b524546781b107295618b618693c5518bf84b27d5c55e43a5288315576c0f"
+    },
+    "sources/arxiv-2606.14302-v1--v1.md": {
+      "kind": "source",
+      "sha256": "d8788f4f6f12c4000bccc6b8a486898d8b6752cba5e42e6405695f829c933e87"
+    },
+    "sources/arxiv-2605.22905-v1--v1.md": {
+      "kind": "source",
+      "sha256": "5f5ca1476217045b7dd8f8c8e7c31cf1f206907bff1ec9bbfdab3a23e04a032d"
+    },
+    "sources/arxiv-2306.11706-v2--v2.md": {
+      "kind": "source",
+      "sha256": "74d42a565c7de37948923d84c45a8ca0e43e372ee98a31b91a8466b74eb0e910"
+    },
+    "sources/arxiv-2505.16410-v1--v1.md": {
+      "kind": "source",
+      "sha256": "279236cfece2706d4f4f6d40a23a92286602ef785c69f9edf6dd07c40a7c14ed"
+    },
+    "sources/arxiv-2503.23145-v2--v2.md": {
+      "kind": "source",
+      "sha256": "00e820e0fc78fffecce7c2c3ec1201355b8e95ce90de53083e2d2848b2811b48"
+    },
+    "sources/arxiv-2504.16078-v1--v1.md": {
+      "kind": "source",
+      "sha256": "8819799ffd2fd45825d3df707ed65f308fa6f189e3e3e66d0ceb75c46864663d"
+    },
+    "sources/arxiv-2506.11425-v2--v2.md": {
+      "kind": "source",
+      "sha256": "a507578b2553fac6685b614502aafd6dc6b10cead41cc6ab27e29423558d453b"
+    },
+    "sources/arxiv-2411.02337-v3--v3.md": {
+      "kind": "source",
+      "sha256": "c473656c89e2ddb986c34dcf3b0981950fe29a88faa0a1cd52c5b199a98c16e2"
+    },
+    "sources/arxiv-2507.14172-v2--v2.md": {
+      "kind": "source",
+      "sha256": "dfc45bfae39a9c721590e0df8743c853c1f9a5a90179a61d792aa333c23a163c"
+    },
+    "sources/arxiv-2504.03160-v4--v4.md": {
+      "kind": "source",
+      "sha256": "0f8826b738b4b1bd565234b3190e9ec1d52d96ae4c5bbfe970adc4f92ac56069"
+    },
+    "sources/arxiv-2505.01441-v1--v1.md": {
+      "kind": "source",
+      "sha256": "b9ae2b259ca0db9daec8afcfde8533ca7ffadaf5b0e735366ee284d475317366"
+    },
+    "sources/arxiv-2505.21496-v1--v1.md": {
+      "kind": "source",
+      "sha256": "070f9f01ce1a865b56a957bf6de367c679e594bf528a06b2e5c6af85105ac093"
+    },
+    "sources/arxiv-2504.20073-v2--v2.md": {
+      "kind": "source",
+      "sha256": "3a37d1e5888a892ea9efd1e51dbea36bea9df6b6296074c42eb137089fff2e45"
+    },
+    "sources/arxiv-2508.04700-v2--v2.md": {
+      "kind": "source",
+      "sha256": "1d10a95e7c088406a713144e402320464822d9f62b36eb1345208ad3bf42866a"
+    },
+    "sources/arxiv-2601.02439-v6--v6.md": {
+      "kind": "source",
+      "sha256": "b2d1dcf719820e2c7ee56e9fe2d2b417ee4cba9f8f6a16c226c8c58ab196fda0"
+    },
+    "sources/arxiv-2602.21320-v1--v1.md": {
+      "kind": "source",
+      "sha256": "2443e154c1abb62337af47fe5c7ca39238894a12363253dac44a5d51a36e1565"
+    },
+    "sources/arxiv-2606.07412-v1--v1.md": {
+      "kind": "source",
+      "sha256": "91dbad3b35755bb6b6307342dfcf7b525d257402b3066204bf4a4dc263dca261"
+    },
+    "sources/arxiv-2606.07367-v1--v1.md": {
+      "kind": "source",
+      "sha256": "4721e2553e9d0641bd115a5c33452419cd5eef955ea2a8db49d546ad8ac0ac67"
+    },
+    "sources/arxiv-2607.22529-v1--v1.md": {
+      "kind": "source",
+      "sha256": "68820103518aefcc59bd9d7516f263dcc49d365f44f81c2f9da2661a48735683"
+    },
+    "sources/arxiv-2305.10626-v3--v3.md": {
+      "kind": "source",
+      "sha256": "4dee944c948b81fb22b42b83dd292a2ba5ed278ff2af56650917a1620b548da1"
+    },
+    "sources/arxiv-2405.14205-v4--v4.md": {
+      "kind": "source",
+      "sha256": "717a35a9391da661ab60ab9bebf4218fd153c3e455345edb6b95e16bafed0cd2"
+    },
+    "sources/arxiv-2410.13232-v2--v2.md": {
+      "kind": "source",
+      "sha256": "90519e446f4af5167b42a380ab550817d39c755895d52b9b7f140e7f78d6197c"
+    },
+    "sources/arxiv-2411.14499-v4--v4.md": {
+      "kind": "source",
+      "sha256": "05813a8bd37424f6f28425f0baff88985624160cb911db37da9e4dcba0bff078"
+    },
+    "sources/arxiv-2506.01622-v5--v5.md": {
+      "kind": "source",
+      "sha256": "4ec1007a9ba049a44bd485fb95a2e187369ca90d29a720b854a1691f33014bbc"
+    },
+    "sources/arxiv-2504.21024-v2--v2.md": {
+      "kind": "source",
+      "sha256": "88811e045b213430ae67a6fe105d94c5dbb5525f52789e1a8ba15da2bf38970e"
+    },
+    "sources/arxiv-2507.04370-v1--v1.md": {
+      "kind": "source",
+      "sha256": "665286e75e4d83c635c777db5d93335c9465f311f88058e07c0ecbead772b810"
+    },
+    "sources/arxiv-2501.10116-v1--v1.md": {
+      "kind": "source",
+      "sha256": "ea8b10ed5ac270f32e718cbe8bf51aa3e5fd4bc5f6a875d2e80b56b45f293e7b"
+    },
+    "sources/arxiv-2511.09515-v1--v1.md": {
+      "kind": "source",
+      "sha256": "c68e64a416bc4a58eeb1a0e8fb45bcf3571f886514535b5f93dd6918d5eb9496"
+    },
+    "sources/arxiv-2510.15047-v2--v2.md": {
+      "kind": "source",
+      "sha256": "e6c5695cfac95641f2a83d37f87539c1e7ec980ff64877fb8515a538a81d5e45"
+    },
+    "sources/arxiv-2601.00930-v1--v1.md": {
+      "kind": "source",
+      "sha256": "9b1a758c5d46b6779169dbf327406c251ad957d69b4ef249796e44dda6cffc8f"
+    },
+    "sources/arxiv-2606.30639-v2--v2.md": {
+      "kind": "source",
+      "sha256": "32b13e20bacc1bdac84e12bfa5b78978df2cdc7d41caf10d68b6040724b84607"
+    },
+    "sources/arxiv-2506.23468-v2--v2.md": {
+      "kind": "source",
+      "sha256": "a9faf3d413f6b42c9d5b3c802d0135031436da382b353b73d2278c7188755695"
+    },
+    "sources/arxiv-2510.01183-v1--v1.md": {
+      "kind": "source",
+      "sha256": "96bbee8e68e9ef1eac6b6a7d3df5c00a645f9ff942babab1d4f30f3aee7c9c2b"
+    },
+    "sources/arxiv-2602.11075-v2--v2.md": {
+      "kind": "source",
+      "sha256": "4102efa3e772934c65a4386df97a3d952db8df3cdc9fa70bfeeeb3a4e82f55b9"
+    },
+    "sources/arxiv-2211.01910-v2--v2.md": {
+      "kind": "source",
+      "sha256": "03370bc3f7f82b876c46f5d4a9a7ce7ac43612d6250dca6f7f35c46b0ce02d65"
+    },
+    "sources/arxiv-2309.03409-v3--v3.md": {
+      "kind": "source",
+      "sha256": "6b3ea5693e26e7a53d6580b1286812af22d4c04b6684f5a066e658004dd600b0"
+    },
+    "sources/arxiv-2407.00247-v1--v1.md": {
+      "kind": "source",
+      "sha256": "3b305638b838ec7263a2fa55413618b12a6d6f592b48a626397c4f59cfdd306f"
+    },
+    "sources/arxiv-2409.15199-v1--v1.md": {
+      "kind": "source",
+      "sha256": "8635d2f825b71ea71fd76f480a9babece92c83868e6abb773b364da417754702"
+    },
+    "sources/arxiv-2402.08702-v4--v4.md": {
+      "kind": "source",
+      "sha256": "d219616fa0a9a079b2729020cc5e89c58993f535ebc4239d833f216d830ef23f"
+    },
+    "sources/arxiv-2501.01329-v1--v1.md": {
+      "kind": "source",
+      "sha256": "3c04892a1010c15f482fb68c44fb4e3cb260ea761c888cb03395c2ae7811a554"
+    },
+    "sources/arxiv-2510.15260-v1--v1.md": {
+      "kind": "source",
+      "sha256": "0d7ec9b43ac1ba21997f0ec1295dbf38dda078e393405bab03577cc071c2efc9"
+    },
+    "sources/arxiv-2606.04465-v1--v1.md": {
+      "kind": "source",
+      "sha256": "e2cd8226ea4afa11049d31c235bc01d0927f1a90d1b2eb15b0a48fa5c7ac8ff0"
+    },
+    "sources/arxiv-2606.18902-v2--v2.md": {
+      "kind": "source",
+      "sha256": "f1fc9a033b6cf44f9b51978e942e62e891776230effd4d2364df6d6e355aff78"
+    },
+    "sources/arxiv-2303.17651-v2--v2.md": {
+      "kind": "source",
+      "sha256": "0a50ec6372cf74f840d3b4d5b25263160ed21fcc6da234395ab7e7534195158b"
+    },
+    "sources/arxiv-2302.02676-v8--v8.md": {
+      "kind": "source",
+      "sha256": "54f7ed991b6103b0d637a17220d786acdfdc6e92034b811faddf73d239bcd303"
+    },
+    "sources/arxiv-2303.11366-v4--v4.md": {
+      "kind": "source",
+      "sha256": "0f9f2427669438ee837353c0fde7db92a70b82677f5c4a754fde1128ca0dbb7e"
+    },
+    "sources/arxiv-2405.03845-v1--v1.md": {
+      "kind": "source",
+      "sha256": "21aa665282009cd89e86653c63557a0466596de23cf57acbeae5e0159fa71df2"
+    },
+    "sources/arxiv-2405.17346-v1--v1.md": {
+      "kind": "source",
+      "sha256": "2dcfc58e4f1a54d5550e1b66b568aac65e0d90a662e3b67bed6ff855f5e87b6f"
+    },
+    "sources/arxiv-2406.11695-v2--v2.md": {
+      "kind": "source",
+      "sha256": "4478fe1aea95d84c2c4023352324fa22ee240c6a1a9aee7a10add18721b5d1a2"
+    },
+    "sources/arxiv-2410.02748-v3--v3.md": {
+      "kind": "source",
+      "sha256": "25be92bb1ca7a15752ffa75a1fb5306fa70dcf5606673cf49865bb1e9725c882"
+    },
+    "sources/arxiv-2412.19684-v2--v2.md": {
+      "kind": "source",
+      "sha256": "36fb1ecee2c467b1b5c4536700dc84290fe4aba5baefd81a188484a69ffbdb17"
+    },
+    "sources/arxiv-2605.16233-v1--v1.md": {
+      "kind": "source",
+      "sha256": "5db745f928e320214fb01d6b4eda5f96771c1fd6bc16d9520fe1f5ba68d3613f"
+    },
+    "sources/arxiv-2309.16797-v1--v1.md": {
+      "kind": "source",
+      "sha256": "8c11529b0406f1597d19bce54c7a5909f86e28cf9d2e00fc9bebf312dcd61f00"
+    },
+    "sources/arxiv-2309.08532-v3--v3.md": {
+      "kind": "source",
+      "sha256": "47906b35c409b3abcf8db448b486b4218e3d7c3c1c64981e027a3313590d6032"
+    },
+    "sources/arxiv-2304.12244-v3--v3.md": {
+      "kind": "source",
+      "sha256": "a681ca104bd6459fb2f8647b63a28c84c2f6a67d113e8c6120166b187a486e15"
+    },
+    "sources/arxiv-2506.00178-v2--v2.md": {
+      "kind": "source",
+      "sha256": "be66378d382cf23eff42d7d9d4bd53eb664cef7c6bbf4b290fea48bbb84f8dc7"
+    },
+    "sources/arxiv-2510.18257-v1--v1.md": {
+      "kind": "source",
+      "sha256": "5ecea97842f657164fc3684a7276e88e3964f5432a1273ec9ffc2b2ef2b8c14c"
+    },
+    "sources/arxiv-2510.21148-v1--v1.md": {
+      "kind": "source",
+      "sha256": "139f708575aa73fd40e2445100a6b078b623df337635f17d23f57717ddbf209e"
+    },
+    "sources/arxiv-2305.03495-v2--v2.md": {
+      "kind": "source",
+      "sha256": "f826eae48f42428a6bcd39a61525593a426058ec57e7a9729e169eebc1785ae0"
+    },
+    "sources/arxiv-2412.03624-v1--v1.md": {
+      "kind": "source",
+      "sha256": "46a8cda188af699291f5826774423e98adfdab01e45cab46925f61b8ea758242"
+    },
+    "sources/arxiv-2406.16218-v2--v2.md": {
+      "kind": "source",
+      "sha256": "7e3923c04755d618fb3abd9e7fdb88ad72c7d79728f1f0d5ae0912b3014dfb65"
+    },
+    "sources/arxiv-2406.07496-v1--v1.md": {
+      "kind": "source",
+      "sha256": "afb5191c51bbdc727960ecd44d6335791fc246ba766a8b2e56bc61800d9b0d9c"
+    },
+    "sources/arxiv-2505.18524-v2--v2.md": {
+      "kind": "source",
+      "sha256": "7debc530e181ef23e7884c77c387f08430da3516c5f0449b947516f5a3229bce"
+    },
+    "sources/arxiv-2506.00400-v4--v4.md": {
+      "kind": "source",
+      "sha256": "cc62f0e11dc2f17047bf267398e6bff08ddc360b17816d5f0e848118f2ea0f42"
+    },
+    "sources/arxiv-2606.05395-v1--v1.md": {
+      "kind": "source",
+      "sha256": "c0e851fd435f538c6eb028bf861690788ef8d1d2912b80deac8f77dd56faf004"
+    },
+    "sources/arxiv-2604.20714-v1--v1.md": {
+      "kind": "source",
+      "sha256": "f64584c98b6530927d7df701ee9b48a995089b04808614222069295e84ea3078"
+    },
+    "sources/arxiv-2604.00830-v3--v3.md": {
+      "kind": "source",
+      "sha256": "c46f0c7047d3072a334f17f1934a5b0c079dd9b5923683729f4d91c565584146"
+    },
+    "sources/arxiv-2305.00833-v2--v2.md": {
+      "kind": "source",
+      "sha256": "7088a2cd1acccfd6c618d1a0bec2a388d9a7b0a0039ab1fe446dedf4c7049aac"
+    },
+    "sources/arxiv-2308.10144-v3--v3.md": {
+      "kind": "source",
+      "sha256": "7e79a18b4c5496f57cc6ff56007ff66554aac57e213ca97e5d6bdd19b4117d13"
+    },
+    "sources/arxiv-2402.09727-v3--v3.md": {
+      "kind": "source",
+      "sha256": "ec0eb39f8f6d6c03d2338802526323210a663987c183b635b895a35cc9aaef1c"
+    },
+    "sources/arxiv-2401.07339-v2--v2.md": {
+      "kind": "source",
+      "sha256": "b7375020b6a2a8ad8190461fe955c539d1f20bf9641136d3b268331d74627107"
+    },
+    "sources/arxiv-2402.04624-v2--v2.md": {
+      "kind": "source",
+      "sha256": "0132001cc951a808e4dc03a0d972cb353d43f24c4a918ccac3bb19862128482a"
+    },
+    "sources/arxiv-2409.07429-v1--v1.md": {
+      "kind": "source",
+      "sha256": "da096adf46d50dbe4314379ce6f2b188cad67951b9c01f1b4068fab7d908f22b"
+    },
+    "sources/arxiv-2509.25140-v2--v2.md": {
+      "kind": "source",
+      "sha256": "2c5d47dc9233332e7a5bd918e305889540531d7dbcf5e50ac4619ccbeded8fd9"
+    },
+    "sources/arxiv-2508.09736-v4--v4.md": {
+      "kind": "source",
+      "sha256": "442432c39e3b66104607f064d9bfde7ce77e5216319c2cd995b929d82bc6674b"
+    },
+    "sources/arxiv-2509.22315-v3--v3.md": {
+      "kind": "source",
+      "sha256": "87852ccd85278661b2576c48d46f78cf410c348642aa3c95d4ff08502c6dbe0d"
+    },
+    "sources/arxiv-2509.24704-v2--v2.md": {
+      "kind": "source",
+      "sha256": "827aa0ca29bde4559eba5535cb6baa4b84c5fa779c4a194d456ae5d6291f24c5"
+    },
+    "sources/arxiv-2502.00592-v2--v2.md": {
+      "kind": "source",
+      "sha256": "c82f7b1918c2bfb4e5a38db144082a7fa5e06ee8734746fe0c65848f8c2b5fc3"
+    },
+    "sources/arxiv-2604.12231-v1--v1.md": {
+      "kind": "source",
+      "sha256": "42c373c025ae70b1e98cfc465d4c098aa23d85a7f4428753546d64fb9f0ce313"
+    },
+    "sources/arxiv-2606.02215-v1--v1.md": {
+      "kind": "source",
+      "sha256": "3eddb28ac58dee58f0c34176e7b1a70a79d5baf3af1a4208a6f38ef05d662e5e"
+    },
+    "sources/arxiv-2606.24177-v1--v1.md": {
+      "kind": "source",
+      "sha256": "1b3451f3faf16c0a547f74d9ce0a65a33185461f2208476f8e2d9c8cbaddb4f5"
+    },
+    "sources/arxiv-2207.07115-v2--v2.md": {
+      "kind": "source",
+      "sha256": "e98207af27ec3f9e0b46c7bf7e0723bc6dfe65bf1807ee5d99dd5731f5914dd2"
+    },
+    "sources/arxiv-2305.10250-v3--v3.md": {
+      "kind": "source",
+      "sha256": "14d7c61fb73b8be36901e7ae69e7786fb58aa3688e562c74a06d0890e7e026e5"
+    },
+    "sources/arxiv-2307.16449-v4--v4.md": {
+      "kind": "source",
+      "sha256": "d8ddce0c30145f372ac081fdb4c6b5a082fdae8d1457242a6aca2d03be03ce24"
+    },
+    "sources/arxiv-2312.03003-v3--v3.md": {
+      "kind": "source",
+      "sha256": "d00c5ef5bda9dff92a4e71aa66ed38da2aedbd1b79f8e3de4e45a154d06ed0b8"
+    },
+    "sources/arxiv-2304.13343-v4--v4.md": {
+      "kind": "source",
+      "sha256": "24ef7cf029ed709363e1a4b24465209c9c5d5baa78f63dbdd8b75eb67b17e3ae"
+    },
+    "sources/arxiv-2507.22925-v1--v1.md": {
+      "kind": "source",
+      "sha256": "c8f96deed2392f4c0f79c2c3dfde2f042b47df1f492fbc06a21c759da11fc0ea"
+    },
+    "sources/arxiv-2505.09081-v2--v2.md": {
+      "kind": "source",
+      "sha256": "ad31e8e54104cc16977dac0b406f10b17540e67570b809e04d2fe1d17f16832b"
+    },
+    "sources/arxiv-2504.19413-v1--v1.md": {
+      "kind": "source",
+      "sha256": "1cec9e78368a3e212cca5b4c17c4beaae88ed90ddaf52401156d122a386cc843"
+    },
+    "sources/arxiv-2506.07398-v2--v2.md": {
+      "kind": "source",
+      "sha256": "cfb8dbfeba9f2c797ecf5bd4e2ecc8cd158686d865e1ce0e8930710506f4b28b"
+    },
+    "sources/arxiv-2501.13956-v1--v1.md": {
+      "kind": "source",
+      "sha256": "343b4afc19c9f3605a8e50dd8236ea84a6ba71c23a0c5a49ed1bf1593d1ee20e"
+    },
+    "sources/arxiv-2509.21212-v1--v1.md": {
+      "kind": "source",
+      "sha256": "c91d680db2d4c77b359859d2379712deb62c53284cbeb06b5fc030e100c3830a"
+    },
+    "sources/arxiv-2503.19878-v3--v3.md": {
+      "kind": "source",
+      "sha256": "5d6b77b14980a0114d15ef8eb32796258436d1928aa70768936c8843893c8c7d"
+    },
+    "sources/arxiv-2504.06135-v1--v1.md": {
+      "kind": "source",
+      "sha256": "214d7eb03bcc28897a8fee283ca6496d97f28161c3ffbfdba2de8b21a4067c19"
+    },
+    "sources/arxiv-2505.23422-v1--v1.md": {
+      "kind": "source",
+      "sha256": "cb345003a5b4c1982d3967469c53614ca179a163882b6e2602422c63bd71d57f"
+    },
+    "sources/arxiv-2503.08026-v2--v2.md": {
+      "kind": "source",
+      "sha256": "43b1018299c6db1c836a5dcea65d3daa605bc1407721a9b032e16a12224bf563"
+    },
+    "sources/arxiv-2605.13941-v1--v1.md": {
+      "kind": "source",
+      "sha256": "3451c2c028bd85a01b095bbbf7b9265b3c4d697b89ee6cece3c04ec1a1b84ad8"
+    },
+    "sources/arxiv-2605.12061-v1--v1.md": {
+      "kind": "source",
+      "sha256": "9f789c409249e7468bb089f46bc81e204d20264013b2521f50b5998ad192f12c"
+    },
+    "sources/arxiv-2604.19795-v1--v1.md": {
+      "kind": "source",
+      "sha256": "f4a9bd1e09b254435aecdac0321ae4c5fdc4ddfbcb04e62f79dfe3651055ea32"
+    },
+    "sources/arxiv-2605.22721-v1--v1.md": {
+      "kind": "source",
+      "sha256": "ce0d0aa6d2eecca1b9a441e77805925bafc7bf68307479b6d96027792f69f700"
+    },
+    "sources/arxiv-2605.17721-v1--v1.md": {
+      "kind": "source",
+      "sha256": "6f47d8725818c464474234792b8d17821c0d753fbdea0ac06565c7d89a4e8ed7"
+    },
+    "sources/arxiv-2603.15421-v2--v2.md": {
+      "kind": "source",
+      "sha256": "dfb3b2fb1d20d5ae4adce05fefeab77e188aad3e73a0fe39e5f26e6c10874036"
+    },
+    "sources/arxiv-2304.03442-v2--v2.md": {
+      "kind": "source",
+      "sha256": "500e44cc244179b0a504ef732e5412db2909d98631abef035993b1bcd0f10bb1"
+    },
+    "sources/arxiv-2509.09498-v3--v3.md": {
+      "kind": "source",
+      "sha256": "14aaee3040820958a63aa7ccf37d33baae4c14fb055fb19d7661628c98b46d8b"
+    },
+    "sources/arxiv-2503.21760-v2--v2.md": {
+      "kind": "source",
+      "sha256": "92585e8ce9a11c74aa4a99c5a7cb3a32335f072d0e9f5b4d84d2ac0d09da43eb"
+    },
+    "sources/arxiv-2502.12110-v11--v11.md": {
+      "kind": "source",
+      "sha256": "b8eaf2f4ba9536a0fe0be69221f93fe75203d14b949f31a6d07d57ffa962ae42"
+    },
+    "sources/arxiv-2501.09136-v4--v4.md": {
+      "kind": "source",
+      "sha256": "ed30049d0ebc1bbfc3670634a16281dc653d197c89d57a37cff5086ab64051d6"
+    },
+    "sources/arxiv-2506.06326-v1--v1.md": {
+      "kind": "source",
+      "sha256": "33299c676a6900b1d105d65d3c96903b0ea35c884718a90dafbaaeb03c7a5626"
+    },
+    "sources/arxiv-2504.07952-v1--v1.md": {
+      "kind": "source",
+      "sha256": "bccdbe83849905a04f7c2616927b7bf959f8b8fa6bd536a4916fc9bdfaa4b338"
+    },
+    "sources/arxiv-2507.20215-v1--v1.md": {
+      "kind": "source",
+      "sha256": "5facb0027fafe92abc5f45bee06110a186368f37aee2fdf0588c015f0701c73c"
+    },
+    "sources/arxiv-2608.20920-v2--v2.md": {
+      "kind": "source",
+      "sha256": "e24a86bce9ec5df43f4d8f36595d90748290c1dc32b7ed54d4b5d66e2d7fb8b8"
+    },
+    "sources/arxiv-2601.03192-v2--v2.md": {
+      "kind": "source",
+      "sha256": "295da2390d059d53b5b525b3864d3a6f8fa7cbb8e9b9ecc1bf7ce91a686b1b77"
+    },
+    "sources/arxiv-2606.04536-v1--v1.md": {
+      "kind": "source",
+      "sha256": "2f3aafe9f7214d6d820b5e6d775f014572c50d3177c21e631ab13469cd41f9d0"
+    },
+    "sources/arxiv-2605.08374-v3--v3.md": {
+      "kind": "source",
+      "sha256": "3aae1594ddb5585961c3bbae0f6bb5522e5384037752ec40f72872c4c5eb5165"
+    },
+    "sources/arxiv-2606.09483-v1--v1.md": {
+      "kind": "source",
+      "sha256": "a9cd3fb5aa17b75e888e2de2c0ac3da33527dd07f72b4bbe697afa023ca2937e"
+    },
+    "sources/arxiv-2604.21725-v2--v2.md": {
+      "kind": "source",
+      "sha256": "35e2a30618e61733e4bade8179b6ec784e5aba31c4bda0b17083e551227c87e0"
+    },
+    "sources/arxiv-2606.24151-v1--v1.md": {
+      "kind": "source",
+      "sha256": "550a22d18549659f73bb0b8e2d01fc57f4a531a1378f59a695408301e7674788"
+    },
+    "sources/arxiv-2604.10923-v1--v1.md": {
+      "kind": "source",
+      "sha256": "f63fe476be392b168240bd247c223654ed38e92ac4a3b0839fa29c8bbe1204bd"
+    },
+    "sources/arxiv-2305.16291-v2--v2.md": {
+      "kind": "source",
+      "sha256": "001d474c869715dfab6d3a7e86e2a4449d713a1ffe6a8ac7104bec8859fef777"
+    },
+    "sources/arxiv-2403.00839-v1--v1.md": {
+      "kind": "source",
+      "sha256": "1c856935d8471955059f1fd9d54fd671675af6d74f1e28ff7ab44793bd55f561"
+    },
+    "sources/arxiv-2506.12508-v6--v6.md": {
+      "kind": "source",
+      "sha256": "2db67f64b30979e1d845eb7d8d58c243a63aedd5a4e630544f8f53ebfe62e073"
+    },
+    "sources/arxiv-2508.00271-v2--v2.md": {
+      "kind": "source",
+      "sha256": "1893c3a710e8ab5e4503b415f91db5f7fec3c66a8b926f41bcfc49b041d8079d"
+    },
+    "sources/arxiv-2510.24663-v1--v1.md": {
+      "kind": "source",
+      "sha256": "a516ee3d96bbc60bd5fd33a966b0f633a62b4b73ae9a58e60ac1dc019cffa4ef"
+    },
+    "sources/arxiv-2507.21836-v1--v1.md": {
+      "kind": "source",
+      "sha256": "4fa16d45bc14c5ea56a1b0539932fb100271330adde0ba57bb0ad071da41516c"
+    },
+    "sources/arxiv-2510.24284-v3--v3.md": {
+      "kind": "source",
+      "sha256": "6ae3544ffd7369acfe6d8d2627751669e33672be4ad03ba7034196c9ab75a75e"
+    },
+    "sources/arxiv-2510.05592-v2--v2.md": {
+      "kind": "source",
+      "sha256": "2774fed2897a31bbd905e4cafef971d108413b5604c8484fc2c4287c9f4173bd"
+    },
+    "sources/arxiv-2507.00487-v2--v2.md": {
+      "kind": "source",
+      "sha256": "00f431a7c21c54850eee4fa9313fa000cbf7822a7540aaf48d47072b3a1c9f54"
+    },
+    "sources/arxiv-2506.01056-v4--v4.md": {
+      "kind": "source",
+      "sha256": "636d67fd8e237a3c0224e3d866106047e243ffee0487b7f7149721f883de1d6b"
+    },
+    "sources/arxiv-2503.01940-v2--v2.md": {
+      "kind": "source",
+      "sha256": "ed960cec76f24fd54d3ec5ac80651e17d9f199bfeb3401ad1cc28f3504cf6432"
+    },
+    "sources/arxiv-2507.21428-v1--v1.md": {
+      "kind": "source",
+      "sha256": "6c61ef8649535354346482aec506d74835f46ee7cd202fd34230004ed8475d34"
+    },
+    "sources/arxiv-2406.03807-v4--v4.md": {
+      "kind": "source",
+      "sha256": "bffc7d1e5ba5c3142d46d8d7df710d7ad9a2341638b64e90f5373bdf69b6de3c"
+    },
+    "sources/arxiv-2511.01854-v2--v2.md": {
+      "kind": "source",
+      "sha256": "efe0ec6ceb9e0a6616a9cc6f5a6efa44b2c21ae9001288a4d453a48022a6247b"
+    },
+    "sources/arxiv-2410.03439-v3--v3.md": {
+      "kind": "source",
+      "sha256": "79995b2ef1036b7d47d7615c258de5d42c75d48b5160e0f953038e1465c19a57"
+    },
+    "sources/arxiv-2504.01400-v3--v3.md": {
+      "kind": "source",
+      "sha256": "6eb78ffda5d1431eec160dc572feca9af90a60b418d2d857738be72a06f01cd7"
+    },
+    "sources/arxiv-2510.21618-v3--v3.md": {
+      "kind": "source",
+      "sha256": "060d6de61f0df8063de70dacd9423432a3627a1db1b8393b81db609cc56e7b94"
+    },
+    "sources/arxiv-2511.05271-v4--v4.md": {
+      "kind": "source",
+      "sha256": "a273aa81169bad25d6678e6173b7876c80ac2805f656348345c12defc61a0eea"
+    },
+    "sources/arxiv-2604.17091-v1--v1.md": {
+      "kind": "source",
+      "sha256": "d304570cb2f4bb9c28eda505cbab037435a62ac865cf72b8a37bf4b1d855bfc9"
+    },
+    "sources/arxiv-2507.02004-v1--v1.md": {
+      "kind": "source",
+      "sha256": "d3afe3406e91caef70b38b828b66775fb8d09c898bbb1c1ac47c3830bcaf2c0b"
+    },
+    "sources/arxiv-2504.07079-v1--v1.md": {
+      "kind": "source",
+      "sha256": "b565572df16b566f718b4d168a8ea1d97c45af74761090e679671d011a024f40"
+    },
+    "sources/arxiv-2507.07998-v3--v3.md": {
+      "kind": "source",
+      "sha256": "df845c460d49ba9c30377a2989d138b830917fad6bb70432e42fb63a110aa3b4"
+    },
+    "sources/arxiv-2410.08197-v2--v2.md": {
+      "kind": "source",
+      "sha256": "7ac0ed296da6bbebbd702afed7fbe487aa365177dfed6d5716b04f7c33d65e37"
+    },
+    "sources/arxiv-2412.14841-v2--v2.md": {
+      "kind": "source",
+      "sha256": "09484a6f023d3484e9ba223cb5442408491a411c8f5b5293b91de3e9aa5eda81"
+    },
+    "sources/arxiv-2605.08703-v1--v1.md": {
+      "kind": "source",
+      "sha256": "2bc9f30ee10f1dc6750fc5841c30c664d8a4688564c1f0fcce5e4f9e5d023ebc"
+    },
+    "sources/arxiv-2605.27366-v2--v2.md": {
+      "kind": "source",
+      "sha256": "d82f228cf10b073c49e24457227635125798152d8d2ec17c5da0bcc167dd71ed"
+    },
+    "sources/arxiv-2605.25430-v1--v1.md": {
+      "kind": "source",
+      "sha256": "9105f218606735e54371ac146ddaadb1568125945a8f73766ca22543d4a6d23d"
+    },
+    "sources/arxiv-2604.10846-v1--v1.md": {
+      "kind": "source",
+      "sha256": "06a15343b651419511e07788f097db50c3e638cd062c662d05851037fa3b52d3"
+    },
+    "sources/arxiv-2305.17126-v2--v2.md": {
+      "kind": "source",
+      "sha256": "562e86178fa53ff4f33a9c0fd850fae2d4d7a29b6236ca13a32ee33b88fd79d3"
+    },
+    "sources/arxiv-2402.07456-v2--v2.md": {
+      "kind": "source",
+      "sha256": "ad4a848d4b631349bfc930d832a2cef9ced4daef9accb698e537a888fee81142"
+    },
+    "sources/arxiv-2505.20286-v1--v1.md": {
+      "kind": "source",
+      "sha256": "f7dc9fe3c6b1fe2f64fee620b7d1cbd782ce36db376ddb87e234250ac22ac520"
+    },
+    "sources/arxiv-2510.23601-v1--v1.md": {
+      "kind": "source",
+      "sha256": "055a2e7f28bf79d7069a6128e4d7672f5c4d6e328dad3591ec2f8918fa0b0ec2"
+    },
+    "sources/arxiv-2502.11705-v2--v2.md": {
+      "kind": "source",
+      "sha256": "3aa731991f657c5fdb49cf30d96db2d0936cbd0445946c0a7110015a6fc86499"
+    },
+    "sources/arxiv-2503.10071-v1--v1.md": {
+      "kind": "source",
+      "sha256": "e0bc21539f76a75e70090187523756a428ae9a10926bd245bb714cb3285c0395"
+    },
+    "sources/arxiv-2509.05941-v4--v4.md": {
+      "kind": "source",
+      "sha256": "de9232d039660598e1e00c7db15777cdfa62c1bb9e017c816754167d22385b9e"
+    },
+    "sources/arxiv-2312.17294-v3--v3.md": {
+      "kind": "source",
+      "sha256": "e14a6c00674cf69673ebe36c8c7c88b3468ebb7ead812d4a2665f60e882c85b1"
+    },
+    "sources/arxiv-2606.06741-v1--v1.md": {
+      "kind": "source",
+      "sha256": "c4f53a4fe3113a89b7bcd1f7f1d0860723378c469060d589e98b471da8c15034"
+    },
+    "sources/arxiv-2606.03841-v1--v1.md": {
+      "kind": "source",
+      "sha256": "5f577dfef9cea53bb21235228a65cee41911178b777cf5145e6152d5b8fd8f28"
+    },
+    "sources/arxiv-2604.15082-v1--v1.md": {
+      "kind": "source",
+      "sha256": "678284a679c33cae385c16c8249f1067dc2375a032478695008b51e14b805bf6"
+    },
+    "sources/arxiv-2604.01687-v3--v3.md": {
+      "kind": "source",
+      "sha256": "8bffd9c350ee2e52082c62fa3c8c6d2243043007efa23e22aeed6403b22bcbaa"
+    },
+    "sources/arxiv-2402.16823-v3--v3.md": {
+      "kind": "source",
+      "sha256": "64883848a9ce35e7bcdef104e3db0d263c587fcc2a36783587fba9f0cabc0ed6"
+    },
+    "sources/arxiv-2410.04444-v4--v4.md": {
+      "kind": "source",
+      "sha256": "91d89a1cd59b653ffcea7f10e0ce079bc44db30b853f77b8caff144c2d35655d"
+    },
+    "sources/arxiv-2408.08435-v2--v2.md": {
+      "kind": "source",
+      "sha256": "b163eb12e7ec0f2fd43dacb86bfb49a4d13ed1129dafb356be77be3bde956f7d"
+    },
+    "sources/arxiv-2406.18532-v1--v1.md": {
+      "kind": "source",
+      "sha256": "9aac317520531b295efe80d9330f0d5b2db555dff00eda2c23a90ef2ce35e4b0"
+    },
+    "sources/arxiv-2505.22954-v3--v3.md": {
+      "kind": "source",
+      "sha256": "38651d518d44c8ef4d680ce0cf5a6c7893667f9ffda714840d2c8c56a99326e6"
+    },
+    "sources/arxiv-2510.21614-v3--v3.md": {
+      "kind": "source",
+      "sha256": "d606fc95cfad20e61373188007be97b220e07c2f942d7bf539db44382f638022"
+    },
+    "sources/arxiv-2509.19349-v1--v1.md": {
+      "kind": "source",
+      "sha256": "ef090e0ce7969c1ff155433380609e9e76b342b607afb5cd3ab34e86f81a0e08"
+    },
+    "sources/arxiv-2511.13646-v3--v3.md": {
+      "kind": "source",
+      "sha256": "ed124a9aec978bbf1db111a706c4e54db4a6794c5bdbb14b2942ed6c9e8d04dc"
+    },
+    "sources/arxiv-2601.04620-v1--v1.md": {
+      "kind": "source",
+      "sha256": "aaf9b2dd7deabe2e8c6626af51199b9145bc9331f976048ef11bcdbb21d1f06c"
+    },
+    "sources/arxiv-2601.07477-v2--v2.md": {
+      "kind": "source",
+      "sha256": "f3918d33d4b118373f1c0314d0ec96ade6a87a33200074c3c6db989dea0598fe"
+    },
+    "sources/arxiv-2601.01126-v2--v2.md": {
+      "kind": "source",
+      "sha256": "889015ff66ca50da94dcc08595ddf1f29f3253a141358070f6621351b6945e01"
+    },
+    "sources/arxiv-2602.04837-v1--v1.md": {
+      "kind": "source",
+      "sha256": "f26eda90c01fddff2ba44925a4fd4f400478f50eb98cce91c442c032fcf2a6b0"
+    },
+    "sources/arxiv-2603.19461-v1--v1.md": {
+      "kind": "source",
+      "sha256": "3a4647394215929cbfc4cd42b3b565b7be206750280bfe455939a59d7e654311"
+    },
+    "sources/arxiv-2604.01658-v3--v3.md": {
+      "kind": "source",
+      "sha256": "965fe15238c5cbef1e09d0586e80d42d536f2bb48778153405937d0bdbba579b"
+    },
+    "sources/arxiv-2606.01770-v2--v2.md": {
+      "kind": "source",
+      "sha256": "564fc3a34e22a460c4a4f18231fa990efaee4c47cf3d573a076e81b791839328"
+    },
+    "sources/arxiv-2605.22794-v2--v2.md": {
+      "kind": "source",
+      "sha256": "90c69e66b5e7e19a122a02c6a5416a9d396b4593b8e04d3619954abdf7b3ebef"
+    },
+    "sources/arxiv-2606.28374-v1--v1.md": {
+      "kind": "source",
+      "sha256": "f6f3602d46ad3eac738e76e96c95b0768dff72615bf010231e4004456767505b"
+    },
+    "sources/arxiv-2605.09998-v1--v1.md": {
+      "kind": "source",
+      "sha256": "6bdfd8d5e045467881308f7792efbca29d8b51a33e20cf614a3472e0ff6e2e0b"
+    },
+    "sources/arxiv-2608.05144-v2--v2.md": {
+      "kind": "source",
+      "sha256": "3c6c540bb272585088ba02e82a0f4f2ea3eeeec1ec935660f5d66426a93590ca"
+    },
+    "sources/arxiv-2606.26294-v2--v2.md": {
+      "kind": "source",
+      "sha256": "7c94c4b22da578869d9cdc57054325858d5e6296c6bd687282c4bc6658251e48"
+    },
+    "sources/arxiv-2608.02276-v1--v1.md": {
+      "kind": "source",
+      "sha256": "044de67489f2f4d26ff750eb36ff49739126992108a6693d6386d8069ccf2fbb"
+    },
+    "sources/arxiv-2606.15874-v2--v2.md": {
+      "kind": "source",
+      "sha256": "ca8a668bb55dc1dcac194f2db63d3c9bd44dad6d8521b7d8c832e814d8ce23d1"
+    },
+    "sources/arxiv-2608.08311-v3--v3.md": {
+      "kind": "source",
+      "sha256": "aded36417fb67b7ac748acefe5c43f90bdb80ad080350292096726f39727d12a"
+    },
+    "sources/arxiv-2607.13285-v1--v1.md": {
+      "kind": "source",
+      "sha256": "f9f3a5e4c25e1883b346abdc7648bfea20e9fd2dd637f145939de813a68a5dd0"
+    },
+    "sources/arxiv-2608.24735-v1--v1.md": {
+      "kind": "source",
+      "sha256": "92d57d3622557bcb1c76cd9cca320ccb7f4ad9073ee5b5d85b7143931b45fb02"
+    },
+    "sources/arxiv-2609.05903-v1--v1.md": {
+      "kind": "source",
+      "sha256": "09ad04dae83bcbaa5a20e3a80ba166713738793b08b5fcb6185356aa356c2dff"
+    },
+    "sources/arxiv-2306.06070-v3--v3.md": {
+      "kind": "source",
+      "sha256": "19c849e7bbac4f7038ce291868f84bbdbdbbf4ff29f4ec1071555fe257ecdb22"
+    },
+    "sources/arxiv-2410.06992-v2--v2.md": {
+      "kind": "source",
+      "sha256": "23497bbfe7329f23de297d1b91d15662beaa574b44c906b40eefacdecb6a0696"
+    },
+    "sources/arxiv-2406.04151-v1--v1.md": {
+      "kind": "source",
+      "sha256": "d04b349eea6784386adfd87be92ee6d3a80de1a9d67164839f7f4065d9075b29"
+    },
+    "sources/arxiv-2508.18993-v2--v2.md": {
+      "kind": "source",
+      "sha256": "7844f5f86921fd57a1ad88dcedfd3967cf629a96b88e965ad4057a1b49789019"
+    },
+    "sources/arxiv-2412.13178-v5--v5.md": {
+      "kind": "source",
+      "sha256": "087a32b244c021ba962f3e070d2f26f6de1eb93b725a2f301d707dfc0876a5a1"
+    },
+    "sources/arxiv-2503.23804-v3--v3.md": {
+      "kind": "source",
+      "sha256": "2ce42aab5586a673d4e1212abe0d2cac96d57df51d635f1376739ab76de0548a"
+    },
+    "sources/arxiv-2601.08613-v1--v1.md": {
+      "kind": "source",
+      "sha256": "09ee50080ed7c426cbe8457fe4b8f38c281c2dc91ebe1ba27b4b063bcd2e4d3a"
+    },
+    "sources/arxiv-2410.10934-v2--v2.md": {
+      "kind": "source",
+      "sha256": "4257f05e6eafe6c75ff10bf896318014e3533492763d5d4024444944099238cf"
+    },
+    "sources/arxiv-2311.18760-v4--v4.md": {
+      "kind": "source",
+      "sha256": "b362b7b8a9b38b135bc4754cfeaf56f3fa51d755cb21a91b5d52a2ba46c73d38"
+    },
+    "sources/arxiv-2310.03128-v6--v6.md": {
+      "kind": "source",
+      "sha256": "1b13ea9c7406470d86a3770d3fb84bd212ff07f08b4a0642751dc894e9d30581"
+    },
+    "sources/arxiv-2608.04003-v1--v1.md": {
+      "kind": "source",
+      "sha256": "dc3247b7906a5cca1e86d953d3e9d3848a8b209e45a72f88a0cee5a90f124c84"
+    },
+    "sources/arxiv-2412.02883-v1--v1.md": {
+      "kind": "source",
+      "sha256": "11ee3a4cebf7c8c8e40b794af9f462184881e4cedac826b917550095659689a5"
+    },
+    "sources/arxiv-2511.13998-v1--v1.md": {
+      "kind": "source",
+      "sha256": "3b71358feae2c27743db472169af2c3c358c023fce8e23e425cf8314b9e1f14e"
+    },
+    "sources/arxiv-2406.12373-v3--v3.md": {
+      "kind": "source",
+      "sha256": "7dbffb11f69c4deb010d3c925a66b4b315983af27391ba6a351c314c619f6e70"
+    },
+    "sources/arxiv-2405.20859-v1--v1.md": {
+      "kind": "source",
+      "sha256": "3cbd138be77f3e3df3d68a539a655d5c01d259931c15b6aff78b9e426a076e42"
+    },
+    "sources/arxiv-2406.06613-v2--v2.md": {
+      "kind": "source",
+      "sha256": "30b87b736cfee07e2e29f60fcb197e1e84c8f4bd2e13d8a4edac7d1031f008e6"
+    },
+    "sources/arxiv-2402.12348-v2--v2.md": {
+      "kind": "source",
+      "sha256": "2a9df12d884f13e15105f8d0d2b99699df39e5641a55f3684a9937426921a5ca"
+    },
+    "sources/arxiv-2504.01848-v3--v3.md": {
+      "kind": "source",
+      "sha256": "43a938453017c40179b6b7b2f17a28d05997264f2f38e59394b551557d1c2b0c"
+    },
+    "sources/arxiv-2605.08678-v3--v3.md": {
+      "kind": "source",
+      "sha256": "eb5c0e3cf5e31d35eff1bf5c955242882407fbf6c4de6821760ac274e9ce3230"
+    },
+    "sources/arxiv-2404.07972-v2--v2.md": {
+      "kind": "source",
+      "sha256": "563a72df3f97ea89f96778a89be02d460433d6ef4fd3b2c17a2b547dc447ce2c"
+    },
+    "sources/arxiv-2609.14857-v1--v1.md": {
+      "kind": "source",
+      "sha256": "cf8f9dd43163a96f584a8720483308e76922d818305513b67732b2d257bb7294"
+    },
+    "sources/arxiv-2609.15195-v1--v1.md": {
+      "kind": "source",
+      "sha256": "e22209197aea239573bef6270d728d9c38ad3fbae3e96828ae1df6ff16e0a75d"
+    },
+    "sources/arxiv-2609.17320-v1--v1.md": {
+      "kind": "source",
+      "sha256": "7de0fb20a740f76f19a67547c2849fe9657e41a57f0b6be8f5517e228197097b"
+    },
+    "sources/arxiv-2609.11873-v2--v2.md": {
+      "kind": "source",
+      "sha256": "38a651aa70964cf6acc3b661ebc3fc30f449159e830dda61ff53e7ab0930a5b9"
+    },
+    "sources/arxiv-2609.15982-v1--v1.md": {
+      "kind": "source",
+      "sha256": "d6a7367eb07f4c0aabef7c313e4a5c87d17aac5f81377d70af386f45519e26f3"
+    },
+    "sources/arxiv-2609.17523-v1--v1.md": {
+      "kind": "source",
+      "sha256": "acfd7bf5ebaa174c69e3887623a9a6831956d5d4d89e47b2e356ab419295fa4b"
+    },
+    "sources/arxiv-2609.06986-v1--v1.md": {
+      "kind": "source",
+      "sha256": "2d1a93622f42ac8ba94309a665ad89c0fc2e6f1e09ca79ab583af72036cb02a6"
+    },
+    "sources/arxiv-2609.13463-v1--v1.md": {
+      "kind": "source",
+      "sha256": "7924ee0099f666b0c4e8ccf63272fc69ca1b6e64ad8e166ac11f6f8ac7095948"
+    },
+    "sources/arxiv-2609.15504-v1--v1.md": {
+      "kind": "source",
+      "sha256": "5628815a15fc1ca0f5293607021d458631cbdbc1279012351401fea73e6cd1df"
+    },
+    "sources/arxiv-2609.15863-v1--v1.md": {
+      "kind": "source",
+      "sha256": "7282a7804224e7a85ca8a6b23823d58aaafca2503c59a4eb0bb899cbacff23fc"
+    },
+    "sources/arxiv-2609.15364-v1--v1.md": {
+      "kind": "source",
+      "sha256": "320c2d55bf9bfe8c60b39400d8073aa669cecb3d80b1340c347f4fdf20c9a469"
+    },
+    "sources/arxiv-2609.15309-v1--v1.md": {
+      "kind": "source",
+      "sha256": "4b6d5fb8b9794d6bb8e8da5aed65efd60d0747d0e66a38c0df3e0133cc5e0441"
+    },
+    "sources/arxiv-2609.15973-v1--v1.md": {
+      "kind": "source",
+      "sha256": "5358a604e89e2783cea1e1133846a7bf4740ca99a4f4665e0258189961b90191"
+    },
+    "sources/arxiv-2609.15478-v1--v1.md": {
+      "kind": "source",
+      "sha256": "a0b5f776508c1f115bd26bc014fdd5ccf701c64bac1ef64e27d81eb511af2c4b"
     }
   },
   "imports": {
@@ -740,6 +1823,17 @@
         "concepts/procedural-graphs-as-local-hypothesis.md"
       ],
       "source_manifest_sha256": "990bccb1e2109b5a8d06ab932e21121b9931a266dadf8c37014ab72dbdcb7ac9"
+    },
+    "r6-evaluator-change-and-improvement-20260916": {
+      "sha256": "2548ea1d6a9b989fc11f82d576ef9956987d9ef51947ad5e47781a7a2af48b50",
+      "generated": {
+        "by": "codex/gpt-6",
+        "at": "2026-09-16T09:56:34Z"
+      },
+      "pages": [
+        "concepts/evaluator-change-and-improvement.md"
+      ],
+      "source_manifest_sha256": "ebac5a349d9dc5a562011fd1a7cdd83f1f24b8a10970267126d202f7c9941db0"
     }
   }
 }

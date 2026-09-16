@@ -9,7 +9,7 @@ tags:
 status: draft
 generated:
   by: process:rsi-source-registry
-  at: 2026-09-16T08:06:57.223Z
+  at: 2026-09-16T10:53:25.873Z
 sources:
   - id: ref-llms-v2-proposal-c079de9e
     resource: https://github.com/AnswerDotAI/llms-txt/blob/f5aed2aeab1df0ea11e49909a3af86739a09d9a3/nbs/index.qmd

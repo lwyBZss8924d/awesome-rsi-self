@@ -2,43 +2,299 @@
 
 ## Concepts
 
+- [XMem: Long-Term Video Object Segmentation with an Atkinson-Shiffrin Memory Model](arxiv-2207.07115-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Large Language Models Can Self-Improve](arxiv-2210.11610-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Large Language Models Are Human-Level Prompt Engineers](arxiv-2211.01910-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Constitutional AI: Harmlessness from AI Feedback](arxiv-2212.08073-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Self-Instruct: Aligning Language Models with Self-Generated Instructions](arxiv-2212.10560-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Chain of Hindsight Aligns Language Models with Feedback](arxiv-2302.02676-v8--v8.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Reflexion: Language Agents with Verbal Reinforcement Learning](arxiv-2303.11366-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Self-Refine: Iterative Refinement with Self-Feedback](arxiv-2303.17651-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Generative Agents: Interactive Simulacra of Human Behavior](arxiv-2304.03442-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [WizardLM: Empowering large pre-trained language models to follow complex instructions](arxiv-2304.12244-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SCM: Enhancing Large Language Model with Self-Controlled Memory Framework](arxiv-2304.13343-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Learning to Reason and Memorize with Self-Notes](arxiv-2305.00833-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Automatic Prompt Optimization with "Gradient Descent" and Beam Search](arxiv-2305.03495-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MemoryBank: Enhancing Large Language Models with Long-Term Memory](arxiv-2305.10250-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Language Models Meet World Models: Embodied Experiences Enhance Language Models](arxiv-2305.10626-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Voyager: An Open-Ended Embodied Agent with Large Language Models](arxiv-2305.16291-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Large Language Models as Tool Makers](arxiv-2305.17126-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Orca: Progressive Learning from Complex Explanation Traces of GPT-4](arxiv-2306.02707-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Mind2Web: Towards a Generalist Agent for the Web](arxiv-2306.06070-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation](arxiv-2306.11706-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MovieChat: From Dense Token to Sparse Memory for Long Video Understanding](arxiv-2307.16449-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [ExpeL: LLM Agents Are Experiential Learners](arxiv-2308.10144-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Large Language Models as Optimizers](arxiv-2309.03409-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [EvoPrompt: Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers](arxiv-2309.08532-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution](arxiv-2309.16797-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SELF: Self-Evolution with Language Feedback](arxiv-2310.00533-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MetaTool Benchmark for Large Language Models: Deciding Whether to Use Tools and Which to Use](arxiv-2310.03128-v6--v6.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [TaskBench: Benchmarking Large Language Models for Task Automation](arxiv-2311.18760-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Explore, Select, Derive, and Recall: Augmenting LLM with Human-like Memory for Mobile Task Automation](arxiv-2312.03003-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [ReST meets ReAct: Self-Improvement for Multi-Step Reasoning LLM Agent](arxiv-2312.10003-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Enhancing Open-Domain Task-Solving Capability of LLMs via Autonomous Tool Integration from GitHub](arxiv-2312.17294-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [CodeAgent: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges](arxiv-2401.07339-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MEMORYLLM: Towards Self-Updatable Large Language Models](arxiv-2402.04624-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [OS-Copilot: Towards Generalist Computer Agents with Self-Improvement](arxiv-2402.07456-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [PRompt Optimization in Multi-Step Tasks (PROMST): Integrating Human Feedback and Heuristic-based Sampling](arxiv-2402.08702-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts](arxiv-2402.09727-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [GTBench: Uncovering the Strategic Reasoning Limitations of LLMs via Game-Theoretic Evaluations](arxiv-2402.12348-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Language Agents as Optimizable Graphs](arxiv-2402.16823-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [ToolNet: Connecting Large Language Models with Massive Tools via Tool Graph](arxiv-2403.00839-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments](arxiv-2404.07972-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Self-Improving Customer Review Response Generation Based on LLMs](arxiv-2405.03845-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Agent Planning with World Knowledge Model](arxiv-2405.14205-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Prompt Optimization with Human Feedback](arxiv-2405.17346-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [clembench-2024: A Challenging, Dynamic, Complementary, Multilingual Benchmark and Underlying Flexible Framework for LLMs as Multi-Action Agents](arxiv-2405.20859-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Tool-Planner: Task Planning with Clusters across Multiple Tools](arxiv-2406.03807-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [AgentGym: Evolving Large Language Model-based Agents across Diverse Environments](arxiv-2406.04151-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [GameBench: Evaluating Strategic Reasoning Abilities of LLM Agents](arxiv-2406.06613-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [TextGrad: Automatic "Differentiation" via Text](arxiv-2406.07496-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs](arxiv-2406.11695-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [WebCanvas: Benchmarking Web Agents in Online Environments](arxiv-2406.12373-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Trace is the Next AutoDiff: Generative Optimization with Rich Feedback, Execution Traces, and LLMs](arxiv-2406.16218-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Symbolic Learning Enables Self-Evolving Agents](arxiv-2406.18532-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Prompt Refinement with Image Pivot for Text-to-Image Generation](arxiv-2407.00247-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SELF-GUIDE: Better Task-Specific Instruction Following via Self-Synthetic Finetuning](arxiv-2407.12874-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Automated Design of Agentic Systems](arxiv-2408.08435-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Agent Workflow Memory](arxiv-2409.07429-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Learning from Contrastive Prompts: Automated Optimization and Adaptation](arxiv-2409.15199-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [CriSPO: Multi-Aspect Critique-Suggestion-guided Automatic Prompt Optimization for Text Generation](arxiv-2410.02748-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [ToolGen: Unified Tool Retrieval and Calling via Generation](arxiv-2410.03439-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement](arxiv-2410.04444-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SWE-Bench+: Enhanced Coding Benchmark for LLMs](arxiv-2410.06992-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [From Exploration to Mastery: Enabling LLMs to Master Tools via Self-Driven Interactions](arxiv-2410.08197-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Agent-as-a-Judge: Evaluate Agents with Agents](arxiv-2410.10934-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation](arxiv-2410.13232-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Adapting While Learning: Grounding LLMs for Scientific Problems with Intelligent Tool Usage Adaptation](arxiv-2411.00412-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Self-Evolved Reward Learning for LLMs](arxiv-2411.00418-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning](arxiv-2411.02337-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Self-Consistency Preference Optimization](arxiv-2411.04109-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Understanding World or Predicting Future? A Comprehensive Survey of World Models](arxiv-2411.14499-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [TDD-Bench Verified: Can LLMs Generate Tests for Issues Before They Get Resolved?](arxiv-2412.02883-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [How to Correctly do Semantic Backpropagation on Language-based Agentic Systems](arxiv-2412.03624-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents](arxiv-2412.13178-v5--v5.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Helping LLMs Improve Code Generation Using Feedback from Testing and Static Analysis](arxiv-2412.14841-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Boosting Private Domain Understanding of Efficient MLLMs: A Tuning-free, Adaptive, Universal Prompt Optimization Framework](arxiv-2412.19684-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [DIVE: Diversified Iterative Self-Improvement](arxiv-2501.00747-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [The Prompt Alchemist: Automated LLM-Tailored Prompt Optimization for Test Case Generation](arxiv-2501.01329-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG](arxiv-2501.09136-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [GAWM: Global-Aware World Model for Multi-Agent Reinforcement Learning](arxiv-2501.10116-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Zep: A Temporal Knowledge Graph Architecture for Agent Memory](arxiv-2501.13956-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [M+: Extending MemoryLLM with Scalable Long-Term Memory](arxiv-2502.00592-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Adaptive Self-improvement LLM Agentic System for ML Library Development](arxiv-2502.02534-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [LLM Agents Making Agent Tools](arxiv-2502.11705-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [STRIVE: Structured Reasoning for Self-Improvement in Claim Verification](arxiv-2502.11959-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [A-MEM: Agentic Memory for LLM Agents](arxiv-2502.12110-v11--v11.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [LADDER: Self-Improving LLMs Through Recursive Problem Decomposition](arxiv-2503.00735-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [AskToAct: Enhancing LLMs Tool Use via Self-Correcting Clarification](arxiv-2503.01940-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Superficial Self-Improved Reasoners Benefit from Model Merging](arxiv-2503.02103-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [In Prospect and Retrospect: Reflective Memory Management for Long-term Personalized Dialogue Agents](arxiv-2503.08026-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Advanced Tool Learning and Selection System (ATLASS): A Closed-Loop Framework Using LLM](arxiv-2503.10071-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Will Pre-Training Ever End? A First Step Toward Next-Generation Foundation MLLMs via Self-Improving Systematic Cognition](arxiv-2503.12303-v6--v6.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [CausalRAG: Integrating Causal Graphs into Retrieval-Augmented Generation](arxiv-2503.19878-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MemInsight: Autonomous Memory Augmentation for LLM Agents](arxiv-2503.21760-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [CodeARC: Benchmarking Reasoning Capabilities of LLM Agents for Inductive Program Synthesis](arxiv-2503.23145-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [DrunkAgent: Stealthy Memory Corruption in LLM-Powered Recommender Agents](arxiv-2503.23804-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [ToolACE-R: Model-aware Iterative Training and Adaptive Refinement for Tool Learning](arxiv-2504.01400-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [PaperBench: Evaluating AI's Ability to Replicate AI Research](arxiv-2504.01848-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Beyond Accuracy: The Role of Calibration in Self-Improving Large Language Models](arxiv-2504.02902-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments](arxiv-2504.03160-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Right Question is Already Half the Answer: Fully Unsupervised LLM Reasoning Incentivization](arxiv-2504.05812-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Decentralizing AI Memory: SHIMI, a Semantic Hierarchical Memory Index for Scalable Agent Reasoning](arxiv-2504.06135-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SkillWeaver: Web Agents can Self-Improve by Discovering and Honing Skills](arxiv-2504.07079-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Dynamic Cheatsheet: Test-Time Learning with Adaptive Memory](arxiv-2504.07952-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [LLMs are Greedy Agents: Effects of RL Fine-tuning on Decision-Making Abilities](arxiv-2504.16078-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [TTRL: Test-Time Reinforcement Learning](arxiv-2504.16084-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](arxiv-2504.19413-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning](arxiv-2504.20073-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [WebEvolver: Enhancing Web Agent Self-Improvement with Coevolving World Model](arxiv-2504.21024-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Iterative Tool Usage Exploration for Multimodal Agents via Step-wise Preference Tuning](arxiv-2504.21561-v5--v5.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning](arxiv-2505.01441-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Improving Model Alignment Through Collective Intelligence of Open-Source LLMS](arxiv-2505.03059-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Self Rewarding Self Improving](arxiv-2505.08827-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [RLSR: Reinforcement Learning from Self Reward](arxiv-2505.08827-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SALM: A Multi-Agent Framework for Language Model-Driven Social Network Simulation](arxiv-2505.09081-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Self-Evolving Curriculum for LLM Reasoning](arxiv-2505.14970-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Tool-Star: Empowering LLM-Brained Multi-Tool Reasoner via Reinforcement Learning](arxiv-2505.16410-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [metaTextGrad: Automatically optimizing language model optimizers](arxiv-2505.18524-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Learning to Reason without External Rewards](arxiv-2505.19590-v5--v5.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Alita: Generalist Agent Enabling Scalable Agentic Reasoning with Minimal Predefinition and Maximal Self-Evolution](arxiv-2505.20286-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Can Large Reasoning Models Self-Train?](arxiv-2505.21444-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Reinforcing General Reasoning without Verifiers](arxiv-2505.21493-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [UI-Genie: A Self-Improving Approach for Iteratively Boosting MLLM-based Mobile GUI Agents](arxiv-2505.21496-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [First SFT, Second RL, Third UPT: Continual Improving Multi-Modal LLM Reasoning via Unsupervised Post-Training](arxiv-2505.22453-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Maximizing Confidence Alone Improves Reasoning](arxiv-2505.22660-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents](arxiv-2505.22954-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [From Knowledge to Noise: CTIM-Rover and the Pitfalls of Episodic Memory in Software Engineering Agents](arxiv-2505.23422-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Reflect, Retry, Reward: Self-Improving LLMs via Reinforcement Learning](arxiv-2505.24726-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Tournament of Prompts: Evolving LLM Instructions Through Structured Debates and Elo Ratings](arxiv-2506.00178-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Scaling Textual Gradients via Sampling-Based Momentum](arxiv-2506.00400-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MCP-Zero: Active Tool Discovery for Autonomous LLM Agents](arxiv-2506.01056-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [General agents contain world models](arxiv-2506.01622-v5--v5.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Sample, Predict, then Proceed: Self-Verification Sampling for Tool Use of LLMs](arxiv-2506.02918-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Memory OS of AI Agent](arxiv-2506.06326-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems](arxiv-2506.07398-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [TaskCraft: Automated Generation of Agentic Tasks](arxiv-2506.10055-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Self-Adapting Language Models](arxiv-2506.10943-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards](arxiv-2506.11425-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [AgentOrchestra: Orchestrating Multi-Agent Intelligence with the Tool-Environment-Agent(TEA) Protocol](arxiv-2506.12508-v6--v6.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [AlphaEvolve: A coding agent for scientific and algorithmic discovery](arxiv-2506.13131-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [NavMorph: A Self-Evolving World Model for Vision-and-Language Navigation in Continuous Environments](arxiv-2506.23468-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MassTool: A Multi-Task Search-Based Tool Retrieval Framework for Large Language Models](arxiv-2507.00487-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [STELLA: Self-Evolving LLM Agent for Biomedical Research](arxiv-2507.02004-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [WebSynthesis: World-Model-Guided MCTS for Efficient WebUI-Trajectory Synthesis](arxiv-2507.04370-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [PyVision: Agentic Vision with Dynamic Tooling](arxiv-2507.07998-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Self-Improving Language Models for Evolutionary Program Synthesis: A Case Study on ARC-AGI](arxiv-2507.14172-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](arxiv-2507.19457-v2--v2.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [MLC-Agent: Cognitive Model based on Memory-Learning Collaboration in LLM Empowered Agent Simulation Environment](arxiv-2507.20215-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MemTool: Optimizing Short-Term Memory Management for Dynamic Tool Calling in LLM Agent Multi-Turn Conversations](arxiv-2507.21428-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [AutoTIR: Autonomous Tools Integrated Reasoning via Reinforcement Learning](arxiv-2507.21836-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Hierarchical Memory for High-Efficiency Long-Term Reasoning in LLM Agents](arxiv-2507.22925-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MetaAgent: Toward Self-Evolving Agent via Tool Meta-Learning](arxiv-2508.00271-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SEAgent: Self-Evolving Computer Use Agent with Autonomous Learning from Experience](arxiv-2508.04700-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory](arxiv-2508.09736-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging](arxiv-2508.18993-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Code2MCP: Transforming Code Repositories into MCP Services](arxiv-2509.05941-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SEDM: Scalable Self-Evolving Distributed Memory for Agents](arxiv-2509.09498-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [ShinkaEvolve: Towards Open-Ended And Sample-Efficient Program Evolution](arxiv-2509.19349-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SGMem: Sentence Graph Memory for Long-Term Conversational Agents](arxiv-2509.21212-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [PRIME: Planning and Retrieval-Integrated Memory for Enhanced Reasoning](arxiv-2509.22315-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MemGen: Weaving Generative Latent Memory for Self-Evolving Agents](arxiv-2509.24704-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory](arxiv-2509.25140-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [EvoWorld: Evolving Panoramic World Generation with Explicit 3D Memory](arxiv-2510.01183-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](arxiv-2510.04618-v3--v3.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [In-the-Flow Agentic System Optimization for Effective Planning and Tool Use](arxiv-2510.05592-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Why Do LLM Agents Fail in Exploring New Environments? A World-Modeling Perspective](arxiv-2510.15047-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [DRO-InstructZero: Distributionally Robust Prompt Optimization for Large Language Models](arxiv-2510.15260-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [DelvePO: Direction-Guided Self-Evolving Framework for Flexible Prompt Optimization](arxiv-2510.18257-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [How to Auto-optimize Prompts for Domain Tasks? Adaptive Prompting and Reasoning through Evolutionary Domain Knowledge Adaptation](arxiv-2510.21148-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Huxley-Gödel Machine: Human-Level Coding Agent Development by an Approximation of the Optimal Self-Improving Machine](arxiv-2510.21614-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [DeepAgent: A General Reasoning Agent with Scalable Toolsets](arxiv-2510.21618-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Alita-G: Self-Evolving Generative Agent for Agent Generation](arxiv-2510.23601-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MCP-Flow: Facilitating LLM Agents to Master Real-World, Diverse and Scaling MCP Tools](arxiv-2510.24284-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [OrchDAG: Complex Tool Orchestration in Multi-Turn Interactions with Plan DAGs](arxiv-2510.24663-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Tool-to-Agent Retrieval: Bridging Tools and Agents for Scalable LLM Multi-Agent Systems](arxiv-2511.01854-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [DeepEyesV2: Toward Agentic Multimodal Model](arxiv-2511.05271-v4--v4.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [WMPO: World Model-based Policy Optimization for Vision-Language-Action Models](arxiv-2511.09515-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly?](arxiv-2511.13646-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [LoCoBench-Agent: An Interactive Benchmark for LLM Agents in Long-Context Software Engineering](arxiv-2511.13998-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [Towards a Science of Scaling Agent Systems](arxiv-2512.08296-v3--v3.md) - Registered paper source; coverage: authored. Full reading is not asserted.
 - [Recursive Language Models](arxiv-2512.24601-v3--v3.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [AlignUSER: Human-Aligned LLM Agents via World Models for Recommender System Evaluation](arxiv-2601.00930-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [RoboPhD: Self-Improving Text-to-SQL Through Autonomous Agent Evolution](arxiv-2601.01126-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [WebGym: Scaling Training Environments for Visual Web Agents with Realistic Tasks](arxiv-2601.02439-v6--v6.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory](arxiv-2601.03192-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [UniCorn: Towards Self-Improving Unified Multimodal Models through Self-Generated Supervision](arxiv-2601.03193-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [AgentDevel: Reframing Self-Evolving LLM Agents as Release Engineering](arxiv-2601.04620-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Structured Reasoning for Large Language Models](arxiv-2601.07180-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [JudgeFlow: Agentic Workflow Optimization via Block Judge](arxiv-2601.07477-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Magnetization reversal mechanism of double-helix nanowires probed by dark-field magneto-optical Kerr effect](arxiv-2601.08613-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing](arxiv-2602.04837-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning](arxiv-2602.08234-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [RISE: Self-Improving Robot Policy with Compositional World Model](arxiv-2602.11075-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Tool-R0: Self-Evolving LLM Agents for Tool-Learning from Zero Data](arxiv-2602.21320-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SAGE: Multi-Agent Self-Evolution for LLM Reasoning](arxiv-2603.15255-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [CLAG: Adaptive Memory Organization via Agent-Driven Clustering for Small Language Model Agents](arxiv-2603.15421-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Hyperagents](arxiv-2603.19461-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [SkillRouter: Retrieve-and-Rerank Skill Selection for LLM Agents at Scale](arxiv-2603.22455-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [Meta-Harness: End-to-End Optimization of Model Harnesses](arxiv-2603.28052-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Learning to Learn-at-Test-Time: Language Agents with Learnable Adaptation Policies](arxiv-2604.00830-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery](arxiv-2604.01658-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [CoEvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification](arxiv-2604.01687-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [Skill0: In-Context Agentic Reinforcement Learning for Skill Internalization](arxiv-2604.02268-v2--v2.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [Towards Secure Agent Skills: Architecture, Threat Taxonomy, and Security Analysis](arxiv-2604.02837-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [PFAgent: A Tractable and Self-Evolving Power-Flow Agent for Interactive Grid Analysis](arxiv-2604.10846-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Mem$^2$Evolve: Towards Self-Evolving Agents via Co-Evolutionary Capability Expansion and Experience Distillation](arxiv-2604.10923-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Thought-Retriever: Don't Just Retrieve Raw Data, Retrieve Thoughts for Memory-Augmented Agentic Systems](arxiv-2604.12231-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Autonomous Evolution of EDA Tools: Multi-Agent Self-Evolved ABC](arxiv-2604.15082-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)](arxiv-2604.17091-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Prism: An Evolutionary Memory Substrate for Multi-Agent Open-Ended Discovery](arxiv-2604.19795-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization](arxiv-2604.20714-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [AEL: Evolving Agent Harness in Open-Ended Environments](arxiv-2604.21725-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction](arxiv-2605.05242-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [MemQ: Integrating Q-Learning into Self-Evolving Memory Agents over Provenance DAGs](arxiv-2605.08374-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MLS-Bench: A Holistic and Rigorous Assessment of AI Systems on Building Better AI](arxiv-2605.08678-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [RewardHarness: Self-Evolving Agentic Post-Training](arxiv-2605.08703-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Continual Harness: Online Adaptation for Self-Improving Foundation Agents](arxiv-2605.09998-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SAGE: A Self-Evolving Agentic Graph-Memory Engine for Structure-Aware Associative Memory](arxiv-2605.12061-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [EvoGround: Self-Evolving Video Agents for Video Temporal Grounding](arxiv-2605.13803-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [EvolveMem:Self-Evolving Memory Architecture via AutoResearch for LLM Agents](arxiv-2605.13941-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [FORGE: Self-Evolving Agent Memory With No Weight Updates via Population Broadcast](arxiv-2605.16233-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [EXG: Self-Evolving Agents with Experience Graphs](arxiv-2605.17721-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [Code as Agent Harness](arxiv-2605.18747-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [When Skills Don’t Help: A Negative Result on Procedural Knowledge for Tool-Grounded Agents in Offensive Cybersecurity](arxiv-2605.20023-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Self-Evolving Multi-Agent Systems via Decentralized Memory](arxiv-2605.22721-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [MOSS: Self-Evolution through Source-Level Rewriting in Autonomous Agent Systems](arxiv-2605.22794-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [EVE-Agent: Evidence-Verifiable Self-Evolving Agents](arxiv-2605.22905-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [From Raw Experience to Skill Consumption: A Systematic Study of Model-Generated Agent Skills](arxiv-2605.23899-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [SkillOpt: Executive Strategy for Self-Evolving Agent Skills](arxiv-2605.23904-v2--v2.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [CODESKILL: Learning Self-Evolving Skills for Coding Agents](arxiv-2605.25430-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki](arxiv-2605.25480-v2--v2.md) - Registered paper source; coverage: authored. Full reading is not asserted.
+- [MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation](arxiv-2605.27366-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [ANDES: Agent Native Data Evolving Synthesis Tool for Autonomous Instruction Alignment](arxiv-2606.01279-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Adaptive Auto-Harness: Sustained Self-Improvement for Agentic System Deployment on Open-Ended Task Streams](arxiv-2606.01770-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Better with Experience: Self-Evolving LLM Agents for Evidence-Grounded Health Community Notes](arxiv-2606.02215-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management](arxiv-2606.03841-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [SePO: Self-Evolving Prompt Agent for System Prompt Optimization](arxiv-2606.04465-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Scaling Self-Evolving Agents via Parametric Memory](arxiv-2606.04536-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [VASO: Formally Verifiable Self-Evolving Skills for Physical AI Agents](arxiv-2606.05395-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [OpenSkill: Open-World Self-Evolution for LLM Agents](arxiv-2606.06741-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Self-evolving LLM agents with in-distribution Optimization](arxiv-2606.07367-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills](arxiv-2606.07412-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Memory Beyond Recall: A Dual-Process Cognitive Memory System for Self-Evolving LLM Agents](arxiv-2606.09483-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [Self-Harness: Harnesses That Improve Themselves](arxiv-2606.09498-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [WikiKV: Schema-Evolving Path-Indexed Storage for Hierarchical Knowledge Navigation](arxiv-2606.14275-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Retrospective Progress-Aware Self-Refinement for LLM Agent Training](arxiv-2606.14302-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [LLM-as-Code: Agentic Programming for Agent Harness](arxiv-2606.15874-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation](arxiv-2606.17628-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [Skill-MAS: Evolving Meta-Skill for Automatic Multi-Agent Systems](arxiv-2606.18837-v2--v2.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [SAGE: Stochastic Prompt Optimization via Agent-Guided Exploration](arxiv-2606.18902-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Metis: Bridging Text and Code Memory for Self-Evolving Agents](arxiv-2606.24151-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Agon: An Autonomous Large-Scale Omnidisciplinary Research System Built on Prompt Economy](arxiv-2606.24177-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators](arxiv-2606.26294-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Recursive Self-Evolving Agents via Held-Out Selection](arxiv-2606.28374-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Self-Evolving World Models for LLM Agent Planning](arxiv-2606.30639-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe](arxiv-2607.03451-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [LLM-as-a-Verifier: A General-Purpose Verification Framework](arxiv-2607.05391-v2--v2.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
-- [Self-Improvements in Modern Agentic Systems: A Survey](arxiv-2607.13104-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Self-Improvements in Modern Agentic Systems: A Survey](arxiv-2607.13104-v1--v1.md) - Registered paper source; coverage: authored. Full reading is not asserted.
+- [Harness Handbook: Making Evolving Agent Harnesses Readable,Navigable, and Editable](arxiv-2607.13285-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [From Memory to Skills: Evidence-Grounded Co-Evolution Governance for Long-Horizon LLM Agents](arxiv-2607.16621-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills](arxiv-2607.22529-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [WikiLoop: Jointly Learning to Build and Navigate Agent-Native Wikis with Downstream Feedback](arxiv-2607.26604-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [TrajWiki: Source-Grounded Memory Trajectories for Long-Horizon Dialogue Agents](arxiv-2608.00967-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Harness-R1: Learning to Edit Executable Runtime Harnesses from Agent Failure Trajectories](arxiv-2608.02276-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents](arxiv-2608.04003-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Argus: A General-Purpose Agentic Reasoning Runtime for Long-Horizon Tasks](arxiv-2608.05144-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Ouroboros: A Self-Developing Frontier Coding Agent with Reviewed Core Evolution](arxiv-2608.08311-v3--v3.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [Why Does CLAUDE.md Keep Growing? Catastrophic Remembering in Agentic Coding](arxiv-2608.11095-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [Evo-Harness: Context-to-Harness Skill Compilation for Self-Evolving Agents](arxiv-2608.15071-v2--v2.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [EnvHarness: Awakening Static Worlds for Agent Learning](arxiv-2608.19880-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [ForeDreamer: A Self-Evolving Dual-Agent Memory Architecture for Future Event Prediction](arxiv-2608.20920-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [Prime Agent: A Self-Improving RLM Harness](arxiv-2608.23552-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [Meta$^n$: Recursive Self-Improvement through Emergent Depth](arxiv-2608.24735-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [SKILL.state: Scalable Long-Horizon Agent Skills](arxiv-2608.26263-v3--v3.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution](arxiv-2608.27454-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [Towards a Systems Foundation for Agentic Skills: Architecture, Lifecycle, and Security](arxiv-2608.29596-v1--v1.md) - Registered paper source; coverage: authored. Full reading is not asserted.
 - [S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?](arxiv-2608.31100-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [Aspire: Can Models Self-Evolve from Vague Goals?](arxiv-2608.31111-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
 - [HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?](arxiv-2609.01437-v1--v1.md) - Registered paper source; coverage: prepared. Full reading is not asserted.
+- [EvoSafeHarness: Evolving Model- and Domain-Specific Harnesses for Securing Agents](arxiv-2609.05903-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Continual Learning Mechanisms Compose for Long-Horizon Memorization](arxiv-2609.06986-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [Procedural Graphs: Self-Evolving Execution Structures for LLM Agents](arxiv-2609.09153-v1--v1.md) - Registered paper source; coverage: authored. Full reading is not asserted.
+- [The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement](arxiv-2609.11873-v2--v2.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Root-Cause Attribution Is a Search Problem: Continual Search for Long-Horizon Agent Failures](arxiv-2609.13463-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [ModularRSI: Modular and Generalizable Recursive Harness Self-Improvement](arxiv-2609.14857-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [HarnessVLN: Unifying Training-Free Embodied Navigation through an Agent Harness](arxiv-2609.15195-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [When Agents Slow Down: Understanding LLM Agents' Test-Time Strategies via Elo-per-token Analysis](arxiv-2609.15309-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [RSIAgent: Autonomous Exploration for Recursive Self-improvement in New Environments](arxiv-2609.15364-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [BVB: Benchmarking Agentic Video Understanding via Programmatic Reconstruction in Blender](arxiv-2609.15478-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [How Lossless Is Lossless Speculative Decoding? The Role of Numerical Precision in Orthrus](arxiv-2609.15504-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [LynnReal-Omni: Native multi-modal Video Generation for Agentic Visual Workflows](arxiv-2609.15863-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Discovery Foundation Models: Toward Open-Ended Discovery Intelligence](arxiv-2609.15973-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [The Router Within: Eliciting Native Skill Routing from a Frozen LLM](arxiv-2609.15982-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [Emergence World: Adversarial Stress-Testing of Long-Horizon Multi-Agent Systems](arxiv-2609.17320-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
+- [ScienceBuddy: Recursive-in-Recursive Self-Improvement for Interactive Scientific Agents](arxiv-2609.17523-v1--v1.md) - Registered paper source; coverage: registered. Full reading is not asserted.
 - [Awesome Self-Improving Agents](awesome-self-improving-agents--current.md) - Registered repository source; coverage: prepared. Full reading is not asserted.
 - [Claude Dynamic Workflows](claude-dynamic-workflows--current.md) - Registered documentation source; coverage: prepared. Full reading is not asserted.
 - [DSPy](dspy--current.md) - Registered repository source; coverage: prepared. Full reading is not asserted.

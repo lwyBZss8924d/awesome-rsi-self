@@ -9,7 +9,7 @@ tags:
 status: draft
 generated:
   by: process:rsi-source-registry
-  at: 2026-09-16T08:06:57.223Z
+  at: 2026-09-16T10:53:25.873Z
 sources:
   - id: ref-envharness-model-parameter-adapter-5fbe9146
     resource: https://github.com/google-research/envharness/blob/fab7d57441f06b75c73a900e04561d4d7600f361/envharness/infra/model.py

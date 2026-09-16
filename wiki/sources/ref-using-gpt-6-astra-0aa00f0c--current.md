@@ -9,7 +9,7 @@ tags:
 status: draft
 generated:
   by: process:rsi-source-registry
-  at: 2026-09-16T08:06:57.223Z
+  at: 2026-09-16T10:53:25.873Z
 sources:
   - id: ref-using-gpt-6-astra-0aa00f0c
     resource: https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra

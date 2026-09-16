@@ -9,7 +9,7 @@ tags:
 status: draft
 generated:
   by: process:rsi-source-registry
-  at: 2026-09-16T08:06:57.223Z
+  at: 2026-09-16T10:53:25.873Z
 sources:
   - id: ref-openclaw-docs-611bf541
     resource: https://raw.githubusercontent.com/openclaw/openclaw/8b4754c73279d8b4fa20965a38a59e4ded422d8d/docs/tools/skills.md

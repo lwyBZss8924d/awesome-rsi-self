@@ -9,7 +9,7 @@ tags:
 status: draft
 generated:
   by: process:rsi-source-registry
-  at: 2026-09-16T08:06:57.223Z
+  at: 2026-09-16T10:53:25.873Z
 sources:
   - id: ref-pi-resource-loader-83389135
     resource: https://raw.githubusercontent.com/earendil-works/pi/d7296c063b7971a7298769cfff1a167a9a16f8ed/packages/coding-agent/src/core/resource-loader.ts

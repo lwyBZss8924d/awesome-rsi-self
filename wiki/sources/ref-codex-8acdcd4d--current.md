@@ -9,7 +9,7 @@ tags:
 status: draft
 generated:
   by: process:rsi-source-registry
-  at: 2026-09-16T08:06:57.223Z
+  at: 2026-09-16T10:53:25.873Z
 sources:
   - id: ref-codex-8acdcd4d
     resource: https://github.com/openai/codex/tree/de40696ec49815df76ec683f5ca6aea2b0f8760d
